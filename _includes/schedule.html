@@ -141,7 +141,7 @@
       {%- if _thumb_src -%}
         {%- if item.slides and item.hidden != true -%}
         <a class="sched-thumb" href="{{ item.slides }}" target="_blank"
-           aria-label="Open slides for {{ item.title }}"
+           aria-label="Open slides for {{ item.title | strip_html | escape }}"
            style="background-image:url('/assets/img/{{ _thumb_src }}')">
           <div class="sched-extra" aria-hidden="true">▶ Slides</div>
         </a>
