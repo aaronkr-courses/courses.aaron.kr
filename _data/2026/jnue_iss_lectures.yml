@@ -107,7 +107,7 @@
   week: 8
   title: >
     <div>
-      <strong style="color: red">1학년 참관실습Ⅰ</strong> 보강?<br>
+      <strong style="color: red">1학년 참관실습Ⅰ</strong> <a href="https://lms.jnue.kr">(LMS에서 보강)</a><br>
       WEEK 01 출발, 소프트웨어 세상 속으로!<br>
       WEEK 02 AI(인공지능), 너는 누구니?
     </div>
@@ -121,8 +121,7 @@
   week: 9
   title: >
     <div>
-      <strong style="color: red;">No Class (개교기념일)</strong><br>
-      <a style="color: red;" href="https://lms.jnue.kr">(LMS에서 보강?)</a><br>
+      <strong style="color: red;">개교기념일</strong> <a href="https://lms.jnue.kr">(LMS에서 보강)</a><br>
       <strong>WEEK 03 알쏭달쏭! 알고리즘 제대로 알기<br>
       WEEK 04 어서 와! 엔트리는 처음이지?</strong>
     </div>
