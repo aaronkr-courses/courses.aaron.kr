@@ -31,8 +31,7 @@
   week: 3
   title: >
     <div>
-      <strong style="color: red;">No Class (MT)</strong><br>
-      <a style="color: red;" href="https://lms.jnue.kr">(LMS에서 보강)</a><br>
+      <strong style="color: red;">MT</strong> <a href="https://lms.jnue.kr">(LMS에서 보강)</a><br>
       <strong><a href="https://docs.google.com/presentation/d/1R6L8CQrcoa3z1b_UYJICeqARHiOoVRnjPGQJQzSumMc/edit?usp=sharing">3장 편집과 인쇄로 작업 실력 키우기</a></strong>
     </div>
   slides: "https://docs.google.com/presentation/d/1R6L8CQrcoa3z1b_UYJICeqARHiOoVRnjPGQJQzSumMc/edit?usp=sharing"
@@ -159,6 +158,7 @@
   week: 12
   hidden: true
   title: >
+    <a href="https://lms.jnue.kr">(LMS에서 보강)</a><br>
     <strong>WEEK 09 장바구니에 물건을 넣고 빼기<br>
     WEEK 10 누가누가 가장 크게 부나?</strong>
   slides: "https://docs.google.com/presentation/d/1LrCvzVshFlXc_iuL4aYoYD-pKDraViIkA1yMGJR5r9Y/edit?usp=sharing"
