@@ -96,7 +96,7 @@
   title: >
     <strong>Chapter 06 개념적 설계 심화</strong>
   slides: "https://docs.google.com/presentation/d/1ZT7gzKgpnOg9NOB8nBfN8vOl4ZSD4226Uhyp2UiRykk/edit?usp=sharing"
-  img2: 2026/ut-db/8-conceptual-deeper.jpg
+  img: 2026/ut-db/8-conceptual-deeper.jpg
   readings:
   hw: 
   logistics: >
@@ -109,7 +109,7 @@
     <strong>Chapter 07 관계 데이터 모델</strong>
   slides: "https://docs.google.com/presentation/d/1G32UC2FlIIYgRjv1vHH4b6-zQJt2dd_GdGDvXgcGRSk/edit?usp=sharing"
   slides2: "https://docs.google.com/presentation/d/1Yr94Q-BhWnzQYb7VOizdvpOiMj1RVMyFnFjqaI3bQkw/edit?usp=sharing"
-  img2: 2026/ut-db/9-relational.jpg
+  img: 2026/ut-db/9-relational.jpg
   readings:
   hw: 
   logistics: >
@@ -120,7 +120,7 @@
   title: >
     <strong>Chapter 08 논리적 설계 기초</strong>
   slides: "https://docs.google.com/presentation/d/1k8KfwA0I79s0eYkXFSJfk9KGde5dNeQ3AWz1uXimtnY/edit?usp=sharing"
-  img2: 2026/ut-db/10-logical.jpg
+  img: 2026/ut-db/10-logical.jpg
   readings:
   hw: 
   logistics:
@@ -131,7 +131,7 @@
   title: >
     <strong>Chapter 09 논리적 설계 심화</strong>
   slides: "https://docs.google.com/presentation/d/1A2eXNrQC1XRuudJBLLCU-fZBR9aDWtI3cmX4hMssz9w/edit?usp=sharing"
-  img2: 2026/ut-db/11-logical-deeper.jpg
+  img: 2026/ut-db/11-logical-deeper.jpg
   readings:
   hw: 
   logistics:
