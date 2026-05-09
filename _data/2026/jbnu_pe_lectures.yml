@@ -140,22 +140,22 @@
   week: 11
   title: >
     <strong>Switched-Mode Rectifiers<br>
-    Three-Phase Systems<br>
-    Three-Phase InvertersControl<br>
-    Current-Mode Control<br>
-    EMI Filters</strong>
+    Three-Phase Systems</strong>
   supp:
   readings:
   hw:
-  slides:
+  slides: "https://docs.google.com/presentation/d/1GVG2fNKwuvIbbD7C6kyP1QhIs33i4_9BChOo_RXHKAY/edit?usp=sharing"
   slides2:
-  img: 
+  img: 2026/jbnu-pe/11-pwm.jpg
   logistics:
 
 - date: 5/20
   week: 12
   title: >
-    <strong>Switched-Capacitor Converters</strong>
+    <strong>Three-Phase InvertersControl<br>
+    Current-Mode Control<br>
+    EMI Filters<br>
+    Switched-Capacitor Converters</strong>
   supp:
   readings:
   hw:

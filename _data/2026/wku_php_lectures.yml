@@ -110,27 +110,29 @@
   supp:
   readings:
   hw:
-  slides:
+  slides: "https://docs.google.com/presentation/d/1uNVKZhi5vVGxZFRDGec2YzUrTmwclLeHYEhDe4gVAlE/edit?usp=sharing"
   slides2:
-  img:
+  img: 2026/wku-php/11-imgs-time.jpg
   logistics:
 
 - date: 5/19
   week: 12
+  hidden: true
   title: >
-    9장 쿠키 & 세션
+    9장 쿠키 & 세션<br>
+    10장 오류 처리
   supp:
   readings:
   hw:
-  slides:
+  slides: "https://docs.google.com/presentation/d/1sXn5J12A1z9Ga6DF_77uMUeqG1EhosupwfyDY_3L6p8/edit?usp=sharing"
   slides2:
-  img:
+  img: 2026/wku-php/12-cookies-sessions-errors.jpg
   logistics:
 
 - date: 5/26
   week: 13
   title: >
-    10장 오류 처리
+    11장 구조화된 쿼리 언어
   supp:
   readings:
   hw:
@@ -142,7 +144,7 @@
 - date: 6/2
   week: 14
   title: >
-    11장 구조화된 쿼리 언어
+    12장 데이터베이스에서 데이터 가져오기 & 표시하기
   supp:
   readings:
   hw:
@@ -154,7 +156,7 @@
 - date: 6/9
   week: 15
   title: >
-    12장 데이터베이스에서 데이터 가져오기 & 표시하기
+    13장 데이터베이스의 데이터 업데이트하기
   supp:
   readings:
   hw:
@@ -173,7 +175,6 @@
     </div>
   logistics: >
     <div style="display: none;">
-      13장 데이터베이스의 데이터 업데이트하기<br>
       14장 리팩터링 & 종속성 주입<br>
       15장 네임스페이스 & 라이브러리<br>
       16장 멤버십<br>
