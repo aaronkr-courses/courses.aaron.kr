@@ -124,7 +124,9 @@
   img: 2026/ut-db/10-logical.jpg
   readings:
   hw: 
-  logistics:
+  logistics: >
+    <a href="https://drive.google.com/file/d/1-jl09W_H4xznxWUD24uqFPdJCnYNgnsX/view?usp=sharing">8장 연습문제.md</a><br>
+    <a href="https://docs.google.com/document/d/17byu99UEBc8mJ4eoiPOTHNfRgiUyq85MfBwThEV2Amk/edit?usp=sharing">8장 실습문제.docx</a>
 
 - date: 5/18
   week: 12
