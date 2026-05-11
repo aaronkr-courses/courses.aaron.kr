@@ -109,6 +109,7 @@
   readings:
   hw: 
   logistics: >
+    <a href="https://wokwi.com/projects/401567758260228097">Wokwi BH1750</a><br>
     <a href="https://github.com/aaronkr-courses/esp32-iotmaker">Code</a>
 
 - date: 5/18
