@@ -25,6 +25,7 @@ information:
     location: W18동 214호
     kakaotalk: https://open.kakao.com/o/g0ufTdii
     github: https://classroom.github.com/a/kpJtYeMa
+    code: https://github.com/aaronkr-courses/esp32-iotmaker
 
 Main-Text:
   - text: "주교재"

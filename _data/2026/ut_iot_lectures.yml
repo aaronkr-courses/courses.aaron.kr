@@ -108,7 +108,8 @@
   img: 2026/ut-iot/10-components.jpg
   readings:
   hw: 
-  logistics:
+  logistics: >
+    <a href="https://github.com/aaronkr-courses/esp32-iotmaker">Code</a>
 
 - date: 5/18
   week: 12
