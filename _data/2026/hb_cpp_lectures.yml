@@ -131,11 +131,13 @@
   img2: 2024/hb-cpp/12-abstract-data-types.jpg
   logistics:
 
-- date: 5/20
+- date: >
+    <strong style="color: red;">5/20</strong>
   week: 12
   hidden: true
   title: >
-    <strong>CHAPTER 12 값처럼 동작하는 클래스 객체</strong>
+    <strong><span style="color: red;">No Class!</span>개교기념일<br>
+    CHAPTER 12 값처럼 동작하는 클래스 객체</strong>
   supp:
   readings: Accelerated C++, <strong>12장 pp. 338-359</strong>
   hw:
