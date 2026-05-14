@@ -150,9 +150,11 @@
   readings:
   hw:
   slides: "https://docs.google.com/presentation/d/1emnovumqJVha0hwOL0_FHNrWu4aMxCU09_-JSKToir4/edit?usp=sharing"
-  slides2: 
+  slides2: "https://docs.google.com/presentation/d/1d8ecWRwFt17qeHgBUA_acjULd_Qk72lt/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2Title: "Components"
   img: 2026/jbnu-devs/11-smart-devs.jpg
-  logistics:
+  logistics: >
+    <a href="https://wokwi.com/projects/401567758260228097">Wokwi BH1750</a>
 
 - date: 5/21
   week: 12
