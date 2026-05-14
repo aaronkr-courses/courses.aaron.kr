@@ -105,8 +105,7 @@
 - date: 5/12
   week: 11
   title: >
-    7장 이미지 & 파일<br>
-    8장 날짜 & 시간
+    7장 이미지 & 파일
   supp:
   readings:
   hw: "https://classroom.github.com/a/jzHVjI7n"
@@ -119,14 +118,27 @@
   week: 12
   hidden: true
   title: >
-    9장 쿠키 & 세션<br>
-    10장 오류 처리
+    8장 날짜 & 시간<br>
+    9장 쿠키 & 세션
   supp:
   readings:
   hw:
   slides: "https://docs.google.com/presentation/d/1sXn5J12A1z9Ga6DF_77uMUeqG1EhosupwfyDY_3L6p8/edit?usp=sharing"
   slides2:
   img: 2026/wku-php/12-cookies-sessions-errors.jpg
+  logistics:
+
+- date: >
+    <span style="color: red">LMS 보강</span>
+  week: 13
+  title: >
+    10장 오류 처리
+  supp:
+  readings:
+  hw:
+  slides: "https://docs.google.com/presentation/d/1TwBj95ZuvlL1sgpP7GrKeKe3GGLjupR8BpFEjLKrx9Y/edit?usp=sharing"
+  slides2:
+  img: 2026/wku-php/13-errors.jpg
   logistics:
 
 - date: 5/26
@@ -141,7 +153,8 @@
   img:
   logistics:
 
-- date: 6/2
+- date: >
+    <span style="color: red;">5/29 (LMS 보강)</span>
   week: 14
   title: >
     12장 데이터베이스에서 데이터 가져오기 & 표시하기
@@ -156,18 +169,6 @@
 - date: 6/9
   week: 15
   title: >
-    13장 데이터베이스의 데이터 업데이트하기
-  supp:
-  readings:
-  hw:
-  slides:
-  slides2:
-  img:
-  logistics:
-
-- date: 6/16
-  week: 16
-  title: >
     <strong>Final Test</strong>
     <div style="display: none;">
       <br><a href="#">스터디 가이드</a>
@@ -175,6 +176,7 @@
     </div>
   logistics: >
     <div style="display: none;">
+      13장 데이터베이스의 데이터 업데이트하기<br>
       14장 리팩터링 & 종속성 주입<br>
       15장 네임스페이스 & 라이브러리<br>
       16장 멤버십<br>
