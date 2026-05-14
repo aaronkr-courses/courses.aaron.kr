@@ -93,17 +93,15 @@
     </div>
 
 - date: 4/28
-  week: 9
   title: >
     <span style="color: red"><strong>No Class</strong> 대각개교절</span>
 
 - date: 5/5
-  week: 10
   title: >
     <span style="color: red"><strong>No Class</strong> Kid's Day!~~</span>
 
 - date: 5/12
-  week: 11
+  week: 9
   title: >
     7장 이미지 & 파일
   supp:
@@ -115,8 +113,7 @@
   logistics:
 
 - date: 5/19
-  week: 12
-  hidden: true
+  week: 10
   title: >
     8장 날짜 & 시간<br>
     9장 쿠키 & 세션
@@ -129,8 +126,8 @@
   logistics:
 
 - date: >
-    <span style="color: red">LMS 보강</span>
-  week: 13
+    <span style="color: red">5/22 (LMS 보강)</span>
+  week: 11
   title: >
     10장 오류 처리
   supp:
@@ -142,7 +139,7 @@
   logistics:
 
 - date: 5/26
-  week: 13
+  week: 12
   title: >
     11장 구조화된 쿼리 언어
   supp:
@@ -155,9 +152,21 @@
 
 - date: >
     <span style="color: red;">5/29 (LMS 보강)</span>
-  week: 14
+  week: 13
   title: >
     12장 데이터베이스에서 데이터 가져오기 & 표시하기
+  supp:
+  readings:
+  hw:
+  slides:
+  slides2:
+  img:
+  logistics:
+
+- date: 6/3
+  week: 14
+  title: >
+    13장 데이터베이스의 데이터 업데이트하기
   supp:
   readings:
   hw:
@@ -176,7 +185,6 @@
     </div>
   logistics: >
     <div style="display: none;">
-      13장 데이터베이스의 데이터 업데이트하기<br>
       14장 리팩터링 & 종속성 주입<br>
       15장 네임스페이스 & 라이브러리<br>
       16장 멤버십<br>
