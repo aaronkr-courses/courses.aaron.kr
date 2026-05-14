@@ -176,26 +176,16 @@
   img: 
   logistics:
 
-- date: 6/3
+- date: >
+    <span style="color: red;">6/3 (LMS 보강)</span>
   week: 14
   title: >
-    <span style="color: red"><strong>No Class</strong> 선거</span>
+    <span style="color: red">Election (선거)</span> <a href="https://lms.jbnu.ac.kr/">LMS Make-up</a><br>
+    <strong>Resonant Power Conversion<br>
+    Gate Drive, Level Shift, Layout</strong>
 
 - date: 6/10
   week: 15
-  title: >
-    <strong>Resonant Power Conversion<br>
-    Gate Drive, Level Shift, Layout</strong>
-  supp:
-  readings:
-  hw:
-  slides:
-  slides2:
-  img: 
-  logistics:
-
-- date: 6/17
-  week: 16
   title: >
     <strong>Final Test</strong><br>
     <div style="display: none;">

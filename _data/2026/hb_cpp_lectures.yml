@@ -134,12 +134,10 @@
 - date: >
     <strong style="color: red;">5/20</strong>
   week: 12
-  hidden: true
   title: >
-    <strong><span style="color: red;">No Class!</span>개교기념일<br>
-    CHAPTER 12 값처럼 동작하는 클래스 객체</strong>
+    <strong><span style="color: red;">No Class!</span>개교기념일</strong>
   supp:
-  readings: Accelerated C++, <strong>12장 pp. 338-359</strong>
+  readings: 
   hw:
   slides: "https://docs.google.com/presentation/d/1zMUfc73NQsGXszyYbzuAoay4OYOGGMgABAGM9iFfC4E/edit?usp=sharing"
   img2: 2024/hb-cpp/13-cpp-str-class.jpg
@@ -147,13 +145,17 @@
 
 - date: 5/27
   week: 13
-  hidden: true
   title: >
-    <strong>CHAPTER 13 상속과 동적 바인딩</strong>
+    <strong>CHAPTER 12 값처럼 동작하는 클래스 객체<br>
+    CHAPTER 13 상속과 동적 바인딩</strong>
   supp:
-  readings: Accelerated C++, <strong>13장 pp. 362-398</strong>
+  readings: >
+    - Accelerated C++, <strong>12장 pp. 338-359</strong>
+    - Accelerated C++, <strong>13장 pp. 362-398</strong>
   hw:
-  slides: "https://docs.google.com/presentation/d/1b5uiVgeNYdFr9v1Tg9wAOC2iLKKAAgRMAGtXCn3XQiE/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1zMUfc73NQsGXszyYbzuAoay4OYOGGMgABAGM9iFfC4E/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1b5uiVgeNYdFr9v1Tg9wAOC2iLKKAAgRMAGtXCn3XQiE/edit?usp=sharing"
+  slides2Title: "CHAPTER 13 상속과 동적 바인딩"
   img2: 2024/hb-cpp/14-inheritance.jpg
   logistics: >
     <a href="https://raw.githubusercontent.com/aaronkr-classroom/14-inheritance-dynamic-binding-jekkilekki/refs/heads/main/Chp13/new_grades.txt">new_grades.txt</a>

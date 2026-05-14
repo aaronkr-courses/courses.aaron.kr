@@ -132,7 +132,7 @@
 - date: 5/7
   week: 10
   title: >
-    <strong>9. Display, Recording, and Presentation of Measurement Data</strong>
+    <strong>10. Display, Recording, and Presentation of Measurement Data</strong>
   supp:
   readings:
   hw:
@@ -145,7 +145,7 @@
 - date: 5/14
   week: 11
   title: >
-    <strong>10. Intelligent Devices</strong>
+    <strong>11. Intelligent Sensors</strong>
   supp:
   readings:
   hw:
@@ -159,19 +159,20 @@
 - date: 5/21
   week: 12
   title: >
-    <strong>11. Measurement Reliability and Safety Systems</strong>
+    <strong>12. Measurement Reliability and Safety Systems</strong>
   supp:
   readings:
   hw:
   slides: 
-  slides2: 
+  slides2: "https://docs.google.com/presentation/d/1MfJyCpWlpKKtEvTIlIJcBuxOppodhyoG/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2Title: "MQTT Server
   img: 
   logistics:
 
 - date: 5/28
   week: 13
   title: >
-    <strong>12. Data Acquisition with LabVIEW</strong>
+    <strong>13. Sensor Technologies</strong>
   supp:
   readings:
   hw:
@@ -183,7 +184,14 @@
 - date: 6/4
   week: 14
   title: >
-    <strong>13. Sensor Technologies</strong>
+    <strong>14. Temperature measurement<br>
+    15. Pressure Measurement<br>
+    16. Flow Measurement<br>
+    17. Level Measurement<br>
+    18. Mass, force, and torque measurement<br>
+    19. Translation motion, vibration measurement<br>
+    20. Rotational motion transducers<br>
+    21. Summary of other measurement techniques</strong>
   supp:
   readings:
   hw:

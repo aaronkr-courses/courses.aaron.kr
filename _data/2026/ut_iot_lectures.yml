@@ -114,11 +114,10 @@
 
 - date: 5/18
   week: 12
-  hidden: true
   title: >
     <strong>CHAPTER 10 MQTT 서버 만들기</strong>
   slides: "https://docs.google.com/presentation/d/1iep0VKcQbW2oZEpK6MJCT4RMsDMsHBl1Jvbw90TcyvI/edit?usp=sharing"
-  img2: 2026/ut-iot/11-mqtt.jpg
+  img: 2026/ut-iot/11-mqtt.jpg
   readings:
   hw: 
   logistics:
