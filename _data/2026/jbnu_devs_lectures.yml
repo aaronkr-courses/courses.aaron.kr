@@ -156,9 +156,11 @@
   logistics: >
     <a href="https://wokwi.com/projects/401567758260228097">Wokwi BH1750</a>
 
-- date: 5/21
+- date: >
+    <span style="color: red;">5/21 (LMS 보강)</span>
   week: 12
   title: >
+    <span style="color: red">학회</span> <a href="https://lms.jbnu.ac.kr/">LMS Make-up</a><br>
     <strong>12. Measurement Reliability and Safety Systems</strong>
   supp:
   readings:
@@ -185,14 +187,8 @@
 - date: 6/4
   week: 14
   title: >
-    <strong>14. Temperature measurement<br>
-    15. Pressure Measurement<br>
-    16. Flow Measurement<br>
-    17. Level Measurement<br>
-    18. Mass, force, and torque measurement<br>
-    19. Translation motion, vibration measurement<br>
-    20. Rotational motion transducers<br>
-    21. Summary of other measurement techniques</strong>
+    <strong>14~21 Summary of Measurement Techniques<br>
+    <small>Temperature; Pressure; Flow; Level; Mass, force, and torque; Translation motion, vibration; Rotational motion transducers; etc</strong>
   supp:
   readings:
   hw:
