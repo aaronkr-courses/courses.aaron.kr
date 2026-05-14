@@ -165,7 +165,7 @@
   hw:
   slides: 
   slides2: "https://docs.google.com/presentation/d/1MfJyCpWlpKKtEvTIlIJcBuxOppodhyoG/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
-  slides2Title: "MQTT Server
+  slides2Title: "MQTT Server"
   img: 
   logistics:
 
@@ -177,7 +177,8 @@
   readings:
   hw:
   slides: 
-  slides2: 
+  slides2: "https://docs.google.com/presentation/d/1lh0RqVbBdZ8CPdCahKOi5ECjp1RKSeMT/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2Title: "Node-RED Server"
   img: 
   logistics:
 
@@ -196,7 +197,8 @@
   readings:
   hw:
   slides: 
-  slides2: 
+  slides2: "https://docs.google.com/presentation/d/1BCKiqlR7XmGQ_FoJrhgtuvH3C0jv-4w_/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2Title: "Sensors Monitoring"
   img: 
   logistics:
 
@@ -207,3 +209,6 @@
     <div style="display:none;">
       <a href="#">Final Study Guide</a>
     </div>
+  slides:
+  slides2: "https://docs.google.com/presentation/d/1A8uXj3Kdg09uEb9dZChtjVjVDcByaikx/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2Title: "Lights & Alarms"
