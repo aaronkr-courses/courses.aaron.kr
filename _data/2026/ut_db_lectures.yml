@@ -136,7 +136,8 @@
   img: 2026/ut-db/11-logical-deeper.jpg
   readings:
   hw: 
-  logistics:
+  logistics: >
+    <a href="https://raw.githubusercontent.com/aaronkr-classroom/db-code-exercises-jekkilekki/refs/heads/main/code/11%EC%A3%BC%EC%B0%A8/11%EC%A3%BC%EC%B0%A8.sql">11주차 코드 (Aaron)</a>
 
 - date: >
     <span style="color: red;">5/25</span>
