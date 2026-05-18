@@ -137,7 +137,9 @@
   readings:
   hw: 
   logistics: >
-    <a href="https://raw.githubusercontent.com/aaronkr-classroom/db-code-exercises-jekkilekki/refs/heads/main/code/11%EC%A3%BC%EC%B0%A8/11%EC%A3%BC%EC%B0%A8.sql">11주차 코드 (Aaron)</a>
+    <a href="https://raw.githubusercontent.com/aaronkr-classroom/db-code-exercises-jekkilekki/refs/heads/main/code/11%EC%A3%BC%EC%B0%A8/11%EC%A3%BC%EC%B0%A8.sql">11주차 코드 (Aaron)</a><br>
+    <a href="https://drive.google.com/file/d/1XCN1fJC_Ig77b7Sdr9JozvDj1h6H1LvY/view?usp=sharing">연습문제 chp9.md</a><br>
+    <a href="https://docs.google.com/document/d/1w1PMxdzOikczy8aLTEdWBi7OyjEolqqvCQZP4ctouX0/edit?usp=sharing">9장 실습문제</a>
 
 - date: >
     <span style="color: red;">5/25</span>
