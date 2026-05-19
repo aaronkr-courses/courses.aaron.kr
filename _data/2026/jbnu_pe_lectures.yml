@@ -152,22 +152,22 @@
 - date: 5/20
   week: 12
   title: >
-    <strong>Three-Phase InvertersControl<br>
-    Current-Mode Control<br>
-    EMI Filters<br>
-    Switched-Capacitor Converters</strong>
+    <strong>Three-Phase Systems</strong>
   supp:
   readings:
   hw:
-  slides:
+  slides: "https://docs.google.com/presentation/d/1w6TL5k71bxejflfxuIdEgumkOF8YdNt4ViFxU4KK4NU/edit?usp=sharing"
   slides2:
-  img: 
+  img: 2026/jbnu-pe/12-3-phase.jpg
   logistics:
 
 - date: 5/27
   week: 13
   title: >
-    <strong>Soft Switching</strong>
+    <strong>Current-Mode Control<br>
+    EMI Filters<br>
+    Switched-Capacitor Converters<br>
+    Soft Switching</strong>
   supp:
   readings:
   hw:
