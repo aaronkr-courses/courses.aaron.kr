@@ -165,10 +165,10 @@
   supp:
   readings:
   hw:
-  slides: 
+  slides: "https://docs.google.com/presentation/d/1SmCOYmr5A9ZosHUM8NgZlRrxj8ojDNEyRrXiLgfl2sw/edit?usp=sharing"
   slides2: "https://docs.google.com/presentation/d/1MfJyCpWlpKKtEvTIlIJcBuxOppodhyoG/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
   slides2Title: "MQTT Server"
-  img: 
+  img: 2026/jbnu-devs/12-reliability-safety.jpg
   logistics:
 
 - date: 5/28
