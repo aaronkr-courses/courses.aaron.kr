@@ -161,9 +161,11 @@
   img: 2026/jbnu-pe/12-3-phase.jpg
   logistics:
 
-- date: 5/27
+- date: >
+    <span style="color: red;">5/27 (LMS 보강)</span>
   week: 13
   title: >
+    <span style="color: red"><a href="https://lms.jbnu.ac.kr/">LMS Asynchronous Lecture</a></span><br>
     <strong>Current-Mode Control<br>
     EMI Filters<br>
     Switched-Capacitor Converters<br>

@@ -123,24 +123,20 @@
   logistics:
 
 - date: >
-    <span style="color: red;">5/25</span>
+    <span style="color: red;">5/25 (LMS 보강)</span>
   week: 13
   title: >
-    <span style="color: red"><strong>No Class</strong> Buddha's Bday</span>
-
-
-- date: 6/1
-  week: 14
-  hidden: true
-  title: <strong>CHAPTER 11 Node-Red 서버 만들고 활용하기</strong>
+    <span style="color: red">Buddha's Bday</span> <a href="https://ecampus.ut.ac.kr">(LMS 보강)</a><br>
+    <strong>CHAPTER 11 Node-Red 서버 만들고 활용하기</strong>
   slides: "https://docs.google.com/presentation/d/1CRshi1slMQmaFFVSOnEkvS9ZmsRAfHCm6UKWMLqbc-4/edit?usp=sharing"
   img2: 2026/ut-iot/12-node-red.jpg
   readings:
   hw: 
   logistics:
 
-- date: 6/8
-  week: 15
+
+- date: 6/1
+  week: 14
   hidden: true
   title: <strong>CHAPTER 12 센서 데이터 모니터링하기</strong>
   slides: "https://docs.google.com/presentation/d/11D8k0Jp9DcidxvBP1lSPN53Irq_mk2pnI1LD8y3r_F8/edit?usp=sharing"
@@ -149,9 +145,8 @@
   hw: 
   logistics:
 
-- date: >
-    <span style="color: red">6/11 (LMS 보강)</span>
-  week: 16
+- date: 6/8
+  week: 15
   hidden: true
   title: >
     <strong>CHAPTER 13 전등 제어와 경보 시스템 구성하기</strong>

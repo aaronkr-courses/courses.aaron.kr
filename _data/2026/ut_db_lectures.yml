@@ -142,22 +142,18 @@
     <a href="https://docs.google.com/document/d/1dVaLB_2Lvp2l-1MoGcT_NTT1Kqy4dRJ40gMw97r7XO0/edit?usp=drive_link">9장 실습문제</a>
 
 - date: >
-    <span style="color: red;">5/25</span>
+    <span style="color: red;">5/25 (LMS 보강)</span>
   week: 1
   title: >
-    <span style="color: red"><strong>No Class</strong> Buddha's Bday</span>
-
-- date: 6/1
-  week: 14
-  hidden: true
-  title: <strong>Chapter 10 정규화</strong>
+    <span style="color: red">Buddha's Bday</span><a href="https://ecampus.ut.ac.kr">(LMS 보강)</a><br>
+    <strong>Chapter 10 정규화</strong>
   slides: "https://docs.google.com/presentation/d/1ZMJ3aWTOr0LJwX4Jb034kVMb3zRZRwcOgGmWQ4v2mg0/edit?usp=sharing"
   img2: 2026/ut-db/12-norm.jpg 
   readings:
   hw: 
   logistics:
 
-- date: 6/8
+- date: 6/1
   week: 14
   hidden: true
   title: <strong>Chapter 11 물리적 설계</strong>
@@ -167,9 +163,8 @@
   hw: 
   logistics:
 
-- date: >
-    <span style="color: red">6/11 (LMS 보강)</span>
-  week: 15
+- date: 6/8
+  week: 14
   hidden: true
   title: >
     <strong>Chapter 12 데이터베이스 구현</strong>
