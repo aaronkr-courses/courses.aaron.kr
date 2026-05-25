@@ -145,9 +145,9 @@
   supp:
   readings:
   hw:
-  slides:
+  slides: "https://docs.google.com/presentation/d/14XmGWRLTuWm0cwt6C0tKgZ6lwgTFEKiio_M-375OrD0/edit?usp=sharing"
   slides2:
-  img:
+  img: 2026/wku-php/12-sql.jpg
   logistics:
 
 - date: >
