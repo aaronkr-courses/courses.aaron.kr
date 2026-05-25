@@ -148,17 +148,18 @@
     <span style="color: red">Buddha's Bday</span><a href="https://ecampus.ut.ac.kr">(LMS 보강)</a><br>
     <strong>Chapter 10 정규화</strong>
   slides: "https://docs.google.com/presentation/d/1ZMJ3aWTOr0LJwX4Jb034kVMb3zRZRwcOgGmWQ4v2mg0/edit?usp=sharing"
-  img2: 2026/ut-db/12-norm.jpg 
+  slides2: "https://docs.google.com/presentation/d/1LVqTBe_gFx5-8p0G1H2cBX5iK6YZi7CwTuRlRThrz-Q/edit?usp=sharing"
+  slides2Title: "데이터베이스 입문: Chapter 10 정규화"
+  img: 2026/ut-db/12-norm.jpg 
   readings:
   hw: 
   logistics:
 
 - date: 6/1
   week: 14
-  hidden: true
   title: <strong>Chapter 11 물리적 설계</strong>
   slides: "https://docs.google.com/presentation/d/1su7MjOSDcNcLdT4JgkZ7HtDIRaoKhMMC1cAH7v_MUXU/edit?usp=sharing"
-  img2: 2026/ut-db/13-physical.jpg
+  img: 2026/ut-db/13-physical.jpg
   readings:
   hw: 
   logistics:
