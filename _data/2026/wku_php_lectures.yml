@@ -158,9 +158,9 @@
   supp:
   readings:
   hw:
-  slides:
+  slides: "https://docs.google.com/presentation/d/15ilvAsJQ3OguYnyHZFyq4LT2K3jaFMt4KWjk0L6GIf4/edit?usp=sharing"
   slides2:
-  img:
+  img: 2026/wku-php/13-fetching-db.jpg
   logistics:
 
 - date: 6/3
