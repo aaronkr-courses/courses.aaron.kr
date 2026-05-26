@@ -126,7 +126,8 @@
   hw: 
   logistics: >
     <a href="https://drive.google.com/file/d/1-jl09W_H4xznxWUD24uqFPdJCnYNgnsX/view?usp=sharing">8장 연습문제.md</a><br>
-    <a href="https://docs.google.com/document/d/17byu99UEBc8mJ4eoiPOTHNfRgiUyq85MfBwThEV2Amk/edit?usp=sharing">8장 실습문제.docx</a>
+    <a href="https://docs.google.com/document/d/17byu99UEBc8mJ4eoiPOTHNfRgiUyq85MfBwThEV2Amk/edit?usp=sharing">8장 실습문제.docx</a><br>
+    <a href="https://drive.google.com/file/d/18wx4fu-hP2-bXXu9bsdO0NMsHjMUB2h4/view?usp=sharing">8장 과제 정답</a>
 
 - date: 5/18
   week: 12
@@ -139,7 +140,8 @@
   logistics: >
     <a href="https://raw.githubusercontent.com/aaronkr-classroom/db-code-exercises-jekkilekki/refs/heads/main/code/11%EC%A3%BC%EC%B0%A8/11%EC%A3%BC%EC%B0%A8.sql">11주차 코드 (Aaron)</a><br>
     <a href="https://drive.google.com/file/d/1XCN1fJC_Ig77b7Sdr9JozvDj1h6H1LvY/view?usp=sharing">연습문제 chp9.md</a><br>
-    <a href="https://docs.google.com/document/d/1dVaLB_2Lvp2l-1MoGcT_NTT1Kqy4dRJ40gMw97r7XO0/edit?usp=drive_link">9장 실습문제</a>
+    <a href="https://docs.google.com/document/d/1dVaLB_2Lvp2l-1MoGcT_NTT1Kqy4dRJ40gMw97r7XO0/edit?usp=drive_link">9장 실습문제</a><br>
+    <a href="https://drive.google.com/file/d/14ZTqMSvrH5hHOJT4rT9oFfomi7OABkJl/view?usp=sharing">9장 과제 정답</a>
 
 - date: >
     <span style="color: red;">5/25 (LMS 보강)</span>
@@ -153,7 +155,10 @@
   img: 2026/ut-db/12-norm.jpg 
   readings:
   hw: 
-  logistics:
+  logistics: >
+    <a href="https://drive.google.com/file/d/1nfK1os3biLthQCyt3A8uuhu4ORb2DVuq/view?usp=sharing">연습문제 chp10.md</a><br>
+    <a href="https://docs.google.com/document/d/1sVMRFfUQtOBLc-MiHQ14aVII061pwuV5dxVsYrxCijA/edit?usp=sharing">10장 실습문제</a><br>
+
 
 - date: 6/1
   week: 14

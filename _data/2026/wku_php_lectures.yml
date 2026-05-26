@@ -132,7 +132,7 @@
     10장 오류 처리
   supp:
   readings:
-  hw:
+  hw: "https://classroom.github.com/a/wHMtTpiq"
   slides: "https://docs.google.com/presentation/d/1TwBj95ZuvlL1sgpP7GrKeKe3GGLjupR8BpFEjLKrx9Y/edit?usp=sharing"
   slides2:
   img: 2026/wku-php/13-errors.jpg
@@ -144,7 +144,7 @@
     11장 구조화된 쿼리 언어
   supp:
   readings:
-  hw:
+  hw: "https://classroom.github.com/a/Wxel3OjZ"
   slides: "https://docs.google.com/presentation/d/14XmGWRLTuWm0cwt6C0tKgZ6lwgTFEKiio_M-375OrD0/edit?usp=sharing"
   slides2:
   img: 2026/wku-php/12-sql.jpg
