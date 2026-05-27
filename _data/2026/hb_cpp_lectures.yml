@@ -152,7 +152,7 @@
   readings: >
     Accelerated C++, <strong>12장 pp. 338-359</strong><br>
     📖 Accelerated C++, <strong>13장 pp. 362-398</strong>
-  hw:
+  hw: "https://classroom.github.com/a/q73qbYly"
   slides: "https://docs.google.com/presentation/d/1zMUfc73NQsGXszyYbzuAoay4OYOGGMgABAGM9iFfC4E/edit?usp=sharing"
   slides2: "https://docs.google.com/presentation/d/1b5uiVgeNYdFr9v1Tg9wAOC2iLKKAAgRMAGtXCn3XQiE/edit?usp=sharing"
   slides2Title: "CHAPTER 13 상속과 동적 바인딩"
