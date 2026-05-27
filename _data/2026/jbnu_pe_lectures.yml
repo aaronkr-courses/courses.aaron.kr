@@ -181,11 +181,14 @@
   title: >
     <span style="color: red">Election (선거)</span> <a href="https://lms.jbnu.ac.kr/">LMS Make-up</a><br>
     <strong>Current-Mode Control<br>
-    EMI Filters<br>
-    Switched-Capacitor Converters<br>
-    Soft Switching<br>
-    Resonant Power Conversion<br>
-    Gate Drive, Level Shift, Layout</strong>
+    EMI Filters</strong>
+  supp:
+  readings:
+  hw:
+  slides: "https://docs.google.com/presentation/d/1x8e53gMJO6VG_sYeX8QOWaTt56jyoMXDCsAGNVjWOVc/edit?usp=sharing"
+  slides2:
+  img: 2026/jbnu-pe/14-emi-1.jpg
+  logistics:
 
 - date: 6/10
   week: 15
