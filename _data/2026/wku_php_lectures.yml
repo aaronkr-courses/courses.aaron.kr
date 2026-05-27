@@ -170,9 +170,9 @@
   supp:
   readings:
   hw:
-  slides:
+  slides: "https://docs.google.com/presentation/d/1JOrVhl8Givewef47piJXUM_CkIhXDgsnSppyHLzmzb0/edit?usp=sharing"
   slides2:
-  img:
+  img: 2026/wku-php/14-update-db.jpg
   logistics:
 
 - date: 6/9
