@@ -178,10 +178,10 @@
   supp:
   readings:
   hw:
-  slides: 
+  slides: "https://docs.google.com/presentation/d/1yGQ0cqfxiiW3ekw2IqE8Snqc9ytxQxFpBh_AcjE_cf4/edit?usp=sharing"
   slides2: "https://docs.google.com/presentation/d/1lh0RqVbBdZ8CPdCahKOi5ECjp1RKSeMT/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
   slides2Title: "Node-RED Server"
-  img: 
+  img: 2026/jbnu-devs/13-sensors.jpg
   logistics:
 
 - date: 6/4
