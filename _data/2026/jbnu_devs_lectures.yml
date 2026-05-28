@@ -192,10 +192,10 @@
   supp:
   readings:
   hw:
-  slides: 
+  slides: "https://docs.google.com/presentation/d/1McN5MVSLeyGZv8h7JvG_6tPOGW7t_GWScURK8_gSoa0/edit?usp=sharing"
   slides2: "https://docs.google.com/presentation/d/1BCKiqlR7XmGQ_FoJrhgtuvH3C0jv-4w_/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
   slides2Title: "Sensors Monitoring"
-  img: 
+  img: 2026/jbnu-devs/14-21-measurement.jpg
   logistics:
 
 - date: 6/11

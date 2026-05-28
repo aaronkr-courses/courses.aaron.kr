@@ -160,14 +160,14 @@
 
 - date: 6/4
   week: 14
-  hidden: true
   title: >
-    <strong>8. Second-Order Circuits</strong>
+    <span style="color: red"><a href="https://lms.jbnu.ac.kr/">LMS Asynchronous Lecture</a></span><br>
+    <strong>Final Review</strong>
   supp:
   readings: p. 311-365
   hw:
-  slides: "https://docs.google.com/presentation/d/1BvbdAqtSf0tlU_czFPCp92kK_Yw0jQ5UdICJXTKtyxU/edit?usp=sharing"
-  img2: 2025/jbnu-circuits/15-second-order.jpg
+  slides: "https://docs.google.com/presentation/d/1b1rAy5iCSO1If5ptMIG3z5lUf9WH8Tm6y4P0_CmV2x4/edit?usp=sharing"
+  img2: 2025/jbnu-circuits/16-final-review.jpg
   logistics:
 
 - date: 6/11
