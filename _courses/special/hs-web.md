@@ -1,6 +1,6 @@
 ---
 layout: course
-init: UT → HS
+init: HS
 title: Web Programming with a Native Speaker
 subtitle: 영어 원어민과 함께하는 웹프로그래밍
 description: 2023년 방학 • 충북에 있는 고등학교

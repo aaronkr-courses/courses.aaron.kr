@@ -62,7 +62,7 @@ eyebrow: Teaching History
         <button class="pill" data-filter="uni" data-value="HB"><span class="lang-en">HB</span><span class="lang-ko">한밭대</span></button>
         <button class="pill" data-filter="uni" data-value="JNUE"><span class="lang-en">JNUE</span><span class="lang-ko">전주교대</span></button>
         <button class="pill" data-filter="uni" data-value="DJU"><span class="lang-en">DJU</span><span class="lang-ko">대전대</span></button>
-        <button class="pill" data-filter="uni" data-value="IKSAN"><span class="lang-en">Iksan HS</span><span class="lang-ko">익산 고교</span></button>
+        <button class="pill" data-filter="uni" data-value="HS"><span class="lang-en">HS</span><span class="lang-ko">고등학교</span></button>
       </div>
       <div class="ctrl-row">
         <span class="ctrl-row-label"><span class="lang-en">Topic</span><span class="lang-ko">주제</span></span>

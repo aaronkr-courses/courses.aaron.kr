@@ -1,6 +1,6 @@
 ---
 layout: course
-init: JBNU
+init: HB
 title: Advanced C Programming
 subtitle: 고급 C 프로그래밍
 description: INFO2104 • 2024년 2학기 • 한밭대학교
