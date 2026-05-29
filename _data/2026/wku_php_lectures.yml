@@ -157,13 +157,13 @@
     12장 데이터베이스에서 데이터 가져오기 & 표시하기
   supp:
   readings:
-  hw:
+  hw: "https://classroom.github.com/a/-w1T-nmQ"
   slides: "https://docs.google.com/presentation/d/15ilvAsJQ3OguYnyHZFyq4LT2K3jaFMt4KWjk0L6GIf4/edit?usp=sharing"
   slides2:
   img: 2026/wku-php/13-fetching-db.jpg
   logistics:
 
-- date: 6/3
+- date: 6/2
   week: 14
   title: >
     13장 데이터베이스의 데이터 업데이트하기
