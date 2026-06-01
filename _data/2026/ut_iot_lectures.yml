@@ -146,7 +146,6 @@
 
 - date: 6/8
   week: 15
-  hidden: true
   title: >
     <strong>CHAPTER 13 전등 제어와 경보 시스템 구성하기</strong>
   slides: "https://docs.google.com/presentation/d/1Sl0ia9jA6wq81gDr5vWpyOpCl4b2n2X7x-EUnAxwPqE/edit?usp=sharing"
@@ -159,7 +158,7 @@
     <span style="color: red">6/15 (금요일)</span>
   week: 15
   title: >
-    <span style="color: red">금요일 보강이어서 6/22일에 기말고사합니다.</span>
+    <span style="color: red">금요일 보강이어서<br>기말고사는 6/22일에 봅니다.</span>
 
 - date: 6/22
   week: 16
