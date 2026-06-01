@@ -167,7 +167,8 @@
   img: 2026/ut-db/13-physical.jpg
   readings:
   hw: 
-  logistics:
+  logistics: >
+    <a href="https://drive.google.com/file/d/11tAeGB3n91vn879hyryRO00tJBatNOSg/view?usp=sharing">11장 연습문제</a>
 
 - date: 6/8
   week: 14
