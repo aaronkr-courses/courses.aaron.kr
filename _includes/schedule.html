@@ -37,19 +37,23 @@
 {%- endif -%}
 
 {%- assign today_ts = 'now' | date: '%s' | plus: 0 -%}
+{%- assign today_midnight_ts = 'now' | date: '%Y-%m-%d' | date: '%s' | plus: 0 -%}
 
 {%- if _is_current -%}
   {%- comment -%}
     Compute the Mon–Sun window containing today.
     IMPORTANT: compute _off first, then subtract — do NOT chain | minus | times.
-    assign _dfm = today_wday | minus: 2 => Change from minus: 1 to minus: 2 because Monday is not highlighted
+    assign _dfm = today_wday | minus: 1
   {%- endcomment -%}
   {%- assign today_wday = 'now' | date: '%w' | plus: 0 -%}
-  {%- assign _dfm = today_wday | minus: 2 -%}
-  {%- if today_wday == 0 -%}{%- assign _dfm = 6 -%}{%- endif -%}
-  {%- assign _off         = _dfm | times: 86400 -%}
-  {%- assign week_start_ts = today_ts | minus: _off -%}
-  {%- assign week_end_ts   = week_start_ts | plus: 604800 -%}
+  {%- assign _dfm = today_wday | minus: 1 -%}
+  {%- if today_wday == 0 -%}
+    {%- assign _dfm = 6 -%}
+  {%- endif -%}
+
+  {%- assign _off = _dfm | times: 86400 -%}
+  {%- assign week_start_ts = today_midnight_ts | minus: _off -%}
+  {%- assign week_end_ts = week_start_ts | plus: 604800 -%}
 {%- endif -%}
 
 {%- assign skip_count = 0 -%}

@@ -169,7 +169,7 @@
     13장 데이터베이스의 데이터 업데이트하기
   supp:
   readings:
-  hw:
+  hw: "https://classroom.github.com/a/b8AiTfGr"
   slides: "https://docs.google.com/presentation/d/1JOrVhl8Givewef47piJXUM_CkIhXDgsnSppyHLzmzb0/edit?usp=sharing"
   slides2:
   img: 2026/wku-php/14-update-db.jpg

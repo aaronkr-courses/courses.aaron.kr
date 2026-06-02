@@ -15,8 +15,7 @@ grading:
   attendance: 20
   midterm: 25
   final: 25
-  homework: 20
-  project: 10
+  homework: 30
 
 information:
   - section: 0000127046
