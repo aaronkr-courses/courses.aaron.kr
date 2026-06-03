@@ -179,9 +179,9 @@
   week: 15
   title: >
     <strong>Final Test</strong>
-    <div style="display: none;">
-      <br><a href="#">스터디 가이드</a>
-      <br><a href="#">기말퀴즈</a>
+    <div>
+      <br><a href="https://docs.google.com/presentation/d/1YMNA2t_haqMiL1I4bK6Bvqv1Gt3pVAphhYfOuF6WZJA/edit?usp=sharing">스터디 가이드</a>
+      <br><a style="display: none;" href="#">기말퀴즈</a>
     </div>
   logistics: >
     <div style="display: none;">
