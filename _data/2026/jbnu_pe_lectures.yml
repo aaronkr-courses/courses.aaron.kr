@@ -194,7 +194,7 @@
   week: 15
   title: >
     <strong>Final Test</strong><br>
-    <div style="display: none;">
-      <a href="#">Study Guide</a><br>
-      <a href="#">Test</a>
+    <div>
+      <a href="https://docs.google.com/document/d/1wJA0HEwjpgDo0FrgfElArg4RJn0eOo8uOqlMCJz5xZA/edit?usp=drive_link">Study Guide</a><br>
+      <a style="display: none;" href="#">Test</a>
     </div>

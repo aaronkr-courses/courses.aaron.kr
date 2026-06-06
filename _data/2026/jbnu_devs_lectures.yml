@@ -193,18 +193,16 @@
   readings:
   hw:
   slides: "https://docs.google.com/presentation/d/1McN5MVSLeyGZv8h7JvG_6tPOGW7t_GWScURK8_gSoa0/edit?usp=sharing"
-  slides2: "https://docs.google.com/presentation/d/1BCKiqlR7XmGQ_FoJrhgtuvH3C0jv-4w_/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
-  slides2Title: "Sensors Monitoring"
+  slides2: "https://docs.google.com/presentation/d/1A8uXj3Kdg09uEb9dZChtjVjVDcByaikx/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2Title: "Lights & Alarms"
   img: 2026/jbnu-devs/14-21-measurement.jpg
-  logistics:
+  logistics: >
+    <a href="https://docs.google.com/presentation/d/1BCKiqlR7XmGQ_FoJrhgtuvH3C0jv-4w_/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true">DHT22 Monitoring Slides</a>
 
 - date: 6/11
   week: 15
   title: >
     <strong>Final Test</strong><br>
     <div style="display:none;">
-      <a href="#">Final Study Guide</a>
+      Final Study Guide <a href="https://docs.google.com/presentation/d/1V-yMpB60KaJ_Ismbt2HCRuqCI34YFBQ6zGlMY5u5_Mg/edit?usp=sharing">PPT</a> &bull; <a href="https://docs.google.com/document/d/1E3VG4zG3v_HFHZD9hiqr_OXugMxL89437HABFJekS68/edit?usp=sharing">DOCX</a>
     </div>
-  slides:
-  slides2: "https://docs.google.com/presentation/d/1A8uXj3Kdg09uEb9dZChtjVjVDcByaikx/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
-  slides2Title: "Lights & Alarms"
