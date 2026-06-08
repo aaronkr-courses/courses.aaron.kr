@@ -169,7 +169,8 @@
   readings:
   hw: 
   logistics: >
-    <a href="https://drive.google.com/file/d/11tAeGB3n91vn879hyryRO00tJBatNOSg/view?usp=sharing">11장 연습문제</a>
+    <a href="https://drive.google.com/file/d/11tAeGB3n91vn879hyryRO00tJBatNOSg/view?usp=sharing">11장 연습문제</a><br>
+    <a href="https://drive.google.com/file/d/14nRzyDmcrNt8m1TSo6fI03bPHJbhhSCN/view?usp=sharing">11장 과제 정답</a>
 
 - date: 6/8
   week: 14
@@ -178,8 +179,10 @@
   slides: "https://docs.google.com/presentation/d/1mBG7ZH6S2a_u5GO-kJLQxg0vha-pMR-dTvfZCeMs9NQ/edit?usp=sharing"
   img2: 2026/ut-db/14-implementation.jpg
   readings:
-  hw: 
-  logistics:
+  hw:
+  logistics: >
+    <a href="https://drive.google.com/drive/folders/1H7CYlH40NP9atRDvXtkHdMadmUPjwpdW?usp=sharing" style="font-weight: bold; color: red;">최종 프로젝트</a>
+    <a href="https://drive.google.com/file/d/1-JuQuZuJcrOTSHEV-5_-EBxwdgSF9jew/view?usp=sharing">12장 연습문제</a><br>
 
 - date: >
     <span style="color: red">6/15 (금요일)</span>
