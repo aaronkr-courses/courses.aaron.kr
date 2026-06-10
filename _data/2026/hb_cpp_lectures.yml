@@ -171,7 +171,7 @@
     <strong>CHAPTER 14 메모리 관리 자동화</strong>
   supp:
   readings: Accelerated C++, <strong>14장 pp. 399-</strong>
-  hw:
+  hw: "https://classroom.github.com/a/z2EoxSPo"
   slides: "https://docs.google.com/presentation/d/1jZsl94TLtSibDlOzFc4SNnihqfv376pldcq5WaAyURI/edit?usp=sharing"
   img2: 2025/hb-cpp/14-auto-mem.jpg
   logistics: >
