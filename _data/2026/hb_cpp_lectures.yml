@@ -175,7 +175,8 @@
   slides: "https://docs.google.com/presentation/d/1jZsl94TLtSibDlOzFc4SNnihqfv376pldcq5WaAyURI/edit?usp=sharing"
   img2: 2025/hb-cpp/14-auto-mem.jpg
   logistics: >
-    <a href="https://github.com/aaronkr-classroom/13-dynamic-binding-jekkilekki">13장 완성 코드</a>
+    <a href="https://github.com/aaronkr-classroom/13-dynamic-binding-jekkilekki">13장 완성 코드</a><br>
+    <a href="https://github.com/aaronkr-classroom/14-cpp-memory-management-2026-jekkilekki">14장 완성 코드</a>
 
 - date: 6/17
   week: 15
