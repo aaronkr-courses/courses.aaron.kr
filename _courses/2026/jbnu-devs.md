@@ -23,6 +23,7 @@ information:
     time: 목 567 | Thur 1-4pm
     location: 정보화교육동 201호
     kakaotalk: https://open.kakao.com/o/gzdKVdii
+    classroom: https://classroom.google.com/c/ODUwMTIwNTMyODI3?cjc=onakzmcx
     github: https://classroom.github.com/a/ckk3PfSO
     code: https://github.com/aaronkr-courses/esp32-iotmaker
 
