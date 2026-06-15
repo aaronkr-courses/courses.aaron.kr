@@ -195,7 +195,7 @@
   hidden: true
   title: >
     <strong>Final Test</strong><br>
-    <div style="display: none;">
-      <a href="#">기말퀴즈</a>
-      <a href="https://docs.google.com/presentation/d/1YpBhEIwPi4lZ7HHwP8jSNFPf_XJDOHhc-R-JCy6g8KU/edit?usp=sharing">스터디 가이드</a>
+    <div>
+      <a href="https://docs.google.com/presentation/d/1YpBhEIwPi4lZ7HHwP8jSNFPf_XJDOHhc-R-JCy6g8KU/edit?usp=sharing">스터디 가이드</a><br>
+      <a style="display: none;" href="#">기말퀴즈</a>
     </div>
