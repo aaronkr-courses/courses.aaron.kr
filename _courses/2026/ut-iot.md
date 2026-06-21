@@ -26,6 +26,7 @@ information:
     kakaotalk: https://open.kakao.com/o/g0ufTdii
     github: https://classroom.github.com/a/kpJtYeMa
     code: https://github.com/aaronkr-courses/esp32-iotmaker
+    classroom: https://classroom.google.com/c/ODY4MzUwNDMwMzQ5?cjc=c5hhprci
 
 Main-Text:
   - text: "주교재"
