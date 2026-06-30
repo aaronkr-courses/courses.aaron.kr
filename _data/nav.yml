@@ -36,6 +36,9 @@
     - title_en: "Late Policy"
       title_ko: "지각 제출 정책"
       url: "/policies/late"
+    - title_en: "Grade Changes & Appeals"
+      title_ko: "성적 변경 및 이의 제기"
+      url: "/policies/grades"
     - divider: true
     - title_en: "AI Tool Use"
       title_ko: "AI 사용 정책"
@@ -58,6 +61,10 @@
   footer_ko: "피지컬 AI 연구실"
   footer_url: "https://pailab.io"
   items:
+    - title_en: "How to Get an A"
+      title_ko: "A를 받는 방법"
+      url: "/resources/how-to-get-an-a"
+    - divider: true
     - title_en: "Writing Research Papers"
       title_ko: "연구 논문 작성"
       url: "https://www.pailab.io/pages/papers"

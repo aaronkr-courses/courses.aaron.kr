@@ -69,6 +69,20 @@ permalink: /policies/
       </div>
     </a>
 
+    <a class="pol-card" href="{{ '/policies/grades' | relative_url }}">
+      <div class="pol-card-body">
+        <span class="pol-code">POL &mdash; 08</span>
+        <div class="pol-card-title"><span class="lang-en">Grade Changes &amp; Appeals</span><span class="lang-ko">성적 변경 및 이의 제기</span></div>
+        <div class="pol-excerpt">
+          <span class="lang-en">Grades reflect attendance, homework, and tests — not relationships or requests. Explains 상대평가 (relative grading curve) for Korean courses and absolute grading for international students.</span>
+          <span class="lang-ko">성적은 출석, 과제, 시험을 반영합니다 — 관계나 요청이 아닙니다. 한국 강좌의 상대평가와 국제 학생의 절대평가를 설명합니다.</span>
+        </div>
+        <span class="read-more"><span class="lang-en">Read full policy →</span><span class="lang-ko">전체 정책 읽기 →</span></span>
+        <div class="pol-tags"><span class="pol-tag assess">Grading</span><span class="pol-tag core">Core</span></div>
+        <div class="pol-card-footer"><span class="pol-updated">Jun 2026</span><span class="pol-arrow">→</span></div>
+      </div>
+    </a>
+
   </div><!-- .policy-grid -->
 
   <div class="list-section">
@@ -130,6 +144,14 @@ permalink: /policies/
         </div>
         <div class="pl-meta"><span class="pl-date">Jan 2025</span><span class="pl-arrow">→</span></div>
       </a></li>
+      <li><a class="pol-list-item" href="{{ '/policies/grades' | relative_url }}">
+        <span class="pl-num">08</span>
+        <div class="pl-content">
+          <div class="pl-title"><span class="lang-en">Grade Changes &amp; Appeals</span><span class="lang-ko">성적 변경 및 이의 제기</span></div>
+          <div class="pl-desc"><span class="lang-en">상대평가 vs 절대평가, when grades change, and the appeal process.</span><span class="lang-ko">상대평가와 절대평가, 성적 변경 시점 및 이의 제기 절차.</span></div>
+        </div>
+        <div class="pl-meta"><span class="pl-date">Jun 2026</span><span class="pl-arrow">→</span></div>
+      </a></li>
     </ul>
   </div><!-- .list-section -->
 
@@ -160,7 +182,16 @@ permalink: /policies/
           <span class="faq-chevron">&#x25BE;</span>
         </button>
         <div class="faq-a">
-          <p><span class="lang-en">Submit a written regrade request within two weeks. Email a specific explanation of which problem was graded incorrectly and why. Regrading may result in a higher or lower score.</span><span class="lang-ko">2주 이내에 서면 재평가 요청을 제출하세요. 어떤 문제가 잘못 채점되었는지, 그 이유를 구체적으로 설명하는 이메일을 보내세요. 재평가 결과 점수가 올라가거나 내려갈 수 있습니다.</span></p>
+          <p><span class="lang-en">Submit a written regrade request within two weeks. Email a specific explanation of which score was recorded or calculated incorrectly and why. Regrading may result in a higher or lower score. See the <a href="{{ '/policies/grades' | relative_url }}">Grade Changes &amp; Appeals policy</a> for full details.</span><span class="lang-ko">2주 이내에 서면 재평가 요청을 제출하세요. 어느 점수가 잘못 기록되거나 계산되었는지, 그 이유를 구체적으로 설명하는 이메일을 보내세요. 재평가 결과 점수가 올라가거나 내려갈 수 있습니다. 자세한 내용은 <a href="{{ '/policies/grades' | relative_url }}">성적 변경 및 이의 제기 정책</a>을 참조하세요.</span></p>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span><span class="lang-en">I got 82/100 — why did I receive C+?</span><span class="lang-ko">82점을 받았는데 왜 C+인가요?</span></span>
+          <span class="faq-chevron">&#x25BE;</span>
+        </button>
+        <div class="faq-a">
+          <p><span class="lang-en">Most Korean university courses use <strong>상대평가</strong> (relative grading). Your letter grade is determined by your class ranking, not your raw score alone. If many students scored higher than you, the B-grade quota may already be filled — meaning 82 points places you below the B cutoff for that section. The grade boundaries are set by the university, not by me personally. See the <a href="{{ '/policies/grades' | relative_url }}">Grade Changes policy</a> for a full explanation.</span><span class="lang-ko">대부분의 한국 대학 강좌는 <strong>상대평가</strong>를 사용합니다. 등급은 원점수가 아닌 반 순위로 결정됩니다. 많은 학생들이 더 높은 점수를 받았다면 B 등급 할당량이 이미 채워져 있을 수 있습니다 — 즉, 82점이 해당 분반에서 B 기준선 아래에 해당할 수 있습니다. 성적 기준선은 교수가 아닌 대학에서 설정합니다. 자세한 설명은 <a href="{{ '/policies/grades' | relative_url }}">성적 변경 정책</a>을 참조하세요.</span></p>
         </div>
       </li>
       <li class="faq-item">

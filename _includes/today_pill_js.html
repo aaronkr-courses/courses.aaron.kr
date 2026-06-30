@@ -1,0 +1,46 @@
+<script>
+// Shared today-pill logic. Exposes window.TodayPill used by index.md and office-hours.md.
+// Each page calls TodayPill.updatePill() then adds its own extras (e.g., day-card highlight).
+(function(g) {
+  var SCH = {
+    1: { en: 'UT — Korea Transportation University', ko: '한국교통대학교 (월요일)' },
+    2: { en: 'WKU — Wonkwang University',           ko: '원광대학교 (화요일)'    },
+    3: { en: 'HB — Hanbat University',              ko: '한밭대학교 (수요일)'    },
+    4: { en: 'JBNU — Jeonbuk University',           ko: '전북대학교 (수요일 · 목요일)' },
+    5: { en: 'JNUE — Jeonju Natl. Univ. of Ed.',   ko: '전주교육대학교 (금요일)' }
+  };
+  function isKo() { return document.documentElement.classList.contains('ko'); }
+  function isVacation() {
+    var n = new Date(), m = n.getMonth() + 1, d = n.getDate();
+    return (m === 6 && d >= 20) || m === 7 || m === 8;
+  }
+  // Returns { type: 'vacation'|'weekend'|'class'|'noclass', day: 0-6 }
+  function status() {
+    var day = new Date().getDay();
+    if (isVacation())      return { type: 'vacation', day: day };
+    if (!day || day === 6) return { type: 'weekend',  day: day };
+    if (SCH[day])          return { type: 'class',    day: day };
+    return                        { type: 'noclass',  day: day };
+  }
+  // Basic pill update — sufficient for most pages
+  function updatePill() {
+    var pill = document.getElementById('today-pill');
+    var txt  = document.getElementById('today-text');
+    if (!pill || !txt) return;
+    var s = status(), ko = isKo();
+    if (s.type === 'vacation') {
+      pill.classList.add('noclass');
+      txt.textContent = ko ? '여름 방학 — 연구 모드' : 'Summer Break — Research Mode';
+    } else if (s.type === 'weekend') {
+      pill.classList.add('noclass');
+      txt.textContent = ko ? '주말 — 휴강' : 'Weekend — No Class';
+    } else if (s.type === 'class') {
+      txt.textContent = (ko ? '오늘: ' : 'Today: ') + (ko ? SCH[s.day].ko : SCH[s.day].en);
+    } else {
+      pill.classList.add('noclass');
+      txt.textContent = ko ? '오늘은 강의 없음' : 'No Class Today';
+    }
+  }
+  g.TodayPill = { status: status, updatePill: updatePill, isKo: isKo, SCH: SCH };
+})(window);
+</script>

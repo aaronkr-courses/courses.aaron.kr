@@ -12,11 +12,12 @@
 #   badge:      Badge label text (optional)
 #   badge_type: course | lab | admin  (badge color, defaults to admin)
 
-- date: 2026-04-24
-  type: new
-  title: "Site Redesign — Spring 2026"
-  title_ko: "사이트 개편 — 2026년 1학기"
-  body: "Welcome to the newly redesigned courses site, now built with Jekyll on GitHub Pages. Courses, schedules, and policies are updated for Spring 2026."
-  body_ko: "Jekyll 기반으로 새롭게 개편된 강좌 사이트에 오신 것을 환영합니다. 강좌, 강의 일정, 규정이 2026년 1학기에 맞게 업데이트되었습니다."
-  badge: "Spring 2026"
+- date: 2026-06-30
+  type: teal
+  title: "Summer 2026 — Research & Writing Mode"
+  title_ko: "2026년 여름 — 연구 및 집필 모드"
+  body: "Spring semester has ended. I am on research leave through August, focused on PAI Lab projects and writing. Campus visits resume in September. Reach me via KakaoTalk for urgent matters."
+  body_ko: "1학기가 종료되었습니다. 8월까지 PAI 연구소 프로젝트와 집필에 집중하는 연구 휴가 중입니다. 캠퍼스 방문은 9월에 재개됩니다. 긴급한 사항은 카카오톡으로 연락해 주세요."
+  url: "/office-hours"
+  badge: "Summer 2026"
   badge_type: admin

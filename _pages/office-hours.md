@@ -7,10 +7,7 @@ permalink: /office-hours/
 
 <div class="wrap">
 <header class="page-header" data-waves>
-  <div class="today-pill animate d1" id="today-pill">
-    <span class="today-dot"></span>
-    <span id="today-text">Loading&hellip;</span>
-  </div>
+  {% include today_pill.html %}
   <p class="eyebrow animate d1">
     <span class="lang-en">Availability &amp; Contact</span>
     <span class="lang-ko">가용성 및 연락처</span>
@@ -25,6 +22,26 @@ permalink: /office-hours/
   </div>
 </header>
 <div class="oh-page">
+
+  <div id="summer-status" class="season-notice" style="display:none">
+    <span class="season-icon">☀</span>
+    <div class="season-body">
+      <strong><span class="lang-en">Summer 2026 — Research &amp; Writing Mode</span><span class="lang-ko">2026년 여름 — 연구 및 집필 모드</span></strong>
+      <p>
+        <span class="lang-en">Spring semester has ended. I am on research leave through August, working on PAI Lab projects and writing. Campus visits are paused — no in-person office hours until September. For urgent matters, KakaoTalk is still monitored. Meetings can be booked via Cal.com below.</span>
+        <span class="lang-ko">1학기가 종료되었습니다. 8월까지 PAI 연구소 프로젝트와 집필에 집중하는 연구 휴가 중입니다. 캠퍼스 방문이 중단되어 있으며, 9월까지 대면 상담은 없습니다. 긴급한 사항은 카카오톡으로 연락하세요. 아래 Cal.com을 통해 미팅 예약이 가능합니다.</span>
+      </p>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var m = new Date().getMonth() + 1, d = new Date().getDate();
+    if ((m === 6 && d >= 20) || m === 7 || m === 8) {
+      var el = document.getElementById('summer-status');
+      if (el) el.style.display = 'flex';
+    }
+  })();
+  </script>
 
   <div class="oh-heading animate d3">
     <span class="oh-label"><span class="lang-en">Weekly Campus Schedule</span><span class="lang-ko">주간 캠퍼스 일정</span></span>
@@ -178,29 +195,18 @@ Cal("ui", { hideEventTypeDetails: false, layout: "month_view", theme: document.d
 </div><!-- .oh-page -->
 </div><!-- .wrap -->
 
+{% include today_pill_js.html %}
 <script>
 (function(){
-  const campuses = {
-    1: { en: 'Korea Transportation University', ko: '한국교통대학교 (월요일)' },
-    2: { en: 'Wonkwang University',             ko: '원광대학교 (화요일)' },
-    3: { en: 'Hanbat University',               ko: '한밭대학교 (수요일)' },
-    4: { en: 'Jeonbuk National University',     ko: '전북대학교 (수요일 · 목요일)' },
-    5: { en: 'Jeonju Natl. Univ. of Ed.',       ko: '전주교육대학교 (금요일)' }
-  };
-  const pill = document.getElementById('today-pill');
-  const txt  = document.getElementById('today-text');
-  const d    = new Date().getDay();
-  const isKo = document.documentElement.classList.contains('ko');
-  if (campuses[d]) {
-    if (txt) txt.innerHTML = (isKo ? '오늘: <strong style="color:var(--text)">' : 'Today at: <strong style="color:var(--text)">') + (isKo ? campuses[d].ko : campuses[d].en) + '</strong>';
-    const card = document.querySelector(`.day-card[data-day="${d}"]`);
+  TodayPill.updatePill();
+  // Office-hours extra: highlight the matching day-card
+  var s = TodayPill.status();
+  if (s.type === 'class') {
+    var card = document.querySelector('.day-card[data-day="' + s.day + '"]');
     if (card) {
       card.classList.add('today-card');
       card.insertAdjacentHTML('afterbegin', '<span class="today-chip-sm">Today</span>');
     }
-  } else {
-    if (txt) txt.innerHTML = isKo ? '주말 — 휴강' : 'No classes today &mdash; weekend';
-    if (pill) pill.classList.add('noclass');
   }
 })();
 </script>

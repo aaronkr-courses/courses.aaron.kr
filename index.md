@@ -8,10 +8,7 @@ permalink: /
 <div class="wrap">
 
   <header class="home-hero" data-waves>
-    <div class="today-pill animate d1" id="today-pill">
-      <span class="today-dot"></span>
-      <span id="today-text">Loading...</span>
-    </div>
+    {% include today_pill.html %}
 
     <div class="eyebrow">Prof. Aaron Snowberger</div>
     <h1 class="animate d2">Teaching &amp;<br><em>Courses</em></h1>
@@ -84,8 +81,8 @@ permalink: /
     <div class="section-top">
       <div class="section-heading-row">
         <span class="section-label">
-          <span class="lang-en">Spring 2026 — Current Courses</span>
-          <span class="lang-ko">2026년 1학기 — 현재 강좌</span>
+          <span class="lang-en">Spring 2026 — Courses</span>
+          <span class="lang-ko">2026년 1학기 — 강좌</span>
         </span>
         <span class="section-line"></span>
       </div>
@@ -96,6 +93,34 @@ permalink: /
         </button>
       </div>
     </div>
+
+    <div class="study-tips-bar">
+      <a href="{{ '/resources/how-to-get-an-a' | relative_url }}" class="stb-link stb-primary">
+        <span class="stb-icon">🎯</span>
+        <span class="lang-en">How to Get an A in My Courses</span>
+        <span class="lang-ko">내 강좌에서 A를 받는 방법</span>
+      </a>
+      <span id="grade-policy-cta" class="stb-link stb-secondary" style="display:none">
+        <span class="stb-sep">·</span>
+        <a href="{{ '/policies/grades' | relative_url }}">
+          <span class="lang-en">Grade Change Policy</span>
+          <span class="lang-ko">성적 변경 정책</span>
+        </a>
+      </span>
+    </div>
+    <script>
+    // Show grade-policy CTA only during complaint seasons:
+    // June 12 – July 15 (post spring grades) and Dec 12 – Jan 15 (post fall grades)
+    (function(){
+      var m = new Date().getMonth() + 1, d = new Date().getDate();
+      var show = (m === 6 && d >= 12) || (m === 7 && d <= 15)
+              || (m === 12 && d >= 12) || (m === 1 && d <= 15);
+      if (show) {
+        var el = document.getElementById('grade-policy-cta');
+        if (el) el.style.display = 'inline-flex';
+      }
+    })();
+    </script>
 
     <div id="thumb-section">
       {%- assign current_courses = site.courses | where_exp: "c", "c.now" -%}
@@ -289,30 +314,10 @@ permalink: /
 
 </div><!-- /.wrap -->
 
+{% include today_pill_js.html %}
 <script>
 // ── Today pill ────────────────────────────────────────────────────────────────
-(function() {
-  const schedule = {
-    1: { name: 'UT — Korea Transportation University', ko: '한국교통대학교 (월요일)' },
-    2: { name: 'WKU — Wonkwang University',           ko: '원광대학교 (화요일)' },
-    3: { name: 'HB — Hanbat University',              ko: '한밭대학교 (수요일)' },
-    4: { name: 'JBNU — Jeonbuk University',           ko: '전북대학교 (수요일 · 목요일)' },
-    5: { name: 'JNUE — Jeonju Natl. Univ. of Ed.',   ko: '전주교육대학교 (금요일)' },
-  };
-  const day = new Date().getDay();
-  const pill = document.getElementById('today-pill');
-  const txt  = document.getElementById('today-text');
-  const isKo = document.documentElement.classList.contains('ko');
-  if (day === 0 || day === 6) {
-    pill.classList.add('noclass');
-    txt.textContent = isKo ? '주말 — 휴강' : 'Weekend — No Class';
-  } else if (schedule[day]) {
-    txt.textContent = (isKo ? '오늘: ' : 'Today: ') + (isKo ? schedule[day].ko : schedule[day].name);
-  } else {
-    pill.classList.add('noclass');
-    txt.textContent = isKo ? '오늘은 강의 없음' : 'No Class Today';
-  }
-})();
+TodayPill.updatePill();
 
 // ── Thumbnail toggle ──────────────────────────────────────────────────────────
 const _tt = document.getElementById('thumb-toggle');
