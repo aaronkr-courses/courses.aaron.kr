@@ -181,9 +181,17 @@ permalink: /
     </div>
   </div>
 
+  <!-- ── Archive link ──────────────────────────────────────────────────── -->
+  <div style="text-align:center;">
+    <a href="{{ '/archive' | relative_url }}" class="back-btn" style="display:inline-flex;">
+      <span class="lang-en">View All Courses (Archive) →</span>
+      <span class="lang-ko">전체 강좌 보기 (아카이브) →</span>
+    </a>
+  </div>
+
 <div id="announce-outer">
 {%- if site.data.announcements.size > 0 -%}
-<div class="announce-section" style="padding:52px 0 0">
+<div class="announce-section">
   <div class="section-top">
     <div class="section-heading-row">
       <span class="section-label">
@@ -328,14 +336,6 @@ permalink: /
       .catch(function() {});
   })();
   </script>
-
-  <!-- ── Archive link ──────────────────────────────────────────────────── -->
-  <div style="padding-bottom:80px;text-align:center;">
-    <a href="{{ '/archive' | relative_url }}" class="back-btn" style="display:inline-flex;">
-      <span class="lang-en">View All Courses (Archive) →</span>
-      <span class="lang-ko">전체 강좌 보기 (아카이브) →</span>
-    </a>
-  </div>
 
 </div><!-- /.wrap -->
 
