@@ -1,0 +1,232 @@
+- date: 8/31
+  week: 1
+  skip: true
+  title: >
+    <strong>Conference Presentations</strong><br>
+    <a href="https://docs.google.com/presentation/d/1KJgk9eaXtaVf_SEy5XcxJ5Om4xsv6LDYUl729R_pays/edit?usp=sharing">0. Student Research (full)</a><br>
+    <a href="https://docs.google.com/presentation/d/1Y_T0BYhbiMy-F0EKliaI6U169T2wFOXlC6CxuHi1y9Q/edit?usp=sharing">1. Select a Topic</a><br>
+    <a href="https://docs.google.com/presentation/d/1N8Hu-Y_YH7uxtR-OoXxICehon4ILtFGYbGlvh1W6QmY/edit?usp=sharing">2. Writing your Paper</a>
+  supp:
+  readings: Use the template files provided to write your paper.
+  hw:
+  slides: "https://docs.google.com/presentation/d/1KJgk9eaXtaVf_SEy5XcxJ5Om4xsv6LDYUl729R_pays/edit?usp=sharing"
+  slides2:
+  img: 0-research.jpg
+  logistics: >
+    <a href="https://drive.google.com/drive/folders/1XRI8KHzocVz4gamFO_V0qjqBXhmhyljl?usp=sharing"><strong>Template files</strong></a>
+
+- date: 9/7
+  week: 1
+  title: >
+    <strong>Introduction</strong>
+  supp:
+  readings:
+  hw:
+  slides: "https://docs.google.com/presentation/d/1PCqHQq9XjynWK_brYQQDSH7mxZUhf4K93Pg9ivIhRc4/edit?usp=sharing"
+  slides2:
+  img: 2025/jbnu-info/1-intro.jpg
+  logistics: >
+    <a href="https://docs.google.com/presentation/d/1KJgk9eaXtaVf_SEy5XcxJ5Om4xsv6LDYUl729R_pays/edit?usp=sharing">
+      Conference Presentation Info
+    </a>
+
+- date: 9/14
+  week: 2
+  title: >
+    <strong>What is Information?</strong>
+  supp:
+  readings:
+  _slides: "https://docs.google.com/presentation/d/1g_wN1T6o0O1kOCuF7DLiW4mSqraUFQTjZ8bwFMbdY3U/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-info/2-info.jpg
+  hw: 
+  logistics: "Hello Python, MD"
+  tooltip: "(only one HW may work for you - choose one, write any Python & Markdown code and submit, don't run it)"
+
+- date: 9/21
+  week: 3
+  title: >
+    <strong>Baye's Rule</strong>
+  supp:
+  readings:
+  _slides: "https://docs.google.com/presentation/d/1K-wmU48lyNrBoEqKSDDb1YlE3J9higAFvylcUJk7HKI/edit?usp=sharing"
+  _slides2: "https://docs.google.com/presentation/d/1VETVI7XRg_bWrxb1VuvKYgwFk52-ycC1RY4T8zj9GcM/edit?usp=sharing"
+  _img: 2025/jbnu-info/3-inference.jpg
+  hw: 
+  logistics: "Baye's Rule"
+
+- date: 9/28
+  week: 4
+  title: >
+    <strong>Entropy</strong>
+  supp:
+  readings:
+  _slides: "https://docs.google.com/presentation/d/1nJZhh_2OGQdwBeYewASGnr087-go6pnkP98QC1IoXoQ/edit?usp=sharing"
+  _slides2: "https://docs.google.com/presentation/d/1lzYrjC7JivqDxQN0GmbEJ04xFz-VMC45aXJhH0Dt_SM/edit?usp=sharing"
+  _img: 2025/jbnu-info/4-entropy.jpg
+  hw:
+  logistics:
+
+- date: 10/5
+  week: 5
+  title: >
+    <span style="color: red"><strong>No Class</strong> 추석!</span>
+
+- date: 10/12
+  week: 6
+  title: >
+    <strong>I: Data Compression</strong><br>
+    - The Source Coding Theorem<br>
+    - Symbol Codes<br>
+    - Stream Codes
+  supp:
+  readings:
+  _slides: "https://docs.google.com/presentation/d/1rqOkcXbjd2rDUNokM9ky0v5nq5Bmcmt81fxFPNic9ic/edit?usp=sharing"
+  _slides2: "https://docs.google.com/presentation/d/1p4RDEEcevlC_N9J6Cg3OSdjqKi2EKR6DuC8bUhkjnPE/edit?usp=sharing"
+  _img: 2025/jbnu-info/5-source-coding.jpg
+  hw: 
+  logistics: "Run <code>huffman-coding.ipynb</code> and submit file with outputs."
+
+- date: 10/19
+  week: 7
+  title: >
+    <strong>II: Noisy-Channel Coding</strong><br>
+    8. Dependent Random Variables<br>
+    9. Communication over a Noisy Channel<br>
+    10. The Noisy-Channel Coding Theorem<br>
+    11. Error-Correcting Codes and Real Channels
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1_4lg8lld9tTD8zQDh6rJH5ChxLVi6b8iS6e1_00h8qk/edit?usp=sharing"
+  _slides2:
+  _img: 2025/jbnu-info/6-noisy-channels.jpg
+  _logistics: >
+    <a href="https://classroom.google.com/c/ODA0MjY0MzM4Mjk3?cjc=36gyqccg">Join the Google Classroom</a>
+
+- date: 10/26
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    <a style="display: none;" href="https://docs.google.com/presentation/d/1wqgA5ylGlZVApiVunBydzqdv3W7Ndgqi_BxwIUfyq_k/edit?usp=sharing">Study Guide</a>
+    <div style="display: none;">
+      <a href="">Test</a><br>
+    </div>
+  logistics: >
+    <div style="display: none;">
+      Not covered yet.
+      <strong>IV: Probabilities and Inference</strong><br>
+      24. Exact Marginalization<br>
+      27. Laplace's Method<br>
+      28. Model Comparison and Occam's Razor<br>
+      29. Monte Carlo Methods<br>
+      30. Efficient Monte Carlo Methods<br>
+      31. Ising Models<br>
+      32. Exact Monte Carlo Sampling<br>
+      33. Variational Methods<br>
+      34. Independent Component Analysis and Latent Variable Modelling<br>
+      35. Random Inference Topics
+    </div>
+
+- date: 11/2
+  week: 9
+  title: >
+    <strong>Entropy of Continuous Variables</strong><br>
+    <strong>IV: Probabilities and Inference</strong><br>
+    20. A Example Inference Task: Clustering<br>
+    21. Exact Inference by Complete Enumeration<br>
+    22. Maximum Likelihood and Clustering<br>
+    23. Useful Probability Distributions
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1E2sS6BJPVjzIFo8lvH05DMd_pTtlYUReeb2_wQ6npe0/edit?usp=sharing"
+  _slides2:
+  _img: 2025/jbnu-info/7-cont-ent.jpg
+  logistics:
+
+- date: 11/9
+  week: 10
+  title: >
+    <strong>Continuous Mutual Info, Channel Capacity</strong>
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1Le-aGLXoYOzCUO-0EmGM8tA0ARks8b4AY1AXQ5vdWlY/edit?usp=sharing"
+  _slides2:
+  _img: 2025/jbnu-info/9-cont-mi.jpg
+  logistics:
+
+- date: 11/16
+  week: 11
+  title: >
+    <strong>Rate Distortion Theory</strong>
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1xPxiioUux8qr2jsD7-96w8_7grtolvdMGYBDg3SDCLI/edit?usp=sharing"
+  _slides2:
+  _img: 2025/jbnu-info/10-rd.jpg
+  logistics:
+
+- date: 11/23
+  week: 12
+  title: >
+    <strong>Transfer Entropy, Thermodynamics</strong>
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1vLpW48dMe1jnSf7kjrBX-O48AsLRpGZk5iTQi_eD2WE/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-info/11-transfer.jpg
+  logistics:
+
+- date: 11/30
+  week: 13
+  title: >
+    <strong>Information as Nature's Currency I</strong>
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1NjT9QmRU5Hn9q2jN3vp4NLKoZes28C63rYykNpw4Sk8/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-info/12-nature.jpg
+  logistics:
+
+- date: 12/7
+  week: 14
+  title: >
+    <strong>Information as Nature's Currency II</strong>
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1NjT9QmRU5Hn9q2jN3vp4NLKoZes28C63rYykNpw4Sk8/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-info/12-nature.jpg
+  logistics:
+
+- date: 12/14
+  week: 15
+  title: >
+    <strong>V: Neural Networks (Bonus)</strong><br>
+    38. Introduction to Neural Networks<br>
+    39. The Single Neuron as a Classifier<br>
+    40. Capacity of a Single Neuron
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1ijxPgnRbIhz7LpjJQdu0h4NHg7SjkidAfJeRp9pJ3s0/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-info/13-nn.jpg
+  logistics:
+
+- date: 12/21
+  week: 16
+  title: >
+    <strong>Final Test</strong><br>
+    <a style="display: none" href="https://docs.google.com/document/d/1mMaiHxs4XNqElubFsJKeONCW0CBSKpFBP8yAZnQe1Zw/edit?usp=drive_link">Study Guide</a><br>
+    <div style="display: none;">
+      <a style="display: none" href="https://forms.gle/kWnU2go7vYyuARJr9">Test A (Monday)</a><br>
+      <a href="https://forms.gle/4qpzrvWu7BJqWMUA9">Test B (Wednesday)</a><br><br>
+      <a href="https://forms.gle/x76YgKuEEZLyqzqu8">GitHub vs. Colab Survey</a>
+    </div>

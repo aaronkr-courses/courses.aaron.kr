@@ -55,6 +55,9 @@ collections:
 
 # Course category display order (newest first)
 course_categories:
+  - label: "2026-2"
+    label_ko: "2026년 2학기"
+    key: "2026-2"
   - label: "2026-1"
     label_ko: "2026년 1학기"
     key: "2026-1"

@@ -1,29 +1,44 @@
-- name: "Transportation University"
-  name_ko: "교통대학교"
+- name: "Korea Transportation University"
+  name_ko: "한국교통대학교"
+  short_ko: "교통대"
+  campus: "충주캠퍼스"
+  campus_en: "Chungju Campus"
   abbr: ut
   url: "https://www.ut.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/ut-logo_beiynv.png
 
 - name: "Wonkwang University"
   name_ko: "원광대학교"
+  short_ko: "원광대"
+  campus: "익산캠퍼스"
+  campus_en: "Iksan Campus"
   abbr: wku
   url: "https://www.wonkwang.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/wku-logo_cu76kg.png
 
 - name: "Jeonbuk National University"
   name_ko: "전북대학교"
+  short_ko: "전북대"
+  campus: "전주캠퍼스"
+  campus_en: "Jeonju Campus"
   abbr: jbnu
   url: "https://www.jbnu.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/jbnu-logo_r6c50n.png
 
 - name: "Hanbat University"
   name_ko: "한밭대학교"
+  short_ko: "한밭대"
+  campus: "대전캠퍼스"
+  campus_en: "Daejeon Campus"
   abbr: hb
   url: "https://www.hanbat.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/hanbat-logo_mvle6l.png
 
 - name: "Jeonju National University of Education"
   name_ko: "전주교육대학교"
+  short_ko: "전주교육대"
+  campus: "전주캠퍼스"
+  campus_en: "Jeonju Campus"
   abbr: jnue
   url: "https://www.jnue.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jnue-logo_jmyh9e.png

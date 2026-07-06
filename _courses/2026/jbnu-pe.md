@@ -8,7 +8,6 @@ uni: jbnu
 img: assets/img/books/pe-principles.jpg
 importance: 5
 category: 2026-1
-now: Yes
 data_file: 2026/jbnu_pe_lectures
 
 grading:

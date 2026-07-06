@@ -23,25 +23,21 @@ permalink: /office-hours/
 </header>
 <div class="oh-page">
 
-  <div id="summer-status" class="season-notice" style="display:none">
+  {%- comment -%}
+    Vacation banner: populated at runtime from _data/office_hours.yml's
+    `vacation` list via TodayPill.status() (see script at bottom of page).
+    Do not hardcode dates/copy here — edit _data/office_hours.yml instead.
+  {%- endcomment -%}
+  <div id="vacation-status" class="season-notice" style="display:none">
     <span class="season-icon">☀</span>
     <div class="season-body">
-      <strong><span class="lang-en">Summer 2026 — Research &amp; Writing Mode</span><span class="lang-ko">2026년 여름 — 연구 및 집필 모드</span></strong>
+      <strong><span class="lang-en" id="vac-title-en"></span><span class="lang-ko" id="vac-title-ko"></span></strong>
       <p>
-        <span class="lang-en">Spring semester has ended. I am on research leave through August, working on PAI Lab projects and writing. Campus visits are paused — no in-person office hours until September. For urgent matters, KakaoTalk is still monitored. Meetings can be booked via Cal.com below.</span>
-        <span class="lang-ko">1학기가 종료되었습니다. 8월까지 PAI 연구소 프로젝트와 집필에 집중하는 연구 휴가 중입니다. 캠퍼스 방문이 중단되어 있으며, 9월까지 대면 상담은 없습니다. 긴급한 사항은 카카오톡으로 연락하세요. 아래 Cal.com을 통해 미팅 예약이 가능합니다.</span>
+        <span class="lang-en" id="vac-body-en"></span>
+        <span class="lang-ko" id="vac-body-ko"></span>
       </p>
     </div>
   </div>
-  <script>
-  (function(){
-    var m = new Date().getMonth() + 1, d = new Date().getDate();
-    if ((m === 6 && d >= 20) || m === 7 || m === 8) {
-      var el = document.getElementById('summer-status');
-      if (el) el.style.display = 'flex';
-    }
-  })();
-  </script>
 
   <div class="oh-heading animate d3">
     <span class="oh-label"><span class="lang-en">Weekly Campus Schedule</span><span class="lang-ko">주간 캠퍼스 일정</span></span>
@@ -49,65 +45,33 @@ permalink: /office-hours/
   </div>
   <div class="week-grid animate d4" id="week-grid">
 
-    <div class="day-card" data-day="1">
-      <div class="uni-badge"><img src="{{ site.data.universities[0].logo }}" class="ub-abbr" /></div>
-      <div class="day-name"><span class="lang-en">Monday</span><span class="lang-ko">월요일</span></div>
-      <div class="day-school"><span class="lang-en">Korea Transportation Univ.</span><span class="lang-ko">한국교통대학교</span></div>
-      <div class="day-school-kr">교통대 (UT)</div>
+  {%- comment -%}
+    Data-driven week-grid: reads _data/office_hours.yml `schedule` (day/uni
+    assignment) joined with _data/universities.yml (name/logo/campus). Edit
+    those two data files to add/remove a day or change which university a
+    weekday belongs to — do NOT hardcode day-cards here.
+  {%- endcomment -%}
+  {%- assign _dn = "_,Monday,Tuesday,Wednesday,Thursday,Friday" | split: "," -%}
+  {%- assign _dn_ko = "_,월요일,화요일,수요일,목요일,금요일" | split: "," -%}
+  {%- for entry in site.data.office_hours.schedule -%}
+    {%- assign _u = nil -%}
+    {%- for cand in site.data.universities -%}
+      {%- if cand.abbr == entry.uni -%}{%- assign _u = cand -%}{%- endif -%}
+    {%- endfor -%}
+    {%- if _u -%}
+    <div class="day-card" data-day="{{ entry.display_day }}">
+      <div class="uni-badge"><img src="{{ _u.logo }}" class="ub-abbr" /></div>
+      <div class="day-name"><span class="lang-en">{{ _dn[entry.display_day] }}</span><span class="lang-ko">{{ _dn_ko[entry.display_day] }}</span></div>
+      <div class="day-school"><span class="lang-en">{{ _u.name }}</span><span class="lang-ko">{{ _u.name_ko }}</span></div>
+      <div class="day-school-kr">{{ _u.short_ko | default: _u.name_ko }} ({{ _u.abbr | upcase }})</div>
       <div class="day-oh">
         <span class="day-oh-label"><span class="lang-en">Office Hours</span><span class="lang-ko">상담 시간</span></span>
         <div class="day-oh-time"><span class="lang-en">After class</span><span class="lang-ko">수업 후</span></div>
-        <div class="day-oh-room">충주캠퍼스</div>
+        <div class="day-oh-room">{{ _u.campus | default: _u.name_ko }}</div>
       </div>
     </div>
-
-    <div class="day-card" data-day="2">
-      <div class="uni-badge"><img src="{{ site.data.universities[1].logo }}" class="ub-abbr" /></div>
-      <div class="day-name"><span class="lang-en">Tuesday</span><span class="lang-ko">화요일</span></div>
-      <div class="day-school"><span class="lang-en">Wonkwang University</span><span class="lang-ko">원광대학교</span></div>
-      <div class="day-school-kr">원광대 (WKU)</div>
-      <div class="day-oh">
-        <span class="day-oh-label"><span class="lang-en">Office Hours</span><span class="lang-ko">상담 시간</span></span>
-        <div class="day-oh-time"><span class="lang-en">After class</span><span class="lang-ko">수업 후</span></div>
-        <div class="day-oh-room">익산캠퍼스</div>
-      </div>
-    </div>
-
-    <div class="day-card" data-day="3">
-      <div class="uni-badge"><img src="{{ site.data.universities[3].logo }}" class="ub-abbr" /></div>
-      <div class="day-name"><span class="lang-en">Wednesday</span><span class="lang-ko">수요일</span></div>
-      <div class="day-school"><span class="lang-en">Hanbat University</span><span class="lang-ko">한밭대학교</span></div>
-      <div class="day-school-kr">한밭대 (HB)</div>
-      <div class="day-oh">
-        <span class="day-oh-label"><span class="lang-en">Office Hours</span><span class="lang-ko">상담 시간</span></span>
-        <div class="day-oh-time"><span class="lang-en">After class</span><span class="lang-ko">수업 후</span></div>
-        <div class="day-oh-room">대전캠퍼스</div>
-      </div>
-    </div>
-
-    <div class="day-card" data-day="4">
-      <div class="uni-badge"><img src="{{ site.data.universities[2].logo }}" class="ub-abbr" /></div>
-      <div class="day-name"><span class="lang-en">Thursday</span><span class="lang-ko">목요일</span></div>
-      <div class="day-school"><span class="lang-en">Jeonbuk National Univ.</span><span class="lang-ko">전북대학교</span></div>
-      <div class="day-school-kr">전북대 (JBNU)</div>
-      <div class="day-oh">
-        <span class="day-oh-label"><span class="lang-en">Office Hours</span><span class="lang-ko">상담 시간</span></span>
-        <div class="day-oh-time"><span class="lang-en">After class</span><span class="lang-ko">수업 후</span></div>
-        <div class="day-oh-room">전주캠퍼스</div>
-      </div>
-    </div>
-
-    <div class="day-card" data-day="5">
-      <div class="uni-badge"><img src="{{ site.data.universities[4].logo }}" class="ub-abbr" /></div>
-      <div class="day-name"><span class="lang-en">Friday</span><span class="lang-ko">금요일</span></div>
-      <div class="day-school"><span class="lang-en">Jeonju Natl. Univ. of Ed.</span><span class="lang-ko">전주교육대학교</span></div>
-      <div class="day-school-kr">전주교육대 (JNUE)</div>
-      <div class="day-oh">
-        <span class="day-oh-label"><span class="lang-en">Office Hours</span><span class="lang-ko">상담 시간</span></span>
-        <div class="day-oh-time"><span class="lang-en">After class</span><span class="lang-ko">수업 후</span></div>
-        <div class="day-oh-room">전주캠퍼스</div>
-      </div>
-    </div>
+    {%- endif -%}
+  {%- endfor -%}
 
   </div><!-- .week-grid -->
 
@@ -199,13 +163,29 @@ Cal("ui", { hideEventTypeDetails: false, layout: "month_view", theme: document.d
 <script>
 (function(){
   TodayPill.updatePill();
-  // Office-hours extra: highlight the matching day-card
   var s = TodayPill.status();
+
+  // Office-hours extra: highlight the matching day-card
   if (s.type === 'class') {
     var card = document.querySelector('.day-card[data-day="' + s.day + '"]');
     if (card) {
       card.classList.add('today-card');
       card.insertAdjacentHTML('afterbegin', '<span class="today-chip-sm">Today</span>');
+    }
+  }
+
+  // Office-hours extra: show the vacation banner (data from _data/office_hours.yml)
+  if (s.type === 'vacation' && s.vacation) {
+    var el = document.getElementById('vacation-status');
+    if (el) {
+      el.style.display = 'flex';
+      var icon = el.querySelector('.season-icon');
+      if (icon) icon.textContent = s.vacation.icon || '☀';
+      var setText = function(id, val) { var n = document.getElementById(id); if (n) n.textContent = val || ''; };
+      setText('vac-title-en', s.vacation.label_en);
+      setText('vac-title-ko', s.vacation.label_ko);
+      setText('vac-body-en', s.vacation.body_en);
+      setText('vac-body-ko', s.vacation.body_ko);
     }
   }
 })();

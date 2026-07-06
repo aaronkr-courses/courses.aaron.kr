@@ -8,7 +8,6 @@ uni: hb
 img: assets/img/books/cpp-fast.jpg
 importance: 4
 category: 2026-1
-now: Yes
 data_file: 2026/hb_cpp_lectures
 
 grading:

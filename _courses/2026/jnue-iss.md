@@ -8,7 +8,6 @@ uni: jnue
 img: assets/img/books/excel.jpg
 importance: 8
 category: 2026-1
-now: Yes
 data_file: 2026/jnue_iss_lectures
 
 grading:

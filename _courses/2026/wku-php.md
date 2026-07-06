@@ -8,7 +8,6 @@ uni: wku
 img: assets/img/books/php-text.jpg
 importance: 3
 category: 2026-1
-now: Yes
 data_file: 2026/wku_php_lectures
 
 grading:

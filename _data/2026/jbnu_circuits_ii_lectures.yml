@@ -1,0 +1,212 @@
+- date: 8/25
+  week: 1
+  skip: true
+  title: >
+    <strong>Conference Presentations</strong><br>
+    <a href="https://docs.google.com/presentation/d/1KJgk9eaXtaVf_SEy5XcxJ5Om4xsv6LDYUl729R_pays/edit?usp=sharing">0. Student Research (full)</a><br>
+    <a href="https://docs.google.com/presentation/d/1Y_T0BYhbiMy-F0EKliaI6U169T2wFOXlC6CxuHi1y9Q/edit?usp=sharing">1. Select a Topic</a><br>
+    <a href="https://docs.google.com/presentation/d/1N8Hu-Y_YH7uxtR-OoXxICehon4ILtFGYbGlvh1W6QmY/edit?usp=sharing">2. Writing your Paper</a>
+  supp:
+  readings: Use the template files provided to write your paper.
+  hw:
+  slides: "https://docs.google.com/presentation/d/1KJgk9eaXtaVf_SEy5XcxJ5Om4xsv6LDYUl729R_pays/edit?usp=sharing"
+  slides2:
+  img: 0-research.jpg
+  logistics: >
+    <a href="https://drive.google.com/drive/folders/1XRI8KHzocVz4gamFO_V0qjqBXhmhyljl?usp=sharing"><strong>Template files</strong></a>
+
+- date: 9/1
+  week: 1
+  title: >
+    <strong>Introduction</strong>
+  supp:
+  readings:
+  hw:
+  slides: "https://docs.google.com/presentation/d/1uax1Gg_SwhISKl637FFrNWMGQGhQGlGX5T6Ks27pG0M/edit?usp=sharing"
+  slides2:
+  img: 2025/jbnu-circuits-ii/1-intro.jpg
+  logistics: >
+    <a href="https://docs.google.com/presentation/d/1KJgk9eaXtaVf_SEy5XcxJ5Om4xsv6LDYUl729R_pays/edit?usp=sharing">
+      Conference Presentation Info
+    </a>
+
+- date: 9/8
+  week: 2
+  title: >
+    Chapter 9. Sinusoids and Phasors I
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1HVV1afL8p5Gd28sLagNwib-bDQYRYPz4dw5v9YEt-3U/edit?usp=sharing"
+  _slides2: "https://docs.google.com/presentation/d/1Gys3z-lZiNholhtD5ubriQUBpfVvEi5EtoHDv7cTUXk/edit?usp=sharing"
+  _img2: 2025/jbnu-circuits-ii/2-sinusoids.jpg
+  logistics:
+
+- date: 9/15
+  week: 3
+  title: >
+    Chapter 9. Sinusoids and Phasors II
+  supp:
+  readings:
+  _hw2: "https://forms.gle/PvD6LtxAsm5fza5Z6"
+  _slides: "https://docs.google.com/presentation/d/19LFPCXflIs4DN3cG2-610VEE7fj6XNYWBKTZEsP-bHU/edit?usp=sharing"
+  _slides2: "https://colab.research.google.com/drive/1w0vlz9vLKLxcGopV1l_l9gsojaomNyQ7?usp=sharing"
+  _img2: 2025/jbnu-circuits-ii/3-sinusoids-ii.jpg
+  logistics: "Chp 9"
+
+- date: 9/22
+  week: 4
+  title: >
+    Chapter 10. Sinusoidal Steady-State Analysis I
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1yTW1ImXGjBLwgpinahKU70J_1qnF17nRym67EE0cJLI/edit?usp=sharing"
+  _slides2:
+  _img2: 2025/jbnu-circuits-ii/4-sinusoid-ssa.jpg
+  _logistics: >
+    <a href="https://www.khanacademy.org/join/XHUDCE3A">BONUS: Khan Academy Electrical Engineering Course</a>
+
+- date: 9/29
+  week: 5
+  title: >
+    Chapter 10. Sinusoidal Steady-State Analysis II
+    <ul>
+      <li><a href="https://docs.arduino.cc/hardware/uno-rev3/">Learn about your Arduino UNO</a></li>
+      <li><a href="https://aesk.arduino.cc/aesk/module/education/lesson/getting-started">1: Getting Started</a> (sign-in may be required)</li>
+      <li><a href="https://projecthub.arduino.cc/">Explore Arduino Project Hub</a></li>
+      <li><a href="https://app.arduino.cc/">Explore Arduino Cloud</a></li>
+    </ul>
+  supp:
+  readings:
+  _hw2: "https://forms.gle/yPACnX2hgDAgJWtW9"
+  _slides: "https://doc_s.google.com/presentation/d/1yTW1ImXGjBLwgpinahKU70J_1qnF17nRym67EE0cJLI/edit?usp=sharing"
+  slides2:
+  _img2: 2025/jbnu-circuits-ii/4-sinusoid-ssa.jpg
+  _logistics: >
+    Chp 10<br>
+    Bring team computer Wednesday.
+
+- date: 10/6
+  week: 6
+  title: >
+    Arduino Safety and <a href="https://aesk.arduino.cc/aesk/module/education/lesson/getting-started">Getting Started</a><br>
+    <a href="https://aesk.arduino.cc/aesk/module/education/lesson/traffic-signals">Traffic Signals Project</a>
+  supp:
+  readings:
+  _hw: "https://classroom.google.com/c/ODA0MjcwNTc3NDEx/a/ODEyNDg2NTg1NDc1/details"
+  _hw2: "https://classroom.google.com/c/ODA0MjcwNTc3NDEx/a/ODA0MjcyMjI2ODY4/details"
+  _slides: "https://docs.google.com/presentation/d/1zSw6xTzT_-e1egdPLCmg5YFbwLQJXfdp910QppV4fBU/edit?usp=sharing"
+  _slides2:
+  _img2: pages/adv-arduino.jpg
+  _logistics: >
+    <a href="https://classroom.google.com/c/ODA0MjcwNTc3NDEx?cjc=rw6xa36o">Join Google Classroom</a> (Gmail)<br>
+    <a href="https://forms.gle/Vtd3SSqFneaop7nD6">Safety Quiz</a>
+
+- date: 10/13
+  week: 7
+  title: >
+    <a href="https://aesk.arduino.cc/aesk/module/education/lesson/dimmer-switch">Dimmer Switch Project</a>
+  supp:
+  readings:
+  _hw: "https://classroom.google.com/c/ODA0MjcwNTc3NDEx/a/ODE1ODkyMzE0ODMz/details"
+  _slides: "https://docs.google.com/presentation/d/1zSw6xTzT_-e1egdPLCmg5YFbwLQJXfdp910QppV4fBU/edit?usp=sharing"
+  _slides2:
+  _img: pages/adv-arduino.jpg
+  logistics:
+
+- date: 10/20
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    <a style="display: none" href="https://docs.google.com/presentation/d/11ac-rFaeBNeNNLwcXGMR8xe0ebteHAqTZe9Py_1fvTE/edit?usp=sharing">Study Guide</a>
+
+- date: 10/27
+  week: 9
+  title: >
+    Chapter 11. AC Power Analysis
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1lEkpuQw6aPd-7C1HlNmmbWXwGpgVuDo3dnUTW8qlCTQ/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-circuits-ii/9-ac-power.jpg
+  logistics:
+
+- date: 11/3
+  week: 10
+  title: >
+    Chapter 12. Three-Phase Circuits I
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1amfCscQHDUMPfttznKBRFGjBtBvE02aGQtncabxm7K4/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-circuits-ii/10-3-phase.jpg
+  _logistics: >
+    <a href="https://aesk.arduino.cc/aesk/module/education/lesson/holiday-lights">Holiday Lights Project</a>
+
+- date: 11/10
+  week: 11
+  title: >
+    Chapter 12. Three-Phase Circuits II
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1amfCscQHDUMPfttznKBRFGjBtBvE02aGQtncabxm7K4/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-circuits-ii/10-3-phase.jpg
+  _logistics: >
+    <a href="https://aesk.arduino.cc/aesk/module/education/lesson/sports-robot">Sports Robot (Servo Motor)</a>
+
+- date: 11/17
+  week: 12
+  title: >
+    Chapter 13. Magnetically Coupled Circuits I
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/17cjro_BUqAZCmKj93ToRS1WmwQtuc55MoIOt1aBLn70/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-circuits-ii/12-magnetic-coupling.jpg
+  _logistics: >
+    <a href="https://aesk.arduino.cc/aesk/module/education/lesson/windshield-wipers">Windshield Wipers</a>
+
+- date: 11/24
+  week: 13
+  title: >
+    Chapter 13. Magnetically Coupled Circuits II
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/17cjro_BUqAZCmKj93ToRS1WmwQtuc55MoIOt1aBLn70/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-circuits-ii/12-magnetic-coupling.jpg
+  _logistics: >
+    <ul>Select one:
+    <li><a href="https://aesk.arduino.cc/aesk/module/education/lesson/musical-keyboard">Music Keyboard</a></li>
+    <li><a href="https://aesk.arduino.cc/aesk/module/education/lesson/light-wave-radar-cp">Lightwave Radar</a></li>
+    </ul>
+
+- date: 12/1
+  week: 14
+  title: >
+    Chapter 14. Frequency Response
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1pHAgSR-2xsDewQwf6-c_c7afYWJ5Cygrg6xGnP5cCUc/edit?usp=sharing"
+  slides2:
+  _img: 2025/jbnu-circuits-ii/14-freq.jpg
+  logistics:
+
+- date: 12/8
+  week: 15
+  title: >
+    <strong>Final Test</strong><br>
+    <a style="display: none" href="https://docs.google.com/document/d/1uYXiL6CKEvRVDEN5N_WHVI_n2ltkY-hFhlWoBg1HyJw/edit?usp=sharing">Study Guide</a><br>
+    <a style="display: none" href="https://forms.gle/QWqGs2gneePwnzZ5A">HW Study Quiz</a>
+    <div style="display: none;">
+      <br><a href="https://docs.google.com/presentation/d/10fbnjsPThjdAY70T_91tLPwxrTQ9JssKHU52dmVtvzs/edit?usp=sharing">스터디 가이드</a>
+      <br><a href="https://forms.gle/wBXEg8Byt55so6VY7">중간퀴즈</a>
+    </div>

@@ -8,7 +8,6 @@ uni: ut
 img: assets/img/books/db-projects.jpg
 importance: 2
 category: 2026-1
-now: Yes
 data_file: 2026/ut_db_lectures
 
 grading:

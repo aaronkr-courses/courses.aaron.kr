@@ -238,6 +238,7 @@ code {
 }
 
 hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.sched-title hr { margin: 0.25rem 0; }
 
 // ── Animations ───────────────────────────────────────────────────────────────
 @keyframes fadeUp {

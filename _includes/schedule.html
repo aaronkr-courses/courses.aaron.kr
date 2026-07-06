@@ -76,13 +76,23 @@
     {%- assign item_ts = _dated | date: '%s' | plus: 0 -%}
     {%- assign title_lower = item.title | downcase -%}
 
+    {%- comment -%}
+      Word-boundary check for exam/test rows: strip tags, downcase, blank out
+      punctuation, then split into whole words. This avoids false positives
+      like "Example" matching a plain substring check for "exam" (see Bug #23
+      in CLAUDE.md). Korean keywords are still matched as substrings since
+      Korean compounds (e.g. 중간고사) don't use spaces between words.
+    {%- endcomment -%}
+    {%- assign _title_flat = item.title | strip_html | downcase | replace: ':', ' ' | replace: ',', ' ' | replace: ';', ' ' | replace: '.', ' ' | replace: '(', ' ' | replace: ')', ' ' -%}
+    {%- assign _title_words = _title_flat | split: ' ' -%}
+
     {%- comment -%} Determine row type and CSS class {%- endcomment -%}
     {%- if title_lower contains 'no class' or title_lower contains '휴강' or item.skip -%}
       {%- assign row_class = 'no-class' -%}
       {%- assign row_type  = 'noclass'  -%}
       {%- assign skip_count = skip_count | plus: 1 -%}
 
-    {%- elsif title_lower contains 'test' or title_lower contains 'exam' or title_lower contains 'midterm' or title_lower contains 'final' or title_lower contains '시험' -%}
+    {%- elsif _title_words contains 'test' or _title_words contains 'exam' or _title_words contains 'midterm' or _title_words contains 'final' or title_lower contains '시험' or title_lower contains '고사' -%}
       {%- assign row_type   = 'test' -%}
       {%- assign skip_count = skip_count | plus: 1 -%}
       {%- if _is_current -%}

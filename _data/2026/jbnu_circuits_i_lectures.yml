@@ -1,0 +1,180 @@
+- date: 8/25
+  week: 0
+  skip: true
+  title: >
+    <strong>Conference Presentations</strong><br>
+    <a href="https://docs.google.com/presentation/d/1KJgk9eaXtaVf_SEy5XcxJ5Om4xsv6LDYUl729R_pays/edit?usp=sharing">0. Student Research (full)</a><br>
+    <a href="https://docs.google.com/presentation/d/1Y_T0BYhbiMy-F0EKliaI6U169T2wFOXlC6CxuHi1y9Q/edit?usp=sharing">1. Select a Topic</a><br>
+    <a href="https://docs.google.com/presentation/d/1N8Hu-Y_YH7uxtR-OoXxICehon4ILtFGYbGlvh1W6QmY/edit?usp=sharing">2. Writing your Paper</a>
+  supp:
+  readings: Use the template files provided to write your paper.
+  hw:
+  slides: "https://docs.google.com/presentation/d/1KJgk9eaXtaVf_SEy5XcxJ5Om4xsv6LDYUl729R_pays/edit?usp=sharing"
+  slides2:
+  img: 0-research.jpg
+  logistics: >
+    <a href="https://drive.google.com/drive/folders/1XRI8KHzocVz4gamFO_V0qjqBXhmhyljl?usp=sharing"><strong>Template files</strong></a>
+
+- date: 9/1
+  week: 1
+  title: >
+    <strong>Introduction</strong>
+  supp:
+  readings:
+  hw:
+  slides: "https://docs.google.com/presentation/d/1qlnPP1H8OHqNXL8dpVZaSXfVv43KOLfXw1ZROPVDItM/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/16AgmiT68Y3MQ-SGSEZm17FSBU3mOQSkH/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  img: 2025/jbnu-circuits/1-intro.jpg
+  _logistics: >
+    <a href="">Google Classroom</a><br><br>
+    <a href="">Khan Academy (Bonus)</a>
+
+- date: 9/8
+  week: 2
+  title: >
+    <strong>1. Basic Concepts I</strong>
+  supp:
+  readings: p. 1-14
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1LLIqsFH-8qO6zdtHeP6Vue1C9fs_AmxkcKCmTJ61TUY/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/2-basics.jpg
+  logistics:
+
+- date: 9/15
+  week: 3
+  title: >
+    <strong>1. Basic Concepts II</strong>
+  supp:
+  readings: p. 14-26
+  hw: 
+  _slides: "https://docs.google.com/presentation/d/12ai9_AzZy7c9PaxbaXH11upoyMPaJc2MOQ_hjNaxtv8/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/4-basics-ii.jpg
+  logistics:
+
+- date: 9/22
+  week: 4
+  title: >
+    <strong>2. Basic Laws</strong>
+  supp:
+  readings: p. 29-78
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1F1D4gPhXG2Dx_HoFXOaHqP4UVdpWnULg9L8otjp5fW0/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/5-basic-laws.jpg
+  logistics:
+
+- date: 9/29
+  week: 5
+  title: >
+    <strong>2. Basic Laws II</strong>
+  supp:
+  readings: p. 29-78
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1F1D4gPhXG2Dx_HoFXOaHqP4UVdpWnULg9L8otjp5fW0/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/5-basic-laws.jpg
+  logistics:
+
+- date: 10/6
+  week: 6
+  title: >
+    <strong>3. Methods of Analysis I</strong> Node Analysis
+  supp:
+  readings: p. 79-124
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1Q6H4PJ45v2BFa136pgPdXyQpYTX5--O1IBou_61RbrU/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/7-methods.jpg
+  logistics:
+
+- date: 10/13
+  week: 7
+  title: >
+    <strong>3. Methods of Analysis II</strong> Mesh Analysis
+  supp:
+  readings: p. 79-124
+  hw: 
+  _slides: "https://docs.google.com/presentation/d/1x-08M3jYXoZ8TRgv-5ZGMeb5d2944PHTt4fkvxb9qJQ/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/7-methods.jpg
+  logistics:
+
+- date: 10/20
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    <div style="display:none;">
+      <a href="https://docs.google.com/presentation/d/1OJgn12MhAeuIWAY2Pqarmh6T4zHgCTb1ujjiAV6UM1c/edit?usp=sharing">Midterm Study Guide</a>
+    </div>
+
+- date: 10/27
+  week: 9
+  title: >
+    <strong>4. Circuit Theorems</strong>
+  supp:
+  readings: p. 125-171
+  hw: 
+  _slides: "https://docs.google.com/presentation/d/1-inXDXOmnyMGSuMCToj63lDjvydTU-5SL-rl3ClKazA/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/11-c-theorems.jpg
+  logistics:
+
+- date: 11/3
+  week: 10
+  title: >
+    <strong>5. Operational Amplifiers</strong>
+  supp:
+  readings: p. 173-212
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1W6gFBPmHSEoJ0QRlopsB_K6YHS8qvHvvvxEdM8CwnuM/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/12-op-amps.jpg
+  logistics:
+
+- date: 11/10
+  week: 11
+  title: >
+    <strong>6. Capacitors & Inductors</strong>
+  supp:
+  readings: p. 213-249
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1ThNA5y9FphWOMz9NBIrGSjqZTa06_lxkxWFwdah4JJM/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/13-capacitors-inductors.jpg
+  logistics:
+
+- date: 11/17
+  week: 12
+  title: >
+    <strong>7. First-Order Circuits</strong>
+  supp:
+  readings: p. 251-309
+  hw: 
+  _slides: "https://docs.google.com/presentation/d/1amjSqpvLULjzbvBpUYQTCvOfq-aqHfLbDMDTizzjXaY/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/14-first-order.jpg
+  logistics:
+
+- date: 11/24
+  week: 13
+  title: >
+    <strong>8. Second-Order Circuits</strong>
+  supp:
+  readings: p. 311-365
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1BvbdAqtSf0tlU_czFPCp92kK_Yw0jQ5UdICJXTKtyxU/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/15-second-order.jpg
+  logistics:
+
+- date: >
+    <span style="color: red">12/1 (LMS)</span>
+  week: 14
+  title: >
+    <span style="color: red"><a href="https://lms.jbnu.ac.kr/">LMS Asynchronous Lecture</a></span><br>
+    <strong>Review</strong>
+  supp:
+  readings: p. 311-365
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1b1rAy5iCSO1If5ptMIG3z5lUf9WH8Tm6y4P0_CmV2x4/edit?usp=sharing"
+  _img: 2025/jbnu-circuits/16-final-review.jpg
+  logistics:
+
+- date: 12/8
+  week: 15
+  title: >
+    <strong>Final Test</strong><br>
+    <div style="display:none;">
+      <a href="https://docs.google.com/presentation/d/1b1rAy5iCSO1If5ptMIG3z5lUf9WH8Tm6y4P0_CmV2x4/edit?usp=sharing">Final Study Guide</a>
+    </div>

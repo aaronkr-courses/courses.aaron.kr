@@ -1,27 +1,64 @@
 <script>
 // Shared today-pill logic. Exposes window.TodayPill used by index.md and office-hours.md.
 // Each page calls TodayPill.updatePill() then adds its own extras (e.g., day-card highlight).
+// Schedule + vacation data come from _data/office_hours.yml (single source of truth —
+// see CLAUDE.md "Office hours / today pill data" for how to update it each semester).
 (function(g) {
-  var SCH = {
-    1: { en: 'UT — Korea Transportation University', ko: '한국교통대학교 (월요일)' },
-    2: { en: 'WKU — Wonkwang University',           ko: '원광대학교 (화요일)'    },
-    3: { en: 'HB — Hanbat University',              ko: '한밭대학교 (수요일)'    },
-    4: { en: 'JBNU — Jeonbuk University',           ko: '전북대학교 (수요일 · 목요일)' },
-    5: { en: 'JNUE — Jeonju Natl. Univ. of Ed.',   ko: '전주교육대학교 (금요일)' }
+  var DATA = {{ site.data.office_hours | jsonify }};
+  var UNIS = {{ site.data.universities | jsonify }};
+  var DAY_NAMES = {
+    1: { en: 'Monday',    ko: '월요일' },
+    2: { en: 'Tuesday',   ko: '화요일' },
+    3: { en: 'Wednesday', ko: '수요일' },
+    4: { en: 'Thursday',  ko: '목요일' },
+    5: { en: 'Friday',    ko: '금요일' }
   };
-  function isKo() { return document.documentElement.classList.contains('ko'); }
-  function isVacation() {
-    var n = new Date(), m = n.getMonth() + 1, d = n.getDate();
-    return (m === 6 && d >= 20) || m === 7 || m === 8;
+
+  function uniByAbbr(abbr) {
+    for (var i = 0; i < UNIS.length; i++) if (UNIS[i].abbr === abbr) return UNIS[i];
+    return null;
   }
-  // Returns { type: 'vacation'|'weekend'|'class'|'noclass', day: 0-6 }
+
+  // Build weekday(1-5) -> { en, ko } display text from _data/office_hours.yml
+  var SCH = {};
+  (DATA.schedule || []).forEach(function(entry) {
+    var u = uniByAbbr(entry.uni);
+    if (!u) return;
+    var dn = DAY_NAMES[entry.display_day];
+    if (!dn) return;
+    SCH[entry.display_day] = {
+      en: entry.uni.toUpperCase() + ' — ' + u.name,
+      ko: u.name_ko + ' (' + dn.ko + ')'
+    };
+  });
+
+  function isKo() { return document.documentElement.classList.contains('ko'); }
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+
+  // Returns the matching vacation-window object from _data/office_hours.yml, or null.
+  function currentVacation() {
+    var n = new Date(), mmdd = pad2(n.getMonth() + 1) + '-' + pad2(n.getDate());
+    var windows = DATA.vacation || [];
+    for (var i = 0; i < windows.length; i++) {
+      var w = windows[i];
+      var inRange = w.start <= w.end
+        ? (mmdd >= w.start && mmdd <= w.end)
+        : (mmdd >= w.start || mmdd <= w.end); // window wraps New Year's
+      if (inRange) return w;
+    }
+    return null;
+  }
+
+  // Returns { type: 'vacation'|'weekend'|'class'|'noclass', day: 0-6, vacation? }
   function status() {
     var day = new Date().getDay();
-    if (isVacation())      return { type: 'vacation', day: day };
-    if (!day || day === 6) return { type: 'weekend',  day: day };
-    if (SCH[day])          return { type: 'class',    day: day };
-    return                        { type: 'noclass',  day: day };
+    var vac = currentVacation();
+    if (vac)                return { type: 'vacation', day: day, vacation: vac };
+    if (!day || day === 6)  return { type: 'weekend',  day: day };
+    if (SCH[day])           return { type: 'class',    day: day };
+    return                         { type: 'noclass',  day: day };
   }
+
   // Basic pill update — sufficient for most pages
   function updatePill() {
     var pill = document.getElementById('today-pill');
@@ -30,7 +67,7 @@
     var s = status(), ko = isKo();
     if (s.type === 'vacation') {
       pill.classList.add('noclass');
-      txt.textContent = ko ? '여름 방학 — 연구 모드' : 'Summer Break — Research Mode';
+      txt.textContent = ko ? (s.vacation.label_ko || '방학 — 연구 모드') : (s.vacation.label_en || 'Vacation — Research Mode');
     } else if (s.type === 'weekend') {
       pill.classList.add('noclass');
       txt.textContent = ko ? '주말 — 휴강' : 'Weekend — No Class';
@@ -41,6 +78,7 @@
       txt.textContent = ko ? '오늘은 강의 없음' : 'No Class Today';
     }
   }
+
   g.TodayPill = { status: status, updatePill: updatePill, isKo: isKo, SCH: SCH };
 })(window);
 </script>

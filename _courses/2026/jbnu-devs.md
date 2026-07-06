@@ -8,7 +8,6 @@ uni: jbnu
 img: assets/img/books/inst-analysis-morris.jpg
 importance: 7
 category: 2026-1
-now: Yes
 data_file: 2026/jbnu_devs_lectures
 
 grading:

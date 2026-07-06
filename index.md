@@ -76,13 +76,13 @@ permalink: /
   </div>
   </header>
 
-  <!-- ── Spring 2026 — Current Courses by University ───────────────────── -->
+  <!-- ── Fall 2026 — Current Courses by University ───────────────────── -->
   <div class="semester-section animate d4">
     <div class="section-top">
       <div class="section-heading-row">
         <span class="section-label">
-          <span class="lang-en">Spring 2026 — Courses</span>
-          <span class="lang-ko">2026년 1학기 — 강좌</span>
+          <span class="lang-en">Fall 2026 — Courses</span>
+          <span class="lang-ko">2026년 2학기 — 강좌</span>
         </span>
         <span class="section-line"></span>
       </div>
@@ -125,36 +125,48 @@ permalink: /
     <div id="thumb-section">
       {%- assign current_courses = site.courses | where_exp: "c", "c.now" -%}
 
-      {%- comment -%} University groups in teaching-day order {%- endcomment -%}
-      {%- assign uni_names = "한국교통대학교,원광대학교,한밭대학교,전북대학교,전주교육대학교" | split: "," -%}
-      {%- assign uni_abbrs = "UT,WKU,HB,JBNU,JNUE" | split: "," -%}
-      {%- assign uni_days_en = "Monday,Tuesday,Wednesday,Wednesday &amp; Thursday,Friday" | split: "," -%}
-      {%- assign uni_days_ko = "월요일,화요일,수요일,수요일 · 목요일,금요일" | split: "," -%}
-      {%- assign uni_full_en = "Korea Transportation University,Wonkwang University,Hanbat National University,Jeonbuk National University,Jeonju National University of Education" | split: "," -%}
+      {%- comment -%}
+        University groups in teaching-day order — driven by _data/office_hours.yml
+        (single source of truth shared with the Office Hours page + Today Pill).
+        Do NOT hardcode university/day arrays here; edit that file instead.
+      {%- endcomment -%}
+      {%- assign _dn    = "_,Monday,Tuesday,Wednesday,Thursday,Friday" | split: "," -%}
+      {%- assign _dn_ko = "_,월요일,화요일,수요일,목요일,금요일" | split: "," -%}
+      {%- assign _sched = site.data.office_hours.schedule | sort: "display_day" -%}
 
-      {%- for i in (0..4) -%}
-        {%- assign uni = uni_names[i] -%}
+      {%- for entry in _sched -%}
+        {%- assign _u = nil -%}
+        {%- for cand in site.data.universities -%}
+          {%- if cand.abbr == entry.uni -%}{%- assign _u = cand -%}{%- endif -%}
+        {%- endfor -%}
+        {%- if _u -%}
+        {%- assign uni = _u.name_ko -%}
         {%- assign uni_courses = current_courses | where_exp: "c", "c.description contains uni" | sort: "importance" -%}
         {%- if uni_courses.size > 0 -%}
+        {%- assign _days_en = "" -%}
+        {%- assign _days_ko = "" -%}
+        {%- for dnum in entry.days -%}
+          {%- assign _days_en = _days_en | append: _dn[dnum] -%}
+          {%- assign _days_ko = _days_ko | append: _dn_ko[dnum] -%}
+          {%- unless forloop.last -%}
+            {%- assign _days_en = _days_en | append: " &amp; " -%}
+            {%- assign _days_ko = _days_ko | append: " · " -%}
+          {%- endunless -%}
+        {%- endfor -%}
         <div class="uni-group">
           <div class="uni-group-header">
-            {%- assign _g_uni_abbr = uni_courses[0].uni -%}
-            {%- assign _g_logo = uni_courses[0].logo -%}
-            {%- for _u in site.data.universities -%}
-              {%- if _u.abbr == _g_uni_abbr -%}{%- assign _g_logo = _u.logo -%}{%- endif -%}
-            {%- endfor -%}
-            {%- if _g_logo -%}
-            <img src="{{ _g_logo }}" class="uni-group-logo" alt="{{ uni_abbrs[i] }}" />
+            {%- if _u.logo -%}
+            <img src="{{ _u.logo }}" class="uni-group-logo" alt="{{ _u.abbr | upcase }}" />
             {%- else -%}
-            <span class="uni-abbr">{{ uni_abbrs[i] }}</span>
+            <span class="uni-abbr">{{ _u.abbr | upcase }}</span>
             {%- endif -%}
             <span class="uni-group-name">
-              <span class="lang-en">{{ uni_full_en[i] }}</span>
+              <span class="lang-en">{{ _u.name }}</span>
               <span class="lang-ko">{{ uni }}</span>
             </span>
             <span class="uni-group-day">
-              <span class="lang-en">{{ uni_days_en[i] }}</span>
-              <span class="lang-ko">{{ uni_days_ko[i] }}</span>
+              <span class="lang-en">{{ _days_en }}</span>
+              <span class="lang-ko">{{ _days_ko }}</span>
             </span>
           </div>
           <div class="course-grid">
@@ -163,6 +175,7 @@ permalink: /
             {%- endfor -%}
           </div>
         </div>
+        {%- endif -%}
         {%- endif -%}
       {%- endfor -%}
     </div>
@@ -251,20 +264,30 @@ permalink: /
         </a>
       </div>
     </div>
+    {%- comment -%}
+      Static rows below are a pre-JS fallback ONLY (shown briefly before fetch
+      completes, or if fetch fails/JS is blocked) — do NOT hand-update these
+      when publishing a new note. The list is replaced at runtime by the
+      script below, which fetches https://www.pailab.io/notes.json (built
+      dynamically from pailab's `notes` content collection — see
+      src/pages/notes.json.ts in the pailab repo). Publishing a new note
+      there updates this section automatically on next page load, no edits
+      needed here. See CLAUDE.md "Lab Notes data source" for details.
+    {%- endcomment -%}
     <div class="lab-note-list" id="lab-note-list">
-      <a class="lab-note-row" href="https://pailab.io/notes/what-is-physical-ai/" target="_blank">
+      <a class="lab-note-row" href="https://pailab.io/notes/2025/what-is-physical-ai/" target="_blank">
         <span class="lnr-date">Mar 2025</span>
         <span class="lnr-tag">Physical AI</span>
         <span class="lnr-title">What is Physical AI? A working definition for educators</span>
         <span class="lnr-arrow">→</span>
       </a>
-      <a class="lab-note-row" href="https://pailab.io/notes/arduino-to-ros2/" target="_blank">
+      <a class="lab-note-row" href="https://pailab.io/notes/2025/edge-ai/arduino-to-ros2/" target="_blank">
         <span class="lnr-date">2025</span>
         <span class="lnr-tag">Robotics</span>
         <span class="lnr-title">From Arduino to ROS2: a practical path for undergraduates</span>
         <span class="lnr-arrow">→</span>
       </a>
-      <a class="lab-note-row" href="https://pailab.io/notes/tinyml-apple-silicon/" target="_blank">
+      <a class="lab-note-row" href="https://pailab.io/notes/2025/edge-ai/tinyml-apple-silicon/" target="_blank">
         <span class="lnr-date">2025</span>
         <span class="lnr-tag">TinyML</span>
         <span class="lnr-title">TinyML on Apple Silicon: edge model deployment for research</span>
@@ -285,7 +308,9 @@ permalink: /
       var p = iso.split('-');
       return months[parseInt(p[1], 10) - 1] + ' ' + p[0];
     }
-    fetch('https://pailab.io/notes.json')
+    // Query the apex-domain-redirect target directly (pailab.io redirects to
+    // www.pailab.io) to avoid a needless cross-origin redirect hop on fetch.
+    fetch('https://www.pailab.io/notes.json')
       .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
       .then(function(d) {
         if (!d.notes || !d.notes.length) return;

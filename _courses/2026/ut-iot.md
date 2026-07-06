@@ -9,7 +9,6 @@ uni: ut
 img: assets/img/books/iot.jpg
 importance: 1
 category: 2026-1
-now: Yes
 data_file: 2026/ut_iot_lectures
 
 grading:

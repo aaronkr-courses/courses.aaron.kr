@@ -1,0 +1,70 @@
+# ─────────────────────────────────────────────────────────────
+# Weekly teaching schedule — single source of truth for:
+#   1. Office Hours week-grid       (_pages/office-hours.md)
+#   2. Today Pill                   (_includes/today_pill_js.html)
+#   3. Homepage university groups   (index.md)
+#
+# Update this file when your weekday/campus assignment changes for a new
+# semester. This is SEPARATE from adding/removing individual course files —
+# a course's `information.time` field describes class meeting times, not
+# which campus you're physically at that day for office hours. Course
+# meeting times also vary section-to-section and aren't reliably parseable,
+# so this schedule is maintained by hand (once per semester, not per course).
+#
+# Each entry:
+#   uni          — abbr matching an entry in _data/universities.yml
+#   display_day  — 1=Mon .. 5=Fri. The ONE day this university's office-hours
+#                  card/pill entry appears on. Only one entry may claim a
+#                  given display_day (e.g. JBNU teaches Wed+Thu but is shown
+#                  under Thursday since HB already claims Wednesday — see
+#                  CLAUDE.md architecture decision #19).
+#   days         — ALL weekdays (1=Mon..5=Fri) this university meets, used
+#                  only for the homepage group header's day label (e.g. JBNU
+#                  shows "Wednesday & Thursday" even though its OH card/pill
+#                  only appears under Thursday).
+# ─────────────────────────────────────────────────────────────
+schedule:
+  - uni: wku
+    display_day: 1
+    days: [1]
+  - uni: jbnu
+    display_day: 2
+    days: [1, 2]
+  # - uni: hb
+  #   display_day: 3
+  #   days: [3]
+  # - uni: jbnu
+  #   display_day: 4
+  #   days: [3, 4]
+  # - uni: jnue
+  #   display_day: 5
+  #   days: [5]
+
+# ─────────────────────────────────────────────────────────────
+# Vacation / break windows — MM-DD (inclusive), checked against the
+# visitor's local date in JS (not baked in at Jekyll build time), so this
+# stays accurate between deploys. While today falls inside a window, the
+# Office Hours page shows this banner instead of the week-grid, and the
+# Today Pill shows the vacation message instead of a class.
+#
+# Add a new entry at the start of each break (don't just edit label/body —
+# keep old entries only if their dates could still be current; otherwise
+# replace them). If a window wraps New Year's (e.g. Dec 20 – Feb 28), that's
+# fine — `start` may be numerically greater than `end`.
+# ─────────────────────────────────────────────────────────────
+vacation:
+  - start: "06-20"
+    end: "08-31"
+    icon: "☀"
+    label_en: "Summer 2026 — Research & Writing Mode"
+    label_ko: "2026년 여름 — 연구 및 집필 모드"
+    body_en: >
+      Spring semester has ended. I am on research leave through August, working
+      on PAI Lab projects and writing. Campus visits are paused — no in-person
+      office hours until September. For urgent matters, KakaoTalk is still
+      monitored. Meetings can be booked via Cal.com below.
+    body_ko: >
+      1학기가 종료되었습니다. 8월까지 PAI 연구소 프로젝트와 집필에 집중하는 연구
+      휴가 중입니다. 캠퍼스 방문이 중단되어 있으며, 9월까지 대면 상담은
+      없습니다. 긴급한 사항은 카카오톡으로 연락하세요. 아래 Cal.com을 통해
+      미팅 예약이 가능합니다.

@@ -57,8 +57,8 @@ Everything to update when a new semester starts (e.g. 2027-1):
 - [ ] Update `week:` numbers
 - [ ] Add `hw:` / `hw2:` GitHub Classroom assignment links once created
 - [ ] Add `slides:` Google Slides URLs as you create them
-- [ ] Mark holidays with `no_class: true` (or just a descriptive title)
-- [ ] Mark test weeks with `test: true`
+- [ ] Mark holidays with `skip: true` and/or a title containing "No Class"/"휴강"
+- [ ] Test/exam rows are detected from the **title text itself** — no boolean field. A row is styled as an exam row if its title contains the *whole word* `Test`, `Exam`, `Midterm`, or `Final` (English — checked as whole words, so "Example" won't false-trigger), or the substring `시험`/`고사` (Korean). See "Schedule Data Format" below.
 
 ### 4 · Announcements — `_data/announcements.yml`
 - [ ] Add a "New semester begins" announcement
@@ -78,17 +78,21 @@ Each entry supports these fields:
 ```
 The section is hidden automatically when the file is empty.
 
-### 5 · Office Hours — `_pages/office-hours.md`
-- [ ] Update day/time grid if schedule changed
-- [ ] Update campus buildings/room numbers if changed
-- [ ] Update KakaoTalk / contact links if changed
+### 5 · Office Hours / Today Pill — `_data/office_hours.yml`
+- [ ] **Only if your weekday↔university assignment changed** (which university you teach on which day), update the `schedule:` list in `_data/office_hours.yml`. This one file drives the Office Hours week-grid, the Today Pill (homepage + office-hours page), and the homepage's university-group day labels — do not edit those pages directly.
+- [ ] If a campus/room name changed, update `campus`/`campus_en` on that university's entry in `_data/universities.yml` (not `office_hours.yml`)
+- [ ] Update KakaoTalk / contact links in `_pages/office-hours.md` if changed
+- [ ] Add a new `vacation:` window entry (start/end MM-DD + label/body copy) at the start of any break — see "Office Hours & Today Pill Data" below
 
 ### 6 · Index page — `index.md`
-- [ ] Verify the Today pill days are correct (Mon=UT, Tue=WKU, Wed=HB, Thu=JBNU, Fri=JNUE)
+- [ ] Nothing to check here — the Today Pill and homepage university-group day labels read directly from `_data/office_hours.yml` (see step 5)
 
 ### 7 · After the semester ends
 - [ ] Set `now: Yes` → remove or set false on all finished courses
 - [ ] The archive page auto-updates — no manual changes needed
+
+### 8 · Before committing
+- [ ] Run `git status` and confirm every new file (new `.md` course files, new `.yml` data files, new book-cover images) shows up as staged/tracked, **not** under "Untracked files". Unlike edits to existing files, brand-new files are invisible to GitHub Pages until you explicitly `git add` them — this is the #1 cause of "I added courses but they don't show up on the live site" (see CLAUDE.md Bug #24).
 
 ---
 
@@ -203,7 +207,6 @@ Each row in `_data/YYYY/school_subject_lectures.yml`:
 # Test row:
 - date: 5/13
   week: 11
-  test: true
   title: <strong>중간고사</strong> Midterm Test
 ```
 
@@ -212,6 +215,38 @@ Each row in `_data/YYYY/school_subject_lectures.yml`:
 2. **Slides thumbnail** — `img:` links to `slides:`; `slides2:` shows below thumbnail
 3. **Info** — `week:` heading + `title:` + `readings:`
 4. **Logistics** — `logistics:` HTML + `hw:`/`hw2:` buttons
+
+**Exam/test detection:** there is no `test:` boolean field — `_includes/schedule.html` looks at the `title:` text itself. A row gets the yellow exam styling if its title contains the whole word `Test`, `Exam`, `Midterm`, or `Final` (English titles are stripped of HTML/punctuation and split into words, so only exact-word matches count — a title like "20. A **Example** Inference Task" will NOT false-trigger), or the substring `시험`/`고사` (Korean words don't need whole-word matching since compounds don't use spaces). If a lecture title happens to need the word "test"/"exam" without being an actual exam (unlikely), rephrase the title.
+
+---
+
+## Office Hours & Today Pill Data
+
+The Office Hours week-grid, the Today Pill (shown on the homepage and the office-hours page), and the homepage's university-group day labels are **all driven by one file**: `_data/office_hours.yml`. Never hardcode a weekday→university mapping, room/campus name, or vacation date range directly in `_pages/office-hours.md`, `_includes/today_pill_js.html`, or `index.md` — edit the data files instead.
+
+```yaml
+schedule:
+  - uni: ut            # abbr from _data/universities.yml
+    display_day: 1     # 1=Mon..5=Fri — the ONE day this uni's OH card/pill shows on
+    days: [1]           # ALL days this uni meets; used only for the homepage's day label
+  - uni: jbnu
+    display_day: 4      # JBNU's card sits under Thursday (HB already claims Wednesday)
+    days: [3, 4]         # but the homepage shows "Wednesday & Thursday" for it
+
+vacation:
+  - start: "06-20"      # MM-DD, inclusive (start > end is fine for windows spanning New Year's)
+    end: "08-31"
+    icon: "☀"
+    label_en: "Summer 2026 — Research & Writing Mode"
+    label_ko: "2026년 여름 — 연구 및 집필 모드"
+    body_en: "Longer paragraph shown in the vacation banner..."
+    body_ko: "..."
+```
+
+- **When your weekday/campus assignment changes** (roughly once a year, not per-course): edit `schedule:` in `_data/office_hours.yml`.
+- **When a break starts/ends**: add/update a `vacation:` entry. The date check runs client-side in the visitor's browser (not baked in at build time), so it stays accurate even if the site isn't rebuilt for weeks — see CLAUDE.md decision #30.
+- **When a university's display name/campus text changes**: edit that university's entry in `_data/universities.yml` (`name`, `name_ko`, `short_ko`, `campus`, `campus_en`, `logo`) — never the OH page directly.
+- Adding a new course does **not** require touching this file at all, unless the course also changes which day you're physically on a given campus.
 
 ---
 
@@ -226,6 +261,18 @@ The static fallback text in `_includes/about_aaron.html` is shown briefly before
 
 ---
 
+## Recent Lab Notes (homepage)
+
+The "Recent Lab Notes" section on the homepage (`index.md`, near the bottom) pulls **live** from pailab.io — publishing a new note there is the only step needed; nothing to edit on this site.
+
+1. Add the note as a `.md` file in the correct year folder in the pailab repo: `src/content/notes/YYYY/your-note.md` (see `github.com/aaron-kr/pailab/tree/main/src/content/notes`)
+2. Push to `main` — Vercel redeploys pailab.io, which regenerates `https://www.pailab.io/notes.json` (built by `src/pages/notes.json.ts` from the `notes` content collection, newest 8, CORS-enabled)
+3. The next time anyone loads courses.aaron.kr's homepage, the JS at the bottom of the Lab Notes section fetches that JSON and replaces the list automatically
+
+The static `<a class="lab-note-row">` rows in `index.md`'s source are a **pre-JS fallback only** (shown briefly before the fetch resolves, or if JS is blocked) — do not hand-edit them when publishing a new note. If you're checking whether this is working via "View Source," you'll always see the stale fallback rows there since View Source never reflects JS-mutated DOM — check the browser's Elements/Inspector panel (or just look at the rendered page) instead.
+
+---
+
 ## Key Files
 
 | File | Purpose |
@@ -235,7 +282,8 @@ The static fallback text in `_includes/about_aaron.html` is shown briefly before
 | `_includes/about_aaron.html` | Instructor bio box — fetches from aaronsnowberger.com/bio.json |
 | `_includes/course_card.html` | Card component used on home/archive pages |
 | `_sass/_variables.scss` | All color & layout variables |
-| `_data/universities.yml` | **Single source of truth** for university logos, names, abbrs, and URLs |
+| `_data/universities.yml` | **Single source of truth** for university logos, names, abbrs, campus names, and URLs |
+| `_data/office_hours.yml` | **Single source of truth** for the weekday→university teaching schedule + vacation windows (drives Office Hours page, Today Pill, homepage uni-groups) |
 | `_config.yml` | Site settings, course categories, GitHub/social handles |
 | `_data/nav.yml` | Nav links — edit here to add/remove nav items |
 | `_data/announcements.yml` | Homepage announcements strip |
