@@ -14,9 +14,10 @@ category: Special
 
 <hr>
 
-- [생성형 AI 소개 PPT](https://docs.google.com/presentation/d/1rPw8hO2DCn4eSeot1tfPP2_Ck8eNi5eK/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true)
+- [생성형 AI 소개 PPT](https://docs.google.com/presentation/d/1rKn-yo0I2nw1qBhoud6NzNtEtJCB3gGr2FaKNVMGHQY/edit?usp=sharing)
 - [생성형 AI 내용 PPT](https://docs.google.com/presentation/d/1rPw8hO2DCn4eSeot1tfPP2_Ck8eNi5eK/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true)
 
 <hr>
 
 - [디지털 창작 PPT](https://docs.google.com/presentation/d/1Gs8uIP4w4MFTN0zn3bb1LMNr9HKBgMSq/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true)
+- [파이널 도전 PPT](https://docs.google.com/presentation/d/1DB48PLUyJB1MkT5Nv4S8eyMbvkp16JbJ/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true)
