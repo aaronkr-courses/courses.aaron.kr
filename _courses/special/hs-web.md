@@ -8,6 +8,7 @@ uni: ut
 img: assets/img/books/html-css.jpg
 importance: 2
 category: Special
+data_file: special/hs_web_lectures
 external_url: https://2023-aaronkr.github.io/web-crash-course/
 
 grading:
