@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Teaching & Courses
-description: Computer Science and Engineering courses taught by Prof. Aaron Snowberger at five Korean universities. Find schedules, textbooks, assignments, and policies for all active courses.
+description: Computer Science and Engineering courses taught by Prof. Aaron Snowberger at various Korean universities. Find schedules, textbooks, assignments, and policies for all active courses.
 permalink: /
 ---
 
@@ -13,9 +13,9 @@ permalink: /
     <div class="eyebrow">Prof. Aaron Snowberger</div>
     <h1 class="animate d2">Teaching &amp;<br><em>Courses</em></h1>
     <p class="hero-desc animate d3">
-      <span class="lang-en">Computer Science &amp; Engineering courses taught at five Korean universities.
+      <span class="lang-en">Computer Science &amp; Engineering courses taught at various Korean universities.
       Find schedules, textbooks, assignments, and policies for all active courses.</span>
-      <span class="lang-ko">한국 5개 대학에서 가르치는 컴퓨터 공학 강좌입니다.
+      <span class="lang-ko">한국 다양한 대학에서 가르치는 컴퓨터 공학 강좌입니다.
       현재 강좌의 강의 일정, 교재, 과제, 규정을 확인하세요.</span>
     </p>
 
