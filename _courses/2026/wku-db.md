@@ -6,7 +6,7 @@ subtitle: 데이터베이스
 description: ??? • 2026년 2학기 • 원광대학교
 uni: wku
 img: assets/img/books/power-of-db.jpg
-importance: 1
+importance: 5
 category: 2026-2
 now: Yes
 data_file: 2026/wku_db_lectures

@@ -6,9 +6,10 @@ subtitle: 데이터 과학
 description: 259124 • 2026년 2학기 • 교통대학교
 uni: ut
 img: assets/img/books/hands-on-machine-learning.jpg
-importance: 6
+importance: 1
 category: 2026-2
 data_file: 2026/ut_data_lectures
+now: Yes
 
 grading:
   attendance: 10

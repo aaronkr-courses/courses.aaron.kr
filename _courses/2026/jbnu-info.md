@@ -6,7 +6,7 @@ subtitle: 융합형 정보전송
 description: 0000130650 • 2026년 2학기 • 전북대학교
 uni: jbnu
 img: assets/img/books/info-theory-tutorial.jpg
-importance: 2
+importance: 4
 category: 2026-2
 now: Yes
 data_file: 2026/jbnu_info_lectures
