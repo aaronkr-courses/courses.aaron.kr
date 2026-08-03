@@ -1,0 +1,196 @@
+- date: 9/7
+  week: 1
+  title: >
+    <strong>수업 소개</strong>
+  supp:
+  readings: p. 1-26
+  hw:
+  slides: "https://docs.google.com/presentation/d/1TUnhrNPdww_9EMbzZMzNn-F_1T7Zt0JDMMP00rdtSOs/edit?usp=sharing"
+  img: 2024/ut-data/1-intro-to-data-sci.jpg
+  logistics:
+
+- date: 9/14
+  week: 2
+  title: >
+    <strong>1장 한눈에 보는 머신러닝</strong>
+  supp:
+  readings: p. 27-67
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1TGg7rGsrRqk5j9TC948R3aBOGBzBXSzRix4W_W2XtOk/edit?usp=sharing"
+  img_: 2024/ut-data/2-ml-at-a-glance.jpg
+  logistics:
+
+- date: 9/21
+  week: 3
+  title: >
+    <strong>2장 머신러닝 프로젝트 처음부터 끝까지</strong>
+  supp:
+  readings: p. 68-142
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1onWWgiSOLmHiKNFEfb-hMKZDblQL_xiDjpVL0oJugLg/edit?usp=sharing"
+  img_: 2024/ut-data/3-ml-project.jpg
+  logistics:
+
+- date: 9/28
+  week: 4
+  title: >
+    <strong>3장 분류</strong>
+  supp:
+  readings: p. 143-176
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1PTBHY3TSIIe3jNy-gm0FtKuhyH67GuslhFyNj6Yp56c/edit?usp=sharing"
+  img_: 2024/ut-data/4-classification.jpg
+  logistics:
+
+- date: 10/5
+  week: 5
+  title: >
+    <span style="color: red"><strong>No Class</strong> 대체휴일: Coming from Heaven Day</span>
+
+- date: 10/12
+  week: 6
+  title: >
+    <strong>4장 모델 훈련</strong>
+  supp:
+  readings: p. 177-226
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1vJ25q7QR4IcVfUsokYegkMcz_yAqjFFY8D0RLbddG7s/edit?usp=sharing"
+  img_: 2024/ut-data/6-model-training.jpg
+  logistics:
+
+- date: 10/19
+  week: 7
+  title: >
+    <strong>5장 서포트 벡터 머신<br>
+    6장 결정 트리</strong>
+  supp:
+  readings: p. 177-296
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1WunSoesW_wXc5nzeX2_VK1LQkraNDNL3dxGpKIFd6xw/edit?usp=sharing"
+  img_: 2024/ut-data/7-3-models.jpg
+  logistics:
+
+- date: 10/26
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    <div style="display: none;">
+      <a href="https://docs.google.com/spreadsheets/d/1nHiocAwXWG6uLGveyV1QqaXrRuLVGNkqZmT4gOHf0uw/edit?usp=sharing">핵심 개념 용어</a><br>
+      <a href="https://docs.google.com/presentation/d/1NO6_B8HVeR5WoJuTJXMgTgmhxURlt-uzPia3qDSeYsU/edit?usp=sharing">팀 프로젝트 설명 PPT</a><br>
+      <div><br>
+        [<a href="https://classroom.github.com/a/v0Ll672L">프로젝트 저장소 AM</a>]<br>
+        [<a href="https://classroom.github.com/a/PFDbQZp_">프로젝트 저장소 PM</a>]
+      </div>
+    </div>
+
+- date: 11/2
+  week: 9
+  title: >
+    <strong>7장 앙상블 학습과 랜덤 포레스트<br>
+    8장 차원 축소</strong>
+  supp:
+  readings: p. p. 268-323
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1goTW6RepqzHNa3JZDuP8KadDMNuO2ZpyvSvQAiHStxY/edit?usp=sharing"
+  img_: 2024/ut-data/8-ensemble-dim.jpg
+  logistics:
+
+- date: 11/9
+  week: 10
+  title: >
+    <strong>9장 비지도 학습</strong>
+  supp:
+  readings: p. 324-365
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1EEZBzmrEN8VDDdUnZ2Tj9BdJOJXLTrCUWy7KlHWNXQY/edit?usp=sharing"
+  img_: 2024/ut-data/10-unsupervised.jpg
+  logistics:
+
+- date: 11/16
+  week: 11
+  title: >
+    <strong>10장 케라스를 사용한 인공 신경망 소개</strong>
+  supp:
+  readings: p. 370-433
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1nHUbriVxg7J4NUSok7QhskrAmTJ-Mio_BZcO9DSj2bM/edit?usp=sharing"
+  img_: 2024/ut-data/11-keras-nn.jpg
+  logistics:
+
+- date: 11/23
+  week: 12
+  title: >
+    <strong>11장 심층 신경망 훈련</strong>
+  supp:
+  readings: p. 434-488
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1hrGXot-GjUEMNCv7-zUH8yO9gI1NfmHHAkQ_TJj8qGo/edit?usp=sharing"
+  img_: 2024/ut-data/12-cnn-training.jpg
+  logistics:
+
+- date: 11/30
+  week: 13
+  title: >
+    <strong>12장 텐서플로를 사용한 사용자 정의 모델과 훈련<br>
+    13장 텐서플로를 사용한 데이터 적재와 전처리</strong>
+  supp:
+  readings: p. 489-576
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1eMMfWqxcO-6yz4cU2PfY1hVEDmgVNG9m0_t-veLd20Q/edit?usp=sharing"
+  img_: 2024/ut-data/13-tf-user-defined.jpg
+  logistics:
+
+- date: 12/7
+  week: 14
+  title: >
+    <strong>14장 합성곱 신경망을 사용한 컴퓨터 비전</strong>
+  supp:
+  readings: p.
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1QrBSXQ03YFvQ9fvnp_p0zFit5HBjztRjMctJdBcxHyY/edit?usp=sharing"
+  img_: 2024/ut-data/14-cv.jpg
+  logistics:
+
+- date: 12/14 (보강)
+  week: 15
+  title: >
+    <strong>팀 프로젝트 발표</strong><br>
+    <ul style="display: none">
+      <li><a href="https://forms.gle/izpYsTtRUtVxSCUq6">팀 발표 평가 의견 - AM</a></li>
+      <li><a href="https://forms.gle/wcAgy4DQvGsf5Xo56">팀 발표 평가 의견 - PM</a></li>
+    </ul>
+  supp:
+  readings:
+  hw1: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1a4yxg59EzCwAriDRHNguuMnlwCPdx3DEQ4SFRcjiBsE/edit?usp=sharing"
+  img_: 2024/ut-data/15-final-guide.jpg
+  logistics: >
+    팀 발표 (.ipynb, .py, .ppt) 파일들은 GitHub 저장소에서 제출
+    <ul style="display: none">못 하는 것
+      <li>15장 RNN과 CNN을 사용한 시퀀스 처리</li>
+      <li>16장 RNN과 어텐션을 사용한 자연어 처리</li>
+      <li>17장 오토인코더, GAN 그리고 확산 모델</li>
+      <li>18장 강화학습</li>
+      <li>19장 대규모 텐서플로 모델 훈련과 배포</li>
+    </ul>
+
+- date: 12/21
+  week: 16
+  title: >
+    <strong>Final Test</strong><br>
+    <div style="display: none;"><br>
+      <a href="">퀴즈 AM</a><br>
+      <a href="">퀴즈 PM</a>
+    </div>
