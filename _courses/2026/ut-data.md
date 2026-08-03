@@ -3,7 +3,7 @@ layout: course
 init: UT
 title: Data Science
 subtitle: 데이터 과학
-description: 259124 • 2026년 2학기 • 교통대학교
+description: 259124 • 2026년 2학기 • 한국교통대학교
 uni: ut
 img: assets/img/books/hands-on-machine-learning.jpg
 importance: 1

@@ -1,6 +1,6 @@
 # Aaron Snowberger — Courses Site
 
-A **Jekyll site** for Prof. Aaron Snowberger's teaching portfolio across five Korean universities. Hosted on GitHub Pages at [courses.aaron.kr](https://courses.aaron.kr).
+A **Jekyll site** for Prof. Aaron Snowberger's teaching portfolio across various Korean universities. Hosted on GitHub Pages at [courses.aaron.kr](https://courses.aaron.kr).
 
 ## Quick Start
 
@@ -45,6 +45,7 @@ Everything to update when a new semester starts (e.g. 2027-1):
 - [ ] Set `now: Yes` on every **active** course; remove/omit from completed ones
 - [ ] Set correct `category: 2027-1`
 - [ ] Set `uni: <abbr>` (e.g. `uni: ut`) — drives the logo, favicon, and watermark automatically via `_data/universities.yml`
+- [ ] Make sure `description:` contains the university's exact `name_ko` from `_data/universities.yml` (e.g. `한국교통대학교`, not the shortened `교통대학교`) — the **homepage** groups courses by a substring match on `description:`, separate from the `uni:` abbr used everywhere else. Easiest: copy `description:` from an existing course at the same university and only edit the section code/semester. See "Adding a New Course" notes below for why this matters.
 - [ ] Update `data_file:` to match the new data file name (e.g. `2027/ut_iot_lectures`)
 - [ ] Update `information:` (section codes, times, locations, KakaoTalk links)
 - [ ] Update `grading:` if percentages change
@@ -174,6 +175,7 @@ Main-Text:
 > **Notes:**
 > - `now: Yes` in YAML is a boolean `true`. The site uses `where_exp: "c", "c.now"` — never `where: "now", "Yes"` (which matches nothing).
 > - `uni:` must match an `abbr:` in `_data/universities.yml`. For non-university courses (online, high school), use `logo: https://...` directly instead.
+> - **`description:` must contain the university's exact `name_ko` string, or the course silently vanishes from the homepage.** The homepage (`index.md`) does NOT group courses by `uni:` — it does a substring match, `where_exp: "c", "c.description contains uni"`, where `uni` is `_data/universities.yml`'s `name_ko` for that school (e.g. UT's `name_ko` is `한국교통대학교`, not `교통대학교`). If your `description:` uses a shortened/informal Korean name that doesn't contain the exact `name_ko` substring, the course still shows up correctly on `/archive/` (matches by `category:`) and `/office-hours/` (matches by `uni:` abbr) — only the homepage silently drops it, with no build error or warning. **Always copy the exact `name_ko` value from `_data/universities.yml` into your new course's `description:` field**, or copy the `description:` line from another course at the same university verbatim and just swap the section code/semester.
 
 ---
 
