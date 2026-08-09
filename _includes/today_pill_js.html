@@ -49,9 +49,38 @@
     return null;
   }
 
-  // Returns { type: 'vacation'|'weekend'|'class'|'noclass', day: 0-6, vacation? }
+  // Returns today's ISO date (YYYY-MM-DD), local time.
+  function isoToday() {
+    var n = new Date();
+    return n.getFullYear() + '-' + pad2(n.getMonth() + 1) + '-' + pad2(n.getDate());
+  }
+
+  // Returns the matching intensive-session window (_data/office_hours.yml `sessions`),
+  // plus 1-indexed day/total counts, or null. Unlike currentVacation(), these use full
+  // ISO dates since a session is a one-off block, not a recurring annual window.
+  function currentSession() {
+    var iso = isoToday();
+    var list = DATA.sessions || [];
+    for (var i = 0; i < list.length; i++) {
+      var s = list[i];
+      if (iso >= s.start && iso <= s.end) {
+        var msPerDay = 86400000;
+        var start = new Date(s.start + 'T00:00:00');
+        var end = new Date(s.end + 'T00:00:00');
+        var today = new Date(iso + 'T00:00:00');
+        var dayNum = Math.round((today - start) / msPerDay) + 1;
+        var total = Math.round((end - start) / msPerDay) + 1;
+        return Object.assign({}, s, { dayNum: dayNum, total: total });
+      }
+    }
+    return null;
+  }
+
+  // Returns { type: 'session'|'vacation'|'weekend'|'class'|'noclass', day: 0-6, session?|vacation? }
   function status() {
     var day = new Date().getDay();
+    var sess = currentSession();
+    if (sess)                return { type: 'session',  day: day, session: sess };
     var vac = currentVacation();
     if (vac)                return { type: 'vacation', day: day, vacation: vac };
     if (!day || day === 6)  return { type: 'weekend',  day: day };
@@ -65,7 +94,10 @@
     var txt  = document.getElementById('today-text');
     if (!pill || !txt) return;
     var s = status(), ko = isKo();
-    if (s.type === 'vacation') {
+    if (s.type === 'session') {
+      var d = s.session;
+      txt.textContent = (ko ? d.label_ko : d.label_en) + ' · Day ' + d.dayNum + '/' + d.total;
+    } else if (s.type === 'vacation') {
       pill.classList.add('noclass');
       txt.textContent = ko ? (s.vacation.label_ko || '방학 — 연구 모드') : (s.vacation.label_en || 'Vacation — Research Mode');
     } else if (s.type === 'weekend') {

@@ -4,7 +4,7 @@ This file tells Claude (and future collaborators) exactly what this project is, 
 
 ## What This Project Is
 
-A **Jekyll-based courses website** for Prof. Aaron Snowberger, who teaches computer science at five Korean universities (one per weekday):
+A **Jekyll-based courses website** for Prof. Aaron Snowberger, who teaches computer science at five Korean universities (one per weekday). For example:
 
 | Day | University | Korean | Abbr |
 |---|---|---|---|
@@ -222,6 +222,10 @@ claude-courses/
     - `vacation:` entries have `start`/`end` (MM-DD, inclusive; `start > end` is fine for windows spanning New Year's), plus `icon`, `label_en`/`label_ko`, `body_en`/`body_ko`.
     - Update this file once per semester when the weekday/campus assignment changes. This is separate from adding/removing individual course files — course `information.time` fields describe class meeting times (which vary section-to-section and aren't reliably parseable), not which campus you're physically at for office hours.
 30. **Vacation window checking stays client-side, not build-time** — The `vacation:` list from `_data/office_hours.yml` is embedded into `today_pill_js.html` via `jsonify` and compared against the visitor's real local date in JS, not evaluated once at Jekyll build time. This matters because the site only rebuilds on push (see decision #27) — a build-time check would go stale between deploys during a multi-week break (e.g. the banner would fail to appear/disappear on the exact date if nobody pushes that day).
+31. **`_data/YYYY/` folder year = calendar year of the lecture dates, not the course's academic-year folder** — `schedule.html` prepends the `_data_file`'s leading path segment to each `date:` to parse the correct calendar year (decision #26), so that segment must match when the lectures actually happen. Regular semesters don't notice this because a course's `_courses/2026/` folder and its `2026-1`/`2026-2` category both fall inside calendar 2026. A winter-intensive (계절학기) course breaks that coincidence: `_courses/2026/gnue-ai-edu.md` (academic year 2026, category `2026-winter`) meets on real January-**2027** dates, so its `data_file` points at `_data/2027/gnue_ai_edu_lectures.yml` — a different year than the course file's own directory. This is intentional, not a misfile; do the same for any future winter/summer session whose dates cross into the next calendar year.
+32. **Grad-course + winter-intensive (계절학기) front matter** — `grad: true` and `intensive: true` are independent boolean flags (a course can be either, both, or neither — see `_courses/2026/gnue-ai-edu.md` for both). `grad` only affects the home/archive card/row (🎓 chip + `var(--warn)` left-accent bar via `::after`/`::before` overlay, never a layout-shifting border, so non-grad rows are pixel-identical to before) and a dedicated archive "Level" filter — it has **no effect on the course page itself** (explicit design intent: don't change the per-course layout). `intensive` affects the course page (❄ hero badge, `session_start`/`session_end`/`daily_hours`-driven date line, `schedule.html`'s `include.intensive` param swapping "Week N"→"Day N"), the homepage (its own "Winter Intensive Sessions" group, since it has no weekday `office_hours.yml` slot to sit under), and Office Hours/Today Pill (via the new `sessions:` list in `_data/office_hours.yml` — see decision #29 addendum below). Per-lecture-row `zoom:`/`lms:` fields in the data file are independent of both flags (either can appear on any row of any course) and just render a small link via `schedule.html`.
+33. **`visible: false` course front matter** — Excludes a course from every internal listing (`index.md` current-course groups + stats counts, `archive.md` semester groups, `nav.html` desktop/mobile dropdowns) while still building the page at its normal URL — for drafting/testing a course before announcing it, without deleting it. Implemented as `| where_exp: "c", "c.visible != false"` chained onto every `site.courses` query in those three files (safe under the `where_exp` scope gotcha in decision #18/Bug #16 below, since the expression only ever references the loop's own iteratee, never an outer local var like `cat.key`). Default (field omitted) is visible — existing courses need no changes. Does **not** exclude the page from `sitemap.xml` (jekyll-sitemap reads its own `sitemap: false` front-matter key at build time, which can't be conditioned on another field via Liquid) — pair `visible: false` with `sitemap: false` by hand if that matters for a given draft.
+34. **`sessions:` in `_data/office_hours.yml`** — Sibling list to `vacation:`, for one-off intensive/winter-session teaching windows. Unlike `vacation:` (recurring `MM-DD`, checked every year), `sessions:` entries use full ISO `start`/`end` dates (`YYYY-MM-DD`) since they don't repeat. `today_pill_js.html`'s `currentSession()` mirrors `currentVacation()`'s lookup but also returns 1-indexed `dayNum`/`total` (date-diff in days) for the "Day N/Total" Today Pill text. In `status()`, an active session takes priority over vacation (teaching is still happening even during a semester break) and over the regular weekday `schedule:` lookup. `office-hours.md` renders it in its own `#session-status` banner (`.season-notice.is-session` — accent2/blue, vs. the vacation banner's accent3/teal, so the two are visually distinct) alongside, not replacing, the existing `#vacation-status` banner markup.
 
 ## Known Bugs & Fixes (historical record)
 
@@ -454,6 +458,11 @@ evaluates as `(today_ts − days_from_monday) × 86400`, which is an astronomica
   img2: 2024/hb-cpp/1-alt.jpg        # Optional second image (fallback if img not set)
   logistics: >        # Optional logistics HTML — goes in column 4; can contain <a> links
     <a href="...">Link</a>
+  zoom: "https://zoom.us/j/..."   # Optional — renders a "🎥 Zoom" link (live lecture day)
+  lms: "https://..."              # Optional — renders a "📺 LMS Video" link (pre-recorded day)
+                                   # Either, both, or neither may be set per row — typically
+                                   # used on intensive: true courses (see below), but not
+                                   # restricted to them.
 
 # No-class row (holiday/test):
 - date: 4/22
@@ -473,9 +482,24 @@ description: SECTION_CODE • YYYY년 N학기 • 대학교이름
 uni: ut                       # abbr from _data/universities.yml (drives logo + favicon)
 img: assets/img/books/book.jpg
 importance: 1                 # sort order (lower = higher priority)
-category: 2026-1              # YYYY-N (semester key)
+category: 2026-1              # YYYY-N (semester key); see course_categories in _config.yml
 now: Yes                      # omit or "No" for past courses
+visible: false                # optional — omit (or true) to show normally. false hides this
+                               # course from index/archive/nav listings + homepage stats while
+                               # still building the page at its URL (see decision #33). For
+                               # drafting a course before it's ready to announce.
+grad: true                    # optional — marks a graduate-level course. Home/archive card +
+                               # archive-row get a 🎓 chip + gold accent bar, and it's filterable
+                               # via the archive "Level" pill. No effect on the course page.
+intensive: true                    # optional — marks a 계절학기/winter-intensive course.
+session_start: 2027-01-04          # required if intensive: true — ISO date
+session_end: 2027-01-22            # required if intensive: true — ISO date
+daily_hours: 3                     # optional — shown as "Daily · Nhr" next to the date range
 data_file: 2026/ut_iot_lectures  # path inside _data/ (no .yml); split on / in schedule.html
+                               # NOTE: this must be the CALENDAR year the lecture dates fall in,
+                               # not necessarily this course file's own year folder — see
+                               # decision #31 (a winter session starting a course's "2026-2"
+                               # fall semester can run into January of the next calendar year).
 
 grading:
   attendance: 10
@@ -553,3 +577,4 @@ The original prototype HTML files (`index.html`, `course.html`, `archive.html`, 
 11. Session 15: **Waves debugging + single-source-of-truth logos** — Diagnosed `prefers-reduced-motion` killing canvas; fixed full-width lines via `ctx.translate(wH,hH)`; `data-waves` opt-in attribute (index + office-hours only); waves default OFF with localStorage toggle; 44 course files migrated from `logo: <url>` to `uni: <abbr>`; `_data/universities.yml` created as canonical logo source; all templates updated to `site.data.universities` + for-loop lookup; stats bar university count deduplicated to exclude non-universities
 12. Session 16: **Security + quality audit + bug fixes** — Full repo security audit (AUDIT.md); moved policies inline `<style>` to `_sass/_pages.scss`; grading bar colors extracted to CSS custom properties (`--grade-attend` etc.); fixed malformed YAML in `_data/nav.yml`; `innerHTML → textContent` in `about_aaron.html` (XSS); fixed `schedule.html`: year detection from data_file path, correct week boundary calculation (`_off = N | times: 86400; ts | minus: _off` — NOT chained), past rows only for current year, `this-week` highlighting (Mon–Sun window, teal border); QR modal auto-refresh on token rotation via `refreshModalQR()`; consolidated 3 GitHub Actions workflows into single `deploy.yml` with yamllint lint step
 13. Session 17: **Fall-semester prep bug fixes** — Fixed `schedule.html` exam/test detection false-positiving on "Example" (substring match → word-boundary tokenized match; also added missing `고사` keyword); diagnosed new fall courses "missing" from Archive as untracked git files (not a template bug — see Bug #24) rather than fixing template code; replaced the hardcoded 5-day office-hours grid, the hardcoded weekday→university map in `today_pill_js.html`, and the hardcoded weekday→university arrays in `index.md`'s homepage university-groups (three separate copies of the same fact) with a single `_data/office_hours.yml` + `_data/universities.yml` (`short_ko`/`campus`/`campus_en` fields added) data-driven system (see decisions #29–30); vacation banner text/dates moved out of hardcoded HTML+JS into the same data file
+14. Session 18 (2026-08-07): **Grad-course + winter-intensive (계절학기) system** — New course front-matter fields `grad`, `intensive`, `session_start`/`session_end`, `daily_hours`, `visible` (see format sections + decision #31 below); new per-lecture-row data-file fields `zoom`/`lms`. `grad: true` adds a subtle 🎓 chip + `var(--warn)` left-accent bar to the card/archive-row (home, archive, and a new archive "Level" filter only — no effect on the course page itself, per design intent). `intensive: true` swaps `schedule.html`'s "Week N" labels for "Day N", renders per-row Zoom/LMS links, adds a ❄ hero badge + date-range line on the course page, gives intensive courses their own homepage group (they have no weekday `office_hours.yml` slot to group under), and — via a new `sessions:` list in `_data/office_hours.yml` (one-off ISO-date windows, unlike the recurring MM-DD `vacation:` list) — drives a dedicated Office Hours banner and a "Day N/Total" Today Pill message that takes priority over the vacation banner. `visible: false` excludes a course from `index.md`/`archive.md`/`nav.html` listings and homepage stats (page still builds at its URL) via `| where_exp: "c", "c.visible != false"` chained onto every `site.courses` listing query. Added GNUE (Gwangju National University of Education, `abbr: gnue`) to `_data/universities.yml` and a `2026-winter` course category; built `_courses/2026/gnue-ai-edu.md` + `_data/2027/gnue_ai_edu_lectures.yml` (real Jan 2027 calendar dates, hence the `2027` data folder despite the course living under `_courses/2026/` — see decision #31) as the scaffold course exercising all of the above.

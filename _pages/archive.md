@@ -62,7 +62,16 @@ eyebrow: Teaching History
         <button class="pill" data-filter="uni" data-value="HB"><span class="lang-en">HB</span><span class="lang-ko">한밭대</span></button>
         <button class="pill" data-filter="uni" data-value="JNUE"><span class="lang-en">JNUE</span><span class="lang-ko">전주교대</span></button>
         <button class="pill" data-filter="uni" data-value="DJU"><span class="lang-en">DJU</span><span class="lang-ko">대전대</span></button>
+        <button class="pill" data-filter="uni" data-value="GNUE"><span class="lang-en">GNUE</span><span class="lang-ko">광주교대</span></button>
         <button class="pill" data-filter="uni" data-value="HS"><span class="lang-en">HS</span><span class="lang-ko">고등학교</span></button>
+      </div>
+      <div class="ctrl-row">
+        <span class="ctrl-row-label"><span class="lang-en">Level</span><span class="lang-ko">과정</span></span>
+        <button class="pill active" data-filter="level" data-value="all">
+          <span class="lang-en">All</span><span class="lang-ko">전체</span>
+        </button>
+        <button class="pill" data-filter="level" data-value="grad">🎓 <span class="lang-en">Graduate</span><span class="lang-ko">대학원</span></button>
+        <button class="pill" data-filter="level" data-value="undergrad"><span class="lang-en">Undergraduate</span><span class="lang-ko">학부</span></button>
       </div>
       <div class="ctrl-row">
         <span class="ctrl-row-label"><span class="lang-en">Topic</span><span class="lang-ko">주제</span></span>
@@ -99,7 +108,7 @@ eyebrow: Teaching History
 
   <main id="archive-main" style="padding:32px 0 80px;">
     {%- for cat in site.course_categories -%}
-      {%- assign cat_courses = site.courses | where: "category", cat.key | sort: "importance" -%}
+      {%- assign cat_courses = site.courses | where: "category", cat.key | where_exp: "c", "c.visible != false" | sort: "importance" -%}
       {%- if cat_courses.size > 0 -%}
       {%- assign is_current = cat_courses | where_exp: "c", "c.now" | size -%}
       <div class="semester-group{% if is_current > 0 %} is-current{% endif %}" data-sem="{{ cat.key }}">
@@ -129,11 +138,12 @@ eyebrow: Teaching History
               {%- assign _tc = 'theory' -%}{%- assign _tl2 = 'CS' -%}
             {%- endif -%}
             <li>
-              <a class="archive-item"
+              <a class="archive-item{% if course.grad %} grad-item{% endif %}"
                  href="{{ course.url | relative_url }}"
                  data-uni="{{ _uni }}"
                  data-sem="{{ course.category }}"
                  data-topic="{{ _tc }}"
+                 data-level="{% if course.grad %}grad{% else %}undergrad{% endif %}"
                  data-title="{{ course.title | downcase }}">
                 {%- if course.img -%}
                 <div class="item-thumb" style="background-image:url('{{ course.img | relative_url }}')"></div>
@@ -151,6 +161,8 @@ eyebrow: Teaching History
                     {%- if course.subtitle %}<div class="item-subtitle">{{ course.subtitle }}</div>{%- endif -%}
                     <div class="item-meta-row">
                       <span class="item-tag {{ _tc }}">{{ _tl2 }}</span>
+                      {%- if course.grad -%}<span class="item-tag grad-tag">🎓 <span class="lang-en">Grad</span><span class="lang-ko">대학원</span></span>{%- endif -%}
+                      {%- if course.intensive -%}<span class="item-tag intensive-tag">❄ <span class="lang-en">Intensive</span><span class="lang-ko">계절학기</span></span>{%- endif -%}
                       {%- if _info.time -%}<span class="item-meta-val">{{ _info.time }}</span>{%- endif -%}
                       {%- if _info.location -%}<span class="item-meta-val">{{ _info.location }}</span>{%- endif -%}
                     </div>
@@ -182,6 +194,7 @@ eyebrow: Teaching History
   let activeSem   = 'all';
   let activeUni   = 'all';
   let activeTopic = 'all';
+  let activeLevel = 'all';
   let activeSort  = 'newest';
 
   const main = document.getElementById('archive-main');
@@ -203,7 +216,8 @@ eyebrow: Teaching History
       const semOk   = activeSem   === 'all' || row.dataset.sem   === activeSem;
       const uniOk   = activeUni   === 'all' || row.dataset.uni   === activeUni;
       const topicOk = activeTopic === 'all' || row.dataset.topic === activeTopic;
-      li.classList.toggle('arch-hidden', !(semOk && uniOk && topicOk));
+      const levelOk = activeLevel === 'all' || row.dataset.level === activeLevel;
+      li.classList.toggle('arch-hidden', !(semOk && uniOk && topicOk && levelOk));
     });
     document.querySelectorAll('.semester-group').forEach(sec => {
       const anyVis = [...sec.querySelectorAll('li')].some(li => !li.classList.contains('arch-hidden'));
@@ -253,6 +267,7 @@ eyebrow: Teaching History
       if (group === 'sem')   activeSem   = val;
       if (group === 'uni')   activeUni   = val;
       if (group === 'topic') activeTopic = val;
+      if (group === 'level') activeLevel = val;
       applyFilters();
     });
   });

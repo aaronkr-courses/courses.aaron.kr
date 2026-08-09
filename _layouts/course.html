@@ -19,9 +19,17 @@ layout: default
       <span class="c-badge code">{{ info.section | default: page.section }}</span>
       <span class="c-badge sem">{{ page.category | replace: '-', ' ' }}</span>
       <span class="c-badge uni">{{ page.description | split: ' • ' | last }}</span>
+      {%- if page.grad -%}<span class="c-badge grad">🎓 <span class="lang-en">Graduate</span><span class="lang-ko">대학원</span></span>{%- endif -%}
+      {%- if page.intensive -%}<span class="c-badge intensive">❄ <span class="lang-en">Winter Intensive</span><span class="lang-ko">계절학기</span></span>{%- endif -%}
     </div>
     <h1 class="animate d2">{{ page.title }}</h1>
     {% if page.subtitle %}<div class="course-subtitle animate d2">{{ page.subtitle }}</div>{% endif %}
+    {%- if page.intensive and page.session_start and page.session_end -%}
+    <div class="intensive-note animate d2">
+      <span class="lang-en">{{ page.session_start | date: "%b %-d" }} – {{ page.session_end | date: "%b %-d, %Y" }} · Daily{% if page.daily_hours %} · {{ page.daily_hours }}hr{% endif %}</span>
+      <span class="lang-ko">{{ page.session_start | date: "%-m월 %-d일" }} – {{ page.session_end | date: "%-m월 %-d일" }} · 매일{% if page.daily_hours %} {{ page.daily_hours }}시간{% endif %}</span>
+    </div>
+    {%- endif -%}
 
     {%- if page.information.size > 1 -%}
     <div class="stats-strip animate d3" style="grid-template-columns:repeat({{ page.information.size | times: 3 | at_most: 6 }},1fr);">
@@ -138,7 +146,7 @@ layout: default
       <div class="crs-section" id="schedule">
         <div class="crs-heading"><span class="crs-label"><span class="lang-en">Schedule</span><span class="lang-ko">강의 일정</span></span><span class="crs-line"></span></div>
         {%- if page.data_file -%}
-          {% include schedule.html data_file=page.data_file %}
+          {% include schedule.html data_file=page.data_file intensive=page.intensive %}
         {%- elsif page.external_url -%}
           <p style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:.8rem;">
             Schedule available on the <a href="{{ page.external_url }}" target="_blank" rel="noopener noreferrer" style="color:var(--accent2);">course site →</a>

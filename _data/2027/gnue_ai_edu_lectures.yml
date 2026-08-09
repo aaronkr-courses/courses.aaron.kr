@@ -1,0 +1,104 @@
+# _data/2027/gnue_ai_edu_lectures.yml
+# 광주교육대학교 AI융합교육프로젝트 (대학원) — Winter Intensive (계절학기)
+# Jan 4–22, 2027 · 15 daily sessions (M–F, 3 sections) compressed from a 15-week syllabus.
+# `zoom:` / `lms:` are optional per-row links rendered by schedule.html — use whichever
+# applies to that day (real-time Zoom lecture vs. pre-recorded LMS video day).
+# PLACEHOLDER links below — replace with real Zoom/GNUE LMS URLs before publishing.
+
+- date: 1/4
+  title: >
+    <strong>Course Orientation & AI in Education Overview</strong>
+  title_ko: "강좌 오리엔테이션 및 교육 분야 AI 개관"
+  zoom: "https://zoom.us/j/0000000001"
+  logistics: "실시간 Zoom 강의 · Live Zoom lecture"
+
+- date: 1/5
+  title: >
+    <strong>Foundations of Machine Learning for Educators</strong>
+  title_ko: "교육자를 위한 머신러닝 기초"
+  zoom: "https://zoom.us/j/0000000002"
+
+- date: 1/6
+  title: >
+    <strong>Data Literacy & Ethics in Educational AI</strong>
+  title_ko: "교육 AI의 데이터 리터러시와 윤리"
+  lms: "https://cyber.gnue.ac.kr/course/view.php?id=0000&week=3"
+  logistics: "LMS 동영상 시청 · Watch LMS video"
+
+- date: 1/7
+  title: >
+    <strong>Generative AI Tools for Curriculum Design</strong>
+  title_ko: "교육과정 설계를 위한 생성형 AI 도구"
+  zoom: "https://zoom.us/j/0000000004"
+
+- date: 1/8
+  title: >
+    <strong>Hands-on: Prompt Engineering Workshop</strong>
+  title_ko: "실습: 프롬프트 엔지니어링 워크숍"
+  zoom: "https://zoom.us/j/0000000005"
+  readings: "Course packet, Ch. 1–2"
+
+- date: 1/11
+  title: >
+    <strong>Computer Vision Basics for Classroom Applications</strong>
+  title_ko: "교실 적용을 위한 컴퓨터 비전 기초"
+  lms: "https://cyber.gnue.ac.kr/course/view.php?id=0000&week=6"
+  logistics: "LMS 동영상 시청 · Watch LMS video"
+
+- date: 1/12
+  title: >
+    <strong>Natural Language Processing in Education</strong>
+  title_ko: "교육 분야의 자연어 처리"
+  zoom: "https://zoom.us/j/0000000007"
+
+- date: 1/13
+  title: >
+    <strong>AI-Assisted Assessment & Feedback Systems</strong>
+  title_ko: "AI 기반 평가 및 피드백 시스템"
+  lms: "https://cyber.gnue.ac.kr/course/view.php?id=0000&week=8"
+  logistics: "LMS 동영상 시청 · Watch LMS video"
+
+- date: 1/14
+  title: >
+    <strong>Designing an AI-Integrated Lesson Plan (Project Kickoff)</strong>
+  title_ko: "AI 융합 수업 설계 (프로젝트 착수)"
+  zoom: "https://zoom.us/j/0000000009"
+
+- date: 1/15
+  title: >
+    <strong>Project Work Session I (Individual Consulting)</strong>
+  title_ko: "프로젝트 실습 I (개별 상담)"
+  zoom: "https://zoom.us/j/0000000010"
+
+- date: 1/18
+  title: >
+    <strong>Ethical & Legal Considerations (Student Data Privacy)</strong>
+  title_ko: "윤리적·법적 고려사항 (학생 데이터 프라이버시)"
+  lms: "https://cyber.gnue.ac.kr/course/view.php?id=0000&week=11"
+  logistics: "LMS 동영상 시청 · Watch LMS video"
+
+- date: 1/19
+  title: >
+    <strong>Project Work Session II (Peer Review)</strong>
+  title_ko: "프로젝트 실습 II (동료 피드백)"
+  zoom: "https://zoom.us/j/0000000012"
+
+- date: 1/20
+  title: >
+    <strong>Integrating AI Tools into LMS Platforms</strong>
+  title_ko: "LMS 플랫폼과 AI 도구 통합"
+  lms: "https://cyber.gnue.ac.kr/course/view.php?id=0000&week=13"
+  logistics: "LMS 동영상 시청 · Watch LMS video"
+
+- date: 1/21
+  title: >
+    <strong>Project Work Session III (Presentation Prep)</strong>
+  title_ko: "프로젝트 실습 III (발표 준비)"
+  zoom: "https://zoom.us/j/0000000014"
+
+- date: 1/22
+  title: >
+    <strong>Project Presentations & Course Wrap-up</strong>
+  title_ko: "프로젝트 발표 및 강좌 마무리"
+  zoom: "https://zoom.us/j/0000000015"
+  logistics: "실시간 Zoom 발표 · Live Zoom presentations"

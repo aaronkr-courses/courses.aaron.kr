@@ -3,9 +3,9 @@ layout: course
 init: WKU
 title: Database 
 subtitle: 데이터베이스
-description: ??? • 2026년 2학기 • 원광대학교
+description: 374112 • 2026년 2학기 • 원광대학교
 uni: wku
-img: assets/img/books/power-of-db.jpg
+img: assets/img/books/db-by-img.jpg
 importance: 5
 category: 2026-2
 now: Yes
@@ -19,9 +19,9 @@ grading:
   project: 5
 
 information:
-  - section: ???
+  - section: 374112
     time: 월 678 | Mon 2-5pm
-    location: 프라임관 지상 2층 - ???
+    location: 프라임관 지상 2층 - 콘텐츠응용개발실습실
     kakaotalk: 
 
 Main-Text:

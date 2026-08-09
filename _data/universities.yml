@@ -54,3 +54,30 @@
   abbr: jj
   url: "https://www.jj.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jju-logo_x1phga.png
+
+- name: "Gwangju National University of Education"
+  name_ko: "광주교육대학교"
+  short_ko: "광주교대"
+  campus: "광주캠퍼스"
+  campus_en: "Gwangju Campus"
+  abbr: gnue
+  url: "https://www.gnue.ac.kr/"
+  logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/gnue-logo_tkxaro.png"
+
+- name: "Chungbuk National University"
+  name_ko: "충북대학교"
+  short_ko: "충북대"
+  campus: "청주캠퍼스"
+  campus_en: "Cheongju Campus"
+  abbr: cbnu
+  url: "https://www.cbnu.ac.kr/"
+  logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/cbnu-logo_xme7s0.png"
+
+- name: "Kongju National University"
+  name_ko: "공주대학교"
+  short_ko: "공주대"
+  campus: "공주캠퍼스"
+  campus_en: "Kongju Campus"
+  abbr: kjnu
+  url: "https://www.kongju.ac.kr/"
+  logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/kongju-logo_rspuq9.png"

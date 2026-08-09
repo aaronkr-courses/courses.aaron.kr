@@ -55,6 +55,9 @@ collections:
 
 # Course category display order (newest first)
 course_categories:
+  - label: "Winter 2027"
+    label_ko: "2027년 겨울 계절학기"
+    key: "2027-winter"
   - label: "2026-2"
     label_ko: "2026년 2학기"
     key: "2026-2"
@@ -135,43 +138,3 @@ defaults:
       path: "assets/pdf"
     values:
       sitemap: false
-
-# ─────────────────────────────────────────
-# Universities
-# ─────────────────────────────────────────
-universities:
-  - name: "Transportation University"
-    name_ko: "교통대학교"
-    abbr: ut
-    url: "https://www.ut.ac.kr/"
-    logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/ut-logo_beiynv.png
-  - name: "Wonkwang University"
-    name_ko: "원광대학교"
-    abbr: wku
-    url: "https://www.wonkwang.ac.kr/"
-    logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/wku-logo_cu76kg.png
-  - name: "Jeonbuk National University"
-    name_ko: "전북대학교"
-    abbr: jbnu
-    url: "https://www.jbnu.ac.kr/"
-    logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/jbnu-logo_r6c50n.png
-  - name: "Hanbat University"
-    name_ko: "한밭대학교"
-    abbr: hb
-    url: "https://www.hanbat.ac.kr/"
-    logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/hanbat-logo_mvle6l.png
-  - name: "Jeonju National University of Education"
-    name_ko: "전주교육대학교"
-    abbr: jnue
-    url: "https://www.jnue.kr/"
-    logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jnue-logo_jmyh9e.png
-  - name: "Daejeon University"
-    name_ko: "대전대학교"
-    abbr: dju
-    url: "https://www.dju.ac.kr/"
-    logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/dju-logo-2_jxm7py.png
-  - name: "Jeonju University"
-    name_ko: "전주대학교"
-    abbr: jj
-    url: "https://www.jj.ac.kr/"
-    logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jju-logo_x1phga.png

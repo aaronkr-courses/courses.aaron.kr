@@ -10,7 +10,7 @@
             <button aria-haspopup="true" aria-expanded="false" aria-label="{{ item.title_en }} menu">{{ item.title_en }} &#x25BE;</button>
             <ul class="nav-dropdown">
               <li><span class="dd-semester"><span class="lang-en">{{ item.semester_en }}</span><span class="lang-ko">{{ item.semester_ko }}</span></span></li>
-              {%- assign _dd_courses = site.courses | where: "category", item.category | sort: "importance" -%}
+              {%- assign _dd_courses = site.courses | where: "category", item.category | where_exp: "c", "c.visible != false" | sort: "importance" -%}
               {%- for course in _dd_courses -%}
               <li>
                 <a href="{{ course.url | relative_url }}">
@@ -70,7 +70,7 @@
           <span class="m-chevron">&#x25BE;</span>
         </button>
         <div class="mobile-sub" id="m-{{ _mob_id }}-sub">
-          {%- assign _m_courses = site.courses | where: "category", item.category | sort: "importance" -%}
+          {%- assign _m_courses = site.courses | where: "category", item.category | where_exp: "c", "c.visible != false" | sort: "importance" -%}
           {%- for course in _m_courses -%}
           <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
           {%- endfor -%}

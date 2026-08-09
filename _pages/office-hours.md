@@ -24,6 +24,27 @@ permalink: /office-hours/
 <div class="oh-page">
 
   {%- comment -%}
+    Session banner: populated at runtime from _data/office_hours.yml's `sessions`
+    list (one-off intensive/winter-session teaching windows) via TodayPill.status().
+    Takes priority over the vacation banner below — see script at bottom of page.
+    Do not hardcode dates/copy here — edit _data/office_hours.yml instead.
+  {%- endcomment -%}
+  <div id="session-status" class="season-notice is-session" style="display:none">
+    <span class="season-icon">❄</span>
+    <div class="season-body">
+      <strong><span class="lang-en" id="sess-title-en"></span><span class="lang-ko" id="sess-title-ko"></span></strong>
+      <p>
+        <span class="lang-en" id="sess-body-en"></span>
+        <span class="lang-ko" id="sess-body-ko"></span>
+      </p>
+      <a href="#" id="sess-link" class="contact-link cl-campus">
+        <span class="lang-en">View Course Page →</span>
+        <span class="lang-ko">강좌 페이지 보기 →</span>
+      </a>
+    </div>
+  </div>
+
+  {%- comment -%}
     Vacation banner: populated at runtime from _data/office_hours.yml's
     `vacation` list via TodayPill.status() (see script at bottom of page).
     Do not hardcode dates/copy here — edit _data/office_hours.yml instead.
@@ -186,6 +207,24 @@ Cal("ui", { hideEventTypeDetails: false, layout: "month_view", theme: document.d
       setText('vac-title-ko', s.vacation.label_ko);
       setText('vac-body-en', s.vacation.body_en);
       setText('vac-body-ko', s.vacation.body_ko);
+    }
+  }
+
+  // Office-hours extra: show the winter-intensive session banner instead
+  // (data from _data/office_hours.yml `sessions`) — takes priority over vacation.
+  if (s.type === 'session' && s.session) {
+    var selEl = document.getElementById('session-status');
+    if (selEl) {
+      selEl.style.display = 'flex';
+      var sicon = selEl.querySelector('.season-icon');
+      if (sicon) sicon.textContent = s.session.icon || '❄';
+      var setText2 = function(id, val) { var n = document.getElementById(id); if (n) n.textContent = val || ''; };
+      setText2('sess-title-en', s.session.label_en + ' · Day ' + s.session.dayNum + '/' + s.session.total);
+      setText2('sess-title-ko', s.session.label_ko + ' · ' + s.session.dayNum + '/' + s.session.total + '일차');
+      setText2('sess-body-en', s.session.body_en);
+      setText2('sess-body-ko', s.session.body_ko);
+      var link = document.getElementById('sess-link');
+      if (link && s.session.url) link.href = s.session.url;
     }
   }
 })();

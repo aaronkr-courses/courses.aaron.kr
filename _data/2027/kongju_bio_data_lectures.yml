@@ -1,0 +1,182 @@
+- date: 9/4
+  week: 1
+  title: >
+    <strong>보건의료 데이터의 특성: 출처와 종류</strong>
+  supp:
+  readings: 보건의료정보학 3장 (p.38-58)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/1-intro.jpg
+  logistics: >
+
+- date: 9/11
+  week: 2
+  title: >
+    데이터베이스: 개념, 설계, 조작
+  supp:
+  readings: 보건의료정보학 4장 (p.68-88)
+  hw: 
+  slides:
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+
+- date: 9/18
+  week: 3
+  title: >
+    데이터베이스 설계 실습 (일반 개념 보강)
+  supp:
+  readings: 그림으로 배우는 데이터베이스
+  hw: 
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+    프로젝트 소개 및 팀 구성
+
+- date: 10/2
+  week: 4
+  title: >
+    전자의무기록(EMR): 발전사, 도입 이점, 최근 이슈<br>
+    실습: Synthea로 합성 환자데이터 생성 → HAPI FHIR 서버 적재
+  supp:
+  readings: 보건의료정보학 14장 (p.280-291)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+
+- date: 10/16
+  week: 5
+  title: >
+    개인건강기록(PHR): 기능, 국내외 현황
+  supp:
+  readings: 보건의료정보학 15장 (p.296-313)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+    (팀별 스키마 설계 진행 중)
+
+- date: 10/23
+  week: 6
+  title: >
+    임상의사결정지원 시스템
+  supp:
+  readings: >
+    보건의료정보학 16장 (p.322-323)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+    스키마 설계 초안 제출
+
+- date: 10/23
+  week: 7
+  title: >
+    보건의료데이터 분석: 통계 기반, AI 기반 분석
+  supp:
+  readings: >
+    보건의료정보학 5장 (p.94-106)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+
+- date: 10/30
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    진행상황 점검
+    <div style="display: none">
+      <br><a href="">중간 퀴즈</a>
+    </div>
+
+- date: 11/6
+  week: 9
+  title: >
+    실사용데이터/실사용근거(RWD/RWE)와 약물감시 네트워크
+  supp:
+  readings: 보건의료정보학 6장 (p.116-129)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+
+- date: 11/13
+  week: 10
+  title: >
+    SQL 실습: 프로젝트 스키마 구축
+  supp:
+  readings: >
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+    핵심 빌드: FHIR API로 리소스 추출(Python) → MySQL 적재 → 임상 질의 작성
+
+- date: 11/20
+  week: 11
+  title: >
+    정보검색과 의학 문헌정보시스템: PubMed
+  supp:
+  readings: 보건의료정보학 7장 (p.138-143)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+
+- date: 11/27
+  week: 12
+  title: >
+    보건의료정보 생산·활용의 법적, 윤리적 문제
+  supp:
+  readings: 보건의료정보학 8장 (p.150-154)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+
+- date: 12/4
+  week: 13
+  title: >
+    공중보건정보시스템
+  supp:
+  readings: 보건의료정보학 18장 (p.366-371)
+  hw:
+  slides: 
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+
+- date: 12/11
+  week: 14
+  title: >
+    프로젝트 작업 및 동료 피드백
+  supp:
+  readings:
+  hw:
+  slides:
+  slides2:
+  img: 2027/kongju-bio-data/
+  logistics: >
+    쿼리 정제, 발표 준비
+
+- date: 12/18
+  week: 15
+  title: >
+    <strong>Final Test</strong><br>
+    기말 프로젝트 발표 및 기말고사<br>
+    최종 발표(데이터마트 + 쿼리 결과)
+    <div style="display: none">
+      <a href="">기말 퀴즈</a>
+    </div>

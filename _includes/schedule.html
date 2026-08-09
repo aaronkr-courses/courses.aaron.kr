@@ -1,12 +1,15 @@
 {% comment %}
   Usage: {% include schedule.html data_file="2026/hb_cpp_lectures" %}
+         {% include schedule.html data_file="2027/gnue_ai_edu_lectures" intensive=true %}
   Supports:
     - Subdirectory path: "2026/hb_cpp_lectures" → site.data["2026"]["hb_cpp_lectures"]
     - Legacy flat key:   "2026_hb_cpp_lectures" → site.data["2026_hb_cpp_lectures"]
-  Columns: date | slide thumb + slides2 link | week + title + readings | logistics + hw
+  Columns: date | slide thumb + slides2 link | week/day + title + readings | logistics + hw
   Test / no-class rows: colspan="3" across the last three columns.
   YAML fields: date, title, title_ko, week, img, img2, slides, slides2, slides2_title,
-               readings, logistics, hw, hw2, skip, hidden
+               readings, logistics, hw, hw2, zoom, lms, skip, hidden
+  `intensive: true` (pass from page.intensive on winter-session courses) swaps the
+  "Week N" label for "Day N" and renders zoom/lms as small mode links per row.
 
   Past/current-week highlighting:
     - Only applied to courses whose data_file year matches the current calendar year.
@@ -57,6 +60,12 @@
 {%- endif -%}
 
 {%- assign skip_count = 0 -%}
+{%- assign _unit_en = 'Week' -%}
+{%- assign _unit_ko = '주차' -%}
+{%- if include.intensive -%}
+  {%- assign _unit_en = 'Day' -%}
+  {%- assign _unit_ko = '일차' -%}
+{%- endif -%}
 
 <table class="sched-table" role="table">
 <caption class="sr-only">Course lecture schedule</caption>
@@ -179,7 +188,7 @@
 
     {%- comment -%} ── Column 3: Week + title + readings ─────────────── {%- endcomment -%}
     <td class="sched-info">
-      <span class="sched-week"><span class="lang-en">Week</span><span class="lang-ko">주차</span> {{ display_week }}</span>
+      <span class="sched-week"><span class="lang-en">{{ _unit_en }}</span><span class="lang-ko">{{ _unit_ko }}</span> {{ display_week }}</span>
       <div class="sched-title">
         <span class="lang-en">{{ item.title }}</span>
         <span class="lang-ko">{{ item.title_ko | default: item.title }}</span>
@@ -193,6 +202,12 @@
     <td class="sched-logistics">
       {%- if item.logistics -%}
       <div class="sched-subtitle">{{ item.logistics }}</div>
+      {%- endif -%}
+      {%- if item.zoom -%}
+      <a href="{{ item.zoom }}" class="mode-link zoom-link" target="_blank" rel="noopener noreferrer">🎥 <span class="lang-en">Zoom</span><span class="lang-ko">실시간 Zoom</span></a>
+      {%- endif -%}
+      {%- if item.lms -%}
+      <a href="{{ item.lms }}" class="mode-link lms-link" target="_blank" rel="noopener noreferrer">📺 <span class="lang-en">LMS Video</span><span class="lang-ko">LMS 동영상</span></a>
       {%- endif -%}
       {%- if item.hw -%}
       <a href="{{ item.hw }}" class="hw-link" target="_blank">과제 →</a>

@@ -1,0 +1,190 @@
+- date: 9/4
+  week: 1
+  title: >
+    <strong>보건의료정보학이란 무엇인가: 서론, 보건의료에서의 컴퓨터 활용</strong>
+  supp:
+  readings: 보건의료정보학 1장 (p.2-14)
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/1-intro.jpg
+  logistics: >
+
+- date: 9/11
+  week: 2
+  title: >
+    네트워크 기초: TCP/IP, OSI 모델, 프로토콜
+  supp:
+  readings: 그림으로 배우는 네트워크 원리
+  hw: 
+  slides:
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 9/18
+  week: 3
+  title: >
+    병원정보시스템 구조: 구성요소, 개발, 임상데이터웨어하우스
+  supp:
+  readings: 보건의료정보학 17장 (p.346-361)
+  hw: 
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+    연구 프로젝트 소개 및 팀 구성
+
+- date: 9/25
+  week: 4
+  title: >
+    <span style="color: red"><strong>No Class</strong> Chuseok!~</span>
+
+- date: 10/2
+  week: 5
+  title: >
+    보건의료정보 표준: 표준 개발 기구, 영역별 표준 현황
+  supp:
+  readings: 보건의료정보학 10장 (p.196-211)
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 10/9
+  week: 6
+  title: >
+    <span style="color: red"><strong>No Class</strong> Hangul Day!~</span>
+
+- date: 10/16
+  week: 7
+  title: >
+    보건의료 용어 표준: SNOMED CT, LOINC, KCD
+  supp:
+  readings: 보건의료정보학 11장 (p.216-237)
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 10/23
+  week: 8
+  title: >
+    상호운용성: 정의, 수준, 생태계 / HL7-FHIR 개념 도입
+  supp:
+  readings: >
+    보건의료정보학 12장 (p.242-251)<br>
+    Benson & Grieve 발췌
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 10/30
+  week: 9
+  title: >
+    <strong>Midterm Test</strong><br>
+    연구계획서(outline) 제출
+    <div style="display: none">
+      <br><a href="">중간 퀴즈</a>
+    </div>
+
+- date: 11/6
+  week: 10
+  title: >
+    의료영상정보학: DICOM, PACS, 영상 데이터 표준
+  supp:
+  readings: 보건의료정보학 23장 (p.476-496)
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 11/13
+  week: 11
+  title: >
+    소비자건강정보학: 디지털 헬스, 웨어러블 기기
+  supp:
+  readings: >
+    보건의료정보학 21장 (p.432-441)<br>
+    IEEE 11073 보강
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 11/20
+  week: 12
+  title: >
+    실습: ESP32 생체신호 센서 → MQTT → Node-RED 대시보드 구축
+  supp:
+  readings: 자체 실습 자료
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+    프로젝트 리서치 및 개별 상담
+
+- date: 11/27
+  week: 13
+  title: >
+    원격의료: 개념, 서비스 유형, 팬데믹 이후 발전 방향
+  supp:
+  readings: 보건의료정보학 19장 (p.382-397)
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 12/4
+  week: 14
+  title: >
+    정보보호와 보안: 개인정보보호, 보안기술, 비식별화
+  supp:
+  readings: 보건의료정보학 9장 (p.168-187)
+  hw:
+  slides: 
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 12/11
+  week: 15
+  title: >
+    보건의료정보학의 미래: 거대언어모델, 가상의료, 디지털헬스
+  supp:
+  readings: 보건의료정보학 24장 (p.504-523)
+  hw:
+  slides:
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+
+- date: 12/12?
+  week: 16
+  title: >
+    Ch 13 사용성과 UX 또는 Ch 20 간호정보학
+  supp:
+  readings:
+  hw:
+  slides:
+  slides2:
+  img: 2026/kongju-bio-net/
+  logistics: >
+    프로젝트 작업 및 피드백
+
+- date: 12/18
+  week: 17
+  title: >
+    <strong>Final Test</strong><br>
+    기말 프로젝트 발표 및 기말고사
+    <div style="display: none">
+      <a href="">기말 퀴즈</a>
+    </div>

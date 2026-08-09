@@ -27,7 +27,7 @@
   {%- assign _tag_class = 'theory' -%}{%- assign _tag_label = 'CS' -%}
 {%- endif -%}
 
-<a class="card" href="{{ c.url | relative_url }}" aria-label="{{ c.title }}{% if c.subtitle %}: {{ c.subtitle }}{% endif %} — {{ uni_name }}">
+<a class="card{% if c.grad %} grad-card{% endif %}" href="{{ c.url | relative_url }}" aria-label="{{ c.title }}{% if c.subtitle %}: {{ c.subtitle }}{% endif %} — {{ uni_name }}">
   <div class="card-inner">
     {%- if c.img -%}
     <div class="card-thumb" style="background-image:url('{{ c.img | relative_url }}')"></div>
@@ -43,6 +43,8 @@
       {%- endif -%}
       <div class="card-tags">
         <span class="tag {{ _tag_class }}">{{ _tag_label }}</span>
+        {%- if c.grad -%}<span class="tag grad-tag">🎓 <span class="lang-en">Grad</span><span class="lang-ko">대학원</span></span>{%- endif -%}
+        {%- if c.intensive -%}<span class="tag intensive-tag">❄ <span class="lang-en">Intensive</span><span class="lang-ko">계절학기</span></span>{%- endif -%}
         {%- if c.now -%}<span class="tag systems">● Active</span>{%- endif -%}
       </div>
       <div class="card-footer">

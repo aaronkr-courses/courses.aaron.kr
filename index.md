@@ -20,12 +20,13 @@ permalink: /
     </p>
 
     <div class="stats-bar animate d4">
-      {%- assign active_courses = site.courses | where_exp: "c", "c.now" -%}
-      {%- assign total_courses  = site.courses | size -%}
+      {%- assign visible_courses = site.courses | where_exp: "c", "c.visible != false" -%}
+      {%- assign active_courses = visible_courses | where_exp: "c", "c.now" -%}
+      {%- assign total_courses  = visible_courses | size -%}
       {%- comment -%} Count unique universities (by uni abbr — excludes high school / online) {%- endcomment -%}
       {%- assign _seen_unis = "" -%}
       {%- assign _all_uni_count = 0 -%}
-      {%- for c in site.courses -%}
+      {%- for c in visible_courses -%}
         {%- if c.uni -%}
           {%- unless _seen_unis contains c.uni -%}
             {%- assign _all_uni_count = _all_uni_count | plus: 1 -%}
@@ -123,7 +124,7 @@ permalink: /
     </script>
 
     <div id="thumb-section">
-      {%- assign current_courses = site.courses | where_exp: "c", "c.now" -%}
+      {%- assign current_courses = site.courses | where_exp: "c", "c.now" | where_exp: "c", "c.visible != false" -%}
 
       {%- comment -%}
         University groups in teaching-day order — driven by _data/office_hours.yml
@@ -178,6 +179,29 @@ permalink: /
         {%- endif -%}
         {%- endif -%}
       {%- endfor -%}
+
+      {%- comment -%}
+        Winter intensive (계절학기) courses don't belong to a weekday office-hours slot
+        (see _data/office_hours.yml), so they're never picked up by the loop above.
+        Give them their own group instead of hiding them from the homepage.
+      {%- endcomment -%}
+      {%- assign intensive_courses = current_courses | where_exp: "c", "c.intensive" -%}
+      {%- if intensive_courses.size > 0 -%}
+      <div class="uni-group intensive-group">
+        <div class="uni-group-header">
+          <span class="uni-abbr">❄</span>
+          <span class="uni-group-name">
+            <span class="lang-en">Winter Intensive Sessions</span>
+            <span class="lang-ko">계절학기</span>
+          </span>
+        </div>
+        <div class="course-grid">
+          {%- for course in intensive_courses -%}
+            {% include course_card.html course=course %}
+          {%- endfor -%}
+        </div>
+      </div>
+      {%- endif -%}
     </div>
   </div>
 

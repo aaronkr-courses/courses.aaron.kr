@@ -134,6 +134,14 @@
   &.web     { color: var(--accent2); border-color: rgba(126,184,247,.28); }
   &.data    { color: var(--accent);  border-color: rgba(155,101,255,.3); }
   &.ee      { color: var(--warn);    border-color: rgba(251,191,36,.28); }
+  // Grad-course / winter-intensive markers — reuse the accent palette (subtle, not a
+  // new hue), disambiguated by icon + label rather than a reserved color.
+  &.grad-tag      { color: var(--warn);    border-color: rgba(251,191,36,.3); }
+  &.intensive-tag { color: var(--accent2); border-color: rgba(126,184,247,.3); }
+}
+.item-tag {
+  &.grad-tag      { color: var(--warn);    border-color: rgba(251,191,36,.3); }
+  &.intensive-tag { color: var(--accent2); border-color: rgba(126,184,247,.3); }
 }
 [data-theme="light"] {
   .tag.ml      { color: var(--accent);  border-color: rgba(124,58,255,.25); }
@@ -223,6 +231,18 @@ a.card {
   &:hover { border-color: #3a3a5a; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,.4); }
 }
 [data-theme="light"] a.card:hover { border-color: #c0c0e0; box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+
+// Graduate-course marker — thin left accent bar, subtle enough not to disturb the
+// card layout (overlaid via ::after, same technique as .uni-badge; doesn't shift content).
+a.card.grad-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: var(--warn);
+  border-radius: var(--radius) 0 0 var(--radius);
+  z-index: 2;
+}
 
 // Card thumbnail — hidden by default, 82px left when thumbs active
 .card-inner { display: flex; flex: 1; }
@@ -356,9 +376,19 @@ a.archive-item {
   border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
+  position: relative;
   transition: background .15s;
   // &:last-child { border-bottom: none; }
   &:hover { background: rgba(155,101,255,.04); }
+}
+// Graduate-course marker — overlaid bar (doesn't shift row padding/alignment).
+a.archive-item.grad-item::before {
+  content: '';
+  position: absolute;
+  left: -2px; top: 10px; bottom: 10px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--warn);
 }
 
 .item-thumb {

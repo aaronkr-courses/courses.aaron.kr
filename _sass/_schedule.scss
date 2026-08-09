@@ -137,6 +137,26 @@ td.sched-logistics {
   &.due { color: var(--warn); border-color: rgba(251,191,36,.28); &:hover { background: rgba(251,191,36,.08); } }
 }
 
+// Winter-intensive per-day mode links (live Zoom vs. pre-recorded LMS video) —
+// same shape as .hw-link, distinct colors so the two modes read apart at a glance.
+.mode-link {
+  display: inline-block;
+  float: right;
+  clear: right;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .6rem;
+  text-decoration: none;
+  letter-spacing: .03em;
+  border-radius: 3px;
+  padding: 3px 7px;
+  white-space: nowrap;
+  margin-top: 4px;
+  margin-right: 4px;
+  transition: background .15s;
+  &.zoom-link { color: var(--accent2); border: 1px solid rgba(126,184,247,.3); &:hover { background: rgba(126,184,247,.14); } }
+  &.lms-link  { color: var(--accent3); border: 1px solid rgba(109,204,221,.3); &:hover { background: rgba(109,204,221,.14); } }
+}
+
 // ── Span cell (test / no-class rows: colspan 3) ───────────────────────────────
 td.sched-span {
   padding: 14px 12px;
