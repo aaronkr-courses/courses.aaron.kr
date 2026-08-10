@@ -1,8 +1,7 @@
 - date: 8/31
   week: 1
   title: >
-    <strong>1부. 관계형 데이터베이스 설계</strong><br>
-    1장. 관계형 데이터 베이스
+    <strong>수업 소개 & MySQL 설치</strong>
     <hr>
     Introduction<br>
     <strong>PART I: GETTING STARTED</strong><br>
@@ -10,15 +9,15 @@
   supp:
   readings:
   hw:
-  slides: 
+  slides: "https://docs.google.com/presentation/d/1w4xllKZ39tEl8jIMQ8b0-qEhCeKvku_B8F8ErBT0Bog/edit?usp=sharing"
   slides2:
-  img: 2026/wku-db/
+  img: 2026/wku-db/1-db-intro.jpg
   logistics:
 
 - date: 9/7
   week: 2
   title: >
-    2장. 설계 목적
+    수업 소개, 데이터베이스 개요 (Chp 1)
     <hr>
     Chapter 2: Creating Databases and Tables<br>
     <strong>PART II: SELECTING DATA FROM A MYSQL DATABASE</strong><br>
@@ -34,7 +33,7 @@
 - date: 9/14
   week: 3
   title: >
-    3장. 전문 용어
+    관계형 데이터베이스 (Chp 2)
     <hr>
     Chapter 4: MySQL Data Types<br>
     Chapter 5: Joining Database Tables
@@ -49,8 +48,7 @@
 - date: 9/21
   week: 4
   title: >
-    <strong>2부. 설계 프로세스</strong><br>
-    4장. 개념적인 개요
+    SQL 기초 (Chp 3.1-3.6)
     <hr>
     Chapter 6: Performing Complex Joins with Multiple Tables
   supp:
@@ -64,7 +62,7 @@
 - date: 9/28
   week: 5
   title: >
-    5장. 프로세스 시작
+    데이터 조회 (Chp 3.7-3.14)
     <hr>
     Chapter 7: Comparing Values<br>
     Chapter 8: Calling Built-in MySQL Functions
@@ -84,7 +82,7 @@
 - date: 10/12
   week: 7
   title: >
-    6장. 기존 데이터베이스 분석
+    집계와 JOIN (Chp 3.15-3.22)
     <hr>
     Chapter 9: Inserting, Updating, and Deleting Data
   supp:
@@ -108,7 +106,7 @@
 - date: 10/26
   week: 9
   title: >
-    7장. 테이블 구조 설정
+    데이터 관리 (Chp 4)
     <hr>
     <strong>PART III: DATABASE OBJECTS</strong><br>
     Chapter 10: Creating Views<br>
@@ -124,7 +122,7 @@
 - date: 11/2
   week: 10
   title: >
-    8장. 키
+    데이터베이스 설계 (Chp 5.1-5.9)
     <hr>
     Chapter 12: Creating Triggers<br>
     Chapter 13: Creating Events
@@ -139,7 +137,7 @@
 - date: 11/9
   week: 11
   title: >
-    9장. 필드 명세
+    정규화 (Chp 5.10-5.15)
     <hr>
     <strong>PART IV: ADVANCED TOPICS</strong><br>
     Chapter 14: Tips and Tricks
@@ -154,7 +152,7 @@
 - date: 11/16
   week: 12
   title: >
-    10장. 테이블 관계
+    데이터베이스 설계 실습 (Chp 5.16-5.19)
     <hr>
     Chapter 15: Calling MySQL from Programming Languages
   supp:
@@ -168,7 +166,7 @@
 - date: 11/23
   week: 13
   title: >
-    11장. 업무 규칙
+    데이터베이스 운영 (Chp 6 일부)
     <hr>
     <strong>PART V: PROJECTS</strong><br>
     Chapter 16: Building a Weather Database
@@ -183,7 +181,7 @@
 - date: 11/30
   week: 14
   title: >
-    12장. 뷰
+    데이터베이스 보안 (Chp 7 일부)
     <hr>
     Chapter 17: Tracking Changes to Voter Data with Triggers
   supp:
@@ -196,20 +194,7 @@
 - date: 12/7
   week: 15
   title: >
-    <strong>Final Test</strong>
-    <br><a href="" style="display: none;">스터디 가이드</a>
-    <div style="display: none;">
-      <br><a href="">기말퀴즈</a>
-      <br><a href="">실기</a>
-    </div>
-
-- date: 12/14
-  week: 16
-  title: >
-    <strong>13장. 데이터 무결성 검토</strong><br>
-    3부. 기타 데이터베이스 설계 문제<br>
-    14장. 잘못된 설계 - 하지 말아야 할 것들<br>
-    15장. 규칙 변형
+    데이터베이스 활용 (Chp 8 일부)
     <hr>
     Chapter 18: Protecting Salary Data with Views
   supp:
@@ -218,3 +203,13 @@
   slides: 
   img: 2026/wku-db/
   logistics:
+
+- date: 12/14
+  week: 16
+  title: >
+    <strong>Final Test</strong>
+    <br><a href="" style="display: none;">스터디 가이드</a>
+    <div style="display: none;">
+      <br><a href="">기말퀴즈</a>
+      <br><a href="">실기</a>
+    </div>

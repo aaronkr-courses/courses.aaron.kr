@@ -38,6 +38,8 @@ Main-Text:
     image: books/hands-on-machine-learning.jpg
 ---
 
+<img style="float: left; width: 150px; margin: 0 10px 10px 0;" src="/assets/img/books/hands-on-machine-learning.jpg" alt="DB textbook" />
+
 데이터 과학의 핵심 개념(데이터 전처리, 시각화, 머신러닝 모델 개발)을 Python과 scikit-learn, TensorFlow를 활용해 실습 중심으로 학습합니다.
 
 This course covers data science fundamentals — data preprocessing, visualization, and machine learning model development — using Python, scikit-learn, and TensorFlow through hands-on practice.
