@@ -261,12 +261,38 @@ a.related-card {
 
 // ── How to Get an A page ─────────────────────────────────────────────────────
 .hta-page { padding: 44px 0 0; }
-.hta-toc {
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 18px 22px; margin-bottom: 44px;
-  .hta-toc-label { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; color: var(--accent3); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: 10px; }
-  ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; }
-  a { font-size: .82rem; color: var(--sub); text-decoration: none; &:hover { color: var(--accent2); } }
+.hta-page-layout { display: grid; grid-template-columns: 230px 1fr; gap: 44px; align-items: start; }
+.hta-sidebar {
+  position: sticky; top: 72px; max-height: calc(100vh - 100px); overflow-y: auto;
+}
+.hta-toc-label { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; color: var(--accent3); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: 12px; }
+.hta-sidebar-nav {
+  list-style: none;
+  border-left: 2px solid var(--border);
+  padding-left: 16px;
+  margin: 0;
+  li { margin-bottom: 2px; }
+  > li > a {
+    display: flex; align-items: baseline; gap: 8px;
+    font-size: .8rem;
+    color: var(--sub);
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color .2s;
+    &:hover, &.active { color: var(--accent3); }
+    &.active { border-left: 2px solid var(--accent3); margin-left: -18px; padding-left: 16px; }
+  }
+}
+.hta-toc-num { font-family: 'IBM Plex Mono', monospace; font-size: .65rem; color: var(--muted); flex-shrink: 0; }
+.hta-sidebar-nav a.active .hta-toc-num { color: var(--accent3); }
+.hta-sidebar-subnav {
+  list-style: none; margin: 2px 0 6px; padding-left: 22px;
+  li { margin-bottom: 0; }
+  a {
+    display: block; font-size: .72rem; color: var(--muted); text-decoration: none;
+    padding: 4px 0; transition: color .2s;
+    &:hover, &.active { color: var(--accent2); }
+  }
 }
 .hta-section {
   display: flex; gap: 24px; padding: 36px 0; border-top: 1px solid var(--border);
@@ -355,7 +381,6 @@ a.related-card {
   .hta-section { flex-direction: column; gap: 8px; }
   .hta-section-num { width: auto; text-align: left; font-size: 2rem; }
   .hta-chapter { flex-direction: column; gap: 4px; }
-  .hta-toc ul { flex-direction: column; }
 }
 
 // ── Season / vacation notice ──────────────────────────────────────────────────
@@ -384,6 +409,8 @@ a.related-card {
   .pol-sidebar { display: none; }
   .related-grid { grid-template-columns: 1fr 1fr; }
   .pol-meta-bar { flex-wrap: wrap; }
+  .hta-page-layout { grid-template-columns: 1fr; }
+  .hta-sidebar { display: none; }
 }
 @media (max-width: 700px) {
   .week-grid { grid-template-columns: 1fr 1fr; }

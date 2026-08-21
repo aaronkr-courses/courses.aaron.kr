@@ -47,13 +47,15 @@
 </div>
 <script>
 // Pull live bio from aaronsnowberger.com — silently falls back to static text above.
+// bio.json is authored solely by Aaron on his own site, so its fields are trusted
+// and rendered as HTML (innerHTML), not escaped as plain text.
 (function() {
   fetch('https://aaronsnowberger.com/bio.json')
     .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
     .then(function(d) {
-      if (d.bio_en) document.getElementById('bio-en').textContent = d.bio_en;
-      if (d.bio_ko) document.getElementById('bio-ko').textContent = d.bio_ko;
-      if (d.role)   document.getElementById('instructor-role').textContent = d.role;
+      if (d.bio_en) document.getElementById('bio-en').innerHTML = d.bio_en;
+      if (d.bio_ko) document.getElementById('bio-ko').innerHTML = d.bio_ko;
+      if (d.role)   document.getElementById('instructor-role').innerHTML = d.role;
     })
     .catch(function() {}); // no-op: static bio remains
 })();

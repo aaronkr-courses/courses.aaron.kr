@@ -8,6 +8,7 @@ uni: kjnu
 img: assets/img/books/health-info.jpg
 importance: 8
 category: 2027-1
+topic: Systems, BioMed
 data_file: 2027/kongju_bio_data_lectures
 visible: false
 

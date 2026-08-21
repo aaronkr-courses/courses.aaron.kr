@@ -9,8 +9,8 @@ img: assets/img/books/health-info.jpg
 importance: 8
 category: 2026-2
 now: Yes
+topic: Systems, BioMed
 data_file: 2026/kongju_bio_net_lectures
-visible: false
 
 grading:
   attendance: 10

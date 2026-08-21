@@ -45,12 +45,14 @@
 
 - name: "Daejeon University"
   name_ko: "대전대학교"
+  short_ko: "대전대"
   abbr: dju
   url: "https://www.dju.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/dju-logo-2_jxm7py.png
 
 - name: "Jeonju University"
   name_ko: "전주대학교"
+  short_ko: "전주대"
   abbr: jj
   url: "https://www.jj.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jju-logo_x1phga.png

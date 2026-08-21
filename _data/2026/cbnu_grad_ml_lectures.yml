@@ -1,0 +1,184 @@
+- date: 9/3
+  week: 1
+  title: >
+    <strong>Course intro, dev environment setup</strong>
+  supp:
+  readings:
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/1-intro.jpg
+  logistics: >
+    Environment setup (Python/Colab, scikit-learn, TensorFlow/Keras), diagnostic Kahoot
+
+- date: 9/10
+  week: 2
+  title: >
+    Ch.1 – The Machine Learning Landscape
+  supp:
+  readings: Ch.1
+  hw: 
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+
+- date: 9/17
+  week: 3
+  title: 	Ch.2 – End-to-End Machine Learning Project
+  supp:
+  readings: Ch.2
+  hw: 
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+    "Follow-me" full pipeline walkthrough
+
+- date: 9/24
+  week: 4
+  title: >
+    <span style="color: red"><strong>No Class</strong> Chuseok!~</span>
+
+- date: 10/1
+  week: 5
+  title: Ch.3 – Classification
+  supp:
+  readings: Ch.3
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+
+- date: 10/8
+  week: 6
+  title: >
+    Ch.4 – Training Models
+  supp:
+  readings: Ch.4
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+
+- date: 10/15
+  week: 7
+  title: >
+    Ch.5 – Support Vector Machines<br>
+    Ch.6 – Decision Trees
+  supp:
+  readings: >
+    Ch.5–6
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+
+- date: 10/22
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    <div style="display: none">
+      <br><a href="">중간 퀴즈</a>
+    </div>
+
+- date: 10/29
+  week: 9
+  title: >
+    Ch.7 – Ensemble Learning & Random Forests<br>
+    Ch.8 – Dimensionality Reduction
+  supp:
+  readings: Ch.7–8
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+    Team Project proposals due
+
+- date: 11/5
+  week: 10
+  title: >
+    Ch.9 – Unsupervised Learning Techniques
+  supp:
+  readings: >
+    Ch.9
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+
+- date: 11/12
+  week: 11
+  title: >
+    Ch.10 – Intro to Artificial Neural Networks with Keras
+  supp:
+  readings: Ch.10
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+
+- date: 11/19
+  week: 12
+  title: >
+    Ch.11 – Training Deep Neural Networks
+  supp:
+  readings: Ch.11
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+
+- date: 11/26
+  week: 13
+  title: >
+    Ch.12 – Custom Models & Training with TF<br>
+    Ch.13 – Loading & Preprocessing Data with TF
+  supp:
+  readings: Ch.12–13
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+    Progress checkpoint due
+
+- date: 12/3
+  week: 14
+  title: >
+    Ch.14 – Deep Computer Vision Using CNNs
+  supp:
+  readings: Ch.14
+  hw:
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+
+- date: 12/10
+  week: 15
+  title: >
+    Team Project Presentations
+  supp:
+  readings:
+  hw:
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-ml/
+  logistics: >
+    Demo + technical report due
+
+- date: 12/17
+  week: 16
+  title: >
+    <strong>Final Test</strong><br>
+    <div style="display: none">
+      <a href="">기말 퀴즈</a>
+    </div>

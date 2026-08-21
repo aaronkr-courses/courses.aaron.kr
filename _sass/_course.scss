@@ -28,6 +28,15 @@
   &.uni  { background: var(--tag-bg);         color: var(--muted);   border: 1px solid var(--border); }
   &.grad      { background: rgba(251,191,36,.1);  color: var(--warn);    border: 1px solid rgba(251,191,36,.28); }
   &.intensive { background: rgba(126,184,247,.08); color: var(--accent2); border: 1px solid rgba(126,184,247,.25); }
+  // Topic badge — same palette as .tag/.item-tag (index cards, archive rows) so a
+  // course's subject color is consistent everywhere it appears.
+  &.theory    { background: rgba(126,184,247,.08); color: var(--accent2); border: 1px solid rgba(126,184,247,.28); }
+  &.systems   { background: rgba(109,204,221,.1);  color: var(--accent3); border: 1px solid rgba(109,204,221,.28); }
+  &.ai-tag    { background: rgba(251,111,132,.08); color: #fb6f84;        border: 1px solid rgba(251,111,132,.3); }
+  &.web       { background: rgba(126,184,247,.08); color: var(--accent2); border: 1px solid rgba(126,184,247,.28); }
+  &.data      { background: rgba(155,101,255,.08); color: var(--accent);  border: 1px solid rgba(155,101,255,.3); }
+  &.ee        { background: rgba(251,191,36,.1);   color: var(--warn);    border: 1px solid rgba(251,191,36,.28); }
+  &.biomed    { background: rgba(94,230,163,.08);  color: #5ee6a3;        border: 1px solid rgba(94,230,163,.3); }
 }
 .course-badges { display: flex; gap: 6px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
 .course-hero h1 { font-size: clamp(1.9rem, 5vw, 3rem); }

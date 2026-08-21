@@ -9,23 +9,8 @@
 {%- assign uni_name = uni_parts | last -%}
 {%- assign uni_init = c.init | upcase -%}
 
-{%- comment -%} Infer subject tag from title/description {%- endcomment -%}
-{%- assign _tl = c.title | downcase -%}
-{%- if _tl contains 'machine learning' or _tl contains 'deep learning' or _tl contains 'ai ' or _tl contains 'artificial' -%}
-  {%- assign _tag_class = 'ai-tag' -%}{%- assign _tag_label = 'AI/ML' -%}
-{%- elsif _tl contains 'database' or _tl contains 'sql' or _tl contains 'data struct' -%}
-  {%- assign _tag_class = 'data' -%}{%- assign _tag_label = 'Data' -%}
-{%- elsif _tl contains 'web' or _tl contains 'php' or _tl contains 'node' or _tl contains 'html' or _tl contains 'jsp' -%}
-  {%- assign _tag_class = 'web' -%}{%- assign _tag_label = 'Web' -%}
-{%- elsif _tl contains 'python' or _tl contains 'java' or _tl contains 'c++' or _tl contains 'scratch' or _tl contains 'programming' -%}
-  {%- assign _tag_class = 'theory' -%}{%- assign _tag_label = 'Programming' -%}
-{%- elsif _tl contains 'iot' or _tl contains 'circuit' or _tl contains 'device' or _tl contains 'semiconductor' or _tl contains 'medical' -%}
-  {%- assign _tag_class = 'systems' -%}{%- assign _tag_label = 'Systems' -%}
-{%- elsif _tl contains 'electric' or _tl contains 'power' or _tl contains 'hydrogen' -%}
-  {%- assign _tag_class = 'ee' -%}{%- assign _tag_label = 'EE' -%}
-{%- else -%}
-  {%- assign _tag_class = 'theory' -%}{%- assign _tag_label = 'CS' -%}
-{%- endif -%}
+{%- comment -%} Infer subject tag(s) from title/description, or use the course's topic: override {%- endcomment -%}
+{%- include topic_tag.html course=c -%}
 
 <a class="card{% if c.grad %} grad-card{% endif %}" href="{{ c.url | relative_url }}" aria-label="{{ c.title }}{% if c.subtitle %}: {{ c.subtitle }}{% endif %} — {{ uni_name }}">
   <div class="card-inner">
@@ -42,7 +27,10 @@
       <div class="card-subtitle">{{ c.subtitle }}</div>
       {%- endif -%}
       <div class="card-tags">
-        <span class="tag {{ _tag_class }}">{{ _tag_label }}</span>
+        {%- for _cls in _tc_list -%}
+          {%- assign _lbl = _tl_list[forloop.index0] -%}
+          <span class="tag {{ _cls }}">{{ _lbl }}</span>
+        {%- endfor -%}
         {%- if c.grad -%}<span class="tag grad-tag">🎓 <span class="lang-en">Grad</span><span class="lang-ko">대학원</span></span>{%- endif -%}
         {%- if c.intensive -%}<span class="tag intensive-tag">❄ <span class="lang-en">Intensive</span><span class="lang-ko">계절학기</span></span>{%- endif -%}
         {%- if c.now -%}<span class="tag systems">● Active</span>{%- endif -%}

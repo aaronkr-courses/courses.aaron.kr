@@ -8,6 +8,7 @@ uni: ut
 img: assets/img/books/medical-dl-old.jpg
 importance: 7
 category: 2025-2
+topic: Systems, BioMed
 data_file: 2025/ut_mip_lectures
 
 grading:

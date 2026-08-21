@@ -134,20 +134,32 @@
   &.web     { color: var(--accent2); border-color: rgba(126,184,247,.28); }
   &.data    { color: var(--accent);  border-color: rgba(155,101,255,.3); }
   &.ee      { color: var(--warn);    border-color: rgba(251,191,36,.28); }
+  &.biomed  { color: #5ee6a3;        border-color: rgba(94,230,163,.3); }
   // Grad-course / winter-intensive markers — reuse the accent palette (subtle, not a
   // new hue), disambiguated by icon + label rather than a reserved color.
   &.grad-tag      { color: var(--warn);    border-color: rgba(251,191,36,.3); }
   &.intensive-tag { color: var(--accent2); border-color: rgba(126,184,247,.3); }
 }
 .item-tag {
+  // Topic colors mirror .tag's palette (index.md cards) so the same subject
+  // reads as the same color everywhere — archive rows, home cards, course pages.
+  &.ml      { color: var(--accent);  border-color: rgba(155,101,255,.3); }
+  &.theory  { color: var(--accent2); border-color: rgba(126,184,247,.28); }
+  &.systems { color: var(--accent3); border-color: rgba(109,204,221,.28); }
+  &.ai-tag  { color: #fb6f84;        border-color: rgba(251,111,132,.3); }
+  &.web     { color: var(--accent2); border-color: rgba(126,184,247,.28); }
+  &.data    { color: var(--accent);  border-color: rgba(155,101,255,.3); }
+  &.ee      { color: var(--warn);    border-color: rgba(251,191,36,.28); }
+  &.biomed  { color: #5ee6a3;        border-color: rgba(94,230,163,.3); }
   &.grad-tag      { color: var(--warn);    border-color: rgba(251,191,36,.3); }
   &.intensive-tag { color: var(--accent2); border-color: rgba(126,184,247,.3); }
 }
 [data-theme="light"] {
-  .tag.ml      { color: var(--accent);  border-color: rgba(124,58,255,.25); }
-  .tag.theory  { color: #2256d8;        border-color: #bfdbfe; } // was #2563eb — 4.13:1→5.12:1 on tag-bg
-  .tag.systems { color: var(--accent3); border-color: rgba(11,173,188,.25); }
-  .tag.ai-tag  { color: #c0182e;        border-color: rgba(192,24,46,.25); } // was #e5294a — 3.74:1→5.16:1 on tag-bg
+  .tag.ml,      .item-tag.ml,      .c-badge.ml      { color: var(--accent);  border-color: rgba(124,58,255,.25); }
+  .tag.theory,  .item-tag.theory,  .c-badge.theory  { color: #2256d8;        border-color: #bfdbfe; } // was #2563eb — 4.13:1→5.12:1 on tag-bg
+  .tag.systems, .item-tag.systems, .c-badge.systems { color: var(--accent3); border-color: rgba(11,173,188,.25); }
+  .tag.ai-tag,  .item-tag.ai-tag,  .c-badge.ai-tag  { color: #c0182e;        border-color: rgba(192,24,46,.25); } // was #e5294a — 3.74:1→5.16:1 on tag-bg
+  .tag.biomed,  .item-tag.biomed,  .c-badge.biomed  { color: #066e3d;        border-color: rgba(6,110,61,.25); } // 5.38:1 on tag-bg-light
 }
 
 // ── Filter panel ─────────────────────────────────────────────────────────────

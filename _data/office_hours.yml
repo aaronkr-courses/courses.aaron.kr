@@ -33,12 +33,12 @@ schedule:
   - uni: wku
     display_day: 3
     days: [3]
-  # - uni: cbnu
-  #   display_day: 4
-  #   days: [4]
-  # - uni: kjnu
-  #   display_day: 5
-  #   days: [5]
+  - uni: cbnu
+    display_day: 4
+    days: [4]
+  - uni: kjnu
+    display_day: 5
+    days: [5]
   # - uni: hb
   #   display_day: 3
   #   days: [3]

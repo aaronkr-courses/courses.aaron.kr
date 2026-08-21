@@ -1,0 +1,99 @@
+{%- comment -%}
+  Archive page filter/sort toolbar + panel — pulled out of _pages/archive.md so it
+  can be tweaked without touching the page's layout/loop logic.
+  Usage: {% include archive_filters.html %}
+
+  The Semester and University rows are generated from data (site.course_categories
+  and site.data.universities respectively) and only show a pill for a value that at
+  least one course actually uses — add a semester to _config.yml's course_categories
+  or a university to _data/universities.yml and, once a course references it, its
+  filter pill appears here automatically. No edits needed in this file for that.
+
+  The Level and Topic rows are NOT data-driven (there's no small config file backing
+  "grad/undergrad" or the six-ish Topic values — see _includes/topic_tag.html for the
+  Topic keys/labels) — add/remove those pills by hand here if the option set changes.
+{%- endcomment -%}
+<!-- Filter + Thumbnail controls -->
+<div class="section-top" style="margin-top:28px;">
+  <div class="section-heading-row">
+    <span class="section-label">
+      <span class="lang-en">By Semester</span>
+      <span class="lang-ko">학기별</span>
+    </span>
+    <span class="section-line"></span>
+  </div>
+  <div class="section-actions">
+    <button class="filter-toggle-btn" id="filter-toggle">
+      ⚙ <span class="lang-en">Filters</span><span class="lang-ko">필터</span>
+    </button>
+    <button class="thumb-toggle" id="arch-thumb-toggle">
+      <span class="t-icon">⊞</span>
+      <span class="lang-en">Thumbnails</span><span class="lang-ko">썸네일</span>
+    </button>
+    <span id="arch-count" style="font-family:'IBM Plex Mono',monospace;font-size:.65rem;color:var(--muted);margin-left:6px;"></span>
+  </div>
+</div>
+<div class="filter-panel" id="filter-panel">
+  <div class="ctrl-row">
+    <span class="ctrl-row-label"><span class="lang-en">Semester</span><span class="lang-ko">학기</span></span>
+    <button class="pill pill-blue active" data-filter="sem" data-value="all">
+      <span class="lang-en">All</span><span class="lang-ko">전체</span>
+    </button>
+    {%- for cat in site.course_categories -%}
+    {%- assign cat_courses = site.courses | where: "category", cat.key -%}
+    {%- if cat_courses.size > 0 -%}
+    <button class="pill pill-blue" data-filter="sem" data-value="{{ cat.key }}">{{ cat.label }}</button>
+    {%- endif -%}
+    {%- endfor -%}
+  </div>
+  <div class="ctrl-row">
+    <span class="ctrl-row-label"><span class="lang-en">Univ.</span><span class="lang-ko">대학교</span></span>
+    <button class="pill active" data-filter="uni" data-value="all">
+      <span class="lang-en">All</span><span class="lang-ko">전체</span>
+    </button>
+    {%- for u in site.data.universities -%}
+      {%- assign _u_count = site.courses | where: "uni", u.abbr | size -%}
+      {%- if _u_count > 0 -%}
+      <button class="pill" data-filter="uni" data-value="{{ u.abbr | upcase }}"><span class="lang-en">{{ u.abbr | upcase }}</span><span class="lang-ko">{{ u.short_ko | default: u.name_ko }}</span></button>
+      {%- endif -%}
+    {%- endfor -%}
+    {%- comment -%} Non-university courses (high school outreach etc.) aren't in universities.yml {%- endcomment -%}
+    <button class="pill" data-filter="uni" data-value="HS"><span class="lang-en">HS</span><span class="lang-ko">고등학교</span></button>
+  </div>
+  <div class="ctrl-row">
+    <span class="ctrl-row-label"><span class="lang-en">Level</span><span class="lang-ko">과정</span></span>
+    <button class="pill active" data-filter="level" data-value="all">
+      <span class="lang-en">All</span><span class="lang-ko">전체</span>
+    </button>
+    <button class="pill" data-filter="level" data-value="grad">🎓 <span class="lang-en">Graduate</span><span class="lang-ko">대학원</span></button>
+    <button class="pill" data-filter="level" data-value="undergrad"><span class="lang-en">Undergraduate</span><span class="lang-ko">학부</span></button>
+  </div>
+  <div class="ctrl-row">
+    <span class="ctrl-row-label"><span class="lang-en">Topic</span><span class="lang-ko">주제</span></span>
+    <button class="pill active" data-filter="topic" data-value="all">
+      <span class="lang-en">All</span><span class="lang-ko">전체</span>
+    </button>
+    <button class="pill" data-filter="topic" data-value="ai-tag"><span class="lang-en">AI/ML</span><span class="lang-ko">AI/머신러닝</span></button>
+    <button class="pill" data-filter="topic" data-value="theory"><span class="lang-en">Programming</span><span class="lang-ko">프로그래밍</span></button>
+    <button class="pill" data-filter="topic" data-value="web"><span class="lang-en">Web</span><span class="lang-ko">웹</span></button>
+    <button class="pill" data-filter="topic" data-value="data"><span class="lang-en">Data</span><span class="lang-ko">데이터</span></button>
+    <button class="pill" data-filter="topic" data-value="systems"><span class="lang-en">Systems</span><span class="lang-ko">시스템</span></button>
+    <button class="pill" data-filter="topic" data-value="ee"><span class="lang-en">EE</span><span class="lang-ko">전기전자</span></button>
+    <button class="pill" data-filter="topic" data-value="biomed"><span class="lang-en">BioMed</span><span class="lang-ko">바이오메디컬</span></button>
+  </div>
+  <div class="ctrl-row">
+    <span class="ctrl-row-label"><span class="lang-en">Sort</span><span class="lang-ko">정렬</span></span>
+    <button class="pill active" data-sort="newest">
+      <span class="lang-en">Newest</span><span class="lang-ko">최신순</span>
+    </button>
+    <button class="pill" data-sort="oldest">
+      <span class="lang-en">Oldest</span><span class="lang-ko">오래된순</span>
+    </button>
+    <button class="pill" data-sort="az">
+      <span class="lang-en">A–Z</span><span class="lang-ko">가나다순</span>
+    </button>
+    <button class="pill" data-sort="byuni">
+      <span class="lang-en">By University</span><span class="lang-ko">대학교별</span>
+    </button>
+  </div>
+</div>

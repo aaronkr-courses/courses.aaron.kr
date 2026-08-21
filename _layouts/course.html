@@ -15,10 +15,15 @@ layout: default
       <img src="{{ _page_logo }}" alt="" role="presentation" />
     </div>
     {%- endif -%}
+    {%- include topic_tag.html course=page -%}
     <div class="course-badges animate d1">
       <span class="c-badge code">{{ info.section | default: page.section }}</span>
       <span class="c-badge sem">{{ page.category | replace: '-', ' ' }}</span>
       <span class="c-badge uni">{{ page.description | split: ' • ' | last }}</span>
+      {%- for _cls in _tc_list -%}
+        {%- assign _lbl = _tl_list[forloop.index0] -%}
+        <span class="c-badge {{ _cls }}">{{ _lbl }}</span>
+      {%- endfor -%}
       {%- if page.grad -%}<span class="c-badge grad">🎓 <span class="lang-en">Graduate</span><span class="lang-ko">대학원</span></span>{%- endif -%}
       {%- if page.intensive -%}<span class="c-badge intensive">❄ <span class="lang-en">Winter Intensive</span><span class="lang-ko">계절학기</span></span>{%- endif -%}
     </div>

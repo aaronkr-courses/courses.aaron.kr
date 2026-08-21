@@ -1,0 +1,189 @@
+- date: 9/3
+  week: 1
+  title: >
+    <strong>Course intro, dev environment setup, NoSQL vs. SQL</strong>
+  supp:
+  readings:
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/1-intro.jpg
+  logistics: >
+    Install MongoDB Community + free Atlas account, Compass, mongosh, driver (Python/Node), VS Code extension; diagnostic Kahoot
+
+- date: 9/10
+  week: 2
+  title: >
+    Introduction to MongoDB & Architecture
+  supp:
+  readings: Guide Ch.1–2
+  hw: 
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Document model, BSON, replica sets
+
+- date: 9/17
+  week: 3
+  title: Developer Tools
+  supp:
+  readings: Guide Ch.3
+  hw: 
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Compass, mongosh, drivers, AI-assisted IDE workflows
+
+- date: 9/24
+  week: 4
+  title: >
+    <span style="color: red"><strong>No Class</strong> Chuseok!~</span>
+
+- date: 10/1
+  week: 5
+  title: Data Modeling & Index Optimization
+  supp:
+  readings: Guide Ch.4
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Embedding vs. referencing, schema patterns
+
+- date: 10/8
+  week: 6
+  title: >
+    Queries
+  supp:
+  readings: Guide Ch.5
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    CRUD, aggregation pipeline basics
+
+- date: 10/15
+  week: 7
+  title: >
+    Database Operations & Security
+  supp:
+  readings: >
+    Guide Ch.6–7
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Admin, backup/restore, auth, RBAC, encryption
+
+- date: 10/22
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    <div style="display: none">
+      <br><a href="">중간 퀴즈</a>
+    </div>
+
+- date: 10/29
+  week: 9
+  title: >
+    MongoDB Atlas & Atlas Search (preview)
+  supp:
+  readings: Guide Ch.8–9
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Cloud deployment; Individual Project due
+
+- date: 11/5
+  week: 10
+  title: >
+    Atlas Vector Search & Intro to RAG
+  supp:
+  readings: >
+    Guide Ch.9 (deep dive)
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Embeddings, vector indexes, RAG architecture; Team Project proposals due
+
+- date: 11/12
+  week: 11
+  title: >
+    Building a RAG Pipeline
+  supp:
+  readings: Guide Ch.9 + supplementary
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Hands-on: LangChain/LlamaIndex + MongoDB as vector store
+
+- date: 11/19
+  week: 12
+  title: >
+    Performance-Oriented Schema Design & Indexing at Scale
+  supp:
+  readings: HP Ch.2–3
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Apply a performance lens to the RAG app's schema
+
+- date: 11/26
+  week: 13
+  title: >
+    Aggregations for Analytics & Real-Time Pipelines
+  supp:
+  readings: HP Ch.4, 8
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Aggregation framework; Change Streams for event-driven ingestion; Progress checkpoint due
+
+- date: 12/3
+  week: 14
+  title: >
+    Scaling for Big Data: Replication & Sharding
+  supp:
+  readings: HP Ch.5–6
+  hw:
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Team project work session
+
+- date: 12/10
+  week: 15
+  title: >
+    Team Project Presentations
+  supp:
+  readings:
+  hw:
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-mongo/
+  logistics: >
+    Demo + technical report due
+
+- date: 12/17
+  week: 16
+  title: >
+    <strong>Final Test</strong><br>
+    <div style="display: none">
+      <a href="">기말 퀴즈</a>
+    </div>

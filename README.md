@@ -36,8 +36,9 @@ Everything to update when a new semester starts (e.g. 2027-1):
 ### 1 · `_config.yml`
 - [ ] Add the new semester to `course_categories` (e.g. `2027-1`)
 
-### 1b · `_data/universities.yml` (only if a logo URL changed)
+### 1b · `_data/universities.yml` (only if a logo URL changed, or you're teaching somewhere new)
 - [ ] Update the `logo:` URL for any university that changed its branding
+- [ ] **Teaching at a new university?** Add its entry here (`name`, `name_ko`, `short_ko`, `abbr`, `url`, `logo`, plus `campus`/`campus_en` if it'll appear on Office Hours). That's it — the Archive page's University filter pill appears automatically once you give it a course (see "Course Topic Tags & Archive Filters" below). No edit needed in `_pages/archive.md` or `_includes/archive_filters.html`.
 
 ### 2 · Course files — `_courses/YYYY/`
 - [ ] Create `_courses/2027/` directory
@@ -105,6 +106,7 @@ The section is hidden automatically when the file is empty.
 | `/archive/` | `_pages/archive.md` | All courses by semester |
 | `/policies/` | `_pages/policies.md` | Shared academic policies |
 | `/office-hours/` | `_pages/office-hours.md` | Campus schedule + contact |
+| `/resources/how-to-get-an-a/` | `_pages/how-to-get-an-a.md` | Study advice + Cal Newport book summary, sticky sidebar TOC |
 | `/courses/2026/ut-iot/` | `_courses/2026/ut-iot.md` | IoT course (UT) |
 | `/courses/2026/...` | `_courses/2026/*.md` | (2026 courses) |
 
@@ -146,6 +148,9 @@ img: assets/img/books/book.jpg  # card thumbnail
 importance: 1
 category: 2026-1
 now: Yes
+topic: Systems, BioMed          # optional — overrides the auto-detected Topic pill(s);
+                                 # comma-separated for more than one. See "Course Topic
+                                 # Tags & Archive Filters" below.
 data_file: 2026/school_subject_lectures   # path inside _data/ (no .yml extension)
 
 grading:
@@ -176,6 +181,31 @@ Main-Text:
 > - `now: Yes` in YAML is a boolean `true`. The site uses `where_exp: "c", "c.now"` — never `where: "now", "Yes"` (which matches nothing).
 > - `uni:` must match an `abbr:` in `_data/universities.yml`. For non-university courses (online, high school), use `logo: https://...` directly instead.
 > - **`description:` must contain the university's exact `name_ko` string, or the course silently vanishes from the homepage.** The homepage (`index.md`) does NOT group courses by `uni:` — it does a substring match, `where_exp: "c", "c.description contains uni"`, where `uni` is `_data/universities.yml`'s `name_ko` for that school (e.g. UT's `name_ko` is `한국교통대학교`, not `교통대학교`). If your `description:` uses a shortened/informal Korean name that doesn't contain the exact `name_ko` substring, the course still shows up correctly on `/archive/` (matches by `category:`) and `/office-hours/` (matches by `uni:` abbr) — only the homepage silently drops it, with no build error or warning. **Always copy the exact `name_ko` value from `_data/universities.yml` into your new course's `description:` field**, or copy the `description:` line from another course at the same university verbatim and just swap the section code/semester.
+
+---
+
+## Course Topic Tags & Archive Filters
+
+Every course shows a colored **Topic pill** (AI/ML, Programming, Web, Data, Systems, EE, BioMed) on its `index.md` card, its `/archive/` row, and its own course page. By default this is auto-detected from the course `title:` by keyword (e.g. a title containing "database" → Data). The logic lives in one place, `_includes/topic_tag.html`, and is shared by `_includes/course_card.html`, `_pages/archive.md`, and `_layouts/course.html` — **never copy the keyword-match logic into a new template**; always `{% include topic_tag.html course=<obj> %}` instead, or a future topic will silently show correctly in one place and not another (this happened once already — see CLAUDE.md decision #35).
+
+**Overriding the auto-detected topic:** add `topic:` to a course's front matter. It accepts either the label you see in the UI or the internal key, matched loosely (case/punctuation-insensitive) — `topic: AI/ML` and `topic: ai-tag` do the same thing:
+
+```yaml
+topic: BioMed                 # single override
+topic: Systems, BioMed        # multiple topics — comma-separated, any number
+```
+
+A course with multiple topics gets one pill per topic everywhere, and shows up under **every** matching Archive filter pill (a `Systems, BioMed` course appears whether you filter by Systems or by BioMed).
+
+**Adding a brand-new Topic value** (not just overriding which existing one applies): you need two things, since there's no single config file listing the valid topics —
+1. Add the new key to the `{%- case _one_norm -%}` block in `_includes/topic_tag.html` (both the override branch and, if it should also auto-detect from certain title keywords, the auto-detect branch)
+2. Add its filter pill to `_includes/archive_filters.html`'s Topic `ctrl-row`, and its color to all three of `.tag`/`.item-tag`/`.c-badge` in `_sass/_components.scss` and `_sass/_course.scss` (plus a `[data-theme="light"]` contrast-corrected color) — see CLAUDE.md decision #37 for the existing color mapping and how BioMed's green was picked.
+
+**Archive filter toolbar:** the whole Filters panel (Semester/Univ./Level/Topic/Sort) lives in `_includes/archive_filters.html`, not in `archive.md` itself — edit it there. The **Semester** and **University** rows are generated from data and self-prune to only the values at least one course actually uses:
+- Semester pills come from `_config.yml`'s `course_categories`
+- University pills come from `_data/universities.yml` — **add a new university there and give it a course, and its filter pill appears automatically.** No edit to `archive_filters.html` needed for that case.
+
+The **Level** and **Topic** rows are hand-maintained lists (there's no small backing data file for those), so adding a Topic value still means editing `archive_filters.html` as described above.
 
 ---
 
@@ -261,6 +291,8 @@ The instructor box on every course page pulls bio text **live** from `aaronsnowb
 
 The static fallback text in `_includes/about_aaron.html` is shown briefly before the fetch completes (or if the fetch fails).
 
+**The fetched bio fields render as HTML, not escaped text** — `about_aaron.html` sets them via `innerHTML`, so `bio_en`/`bio_ko`/`role` in `bio.json` can safely contain tags like `<strong>`/`<em>` and they'll format correctly instead of showing as literal `<strong>` text on the page. This is safe specifically because `bio.json` is authored solely by Aaron on a site only he controls — if that ever changes (e.g. bio.json accepts outside input), this should go back to `textContent` to avoid an XSS hole. See CLAUDE.md decision #36.
+
 ---
 
 ## Recent Lab Notes (homepage)
@@ -281,8 +313,10 @@ The static `<a class="lab-note-row">` rows in `index.md`'s source are a **pre-JS
 |---|---|
 | `_includes/policies.md` | **Single source of truth** for all shared academic policies |
 | `_includes/schedule.html` | Renders `<table>` schedule from `_data/YYYY/…_lectures.yml` |
-| `_includes/about_aaron.html` | Instructor bio box — fetches from aaronsnowberger.com/bio.json |
+| `_includes/about_aaron.html` | Instructor bio box — fetches from aaronsnowberger.com/bio.json, renders as HTML |
 | `_includes/course_card.html` | Card component used on home/archive pages |
+| `_includes/topic_tag.html` | **Single source of truth** for a course's Topic pill(s) — auto-detect + `topic:` override |
+| `_includes/archive_filters.html` | Archive page's Filters toolbar — Semester/University rows are data-driven |
 | `_sass/_variables.scss` | All color & layout variables |
 | `_data/universities.yml` | **Single source of truth** for university logos, names, abbrs, campus names, and URLs |
 | `_data/office_hours.yml` | **Single source of truth** for the weekday→university teaching schedule + vacation windows (drives Office Hours page, Today Pill, homepage uni-groups) |

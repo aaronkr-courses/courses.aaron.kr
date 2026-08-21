@@ -8,6 +8,7 @@ uni: ut
 img: assets/img/books/hands-on-machine-learning.jpg
 importance: 6
 category: 2024-2
+topic: AI/ML
 data_file: 2024/ut_data_lectures
 
 grading:

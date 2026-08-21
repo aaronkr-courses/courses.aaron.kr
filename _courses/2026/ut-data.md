@@ -8,6 +8,7 @@ uni: ut
 img: assets/img/books/hands-on-machine-learning.jpg
 importance: 1
 category: 2026-2
+topic: AI/ML
 now: Yes
 data_file: 2026/ut_data_lectures
 

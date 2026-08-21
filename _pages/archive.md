@@ -18,89 +18,7 @@ eyebrow: Teaching History
       <span class="lang-ko">2021년부터 현재까지 강의한 모든 강좌를 학기별로 정리했습니다.</span>
     </p>
 
-    <!-- Filter + Thumbnail controls -->
-    <div class="section-top" style="margin-top:28px;">
-      <div class="section-heading-row">
-        <span class="section-label">
-          <span class="lang-en">By Semester</span>
-          <span class="lang-ko">학기별</span>
-        </span>
-        <span class="section-line"></span>
-      </div>
-      <div class="section-actions">
-        <button class="filter-toggle-btn" id="filter-toggle">
-          ⚙ <span class="lang-en">Filters</span><span class="lang-ko">필터</span>
-        </button>
-        <button class="thumb-toggle" id="arch-thumb-toggle">
-          <span class="t-icon">⊞</span>
-          <span class="lang-en">Thumbnails</span><span class="lang-ko">썸네일</span>
-        </button>
-        <span id="arch-count" style="font-family:'IBM Plex Mono',monospace;font-size:.65rem;color:var(--muted);margin-left:6px;"></span>
-      </div>
-    </div>
-    <div class="filter-panel" id="filter-panel">
-      <div class="ctrl-row">
-        <span class="ctrl-row-label"><span class="lang-en">Semester</span><span class="lang-ko">학기</span></span>
-        <button class="pill pill-blue active" data-filter="sem" data-value="all">
-          <span class="lang-en">All</span><span class="lang-ko">전체</span>
-        </button>
-        {%- for cat in site.course_categories -%}
-        {%- assign cat_courses = site.courses | where: "category", cat.key -%}
-        {%- if cat_courses.size > 0 -%}
-        <button class="pill pill-blue" data-filter="sem" data-value="{{ cat.key }}">{{ cat.label }}</button>
-        {%- endif -%}
-        {%- endfor -%}
-      </div>
-      <div class="ctrl-row">
-        <span class="ctrl-row-label"><span class="lang-en">University</span><span class="lang-ko">대학교</span></span>
-        <button class="pill active" data-filter="uni" data-value="all">
-          <span class="lang-en">All</span><span class="lang-ko">전체</span>
-        </button>
-        <button class="pill" data-filter="uni" data-value="UT"><span class="lang-en">UT</span><span class="lang-ko">교통대</span></button>
-        <button class="pill" data-filter="uni" data-value="WKU"><span class="lang-en">WKU</span><span class="lang-ko">원광대</span></button>
-        <button class="pill" data-filter="uni" data-value="JBNU"><span class="lang-en">JBNU</span><span class="lang-ko">전북대</span></button>
-        <button class="pill" data-filter="uni" data-value="HB"><span class="lang-en">HB</span><span class="lang-ko">한밭대</span></button>
-        <button class="pill" data-filter="uni" data-value="JNUE"><span class="lang-en">JNUE</span><span class="lang-ko">전주교대</span></button>
-        <button class="pill" data-filter="uni" data-value="DJU"><span class="lang-en">DJU</span><span class="lang-ko">대전대</span></button>
-        <button class="pill" data-filter="uni" data-value="GNUE"><span class="lang-en">GNUE</span><span class="lang-ko">광주교대</span></button>
-        <button class="pill" data-filter="uni" data-value="HS"><span class="lang-en">HS</span><span class="lang-ko">고등학교</span></button>
-      </div>
-      <div class="ctrl-row">
-        <span class="ctrl-row-label"><span class="lang-en">Level</span><span class="lang-ko">과정</span></span>
-        <button class="pill active" data-filter="level" data-value="all">
-          <span class="lang-en">All</span><span class="lang-ko">전체</span>
-        </button>
-        <button class="pill" data-filter="level" data-value="grad">🎓 <span class="lang-en">Graduate</span><span class="lang-ko">대학원</span></button>
-        <button class="pill" data-filter="level" data-value="undergrad"><span class="lang-en">Undergraduate</span><span class="lang-ko">학부</span></button>
-      </div>
-      <div class="ctrl-row">
-        <span class="ctrl-row-label"><span class="lang-en">Topic</span><span class="lang-ko">주제</span></span>
-        <button class="pill active" data-filter="topic" data-value="all">
-          <span class="lang-en">All</span><span class="lang-ko">전체</span>
-        </button>
-        <button class="pill" data-filter="topic" data-value="ai-tag"><span class="lang-en">AI/ML</span><span class="lang-ko">AI/머신러닝</span></button>
-        <button class="pill" data-filter="topic" data-value="theory"><span class="lang-en">Programming</span><span class="lang-ko">프로그래밍</span></button>
-        <button class="pill" data-filter="topic" data-value="web"><span class="lang-en">Web</span><span class="lang-ko">웹</span></button>
-        <button class="pill" data-filter="topic" data-value="data"><span class="lang-en">Data</span><span class="lang-ko">데이터</span></button>
-        <button class="pill" data-filter="topic" data-value="systems"><span class="lang-en">Systems</span><span class="lang-ko">시스템</span></button>
-        <button class="pill" data-filter="topic" data-value="ee"><span class="lang-en">EE</span><span class="lang-ko">전기전자</span></button>
-      </div>
-      <div class="ctrl-row">
-        <span class="ctrl-row-label"><span class="lang-en">Sort</span><span class="lang-ko">정렬</span></span>
-        <button class="pill active" data-sort="newest">
-          <span class="lang-en">Newest</span><span class="lang-ko">최신순</span>
-        </button>
-        <button class="pill" data-sort="oldest">
-          <span class="lang-en">Oldest</span><span class="lang-ko">오래된순</span>
-        </button>
-        <button class="pill" data-sort="az">
-          <span class="lang-en">A–Z</span><span class="lang-ko">가나다순</span>
-        </button>
-        <button class="pill" data-sort="byuni">
-          <span class="lang-en">By University</span><span class="lang-ko">대학교별</span>
-        </button>
-      </div>
-    </div>
+    {%- include archive_filters.html -%}
     <div class="hero-wave-ctrl">
       <button class="wave-btn ctrl-btn" aria-label="Toggle wave animation">🌊</button>
     </div>
@@ -121,28 +39,13 @@ eyebrow: Teaching History
           {%- for course in cat_courses -%}
             {%- assign _uni = course.init | upcase -%}
             {%- assign _info = course.information | first -%}
-            {%- assign _tl = course.title | downcase -%}
-            {%- if _tl contains 'machine learning' or _tl contains 'deep learning' or _tl contains 'ai ' -%}
-              {%- assign _tc = 'ai-tag' -%}{%- assign _tl2 = 'AI/ML' -%}
-            {%- elsif _tl contains 'database' or _tl contains 'sql' or _tl contains 'data struct' -%}
-              {%- assign _tc = 'data' -%}{%- assign _tl2 = 'Data' -%}
-            {%- elsif _tl contains 'web' or _tl contains 'php' or _tl contains 'node' or _tl contains 'html' -%}
-              {%- assign _tc = 'web' -%}{%- assign _tl2 = 'Web' -%}
-            {%- elsif _tl contains 'python' or _tl contains 'java' or _tl contains 'c++' or _tl contains 'programming' -%}
-              {%- assign _tc = 'theory' -%}{%- assign _tl2 = 'Programming' -%}
-            {%- elsif _tl contains 'iot' or _tl contains 'circuit' or _tl contains 'device' or _tl contains 'semiconductor' or _tl contains 'medical' -%}
-              {%- assign _tc = 'systems' -%}{%- assign _tl2 = 'Systems' -%}
-            {%- elsif _tl contains 'electric' or _tl contains 'power' or _tl contains 'hydrogen' -%}
-              {%- assign _tc = 'ee' -%}{%- assign _tl2 = 'EE' -%}
-            {%- else -%}
-              {%- assign _tc = 'theory' -%}{%- assign _tl2 = 'CS' -%}
-            {%- endif -%}
+            {%- include topic_tag.html course=course -%}
             <li>
               <a class="archive-item{% if course.grad %} grad-item{% endif %}"
                  href="{{ course.url | relative_url }}"
                  data-uni="{{ _uni }}"
                  data-sem="{{ course.category }}"
-                 data-topic="{{ _tc }}"
+                 data-topic="{{ _topics_str }}"
                  data-level="{% if course.grad %}grad{% else %}undergrad{% endif %}"
                  data-title="{{ course.title | downcase }}">
                 {%- if course.img -%}
@@ -160,7 +63,10 @@ eyebrow: Teaching History
                     <div class="item-title">{{ course.title }}</div>
                     {%- if course.subtitle %}<div class="item-subtitle">{{ course.subtitle }}</div>{%- endif -%}
                     <div class="item-meta-row">
-                      <span class="item-tag {{ _tc }}">{{ _tl2 }}</span>
+                      {%- for _cls in _tc_list -%}
+                        {%- assign _lbl = _tl_list[forloop.index0] -%}
+                        <span class="item-tag {{ _cls }}">{{ _lbl }}</span>
+                      {%- endfor -%}
                       {%- if course.grad -%}<span class="item-tag grad-tag">🎓 <span class="lang-en">Grad</span><span class="lang-ko">대학원</span></span>{%- endif -%}
                       {%- if course.intensive -%}<span class="item-tag intensive-tag">❄ <span class="lang-en">Intensive</span><span class="lang-ko">계절학기</span></span>{%- endif -%}
                       {%- if _info.time -%}<span class="item-meta-val">{{ _info.time }}</span>{%- endif -%}
@@ -215,7 +121,7 @@ eyebrow: Teaching History
       const li    = row.closest('li');
       const semOk   = activeSem   === 'all' || row.dataset.sem   === activeSem;
       const uniOk   = activeUni   === 'all' || row.dataset.uni   === activeUni;
-      const topicOk = activeTopic === 'all' || row.dataset.topic === activeTopic;
+      const topicOk = activeTopic === 'all' || row.dataset.topic.split(' ').includes(activeTopic);
       const levelOk = activeLevel === 'all' || row.dataset.level === activeLevel;
       li.classList.toggle('arch-hidden', !(semOk && uniOk && topicOk && levelOk));
     });

@@ -1,0 +1,74 @@
+{%- comment -%}
+  Single source of truth for a course's Topic pill(s) (filter class + display label).
+  Infers a single topic from the course's title, unless a `topic:` front-matter field
+  is set, in which case it overrides auto-detection — and may list more than one topic
+  as a comma-separated string (e.g. `topic: Systems, BioMed`) to tag a course with
+  several. Each value accepts either the internal filter key (ai-tag, data, web,
+  theory, systems, ee, biomed) or the human-readable label (AI/ML, Data, Web,
+  Programming, Systems, EE, BioMed) — matched case- and punctuation-insensitively,
+  since that's what most people will naturally type.
+
+  Usage: {% include topic_tag.html course=c %}
+  Assigns into the caller's scope (Jekyll's `include` shares scope with its caller,
+  unlike `render`):
+    _tc_list / _tl_list — parallel arrays, one entry per topic, in order. Loop them
+                           together to render one pill per topic:
+                             {%- for cls in _tc_list -%}
+                               {%- assign lbl = _tl_list[forloop.index0] -%}
+                               <span class="tag {{ cls }}">{{ lbl }}</span>
+                             {%- endfor -%}
+    _tc / _tl2           — first topic's class/label (kept for single-pill callers)
+    _topics_str          — all topic classes space-separated, e.g. "systems biomed" —
+                           use this for a `data-topic` filter attribute so a course
+                           matches if ANY of its topics is the active filter
+{%- endcomment -%}
+{%- assign _tt_c = include.course -%}
+
+{%- comment -%} Auto-detect a single default topic from the title {%- endcomment -%}
+{%- assign _tl = _tt_c.title | downcase -%}
+{%- if _tl contains 'machine learning' or _tl contains 'deep learning' or _tl contains 'ai ' or _tl contains 'artificial' -%}
+  {%- assign _auto_tc = 'ai-tag' -%}{%- assign _auto_tl = 'AI/ML' -%}
+{%- elsif _tl contains 'database' or _tl contains 'sql' or _tl contains 'data struct' -%}
+  {%- assign _auto_tc = 'data' -%}{%- assign _auto_tl = 'Data' -%}
+{%- elsif _tl contains 'web' or _tl contains 'php' or _tl contains 'node' or _tl contains 'html' or _tl contains 'jsp' -%}
+  {%- assign _auto_tc = 'web' -%}{%- assign _auto_tl = 'Web' -%}
+{%- elsif _tl contains 'python' or _tl contains 'java' or _tl contains 'c++' or _tl contains 'scratch' or _tl contains 'programming' -%}
+  {%- assign _auto_tc = 'theory' -%}{%- assign _auto_tl = 'Programming' -%}
+{%- elsif _tl contains 'iot' or _tl contains 'circuit' or _tl contains 'device' or _tl contains 'semiconductor' or _tl contains 'medical' -%}
+  {%- assign _auto_tc = 'systems' -%}{%- assign _auto_tl = 'Systems' -%}
+{%- elsif _tl contains 'electric' or _tl contains 'power' or _tl contains 'hydrogen' -%}
+  {%- assign _auto_tc = 'ee' -%}{%- assign _auto_tl = 'EE' -%}
+{%- else -%}
+  {%- assign _auto_tc = 'theory' -%}{%- assign _auto_tl = 'CS' -%}
+{%- endif -%}
+
+{%- assign _tc_join = "" -%}
+{%- assign _tl_join = "" -%}
+
+{%- if _tt_c.topic -%}
+  {%- assign _topics_raw = _tt_c.topic | split: ',' -%}
+  {%- for _raw in _topics_raw -%}
+    {%- assign _one_norm = _raw | strip | downcase | remove: '/' | remove: ' ' | remove: '-' | remove: '_' -%}
+    {%- case _one_norm -%}
+      {%- when 'aitag' or 'aiml' or 'ai' or 'ml' -%}{%- assign _one_tc = 'ai-tag' -%}{%- assign _one_tl = 'AI/ML' -%}
+      {%- when 'data' -%}{%- assign _one_tc = 'data' -%}{%- assign _one_tl = 'Data' -%}
+      {%- when 'web' -%}{%- assign _one_tc = 'web' -%}{%- assign _one_tl = 'Web' -%}
+      {%- when 'theory' or 'programming' or 'cs' -%}{%- assign _one_tc = 'theory' -%}{%- assign _one_tl = 'Programming' -%}
+      {%- when 'systems' -%}{%- assign _one_tc = 'systems' -%}{%- assign _one_tl = 'Systems' -%}
+      {%- when 'ee' -%}{%- assign _one_tc = 'ee' -%}{%- assign _one_tl = 'EE' -%}
+      {%- when 'biomed' or 'biomedical' -%}{%- assign _one_tc = 'biomed' -%}{%- assign _one_tl = 'BioMed' -%}
+      {%- else -%}{%- assign _one_tc = _raw | strip -%}{%- assign _one_tl = _raw | strip -%}
+    {%- endcase -%}
+    {%- assign _tc_join = _tc_join | append: _one_tc | append: ',' -%}
+    {%- assign _tl_join = _tl_join | append: _one_tl | append: '|' -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- assign _tc_join = _auto_tc | append: ',' -%}
+  {%- assign _tl_join = _auto_tl | append: '|' -%}
+{%- endif -%}
+
+{%- assign _tc_list = _tc_join | split: ',' -%}
+{%- assign _tl_list = _tl_join | split: '|' -%}
+{%- assign _tc = _tc_list | first -%}
+{%- assign _tl2 = _tl_list | first -%}
+{%- assign _topics_str = _tc_list | join: ' ' -%}

@@ -28,6 +28,12 @@
         <a href="{{ text.link }}" class="book-buy" target="_blank"><span class="lang-en">Buy</span><span class="lang-ko">구매</span> →</a>
         {%- endif -%}
       {%- endif -%}
+      {%- if text.amazon -%}
+      <a href="{{ text.amazon }}" class="book-buy" target="_blank" style="margin-left:6px;">Amazon →</a>
+      {%- endif -%}
+      {%- if text.ebook -%}
+      <a href="{{ text.ebook }}" class="book-buy" target="_blank" style="margin-left:6px;">E-book →</a>
+      {%- endif -%}
       {%- if text.code -%}
       <a href="{{ text.code }}" class="book-buy" target="_blank" style="margin-left:6px;">Code →</a>
       {%- endif -%}

@@ -8,6 +8,7 @@ uni: ut
 img: assets/img/books/bio-medical.jpg
 importance: 5
 category: 2024-1
+topic: Systems, BioMed
 data_file: 2024/ut_imd_lectures
 
 grading:

@@ -18,19 +18,28 @@ permalink: /resources/how-to-get-an-a/
   </p>
 </header>
 
-<div class="hta-page">
+<div class="hta-page-layout">
 
-  <div class="hta-toc animate d3">
+  <aside class="hta-sidebar animate d3">
     <span class="hta-toc-label"><span class="lang-en">On this page</span><span class="lang-ko">이 페이지</span></span>
-    <ul>
-      <li><a href="#rule1"><span class="lang-en">1. Show Up</span><span class="lang-ko">1. 출석하기</span></a></li>
-      <li><a href="#rule2"><span class="lang-en">2. Do Every Assignment</span><span class="lang-ko">2. 모든 과제 제출</span></a></li>
-      <li><a href="#rule3"><span class="lang-en">3. Prepare for Tests</span><span class="lang-ko">3. 시험 준비</span></a></li>
-      <li><a href="#rule4"><span class="lang-en">4. Ask for Help Early</span><span class="lang-ko">4. 일찍 도움 요청</span></a></li>
-      <li><a href="#rule5"><span class="lang-en">5. What Won't Work</span><span class="lang-ko">5. 통하지 않는 것들</span></a></li>
-      <li><a href="#newport"><span class="lang-en">Cal Newport's Framework</span><span class="lang-ko">Cal Newport의 방법</span></a></li>
-    </ul>
-  </div>
+    <ol class="hta-sidebar-nav">
+      <li><a href="#rule1"><span class="hta-toc-num">1</span><span class="lang-en">Show Up</span><span class="lang-ko">출석하기</span></a></li>
+      <li><a href="#rule2"><span class="hta-toc-num">2</span><span class="lang-en">Do Every Assignment</span><span class="lang-ko">모든 과제 제출</span></a></li>
+      <li><a href="#rule3"><span class="hta-toc-num">3</span><span class="lang-en">Prepare for Tests</span><span class="lang-ko">시험 준비</span></a></li>
+      <li><a href="#rule4"><span class="hta-toc-num">4</span><span class="lang-en">Ask for Help Early</span><span class="lang-ko">일찍 도움 요청</span></a></li>
+      <li><a href="#rule5"><span class="hta-toc-num">5</span><span class="lang-en">What Won't Work</span><span class="lang-ko">통하지 않는 것들</span></a></li>
+      <li>
+        <a href="#newport"><span class="hta-toc-num">6</span><span class="lang-en">Cal Newport's Framework</span><span class="lang-ko">Cal Newport의 방법</span></a>
+        <ol class="hta-sidebar-subnav">
+          <li><a href="#part1"><span class="lang-en">Part 1 · Study Basics</span><span class="lang-ko">1부 · 공부의 기초</span></a></li>
+          <li><a href="#part2"><span class="lang-en">Part 2 · Quizzes &amp; Exams</span><span class="lang-ko">2부 · 퀴즈와 시험</span></a></li>
+          <li><a href="#part3"><span class="lang-en">Part 3 · Essays &amp; Papers</span><span class="lang-ko">3부 · 에세이와 논문</span></a></li>
+        </ol>
+      </li>
+    </ol>
+  </aside>
+
+  <div class="hta-main">
 
   <!-- ── Section 1 ───────────────────────────────────────────────────────── -->
   <div class="hta-section" id="rule1">
@@ -228,7 +237,7 @@ permalink: /resources/how-to-get-an-a/
     </div>
 
     <!-- Part 1 -->
-    <div class="hta-part">
+    <div class="hta-part" id="part1">
       <div class="hta-part-label"><span class="lang-en">Part 1</span><span class="lang-ko">1부</span></div>
       <h3><span class="lang-en">Study Basics</span><span class="lang-ko">공부의 기초</span></h3>
 
@@ -279,7 +288,7 @@ permalink: /resources/how-to-get-an-a/
     </div>
 
     <!-- Part 2 -->
-    <div class="hta-part">
+    <div class="hta-part" id="part2">
       <div class="hta-part-label"><span class="lang-en">Part 2</span><span class="lang-ko">2부</span></div>
       <h3><span class="lang-en">Quizzes and Exams</span><span class="lang-ko">퀴즈와 시험</span></h3>
 
@@ -330,7 +339,7 @@ permalink: /resources/how-to-get-an-a/
     </div>
 
     <!-- Part 3 -->
-    <div class="hta-part">
+    <div class="hta-part" id="part3">
       <div class="hta-part-label"><span class="lang-en">Part 3</span><span class="lang-ko">3부</span></div>
       <h3><span class="lang-en">Essays and Papers</span><span class="lang-ko">에세이와 논문</span></h3>
 
@@ -370,5 +379,32 @@ permalink: /resources/how-to-get-an-a/
     </a>
   </div>
 
-</div><!-- .hta-page -->
+  </div><!-- .hta-main -->
+
+</div><!-- .hta-page-layout -->
 </div><!-- .wrap -->
+
+<script>
+(function(){
+  const sections = document.querySelectorAll('.hta-main [id]');
+  const links    = document.querySelectorAll('.hta-sidebar-nav a');
+  if (!sections.length || !links.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.hta-sidebar-nav a[href="#${e.target.id}"]`);
+        if (a) {
+          a.classList.add('active');
+          const subnav = a.closest('ol.hta-sidebar-subnav');
+          if (subnav) {
+            const parentLink = subnav.parentElement.querySelector(':scope > a');
+            if (parentLink) parentLink.classList.add('active');
+          }
+        }
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  sections.forEach(s => obs.observe(s));
+})();
+</script>
