@@ -3,7 +3,7 @@ layout: course
 init: CBNU
 title: Advanced Machine Learning (Graduate)
 subtitle: 기계학습특론 (대학원)
-description: TBD • 2026년 2학기 • 충북대학교
+description: 8866359-03 • 2026년 2학기 • 충북대학교
 uni: cbnu
 img: assets/img/books/homl-en.jpg
 importance: 6
@@ -18,9 +18,9 @@ grading:
   project: 50
 
 information:
-  - section: TBD
-    time: TBD
-    location: TBD
+  - section: 8866359-03
+    time: 화 789 | Tue 3pm-6pm
+    location: N5-306
     kakaotalk:
 
 Main-Text:

@@ -3,7 +3,7 @@ layout: course
 init: CBNU
 title: Topics in Computer Science I (Graduate)
 subtitle: 전산특강 1 (대학원)
-description: TBD • 2026년 2학기 • 충북대학교
+description: 8866358-03 • 2026년 2학기 • 충북대학교
 uni: cbnu
 img: assets/img/books/high-perf-mongodb.jpg
 importance: 7
@@ -18,9 +18,9 @@ grading:
   project: 50
 
 information:
-  - section: TBD
-    time: TBD
-    location: TBD
+  - section: 8866358-03
+    time: 목 456 | Thur 12pm-3pm
+    location: N5-306
     kakaotalk:
 
 Main-Text:

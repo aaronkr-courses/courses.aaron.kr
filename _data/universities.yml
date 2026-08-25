@@ -5,6 +5,7 @@
   campus_en: "Chungju Campus"
   abbr: ut
   url: "https://www.ut.ac.kr/"
+  portal: "https://portal.ut.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/ut-logo_beiynv.png
 
 - name: "Wonkwang University"
@@ -13,7 +14,8 @@
   campus: "익산캠퍼스"
   campus_en: "Iksan Campus"
   abbr: wku
-  url: "https://www.wonkwang.ac.kr/"
+  url: "https://www.wku.ac.kr/"
+  portal: "https://itra.wku.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/wku-logo_cu76kg.png
 
 - name: "Jeonbuk National University"
@@ -23,6 +25,7 @@
   campus_en: "Jeonju Campus"
   abbr: jbnu
   url: "https://www.jbnu.ac.kr/"
+  portal: "https://jump.jbnu.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/jbnu-logo_r6c50n.png
 
 - name: "Hanbat University"
@@ -32,6 +35,7 @@
   campus_en: "Daejeon Campus"
   abbr: hb
   url: "https://www.hanbat.ac.kr/"
+  portal: "https://my.hanbat.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/hanbat-logo_mvle6l.png
 
 - name: "Jeonju National University of Education"
@@ -41,6 +45,7 @@
   campus_en: "Jeonju Campus"
   abbr: jnue
   url: "https://www.jnue.kr/"
+  portal: "https://portal.jnue.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jnue-logo_jmyh9e.png
 
 - name: "Daejeon University"
@@ -48,6 +53,7 @@
   short_ko: "대전대"
   abbr: dju
   url: "https://www.dju.ac.kr/"
+  portal: "https://portal.dju.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/dju-logo-2_jxm7py.png
 
 - name: "Jeonju University"
@@ -55,6 +61,7 @@
   short_ko: "전주대"
   abbr: jj
   url: "https://www.jj.ac.kr/"
+  portal: "https://juis.jj.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jju-logo_x1phga.png
 
 - name: "Gwangju National University of Education"
@@ -64,6 +71,7 @@
   campus_en: "Gwangju Campus"
   abbr: gnue
   url: "https://www.gnue.ac.kr/"
+  portal: "https://portal.gnue.ac.kr/"
   logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/gnue-logo_tkxaro.png"
 
 - name: "Chungbuk National University"
@@ -73,6 +81,7 @@
   campus_en: "Cheongju Campus"
   abbr: cbnu
   url: "https://www.cbnu.ac.kr/"
+  portal: "https://eis.cbnu.ac.kr/"
   logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/cbnu-logo_xme7s0.png"
 
 - name: "Kongju National University"
@@ -82,4 +91,5 @@
   campus_en: "Kongju Campus"
   abbr: kjnu
   url: "https://www.kongju.ac.kr/"
+  portal: "https://portal.kongju.ac.kr/"
   logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/kongju-logo_rspuq9.png"
