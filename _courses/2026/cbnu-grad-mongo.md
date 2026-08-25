@@ -6,7 +6,7 @@ subtitle: 전산특강 1 (대학원)
 description: 8866358-03 • 2026년 2학기 • 충북대학교
 uni: cbnu
 img: assets/img/books/high-perf-mongodb.jpg
-importance: 7
+importance: 6
 category: 2026-2
 now: Yes
 grad: true

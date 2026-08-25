@@ -6,7 +6,7 @@ subtitle: 기계학습특론 (대학원)
 description: 8866359-03 • 2026년 2학기 • 충북대학교
 uni: cbnu
 img: assets/img/books/homl-en.jpg
-importance: 6
+importance: 7
 category: 2026-2
 now: Yes
 grad: true
