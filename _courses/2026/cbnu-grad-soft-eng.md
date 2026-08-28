@@ -3,7 +3,7 @@ layout: course
 init: CBNU
 title: Advanced Software Engineering (Graduate)
 subtitle: 소프트웨어공학특론 (대학원)
-description: TBD • 2026년 2학기 • 충북대학교
+description: 8866357-02 • 2026년 2학기 • 충북대학교
 uni: cbnu
 img: assets/img/books/soft-eng.jpg
 importance: 7
@@ -14,14 +14,16 @@ data_file: 2026/cbnu_grad_soft_eng_lectures
 visible: false
 
 grading:
-  attendance: 20
-  homework: 30
-  project: 50
+  attendance: 10
+  homework: 25
+  project: 35
+  midterm: 20
+  final: 10
 
 information:
-  - section: TBD
-    time: TBD
-    location: TBD
+  - section: 8866357-02
+    time: 목 789 | Thur 3pm-6pm
+    location: N5-305
     kakaotalk:
 
 Main-Text:
@@ -33,6 +35,15 @@ Main-Text:
     image: books/soft-eng.jpg
 
 Supplementary:
+  - text: "부교재"
+    author: "Winters, Titus / Manshreck, Tom / Wright, Hyrum"
+    title: >
+      <strong>Software Engineering at Google:</strong> Lessons Learned from Programming Over Time
+    publisher: "O'Reilly Media | 2020년 02월 29일"
+    link: "https://www.yes24.com/product/goods/133247948"
+    ebook: "https://abseil.io/resources/swe-book"
+    image: books/swe-google.jpg
+    
   - text: "부교재"
     author: "Richards, Mark / Ford, Neal"
     title: >
@@ -51,4 +62,17 @@ Supplementary:
 **Course Objectives:** To provide an in-depth understanding of modern software engineering methodologies and to develop the ability to apply them in real-world projects.
 **Key Topics:** Requirements engineering, software architecture patterns, DevOps/CI-CD, testing and quality assurance, software evolution and maintenance, AI-assisted software engineering including LLM-based code generation and review.
 **Course Methodology and Assessment:** The course will combine paper reading seminars and case studies, with team projects and presentations, along with midterm and final evaluations.
+
+---
+
+### Grading:
+
+| Component | Weight |
+| Attendance | 10% |
+| Weekly Build Log & Labs | 25% |
+| Semester Project (code + before/after report + presentation) | 35% |
+| Midterm | 20% |
+| Final Exam | 10% |
+
+**Software Engineering at Google** ([free online](https://abseil.io/resources/swe-book)) slots in well as optional companion reading for Weeks 9–14 — its chapters on code review, testing culture, and technical debt map closely onto what students will be discovering in their own project by then.
 

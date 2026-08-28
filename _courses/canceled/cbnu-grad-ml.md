@@ -11,6 +11,7 @@ category: 2026-2
 now: Yes
 grad: true
 data_file: 2026/cbnu_grad_ml_lectures
+visible: false
 
 grading:
   attendance: 20
@@ -19,7 +20,7 @@ grading:
 
 information:
   - section: 8866359-03
-    time: 화 789 | Tue 3pm-6pm
+    time: 목 789 | Thur 3pm-6pm
     location: N5-306
     kakaotalk:
 

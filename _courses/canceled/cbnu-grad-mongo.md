@@ -11,6 +11,7 @@ category: 2026-2
 now: Yes
 grad: true
 data_file: 2026/cbnu_grad_mongo_lectures
+visible: false
 
 grading:
   attendance: 20

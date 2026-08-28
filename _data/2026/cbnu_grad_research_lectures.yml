@@ -1,0 +1,178 @@
+- date: 9/3
+  week: 1
+  title: What Is Research? Understanding Your Audience
+  supp:
+  readings: 
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/1-intro.jpg
+  logistics: >
+    Craft Intro; PAI U1 — course overview, introduce sci.aaron.kr as the semester's literature stream, name KSPAI (Jan) as the target venue
+
+- date: 9/10
+  week: 2
+  title: From Topics to Questions to a Problem
+  supp:
+  readings:
+  hw: 
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    Craft Part I; PAI U1 — students select a topic (their SE project is a valid option)
+
+- date: 9/17
+  week: 3
+  title: Finding & Evaluating Sources
+  supp:
+  readings:
+  hw: 
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    Craft Part II; PAI U2; WCS ch. on doing research/literature
+
+- date: 9/24
+  week: 4
+  title: >
+    <span style="color: red"><strong>No Class</strong> Chuseok!~</span>
+
+- date: 10/1
+  week: 5
+  title: Research Ethics & AI Use in Research
+  supp:
+  readings:
+  hw:
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    Craft Part V; PAI U9, U10
+  
+- date: 10/8
+  week: 6
+  title: Engaging Sources / Literature Review
+  supp:
+  readings: 
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    Craft Part II cont'd; WCS ch. on literature review; PAI U3 — students submit a draft of their literature review
+
+- date: 10/15
+  week: 7
+  title: Research Design & Data Collection in CS
+  supp:
+  readings:
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    PAI U3; WCS ch. on experimentation
+
+- date: 10/22
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    <div style="display: none">
+      Proposal defense
+      <br><a href="">중간 퀴즈</a>
+    </div>
+
+- date: 10/29
+  week: 9
+  title: Making Claims, Reasons & Evidence
+  supp:
+  readings: 
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    Craft Part III
+
+- date: 11/5
+  week: 10
+  title: Warrants & Anticipating Objections
+  supp:
+  readings:
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    Craft Part III cont'd
+
+- date: 11/12
+  week: 11
+  title: Writing the Paper I: IMRaD
+  supp:
+  readings:
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    PAI U4; WCS ch. on writing up
+
+- date: 11/19
+  week: 12
+  title: Writing the Paper II: Organizing, Sources, Visuals
+  supp:
+  readings:
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    Craft Part IV
+
+- date: 11/26
+  week: 13
+  title: Style & Revision
+  supp:
+  readings: 
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    Craft Part IV cont'd; WCS style chapters
+
+- date: 12/3
+  week: 14
+  title: Presenting Research
+  supp:
+  readings:
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    PAI U5; Craft's new presentations chapter; WCS
+
+- date: 12/10
+  week: 15
+  title: Getting Published & Common Mistakes
+  supp:
+  readings:
+  hw:
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-research/
+  logistics: >
+    PAI U6, U8; WCS ch. on refereeing
+
+- date: 12/17
+  week: 16
+  title: >
+    <strong>Final Test</strong><br>
+    <div style="display: none">
+      Capstone presentations + paper due
+      <a href="">기말 퀴즈</a>
+    </div>

@@ -1,0 +1,203 @@
+- date: 9/3
+  week: 1
+  title: >
+    1. Introduction<br>
+    2. SW Processes
+  supp:
+  readings: Chp 1, 2
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/1-intro.jpg
+  logistics: >
+    Course overview, tool selection (Claude Code, Cursor, v0, Copilot, etc.), team formation (solo or teams of 2-3); vibe-coded MVP assigned, due Wk2
+
+- date: 9/10
+  week: 2
+  title: >
+    3. Agile SW Dev
+  supp:
+  readings: Chp 3
+  hw: 
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    MVP demo; retrofit a lightweight agile workflow (backlog, sprints) onto the existing build
+
+- date: 9/17
+  week: 3
+  title: >
+    4. Requirements Engineering
+  supp:
+  readings: Chp 4
+  hw: 
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Write formal requirements retroactively for what you already built — a genuinely revealing exercise
+
+- date: 9/24
+  week: 4
+  title: >
+    <span style="color: red"><strong>No Class</strong> Chuseok!~</span>
+
+- date: 10/1
+  week: 5
+  title: >
+    5. System Modeling
+  supp:
+  readings: Chp 5
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Diagram the MVP's actual architecture (UML/C4) as it stands
+
+- date: 10/8
+  week: 6
+  title: >
+    6. Architectural Design
+  supp:
+  readings: Chp 6
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Critique and redesign; justify what changed and why
+
+- date: 10/15
+  week: 7
+  title: >
+    7. Implementation<br>
+    8. Testing
+  supp:
+  readings: Chp 7, 8
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Add a real test suite — most vibe-coded projects have none
+
+- date: 10/22
+  week: 8
+  title: >
+    <strong>Midterm Test</strong><br>
+    <div style="display: none">
+    	Written concepts + practical code/architecture review
+      <br><a href="">중간 퀴즈</a>
+    </div>
+
+- date: 10/29
+  week: 9
+  title: >
+    9. Evolution
+  supp:
+  readings: Chp 9
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Refactor pass; midterm review
+
+- date: 11/5
+  week: 10
+  title: >
+    10. Dependable Systems<br>
+    11. Reliability Engineering
+  supp:
+  readings: Chp 10, 11
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Reliability audit of the project
+
+- date: 11/12
+  week: 11
+  title: >
+    12. Safety Engineering<br>
+    13. Security Engineering
+  supp:
+  readings: Chp 12, 13
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Security audit — another spot where vibe-coded apps typically fail
+
+- date: 11/19
+  week: 12
+  title: >
+    14. Resilience Engineering<br>
+    15. Software Reuse
+  supp:
+  readings: Chp 14, 15
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Resilience patterns; audit third-party dependencies
+
+- date: 11/26
+  week: 13
+  title: >
+    16. Component-Based SE<br>
+    17. Distributed SE<br>
+    18. Service-Oriented SE
+  supp:
+  readings: Chp 16–18
+  hw:
+  slides: 
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Survey week — apply whichever is relevant to your stack (API routes, serverless, microservices)
+
+- date: 12/3
+  week: 14
+  title: >
+    19. Systems Engineering<br>
+    20. Systems of Systems<br>
+    21. Real-Time SE
+  supp:
+  readings: Chp 19–21
+  hw:
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Survey week — broader integration context
+
+- date: 12/10
+  week: 15
+  title: >
+    22. Project Management<br>
+    23. Project Planning<br>
+    24. Quality Management<br>
+    25. Configuration Management
+  supp:
+  readings: Chp 22–25
+  hw:
+  slides:
+  slides2:
+  img: 2026/cbnu-grad-soft-eng/
+  logistics: >
+    Apply directly: git workflow/CI-CD as configuration management, retrospective as quality management; final polish + presentation rehearsal
+
+- date: 12/17
+  week: 16
+  title: >
+    <strong>Final Test</strong><br>
+    <div style="display: none">
+      Presentations (MVP vs. final, explicitly before/after) + written final exam
+      <a href="">기말 퀴즈</a>
+    </div>

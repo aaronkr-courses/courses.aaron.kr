@@ -3,7 +3,7 @@ layout: course
 init: CBNU
 title: Research Methodology (Graduate)
 subtitle: 연구방법론 (대학원)
-description: TBD • 2026년 2학기 • 충북대학교
+description: 8866356-02 • 2026년 2학기 • 충북대학교
 uni: cbnu
 img: assets/img/books/research-craft.jpg
 importance: 6
@@ -11,17 +11,18 @@ category: 2026-2
 now: Yes
 grad: true
 data_file: 2026/cbnu_grad_research_lectures
-visible: false
 
 grading:
-  attendance: 20
-  homework: 30
-  project: 50
+  attendance: 10
+  homework: 15
+  project: 15
+  midterm: 30
+  final: 30
 
 information:
-  - section: TBD
-    time: TBD
-    location: TBD
+  - section: 8866356-02
+    time: 목 456 | Thur 12pm-3pm
+    location: N5-305
     kakaotalk:
 
 Main-Text:
@@ -59,3 +60,15 @@ Supplementary:
 **Course Objectives:** To systematically learn the entire research process (from topic selection to publication) necessary for writing theses and academic papers.
 **Key Topics:** Understanding the research process, literature review and citation, experimental design and data collection,
 **Course Methodology and Assessment:** Seminar and weekly critical reading, research proposal and abstract writing practice, individual presentations
+
+---
+
+### Grading:
+
+| Component | Weight |
+| Attendance | 10% |
+| Weekly Reading Responses | 15% |
+| Literature Review draft (Midterm) | 15% |
+| Research Proposal (Wk 8) (Midterm) | 15% |
+| Final Paper (Final) | 30% |
+| Final Presentation | 15% |
