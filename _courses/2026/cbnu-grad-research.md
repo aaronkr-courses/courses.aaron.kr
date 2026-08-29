@@ -65,7 +65,6 @@ Supplementary:
 
 ### Grading:
 
-| Component | Weight |
 | Attendance | 10% |
 | Weekly Reading Responses | 15% |
 | Literature Review draft (Midterm) | 15% |

@@ -5,7 +5,7 @@ title: Advanced Software Engineering (Graduate)
 subtitle: 소프트웨어공학특론 (대학원)
 description: 8866357-02 • 2026년 2학기 • 충북대학교
 uni: cbnu
-img: assets/img/books/soft-eng.jpg
+img: assets/img/books/eng-soft-prod.jpg
 importance: 7
 category: 2026-2
 now: Yes
@@ -28,10 +28,10 @@ information:
 Main-Text:
   - text: "주교재"
     author: "Sommerville, Ian"
-    title: "<strong>Software Engineering (10th ed.)</strong>"
-    publisher: "Pearson | 2015년 04월 03일"
-    link: "https://www.yes24.com/product/goods/18658756"
-    image: books/soft-eng.jpg
+    title: "<strong>Engineering Software Products:</strong> An Introduction to Modern Software Engineering"
+    publisher: "Pearson | 2019년 02월 18일"
+    link: "https://www.yes24.com/product/goods/78558110"
+    image: books/eng-soft-prod.jpg
 
 Supplementary:
   - text: "부교재"
@@ -42,6 +42,13 @@ Supplementary:
     link: "https://www.yes24.com/product/goods/133247948"
     ebook: "https://abseil.io/resources/swe-book"
     image: books/swe-google.jpg
+
+  - text: "주교재"
+    author: "Sommerville, Ian"
+    title: "<strong>Software Engineering (10th ed.)</strong>"
+    publisher: "Pearson | 2015년 04월 03일"
+    link: "https://www.yes24.com/product/goods/18658756"
+    image: books/soft-eng.jpg
     
   - text: "부교재"
     author: "Richards, Mark / Ford, Neal"
@@ -52,7 +59,7 @@ Supplementary:
     image: books/fun-soft-arc.jpg
 ---
 
-<img style="float: left; width: 150px; margin: 0 10px 10px 0;" src="/assets/img/books/soft-eng.jpg" alt="Software Engineering Textbook" />
+<img style="float: left; width: 150px; margin: 0 10px 10px 0;" src="/assets/img/books/eng-soft-prod.jpg" alt="Engineering Software Products Textbook" />
 
 **교육목표:** 최신 소프트웨어 공학 방법론을 심도 있게 다루고, 이를 실제 프로젝트에 적용할 수 있는 역량을 함양함
 **주요내용:** 요구공학, 소프트웨어 아키텍처 패턴, DevOps/CI-CD, 테스팅 및 품질보증, 소프트웨어 진화·유지보수, LLM 기반 코드 생성/리뷰 등 AI 활용 소프트웨어공학
@@ -66,10 +73,9 @@ Supplementary:
 
 ### Grading:
 
-| Component | Weight |
 | Attendance | 10% |
-| Weekly Build Log & Labs | 25% |
-| Semester Project (code + before/after report + presentation) | 35% |
+| Weekly Build Log & Labs | 20% |
+| Semester Project (before/after report + presentation + code walkthrough) | 40% |
 | Midterm | 20% |
 | Final Exam | 10% |
 
