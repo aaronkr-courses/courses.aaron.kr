@@ -72,6 +72,15 @@
 - date: 10/23
   week: 8
   title: >
+    <strong>Midterm Test</strong><br>
+    연구계획서(outline) 제출
+    <div style="display: none">
+      <br><a href="">중간 퀴즈</a>
+    </div>
+
+- date: 10/30
+  week: 9
+  title: >
     상호운용성: 정의, 수준, 생태계 / HL7-FHIR 개념 도입
   supp:
   readings: >
@@ -81,16 +90,7 @@
   slides: 
   slides2:
   img: 2026/kongju-bio-net/
-  logistics: >
-
-- date: 10/30
-  week: 9
-  title: >
-    <strong>Midterm Test</strong><br>
-    연구계획서(outline) 제출
-    <div style="display: none">
-      <br><a href="">중간 퀴즈</a>
-    </div>
+  logistics: >  
 
 - date: 11/6
   week: 10
