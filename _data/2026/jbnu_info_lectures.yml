@@ -1,5 +1,5 @@
-- date: 8/31
-  week: 1
+- date: 8/26
+  week: 0
   skip: true
   title: >
     <strong>Conference Presentations</strong><br>
@@ -15,7 +15,7 @@
   logistics: >
     <a href="https://drive.google.com/drive/folders/1XRI8KHzocVz4gamFO_V0qjqBXhmhyljl?usp=sharing"><strong>Template files</strong></a>
 
-- date: 9/7
+- date: 9/2
   week: 1
   title: >
     <strong>Introduction</strong>
@@ -30,7 +30,7 @@
       Conference Presentation Info
     </a>
 
-- date: 9/14
+- date: 9/9
   week: 2
   title: >
     <strong>What is Information?</strong>
@@ -43,7 +43,7 @@
   logistics: "Hello Python, MD"
   tooltip: "(only one HW may work for you - choose one, write any Python & Markdown code and submit, don't run it)"
 
-- date: 9/21
+- date: 9/16
   week: 3
   title: >
     <strong>Baye's Rule</strong>
@@ -55,7 +55,7 @@
   hw: 
   logistics: "Baye's Rule"
 
-- date: 9/28
+- date: 9/23
   week: 4
   title: >
     <strong>Entropy</strong>
@@ -67,13 +67,8 @@
   hw:
   logistics:
 
-- date: 10/5
+- date: 9/30
   week: 5
-  title: >
-    <span style="color: red"><strong>No Class</strong> 추석!</span>
-
-- date: 10/12
-  week: 6
   title: >
     <strong>I: Data Compression</strong><br>
     - The Source Coding Theorem<br>
@@ -87,8 +82,8 @@
   hw: 
   logistics: "Run <code>huffman-coding.ipynb</code> and submit file with outputs."
 
-- date: 10/19
-  week: 7
+- date: 10/7
+  week: 6
   title: >
     <strong>II: Noisy-Channel Coding</strong><br>
     8. Dependent Random Variables<br>
@@ -104,9 +99,26 @@
   _logistics: >
     <a href="https://classroom.google.com/c/ODA0MjY0MzM4Mjk3?cjc=36gyqccg">Join the Google Classroom</a>
 
-- date: 10/26
-  week: 8
+- date: 10/14
+  week: 7
   title: >
+    <strong>Entropy of Continuous Variables</strong><br>
+    <strong>IV: Probabilities and Inference</strong><br>
+    20. A Example Inference Task: Clustering<br>
+    21. Exact Inference by Complete Enumeration<br>
+    22. Maximum Likelihood and Clustering<br>
+    23. Useful Probability Distributions
+  supp:
+  readings:
+  hw:
+  _slides: "https://docs.google.com/presentation/d/1E2sS6BJPVjzIFo8lvH05DMd_pTtlYUReeb2_wQ6npe0/edit?usp=sharing"
+  _slides2:
+  _img: 2025/jbnu-info/7-cont-ent.jpg
+  logistics:
+
+- date: 10/21
+  week: 8
+    title: >
     <strong>Midterm Test</strong><br>
     <a style="display: none;" href="https://docs.google.com/presentation/d/1wqgA5ylGlZVApiVunBydzqdv3W7Ndgqi_BxwIUfyq_k/edit?usp=sharing">Study Guide</a>
     <div style="display: none;">
@@ -127,26 +139,9 @@
       34. Independent Component Analysis and Latent Variable Modelling<br>
       35. Random Inference Topics
     </div>
-
-- date: 11/2
+  
+- date: 10/28
   week: 9
-  title: >
-    <strong>Entropy of Continuous Variables</strong><br>
-    <strong>IV: Probabilities and Inference</strong><br>
-    20. A Example Inference Task: Clustering<br>
-    21. Exact Inference by Complete Enumeration<br>
-    22. Maximum Likelihood and Clustering<br>
-    23. Useful Probability Distributions
-  supp:
-  readings:
-  hw:
-  _slides: "https://docs.google.com/presentation/d/1E2sS6BJPVjzIFo8lvH05DMd_pTtlYUReeb2_wQ6npe0/edit?usp=sharing"
-  _slides2:
-  _img: 2025/jbnu-info/7-cont-ent.jpg
-  logistics:
-
-- date: 11/9
-  week: 10
   title: >
     <strong>Continuous Mutual Info, Channel Capacity</strong>
   supp:
@@ -157,8 +152,8 @@
   _img: 2025/jbnu-info/9-cont-mi.jpg
   logistics:
 
-- date: 11/16
-  week: 11
+- date: 11/4
+  week: 10
   title: >
     <strong>Rate Distortion Theory</strong>
   supp:
@@ -169,8 +164,8 @@
   _img: 2025/jbnu-info/10-rd.jpg
   logistics:
 
-- date: 11/23
-  week: 12
+- date: 11/11
+  week: 11
   title: >
     <strong>Transfer Entropy, Thermodynamics</strong>
   supp:
@@ -181,8 +176,8 @@
   _img: 2025/jbnu-info/11-transfer.jpg
   logistics:
 
-- date: 11/30
-  week: 13
+- date: 11/18
+  week: 12
   title: >
     <strong>Information as Nature's Currency I</strong>
   supp:
@@ -193,8 +188,8 @@
   _img: 2025/jbnu-info/12-nature.jpg
   logistics:
 
-- date: 12/7
-  week: 14
+- date: 11/25
+  week: 13
   title: >
     <strong>Information as Nature's Currency II</strong>
   supp:
@@ -205,8 +200,8 @@
   _img: 2025/jbnu-info/12-nature.jpg
   logistics:
 
-- date: 12/14
-  week: 15
+- date: 12/2
+  week: 14
   title: >
     <strong>V: Neural Networks (Bonus)</strong><br>
     38. Introduction to Neural Networks<br>
@@ -220,8 +215,8 @@
   _img: 2025/jbnu-info/13-nn.jpg
   logistics:
 
-- date: 12/21
-  week: 16
+- date: 12/9
+  week: 15
   title: >
     <strong>Final Test</strong><br>
     <a style="display: none" href="https://docs.google.com/document/d/1mMaiHxs4XNqElubFsJKeONCW0CBSKpFBP8yAZnQe1Zw/edit?usp=drive_link">Study Guide</a><br>

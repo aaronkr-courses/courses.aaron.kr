@@ -1,4 +1,4 @@
-- date: 8/31
+- date: 9/2
   week: 1
   title: >
     <strong>수업 소개 & MySQL 설치</strong>
@@ -14,7 +14,7 @@
   img: 2026/wku-db/1-db-intro.jpg
   logistics:
 
-- date: 9/7
+- date: 9/9
   week: 2
   title: >
     수업 소개, 데이터베이스 개요 (Chp 1)
@@ -30,7 +30,7 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 9/14
+- date: 9/16
   week: 3
   title: >
     관계형 데이터베이스 (Chp 2)
@@ -45,7 +45,7 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 9/21
+- date: 9/23
   week: 4
   title: >
     SQL 기초 (Chp 3.1-3.6)
@@ -59,7 +59,7 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 9/28
+- date: 9/30
   week: 5
   title: >
     데이터 조회 (Chp 3.7-3.14)
@@ -74,13 +74,8 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 10/5
+- date: 10/7
   week: 6
-  title: >
-    <span style="color: red"><strong>No Class</strong> 추석!</span>
-
-- date: 10/12
-  week: 7
   title: >
     집계와 JOIN (Chp 3.15-3.22)
     <hr>
@@ -93,18 +88,8 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 10/19
-  week: 8
-  title: >
-    <strong>Midterm Test</strong>
-    <br><a style="display: none;" href="">스터디 가이드</a>
-    <div style="display: none;" >
-      <br><a href="">중간고사 퀴즈</a>
-      <br><a href="">중간고사 실기</a>
-    </div>
-
-- date: 10/26
-  week: 9
+- date: 10/14
+  week: 7
   title: >
     데이터 관리 (Chp 4)
     <hr>
@@ -119,8 +104,18 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 11/2
-  week: 10
+- date: 10/21
+  week: 8
+  title: >
+    <strong>Midterm Test</strong>
+    <br><a style="display: none;" href="">스터디 가이드</a>
+    <div style="display: none;" >
+      <br><a href="">중간고사 퀴즈</a>
+      <br><a href="">중간고사 실기</a>
+    </div>
+
+- date: 10/28
+  week: 9
   title: >
     데이터베이스 설계 (Chp 5.1-5.9)
     <hr>
@@ -134,8 +129,8 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 11/9
-  week: 11
+- date: 11/4
+  week: 10
   title: >
     정규화 (Chp 5.10-5.15)
     <hr>
@@ -149,8 +144,8 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 11/16
-  week: 12
+- date: 11/11
+  week: 11
   title: >
     데이터베이스 설계 실습 (Chp 5.16-5.19)
     <hr>
@@ -163,8 +158,8 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 11/23
-  week: 13
+- date: 11/18
+  week: 12
   title: >
     데이터베이스 운영 (Chp 6 일부)
     <hr>
@@ -178,8 +173,8 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 11/30
-  week: 14
+- date: 11/25
+  week: 13
   title: >
     데이터베이스 보안 (Chp 7 일부)
     <hr>
@@ -191,8 +186,8 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 12/7
-  week: 15
+- date: 12/2
+  week: 14
   title: >
     데이터베이스 활용 (Chp 8 일부)
     <hr>
@@ -204,8 +199,8 @@
   img: 2026/wku-db/
   logistics:
 
-- date: 12/14
-  week: 16
+- date: 12/9
+  week: 15
   title: >
     <strong>Final Test</strong>
     <br><a href="" style="display: none;">스터디 가이드</a>

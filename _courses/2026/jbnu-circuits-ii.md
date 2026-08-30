@@ -20,7 +20,7 @@ grading:
 information:
   - section: 0000127048
     time: 화 | Tues 1-4pm
-    location: 인문대학 2호관 ???호
+    location: 인문대학 2호관 505호
     kakaotalk: 
 
 Main-Text:

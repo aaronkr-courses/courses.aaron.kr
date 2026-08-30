@@ -20,7 +20,7 @@ grading:
 information:
   - section: 0000130650
     time: 월 | Mon 2-5pm
-    location: 인문대학 2호관 ???호
+    location: 정보화 교육동 203
     kakaotalk:
 
 Main-Text:
@@ -47,6 +47,8 @@ Supplementary:
     image: books/info-theory-coding.jpg
 
 ---
+
+<img style="float: left; width: 150px; margin: 0 10px 10px 0;" src="/assets/img/books/info-theory-tutorial.jpg" alt="Information Theory textbook" />
 
 정보이론의 기본 개념(엔트로피, 채널 용량, 코딩 이론)과 융합적 정보 전송 기술을 학습합니다.
 
