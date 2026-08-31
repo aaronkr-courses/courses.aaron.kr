@@ -12,7 +12,7 @@
 - date: 9/14
   week: 2
   title: >
-    <strong>1장 한눈에 보는 머신러닝</strong>
+    <strong>1장) 한눈에 보는 머신러닝</strong>
   supp:
   readings: p. 27-67
   hw1: 
@@ -24,7 +24,7 @@
 - date: 9/21
   week: 3
   title: >
-    <strong>2장 머신러닝 프로젝트 처음부터 끝까지</strong>
+    <strong>2장) 머신러닝 프로젝트 처음부터 끝까지</strong>
   supp:
   readings: p. 68-142
   hw1: 
@@ -36,7 +36,7 @@
 - date: 9/28
   week: 4
   title: >
-    <strong>3장 분류</strong>
+    <strong>3장) 분류</strong>
   supp:
   readings: p. 143-176
   hw1: 
@@ -53,7 +53,7 @@
 - date: 10/12
   week: 6
   title: >
-    <strong>4장 모델 훈련</strong>
+    <strong>4장) 모델 훈련</strong>
   supp:
   readings: p. 177-226
   hw1: 
@@ -65,8 +65,8 @@
 - date: 10/19
   week: 7
   title: >
-    <strong>5장 서포트 벡터 머신<br>
-    6장 결정 트리</strong>
+    <strong>5장) 서포트 벡터 머신<br>
+    6장) 결정 트리</strong>
   supp:
   readings: p. 177-296
   hw1: 
@@ -91,8 +91,8 @@
 - date: 11/2
   week: 9
   title: >
-    <strong>7장 앙상블 학습과 랜덤 포레스트<br>
-    8장 차원 축소</strong>
+    <strong>7장) 앙상블 학습과 랜덤 포레스트<br>
+    8장) 차원 축소</strong>
   supp:
   readings: p. p. 268-323
   hw1: 
@@ -104,7 +104,7 @@
 - date: 11/9
   week: 10
   title: >
-    <strong>9장 비지도 학습</strong>
+    <strong>9장) 비지도 학습</strong>
   supp:
   readings: p. 324-365
   hw1: 
@@ -116,7 +116,7 @@
 - date: 11/16
   week: 11
   title: >
-    <strong>10장 케라스를 사용한 인공 신경망 소개</strong>
+    <strong>10장) 케라스를 사용한 인공 신경망 소개</strong>
   supp:
   readings: p. 370-433
   hw1: 
@@ -128,7 +128,7 @@
 - date: 11/23
   week: 12
   title: >
-    <strong>11장 심층 신경망 훈련</strong>
+    <strong>11장) 심층 신경망 훈련</strong>
   supp:
   readings: p. 434-488
   hw1: 
@@ -140,8 +140,8 @@
 - date: 11/30
   week: 13
   title: >
-    <strong>12장 텐서플로를 사용한 사용자 정의 모델과 훈련<br>
-    13장 텐서플로를 사용한 데이터 적재와 전처리</strong>
+    <strong>12장) 텐서플로를 사용한 사용자 정의 모델과 훈련<br>
+    13장) 텐서플로를 사용한 데이터 적재와 전처리</strong>
   supp:
   readings: p. 489-576
   hw1: 
@@ -153,7 +153,7 @@
 - date: 12/7
   week: 14
   title: >
-    <strong>14장 합성곱 신경망을 사용한 컴퓨터 비전</strong>
+    <strong>14장) 합성곱 신경망을 사용한 컴퓨터 비전</strong>
   supp:
   readings: p.
   hw1: 
@@ -179,11 +179,11 @@
   logistics: >
     팀 발표 (.ipynb, .py, .ppt) 파일들은 GitHub 저장소에서 제출
     <ul style="display: none">못 하는 것
-      <li>15장 RNN과 CNN을 사용한 시퀀스 처리</li>
-      <li>16장 RNN과 어텐션을 사용한 자연어 처리</li>
-      <li>17장 오토인코더, GAN 그리고 확산 모델</li>
-      <li>18장 강화학습</li>
-      <li>19장 대규모 텐서플로 모델 훈련과 배포</li>
+      <li>15장) RNN과 CNN을 사용한 시퀀스 처리</li>
+      <li>16장) RNN과 어텐션을 사용한 자연어 처리</li>
+      <li>17장) 오토인코더, GAN 그리고 확산 모델</li>
+      <li>18장) 강화학습</li>
+      <li>19장) 대규모 텐서플로 모델 훈련과 배포</li>
     </ul>
 
 - date: 12/21

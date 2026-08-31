@@ -33,7 +33,7 @@
 - date: 9/8
   week: 2
   title: >
-    Chapter 9. Sinusoids and Phasors I
+    Chp 9. Sinusoids and Phasors I
   supp:
   readings:
   hw:
@@ -45,7 +45,7 @@
 - date: 9/15
   week: 3
   title: >
-    Chapter 9. Sinusoids and Phasors II
+    Chp 9. Sinusoids and Phasors II
   supp:
   readings:
   _hw2: "https://forms.gle/PvD6LtxAsm5fza5Z6"
@@ -57,7 +57,7 @@
 - date: 9/22
   week: 4
   title: >
-    Chapter 10. Sinusoidal Steady-State Analysis I
+    Chp 10. Sinusoidal Steady-State Analysis I
   supp:
   readings:
   hw:
@@ -70,7 +70,7 @@
 - date: 9/29
   week: 5
   title: >
-    Chapter 10. Sinusoidal Steady-State Analysis II
+    Chp 10. Sinusoidal Steady-State Analysis II
     <ul>
       <li><a href="https://docs.arduino.cc/hardware/uno-rev3/">Learn about your Arduino UNO</a></li>
       <li><a href="https://aesk.arduino.cc/aesk/module/education/lesson/getting-started">1: Getting Started</a> (sign-in may be required)</li>
@@ -124,7 +124,7 @@
 - date: 10/27
   week: 9
   title: >
-    Chapter 11. AC Power Analysis
+    Chp 11. AC Power Analysis
   supp:
   readings:
   hw:
@@ -136,7 +136,7 @@
 - date: 11/3
   week: 10
   title: >
-    Chapter 12. Three-Phase Circuits I
+    Chp 12. Three-Phase Circuits I
   supp:
   readings:
   hw:
@@ -149,7 +149,7 @@
 - date: 11/10
   week: 11
   title: >
-    Chapter 12. Three-Phase Circuits II
+    Chp 12. Three-Phase Circuits II
   supp:
   readings:
   hw:
@@ -162,7 +162,7 @@
 - date: 11/17
   week: 12
   title: >
-    Chapter 13. Magnetically Coupled Circuits I
+    Chp 13. Magnetically Coupled Circuits I
   supp:
   readings:
   hw:
@@ -175,7 +175,7 @@
 - date: 11/24
   week: 13
   title: >
-    Chapter 13. Magnetically Coupled Circuits II
+    Chp 13. Magnetically Coupled Circuits II
   supp:
   readings:
   hw:
@@ -191,7 +191,7 @@
 - date: 12/1
   week: 14
   title: >
-    Chapter 14. Frequency Response
+    Chp 14. Frequency Response
   supp:
   readings:
   hw:
@@ -204,9 +204,9 @@
   week: 15
   title: >
     <strong>Final Test</strong><br>
-    <a style="display: none" href="https://docs.google.com/document/d/1uYXiL6CKEvRVDEN5N_WHVI_n2ltkY-hFhlWoBg1HyJw/edit?usp=sharing">Study Guide</a><br>
-    <a style="display: none" href="https://forms.gle/QWqGs2gneePwnzZ5A">HW Study Quiz</a>
     <div style="display: none;">
+      <a style="display: none" href="https://docs.google.com/document/d/1uYXiL6CKEvRVDEN5N_WHVI_n2ltkY-hFhlWoBg1HyJw/edit?usp=sharing">Study Guide</a><br>
+      <a style="display: none" href="https://forms.gle/QWqGs2gneePwnzZ5A">HW Study Quiz</a>
       <br><a href="https://docs.google.com/presentation/d/10fbnjsPThjdAY70T_91tLPwxrTQ9JssKHU52dmVtvzs/edit?usp=sharing">스터디 가이드</a>
       <br><a href="https://forms.gle/wBXEg8Byt55so6VY7">중간퀴즈</a>
     </div>

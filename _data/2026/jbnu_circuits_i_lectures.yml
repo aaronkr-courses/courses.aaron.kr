@@ -32,7 +32,7 @@
 - date: 9/8
   week: 2
   title: >
-    <strong>1. Basic Concepts I</strong>
+    <strong>Chp 1. Basic Concepts I</strong>
   supp:
   readings: p. 1-14
   hw:
@@ -43,7 +43,7 @@
 - date: 9/15
   week: 3
   title: >
-    <strong>1. Basic Concepts II</strong>
+    <strong>Chp 1. Basic Concepts II</strong>
   supp:
   readings: p. 14-26
   hw: 
@@ -54,7 +54,7 @@
 - date: 9/22
   week: 4
   title: >
-    <strong>2. Basic Laws</strong>
+    <strong>Chp 2. Basic Laws</strong>
   supp:
   readings: p. 29-78
   hw:
@@ -65,7 +65,7 @@
 - date: 9/29
   week: 5
   title: >
-    <strong>2. Basic Laws II</strong>
+    <strong>Chp 2. Basic Laws II</strong>
   supp:
   readings: p. 29-78
   hw:
@@ -76,7 +76,7 @@
 - date: 10/6
   week: 6
   title: >
-    <strong>3. Methods of Analysis I</strong> Node Analysis
+    <strong>Chp 3. Methods of Analysis I</strong> Node Analysis
   supp:
   readings: p. 79-124
   hw:
@@ -87,7 +87,7 @@
 - date: 10/13
   week: 7
   title: >
-    <strong>3. Methods of Analysis II</strong> Mesh Analysis
+    <strong>Chp 3. Methods of Analysis II</strong> Mesh Analysis
   supp:
   readings: p. 79-124
   hw: 
@@ -106,7 +106,7 @@
 - date: 10/27
   week: 9
   title: >
-    <strong>4. Circuit Theorems</strong>
+    <strong>Chp 4. Circuit Theorems</strong>
   supp:
   readings: p. 125-171
   hw: 
@@ -117,7 +117,7 @@
 - date: 11/3
   week: 10
   title: >
-    <strong>5. Operational Amplifiers</strong>
+    <strong>Chp 5. Operational Amplifiers</strong>
   supp:
   readings: p. 173-212
   hw:
@@ -128,7 +128,7 @@
 - date: 11/10
   week: 11
   title: >
-    <strong>6. Capacitors & Inductors</strong>
+    <strong>Chp 6. Capacitors & Inductors</strong>
   supp:
   readings: p. 213-249
   hw:
@@ -139,7 +139,7 @@
 - date: 11/17
   week: 12
   title: >
-    <strong>7. First-Order Circuits</strong>
+    <strong>Chp 7. First-Order Circuits</strong>
   supp:
   readings: p. 251-309
   hw: 
@@ -150,7 +150,7 @@
 - date: 11/24
   week: 13
   title: >
-    <strong>8. Second-Order Circuits</strong>
+    <strong>Chp 8. Second-Order Circuits</strong>
   supp:
   readings: p. 311-365
   hw:
@@ -158,8 +158,7 @@
   _img: 2025/jbnu-circuits/15-second-order.jpg
   logistics:
 
-- date: >
-    <span style="color: red">12/1 (LMS)</span>
+- date: 12/1
   week: 14
   title: >
     <span style="color: red"><a href="https://lms.jbnu.ac.kr/">LMS Asynchronous Lecture</a></span><br>
