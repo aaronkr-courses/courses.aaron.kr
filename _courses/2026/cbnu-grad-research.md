@@ -23,7 +23,8 @@ information:
   - section: 8866356-02
     time: 목 456 | Thur 12pm-3pm
     location: N5-305
-    kakaotalk:
+    kakaotalk: https://open.kakao.com/o/gPXSVpLi
+    classroom: https://classroom.google.com/c/ODcyNDY2NDU4MDU2?cjc=7p7x4cbp
 
 Main-Text:
   - text: "주교재"

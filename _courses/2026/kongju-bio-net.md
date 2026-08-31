@@ -23,7 +23,7 @@ information:
   - section: TBD
     time: 금 567 | Fri 2pm-5pm
     location: TBD
-    kakaotalk:
+    kakaotalk: https://open.kakao.com/o/gjTOWpLi
 
 Main-Text:
   - text: "주교재"

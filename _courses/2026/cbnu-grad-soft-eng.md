@@ -23,7 +23,7 @@ information:
   - section: 8866357-02
     time: 목 789 | Thur 3pm-6pm
     location: N5-305
-    kakaotalk:
+    kakaotalk: https://open.kakao.com/o/gs1hWpLi
 
 Main-Text:
   - text: "주교재"

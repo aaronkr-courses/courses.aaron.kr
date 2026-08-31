@@ -21,7 +21,8 @@ information:
   - section: 0000127048
     time: 화 | Tues 1-4pm
     location: 인문대학 2호관 505호
-    kakaotalk: 
+    kakaotalk: https://open.kakao.com/o/gJHYOpLi
+    classroom: https://classroom.google.com/c/ODcyNDY2NDk5MDQ2?cjc=cpysrxz2
 
 Main-Text:
   - text: "주교재"

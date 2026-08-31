@@ -21,7 +21,7 @@ information:
   - section: 374112
     time: 월 678 | Mon 2-5pm
     location: 프라임관 지상 2층 - 콘텐츠응용개발실습실
-    kakaotalk: 
+    kakaotalk: https://open.kakao.com/o/g2rtVpLi
 
 Main-Text:
   - text: "부교재"
