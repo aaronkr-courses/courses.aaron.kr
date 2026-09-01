@@ -3,7 +3,7 @@ layout: course
 init: KJNU
 title: Biomedical Network
 subtitle: 바이오메디컬네트워크
-description: TBD • 2026년 2학기 • 공주대학교
+description: 2009670 • 2026년 2학기 • 공주대학교
 uni: kjnu
 img: assets/img/books/health-info.jpg
 importance: 8
@@ -14,15 +14,15 @@ data_file: 2026/kongju_bio_net_lectures
 
 grading:
   attendance: 10
-  homework: 25
+  homework: 30
   midterm: 25
-  final: 30
+  final: 25
   project: 10
 
 information:
-  - section: TBD
+  - section: 2009670
     time: 금 567 | Fri 2pm-5pm
-    location: TBD
+    location: 간호보건예술440
     kakaotalk: https://open.kakao.com/o/gjTOWpLi
 
 Main-Text:
