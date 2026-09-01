@@ -71,7 +71,7 @@
   week: 5
   title: >
     Chp 10. Sinusoidal Steady-State Analysis II
-    <ul>
+    <ul style="display: none;">
       <li><a href="https://docs.arduino.cc/hardware/uno-rev3/">Learn about your Arduino UNO</a></li>
       <li><a href="https://aesk.arduino.cc/aesk/module/education/lesson/getting-started">1: Getting Started</a> (sign-in may be required)</li>
       <li><a href="https://projecthub.arduino.cc/">Explore Arduino Project Hub</a></li>
@@ -90,15 +90,18 @@
 - date: 10/6
   week: 6
   title: >
-    Arduino Safety and <a href="https://aesk.arduino.cc/aesk/module/education/lesson/getting-started">Getting Started</a><br>
-    <a href="https://aesk.arduino.cc/aesk/module/education/lesson/traffic-signals">Traffic Signals Project</a>
+    Chp 11. AC Power Analysis I<br>
+    <p style="display: none;">
+      Arduino Safety and <a href="https://aesk.arduino.cc/aesk/module/education/lesson/getting-started">Getting Started</a><br>
+      <a href="https://aesk.arduino.cc/aesk/module/education/lesson/traffic-signals">Traffic Signals Project</a>
+    </p>
   supp:
   readings:
   _hw: "https://classroom.google.com/c/ODA0MjcwNTc3NDEx/a/ODEyNDg2NTg1NDc1/details"
   _hw2: "https://classroom.google.com/c/ODA0MjcwNTc3NDEx/a/ODA0MjcyMjI2ODY4/details"
-  _slides: "https://docs.google.com/presentation/d/1zSw6xTzT_-e1egdPLCmg5YFbwLQJXfdp910QppV4fBU/edit?usp=sharing"
-  _slides2:
-  _img2: pages/adv-arduino.jpg
+  _slides: "https://docs.google.com/presentation/d/1lEkpuQw6aPd-7C1HlNmmbWXwGpgVuDo3dnUTW8qlCTQ/edit?usp=sharing"
+  _slides2: "https://docs.google.com/presentation/d/1zSw6xTzT_-e1egdPLCmg5YFbwLQJXfdp910QppV4fBU/edit?usp=sharing"
+  _img2: 2025/jbnu-circuits-ii/9-ac-power.jpg
   _logistics: >
     <a href="https://classroom.google.com/c/ODA0MjcwNTc3NDEx?cjc=rw6xa36o">Join Google Classroom</a> (Gmail)<br>
     <a href="https://forms.gle/Vtd3SSqFneaop7nD6">Safety Quiz</a>
@@ -106,13 +109,16 @@
 - date: 10/13
   week: 7
   title: >
-    <a href="https://aesk.arduino.cc/aesk/module/education/lesson/dimmer-switch">Dimmer Switch Project</a>
+    Chp 11. AC Power Analysis II<br>
+    <p style="display: none;">
+      <a href="https://aesk.arduino.cc/aesk/module/education/lesson/dimmer-switch">Dimmer Switch Project</a>
+    </p>
   supp:
   readings:
   _hw: "https://classroom.google.com/c/ODA0MjcwNTc3NDEx/a/ODE1ODkyMzE0ODMz/details"
-  _slides: "https://docs.google.com/presentation/d/1zSw6xTzT_-e1egdPLCmg5YFbwLQJXfdp910QppV4fBU/edit?usp=sharing"
-  _slides2:
-  _img: pages/adv-arduino.jpg
+  _slides: "https://docs.google.com/presentation/d/1lEkpuQw6aPd-7C1HlNmmbWXwGpgVuDo3dnUTW8qlCTQ/edit?usp=sharing"
+  _slides2: "https://docs.google.com/presentation/d/1zSw6xTzT_-e1egdPLCmg5YFbwLQJXfdp910QppV4fBU/edit?usp=sharing"
+  _img: 2025/jbnu-circuits-ii/9-ac-power.jpg
   logistics:
 
 - date: 10/20
@@ -124,19 +130,19 @@
 - date: 10/27
   week: 9
   title: >
-    Chp 11. AC Power Analysis
+    Chp 12. Three-Phase Circuits I
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1lEkpuQw6aPd-7C1HlNmmbWXwGpgVuDo3dnUTW8qlCTQ/edit?usp=sharing"
+  _slides: "https://docs.google.com/presentation/d/1amfCscQHDUMPfttznKBRFGjBtBvE02aGQtncabxm7K4/edit?usp=sharing"
   slides2:
-  _img: 2025/jbnu-circuits-ii/9-ac-power.jpg
+  _img: 2025/jbnu-circuits-ii/10-3-phase.jpg
   logistics:
 
 - date: 11/3
   week: 10
   title: >
-    Chp 12. Three-Phase Circuits I
+    Chp 12. Three-Phase Circuits II
   supp:
   readings:
   hw:
@@ -149,20 +155,20 @@
 - date: 11/10
   week: 11
   title: >
-    Chp 12. Three-Phase Circuits II
+    Chp 13. Magnetically Coupled Circuits I
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1amfCscQHDUMPfttznKBRFGjBtBvE02aGQtncabxm7K4/edit?usp=sharing"
+  _slides: "https://docs.google.com/presentation/d/17cjro_BUqAZCmKj93ToRS1WmwQtuc55MoIOt1aBLn70/edit?usp=sharing"
   slides2:
-  _img: 2025/jbnu-circuits-ii/10-3-phase.jpg
+  _img: 2025/jbnu-circuits-ii/12-magnetic-coupling.jpg
   _logistics: >
     <a href="https://aesk.arduino.cc/aesk/module/education/lesson/sports-robot">Sports Robot (Servo Motor)</a>
 
 - date: 11/17
   week: 12
   title: >
-    Chp 13. Magnetically Coupled Circuits I
+    Chp 13. Magnetically Coupled Circuits II
   supp:
   readings:
   hw:
@@ -175,13 +181,13 @@
 - date: 11/24
   week: 13
   title: >
-    Chp 13. Magnetically Coupled Circuits II
+    Chp 14. Frequency Response I
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/17cjro_BUqAZCmKj93ToRS1WmwQtuc55MoIOt1aBLn70/edit?usp=sharing"
+  _slides: "https://docs.google.com/presentation/d/1pHAgSR-2xsDewQwf6-c_c7afYWJ5Cygrg6xGnP5cCUc/edit?usp=sharing"
   slides2:
-  _img: 2025/jbnu-circuits-ii/12-magnetic-coupling.jpg
+  _img: 2025/jbnu-circuits-ii/14-freq.jpg
   _logistics: >
     <ul>Select one:
     <li><a href="https://aesk.arduino.cc/aesk/module/education/lesson/musical-keyboard">Music Keyboard</a></li>
@@ -191,7 +197,7 @@
 - date: 12/1
   week: 14
   title: >
-    Chp 14. Frequency Response
+    Chp 14. Frequency Response II
   supp:
   readings:
   hw:
