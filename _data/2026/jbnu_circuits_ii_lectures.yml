@@ -37,9 +37,9 @@
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1HVV1afL8p5Gd28sLagNwib-bDQYRYPz4dw5v9YEt-3U/edit?usp=sharing"
-  _slides2: "https://docs.google.com/presentation/d/1Gys3z-lZiNholhtD5ubriQUBpfVvEi5EtoHDv7cTUXk/edit?usp=sharing"
-  _img2: 2025/jbnu-circuits-ii/2-sinusoids.jpg
+  slides: "https://docs.google.com/presentation/d/1HVV1afL8p5Gd28sLagNwib-bDQYRYPz4dw5v9YEt-3U/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1Gys3z-lZiNholhtD5ubriQUBpfVvEi5EtoHDv7cTUXk/edit?usp=sharing"
+  img: 2025/jbnu-circuits-ii/2-sinusoids.jpg
   logistics:
 
 - date: 9/15
