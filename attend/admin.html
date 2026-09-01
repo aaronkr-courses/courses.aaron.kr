@@ -231,7 +231,8 @@ body.dark {
       <button class="tab active" role="tab" aria-selected="true"  aria-controls="tab-control" onclick="switchTab('control',this)">Control panel</button>
       <button class="tab"        role="tab" aria-selected="false" aria-controls="tab-log"     onclick="switchTab('log',this)">Access log</button>
       <button class="tab"        role="tab" aria-selected="false" aria-controls="tab-history"  onclick="switchTab('history',this)">Session history</button>
-      <button class="tab"        role="tab" aria-selected="false" aria-controls="tab-feedback" onclick="switchTab('feedback',this)">Session feedback</button>
+      <button class="tab"        role="tab" aria-selected="false" aria-controls="tab-feedback"   onclick="switchTab('feedback',this)">Session feedback</button>
+      <button class="tab"        role="tab" aria-selected="false" aria-controls="tab-attendance" onclick="switchTab('attendance',this)">Attendance report</button>
     </div>
 
     <!-- ── CONTROL PANEL ── -->
@@ -442,6 +443,36 @@ body.dark {
       </div>
     </div>
 
+    <!-- ── ATTENDANCE REPORT ── -->
+    <div class="panel" id="tab-attendance" role="tabpanel" aria-labelledby="tab-attendance">
+      <div class="card">
+        <div class="card-label">Export attendance report</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:1rem;line-height:1.6">
+          Generates a per-class gradebook CSV — one row per student, one column per QR session grouped by calendar week.<br>
+          Marks: <strong>.</strong> = present (submitted within 15 min of session open) &nbsp;
+                 <strong>x</strong> = late &nbsp;
+                 <strong>/</strong> = absent (no submission, or did not submit in a later session).
+        </p>
+        <div class="field-row" style="margin-bottom:1rem">
+          <div>
+            <label class="lbl">Class</label>
+            <select id="att-class-sel" style="min-width:240px"></select>
+          </div>
+          <button class="btn-g" onclick="exportAttendanceReport()">↓ Export CSV</button>
+        </div>
+        <div id="att-status" style="font-size:13px;color:var(--muted);line-height:1.8"></div>
+      </div>
+      <div class="card" style="font-size:12px;color:var(--muted);line-height:1.7">
+        <div class="card-label">Column naming rules</div>
+        <ul style="margin-left:1.25rem">
+          <li><strong>wk1-mark</strong> — week 1 had exactly 1 QR session</li>
+          <li><strong>wk2-1-mark, wk2-2-mark</strong> — week 2 had 2 sessions (numbered by time order)</li>
+          <li>Weeks with no sessions (holidays, forgotten) are simply skipped</li>
+          <li>Each QR "Start session" click = one column; multiple starts per class day each get their own column</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </div><!-- /main -->
 
@@ -532,6 +563,7 @@ auth.onAuthStateChanged(user => {
     document.getElementById('main-screen').style.display = 'block';
     document.getElementById('user-email').textContent = user.email;
     buildClassSelector();
+    buildAttendanceClassSelector();
     initListeners();
     loadHistory();
   } else if (user) {
@@ -908,8 +940,9 @@ function switchTab(id,btn) {
   document.getElementById('tab-'+id).classList.add('active');
   btn.classList.add('active');
   btn.setAttribute('aria-selected','true');
-  if(id==='history') loadHistory();
-  if(id==='feedback') loadFeedback();
+  if(id==='history')    loadHistory();
+  if(id==='feedback')   loadFeedback();
+  if(id==='attendance') buildAttendanceClassSelector();
 }
 
 // ── Status ─────────────────────────────────────────────────────
@@ -1106,6 +1139,153 @@ function renderLogTable(filtered) {
       <td style="font-size:12px;color:var(--muted);max-width:180px">${escHtml(l.feedback)}</td>
     </tr>`;
   }).join('');
+}
+
+// ── Attendance Report ────────────────────────────────────────────
+function buildAttendanceClassSelector() {
+  const sel = document.getElementById('att-class-sel');
+  if (!sel) return;
+  const archived = typeof ARCHIVED !== 'undefined' ? ARCHIVED : [];
+  const allCls   = [...CLASSES, ...archived];
+  const sems     = [...new Set(allCls.map(c => c.semester))].sort().reverse();
+  const opts     = [];
+  sems.forEach(sem => {
+    const isActive = CLASSES.some(c => c.semester === sem);
+    opts.push(`<optgroup label="${escHtml(sem)}${isActive ? '' : ' (archived)'}">`);
+    allCls.filter(c => c.semester === sem).forEach(cls => {
+      const school = SCHOOLS[cls.school] || { label: cls.school };
+      opts.push(`<option value="${escHtml(cls.id)}">${escHtml(cls.name)} — ${escHtml(school.label)}</option>`);
+    });
+    opts.push('</optgroup>');
+  });
+  const cur = sel.value;
+  sel.innerHTML = opts.join('');
+  if (cur) sel.value = cur;
+}
+
+async function exportAttendanceReport() {
+  const classId = document.getElementById('att-class-sel')?.value;
+  if (!classId) { alert('Please select a class.'); return; }
+  const statusEl = document.getElementById('att-status');
+  statusEl.textContent = 'Loading session history…';
+
+  try {
+    // 1. Fetch all session_history docs for this class (client-side sort avoids composite index)
+    const histSnap = await db.collection('session_history')
+      .where('classId', '==', classId).get();
+    const sessions = histSnap.docs.map(d => d.data())
+      .filter(s => s.startedAt)
+      .sort((a, b) => a.startedAt.toDate() - b.startedAt.toDate());
+
+    if (!sessions.length) {
+      statusEl.textContent = 'No sessions recorded for this class yet.';
+      return;
+    }
+    statusEl.textContent = `Found ${sessions.length} session(s). Loading attendance logs…`;
+
+    // 2. Fetch all submitted logs for this class
+    const logsSnap = await db.collection('logs')
+      .where('classId', '==', classId).get();
+    const allLogs = logsSnap.docs.map(d => d.data()).filter(l => l.submitted);
+
+    // 3. Group sessions by ISO calendar week (Monday = start of week)
+    function weekStart(d) {
+      const dt = new Date(d);
+      dt.setHours(0, 0, 0, 0);
+      const off = (dt.getDay() + 6) % 7;  // days since Monday
+      dt.setDate(dt.getDate() - off);
+      return dt.toISOString().slice(0, 10);
+    }
+
+    const weekKeys = [...new Set(sessions.map(s => weekStart(s.startedAt.toDate())))].sort();
+    const weekNum  = {};
+    weekKeys.forEach((wk, i) => weekNum[wk] = i + 1);
+
+    const sessInWeek = {};
+    sessions.forEach(s => {
+      const wk = weekStart(s.startedAt.toDate());
+      if (!sessInWeek[wk]) sessInWeek[wk] = [];
+      sessInWeek[wk].push(s);
+    });
+
+    // 4. Build column definitions
+    //    wkN-mark  (1 session that week)  |  wkN-1-mark, wkN-2-mark, …  (multiple)
+    const columns = [];
+    weekKeys.forEach(wk => {
+      const n  = weekNum[wk];
+      const ss = sessInWeek[wk];
+      if (ss.length === 1) {
+        columns.push({ label: `wk${n}-mark`, session: ss[0] });
+      } else {
+        ss.forEach((s, i) => columns.push({ label: `wk${n}-${i + 1}-mark`, session: s }));
+      }
+    });
+
+    // 5. Collect unique students
+    const students = {};
+    allLogs.forEach(l => {
+      if (l.studentId) students[l.studentId] = l.studentName || l.studentId;
+    });
+    const studentIds = Object.keys(students).sort();
+
+    if (!studentIds.length) {
+      statusEl.textContent = 'No submitted attendance found for this class.';
+      return;
+    }
+
+    // 6. Group logs by sessionId for fast lookup
+    const logsBySession = {};
+    allLogs.forEach(l => {
+      if (!logsBySession[l.sessionId]) logsBySession[l.sessionId] = [];
+      logsBySession[l.sessionId].push(l);
+    });
+
+    // 7. Compute attendance marks
+    //    Present (.): submitted within 15 min of session start
+    //    Late    (x): submitted after that window
+    //    Absent  (/): no submission (default)
+    const WINDOW_MS = 15 * 60 * 1000;
+    const marks = {};
+    studentIds.forEach(id => {
+      marks[id] = {};
+      columns.forEach(col => marks[id][col.label] = '/');
+    });
+
+    columns.forEach(col => {
+      const sessStart = col.session.startedAt.toDate();
+      const presentBy = new Date(sessStart.getTime() + WINDOW_MS);
+      (logsBySession[col.session.sessionId] || []).forEach(l => {
+        if (!marks[l.studentId]) return;
+        const t = l.submittedAt?.toDate?.() || l.timestamp?.toDate?.();
+        if (!t) return;
+        marks[l.studentId][col.label] = t <= presentBy ? '.' : 'x';
+      });
+    });
+
+    // 8. Build CSV (BOM prefix for Excel UTF-8 auto-detect)
+    const headers = ['id', 'name', ...columns.map(c => c.label)];
+    const rows    = studentIds.map(id => {
+      const name = (students[id] || '').replace(/,/g, ' ');
+      return [id, name, ...columns.map(c => marks[id][c.label])].join(',');
+    });
+    const csv  = '﻿' + [headers.join(','), ...rows].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const a    = document.createElement('a');
+    a.href     = URL.createObjectURL(blob);
+    const archived = typeof ARCHIVED !== 'undefined' ? ARCHIVED : [];
+    const cls  = [...CLASSES, ...archived].find(c => c.id === classId);
+    a.download = `attendance_${(cls?.name || classId).replace(/\s+/g, '-')}_${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+
+    statusEl.innerHTML =
+      `✅ Exported: <strong>${studentIds.length}</strong> students × <strong>${columns.length}</strong> sessions ` +
+      `(${weekKeys.length} week${weekKeys.length !== 1 ? 's' : ''}).<br>` +
+      `Columns: ${columns.map(c => c.label).join(', ')}`;
+
+  } catch(e) {
+    statusEl.textContent = '❌ Error: ' + e.message;
+    console.error(e);
+  }
 }
 
 // Updated CSV export — respects current filters

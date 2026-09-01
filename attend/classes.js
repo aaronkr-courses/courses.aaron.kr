@@ -20,6 +20,113 @@
 // ── ACTIVE CLASSES (shown in dropdown) ───────────────────────
 const CLASSES = [
   {
+    id:       "2026-knut-data",
+    name:     "Data Science",
+    nameKo:   "데이터과학",
+    school:   "KNUT",
+    semester: "2026-2",
+    students: 69,
+    schedule: [
+      { day: 1, start: "09:00", end: "12:00" },  // Mon 9–12pm
+      { day: 1, start: "13:00", end: "16:00" },  // Mon 1–4pm
+    ]
+  },
+  {
+    id:       "2026-jbnu-circuits-ii",
+    name:     "AC Circuits",
+    nameKo:   "프로그램 기반 회로 이론 II (AC)",
+    school:   "JBNU",
+    semester: "2026-2",
+    students: 69,
+    schedule: [
+      { day: 2, start: "13:00", end: "16:00" },  // Tues 1–4pm
+    ]
+  },
+  {
+    id:       "2026-jbnu-circuits-i",
+    name:     "DC Circuits",
+    nameKo:   "프로그램 기반 회로 이론 I (DC)",
+    school:   "JBNU",
+    semester: "2026-2",
+    students: 31,
+    schedule: [
+      { day: 2, start: "16:00", end: "19:00" },  // Tues 4–7pm
+    ]
+  },
+  {
+    id:       "2026-jbnu-info",
+    name:     "Convergence Information Transmission",
+    nameKo:   "융합정보전송",
+    school:   "JBNU",
+    semester: "2026-2",
+    students: 60,
+    schedule: [
+      { day: 3, start: "09:00", end: "12:00" }   // Wed 9-12pm
+    ]
+  },
+  {
+    id:       "2026-wku-db",
+    name:     "Database (MySQL)",
+    nameKo:   "데이터베이스",
+    school:   "WKU",
+    semester: "2026-2",
+    students: 32,
+    schedule: [
+      { day: 3, start: "15:00", end: "18:00" },  // Wed 3-6pm
+    ]
+  },
+  {
+    id:       "2026-cbnu-research",
+    name:     "Research Methodology",
+    nameKo:   "연구 방법론",
+    school:   "CBNU",
+    semester: "2026-2",
+    students: 28,
+    schedule: [
+      { day: 4, start: "12:00", end: "15:00" }   // Thur 12-3pm
+    ]
+  },
+  {
+    id:       "2026-cbnu-soft-eng",
+    name:     "Advanced Software Engineering",
+    nameKo:   "소프트웨어 공학 특론",
+    school:   "CBNU",
+    semester: "2026-2",
+    students: 23,
+    schedule: [
+      { day: 4, start: "15:00", end: "18:00" },  // Thur 3–6pm
+    ]
+  },
+  {
+    id:       "2026-kjnu-biomed-net",
+    name:     "Biomedical Networks",
+    nameKo:   "바이오메디컬 네트워크",
+    school:   "KJNU",
+    semester: "2026-2",
+    students: 23,
+    schedule: [
+      { day: 5, start: "14:00", end: "17:00" },  // Fri 2–5pm
+    ]
+  },
+];
+
+// ── SCHOOL COLORS (shown as badges in the dropdown) ──────────
+const SCHOOLS = {
+  JBNU: { label: "전북대", color: "#56296E" },
+  KNUT: { label: "교통대", color: "#621E22" },
+  UT:   { label: "교통대", color: "#621E22" },
+  WKU:  { label: "원광대", color: "#004386" },
+  CBNU: { label: "충북대", color: "#a62451" },
+  KJNU: { label: "공주대", color: "#033885" },
+  DJU:  { label: "대전대", color: "#005f2e" },
+  HB:   { label: "한밭대", color: "#0195B9" },
+  JNUE: { label: "전주교육대", color: "#8EC743" },
+  GNUE: { label: "광주교육대", color: "#00884C" },
+  JJU:  { label: "제주대", color: "#ffd23f" },
+};
+
+const ARCHIVED = [
+  {
     id:       "2026-jbnu-dc",
     name:     "DC Circuits",
     nameKo:   "프로그램 기반 회로 이론 I (DC)",
@@ -111,12 +218,3 @@ const CLASSES = [
     ]
   }
 ];
-
-// ── SCHOOL COLORS (shown as badges in the dropdown) ──────────
-const SCHOOLS = {
-  JBNU: { label: "전북대", color: "#56296E" },
-  UT:   { label: "교통대", color: "#621E22" },
-  WKU:  { label: "원광대", color: "#004386" },
-  HB:   { label: "한밭대", color: "#0195B9" },
-  JNUE: { label: "전주교육대", color: "#8EC743" }
-};
