@@ -72,6 +72,9 @@ layout: default
         {%- if section.discussions -%}
         <a href="{{ section.discussions }}" class="ql-btn" target="_blank" rel="noopener noreferrer">💬 <span class="txt">Discussions</span></a>
         {%- endif -%}
+        {%- if section.sci -%}
+        <a href="{{ section.sci }}" class="ql-btn syllabus" target="_blank" rel="noopener noreferrer">🔬 <span class="txt">Scientia</span></a>
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </div><!-- /.course-hero -->

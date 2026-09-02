@@ -25,7 +25,8 @@ information:
     location: N5-305
     kakaotalk: https://open.kakao.com/o/gPXSVpLi
     discussions: https://github.com/aaronkr-2026-2/research-methods-course/discussions
-
+    sci: https://sci.aaron.kr/
+    
 Main-Text:
   - text: "주교재"
     author: "Booth, Wayne C. / Colomb, Gregory G. / Williams, Joseph M."
