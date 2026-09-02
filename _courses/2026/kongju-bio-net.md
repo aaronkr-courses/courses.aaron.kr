@@ -24,6 +24,7 @@ information:
     time: 금 567 | Fri 2pm-5pm
     location: 간호보건예술440
     kakaotalk: https://open.kakao.com/o/gjTOWpLi
+    classroom: https://classroom.google.com/c/ODcyNDY2NDU4MDU2?cjc=7p7x4cbp
 
 Main-Text:
   - text: "주교재"
