@@ -243,6 +243,14 @@ body.dark {
         <div class="card-label">Select class</div>
         <div class="class-selector" id="class-selector"></div>
         <div id="selected-class-info" style="margin-top:10px;font-size:13px;color:var(--muted);display:none"></div>
+
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border)">
+          <label class="lbl" for="oneoff-name">Or start a one-off session (talk, presentation, guest lecture)</label>
+          <div class="field-row">
+            <input type="text" id="oneoff-name" placeholder="e.g. KCSE Conference Talk" style="flex:1;min-width:220px" onkeydown="if(event.key==='Enter'){event.preventDefault();useOneOffSession();}">
+            <button class="btn-s" onclick="useOneOffSession()">Use this session</button>
+          </div>
+        </div>
       </div>
 
       <!-- Session control -->
@@ -554,6 +562,39 @@ function selectClass(cls, btn) {
   document.getElementById('selected-class-info').style.display = '';
   document.getElementById('selected-class-info').innerHTML =
     `<strong>${cls.name}</strong> · ${cls.nameKo} · ${school.label} · ${cls.semester} · ${cls.students} students`;
+}
+
+// ── One-off sessions (talks, presentations, guest lectures) ────
+// Not part of the CLASSES config — these never appear in the gradebook
+// export (that needs a real recurring class), but they flow through the
+// exact same sessions/session_history/logs collections, so Access log,
+// Session history, and Session feedback all work for them unchanged.
+function slugify(str) {
+  return str.trim().toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 60) || 'session';
+}
+
+function useOneOffSession() {
+  if (sessionActive) { alert('⚠️ Stop the current session before starting a new one.'); return; }
+  const input = document.getElementById('oneoff-name');
+  const name  = input.value.trim();
+  if (!name) { alert('⚠️ Please enter a session name.'); return; }
+
+  document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('selected'));
+  const cls = {
+    id:       'talk-' + slugify(name) + '-' + Date.now().toString(36),
+    name:     name,
+    nameKo:   '',
+    school:   'TALK',
+    semester: new Date().getFullYear() + '-oneoff',
+    students: 0
+  };
+  selectedClass = cls;
+  document.getElementById('selected-class-info').style.display = '';
+  document.getElementById('selected-class-info').innerHTML =
+    `<strong>${escHtml(cls.name)}</strong> · one-off session · id: <code>${escHtml(cls.id)}</code>`;
 }
 
 // ── Auth ───────────────────────────────────────────────────────
