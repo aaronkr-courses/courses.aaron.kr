@@ -36,12 +36,11 @@
     <strong>What is Information?</strong>
   supp:
   readings:
-  _slides: "https://docs.google.com/presentation/d/1g_wN1T6o0O1kOCuF7DLiW4mSqraUFQTjZ8bwFMbdY3U/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1g_wN1T6o0O1kOCuF7DLiW4mSqraUFQTjZ8bwFMbdY3U/edit?usp=sharing"
   slides2:
-  _img: 2025/jbnu-info/2-info.jpg
+  img: 2025/jbnu-info/2-info.jpg
   hw: 
   logistics: "Hello Python, MD"
-  tooltip: "(only one HW may work for you - choose one, write any Python & Markdown code and submit, don't run it)"
 
 - date: 9/16
   week: 3
