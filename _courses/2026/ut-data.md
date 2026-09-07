@@ -22,12 +22,12 @@ grading:
 information:
   - section: 259124(2)
     time: 월 123 | Mon 9am-12pm
-    location: W18-
+    location: W18-108호
     kakaotalk: https://open.kakao.com/o/gzMfNpLi
 
   - section: 259124(1)
     time: 월 567 | Mon 1pm-4pm
-    location: W18-
+    location: W18-108호
     kakaotalk: https://open.kakao.com/o/gu14NpLi
 
 Main-Text:
