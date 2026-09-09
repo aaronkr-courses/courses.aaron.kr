@@ -18,9 +18,9 @@
   supp:
   readings: Online Git & GitHub guides
   hw: 
-  slides:
+  slides: "https://docs.google.com/presentation/d/1A_MGryE5jj5IkRrNKQhq10hlWlIWnZrdY3Ggo3tcdqU/edit?usp=sharing"
   slides2:
-  img: 2026/cbnu-grad-soft-eng/
+  img: 2026/cbnu-grad-soft-eng/2-git.jpg
   logistics: >
     Idea pitched, stack chosen, team formation (solo or teams of 2-3); vibe-coded MVP assigned, due Wk2
 
