@@ -17,9 +17,9 @@
   supp:
   readings: 그림으로 배우는 네트워크 원리
   hw: 
-  slides:
+  slides: "https://docs.google.com/presentation/d/1i9x74GCcNs1YulEfNylIyU_Z9WyObIy3oiOvJXAkn90/edit?usp=sharing"
   slides2:
-  img: 2026/kongju-bio-net/
+  img: 2026/kongju-bio-net/2-network.jpg
   logistics: >
 
 - date: 9/18
