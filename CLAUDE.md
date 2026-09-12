@@ -435,6 +435,12 @@ evaluates as `(today_ts − days_from_monday) × 86400`, which is an astronomica
 **Fix:** Added `refreshModalQR()` helper. `updateQR()` calls it after redrawing the main QR whenever the modal overlay has class `open`. The modal interval now only drives the countdown display — QR refresh is piggybacked on the existing `rotateToken()` → `updateQR()` chain.  
 **File:** `attend/admin.html`
 
+### 26. `hw1:` typo silently swallowed the first homework link (only `hw2` ever showed)
+**Symptom:** `courses/2024/ut-data` (and 4 other data files across `ut_data`, `ut_node`, and `jnue_iss` for various years) rendered only one "과제 →" homework link per row even though the YAML clearly had two separate GitHub Classroom links for two sections.
+**Root cause:** `schedule.html` has only ever read `item.hw` and `item.hw2` (see the header comment's documented YAML fields). Five data files used `hw1:`/`hw2:` instead of `hw:`/`hw2:` — `hw1` isn't a recognized field, so Liquid silently rendered nothing for it while `hw2` rendered fine, making it look like "the second link replaced the first" rather than "the first key was never read."
+**Fix:** Renamed `hw1:` → `hw:` in `_data/2026/ut_data_lectures.yml`, `_data/2026/jnue_iss_lectures.yml`, `_data/2025/jnue_iss_lectures.yml`, `_data/2024/ut_node_lectures.yml`, `_data/2024/ut_data_lectures.yml` (checked first for any row that already had both `hw:` and `hw1:` set, which would have been a real YAML key collision — none did). Also added `hw_label`/`hw2_label` YAML fields so a row can override the button's innerHTML, and replaced the hardcoded Korean "과제 →"/"과제 2 →" default text with `<span class="lang-en">HW</span><span class="lang-ko">과제</span>` pairs so the English page correctly defaults to "HW" instead of always showing Korean.
+**File:** `_includes/schedule.html`, the 5 data files above.
+
 ## Design System
 
 ### Color palette (CSS custom properties)
@@ -465,7 +471,16 @@ evaluates as `(today_ts − days_from_monday) × 86400`, which is an astronomica
     <strong>수업 소개</strong>
   readings: "Book, Chapter 1"  # String (not array)
   hw: "https://classroom.github.com/..."
-  hw2: "https://classroom.github.com/..."  # Optional second HW link
+  hw2: "https://classroom.github.com/..."  # Optional second HW link (renders as its OWN
+                                            # separate button — e.g. one per section — not
+                                            # a replacement for `hw`. Property must be named
+                                            # `hw`/`hw2`, not `hw1`/`hw2` — `hw1` is not read
+                                            # by the template and silently produces only one
+                                            # link (see Bug #26)
+  hw_label:  "Quiz →"    # Optional innerHTML override for the `hw` button (default:
+                          # "HW" on the English page / "과제" on the Korean page)
+  hw2_label: "Retake →"  # Optional innerHTML override for the `hw2` button (default:
+                          # "HW 2" / "과제 2")
   slides: "https://docs.google.com/..."
   slides2: "https://..."                   # Optional second slides link (shows below thumbnail)
   slides2_title: "Part 2 Slides"           # Optional label for slides2 link (default: "Slides 2")

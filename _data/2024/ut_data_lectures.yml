@@ -15,7 +15,7 @@
     <strong>1장 한눈에 보는 머신러닝</strong>
   supp:
   readings: p. 27-67
-  hw1: "https://classroom.github.com/a/xfxqWKMC"
+  hw: "https://classroom.github.com/a/xfxqWKMC"
   hw2: "https://classroom.github.com/a/W5hHbiDI"
   slides: "https://docs.google.com/presentation/d/1TGg7rGsrRqk5j9TC948R3aBOGBzBXSzRix4W_W2XtOk/edit?usp=sharing"
   img: 2024/ut-data/2-ml-at-a-glance.jpg
@@ -27,7 +27,7 @@
     <strong>2장 머신러닝 프로젝트 처음부터 끝까지</strong>
   supp:
   readings: p. 68-142
-  hw1: "https://classroom.github.com/a/EfJ-WpOH"
+  hw: "https://classroom.github.com/a/EfJ-WpOH"
   hw2: "https://classroom.github.com/a/JDaFRqGX"
   slides: "https://docs.google.com/presentation/d/1onWWgiSOLmHiKNFEfb-hMKZDblQL_xiDjpVL0oJugLg/edit?usp=sharing"
   img: 2024/ut-data/3-ml-project.jpg
@@ -39,7 +39,7 @@
     <strong>3장 분류</strong>
   supp:
   readings: p. 143-176
-  hw1: "https://classroom.github.com/a/CZraGjNA"
+  hw: "https://classroom.github.com/a/CZraGjNA"
   hw2: "https://classroom.github.com/a/nuDI2Fza"
   slides: "https://docs.google.com/presentation/d/1PTBHY3TSIIe3jNy-gm0FtKuhyH67GuslhFyNj6Yp56c/edit?usp=sharing"
   img: 2024/ut-data/4-classification.jpg
@@ -56,7 +56,7 @@
     <strong>4장 모델 훈련</strong>
   supp:
   readings: p. 177-226
-  hw1: "https://classroom.github.com/a/f4ZHh37L"
+  hw: "https://classroom.github.com/a/f4ZHh37L"
   hw2: "https://classroom.github.com/a/ckWmQR-V"
   slides: "https://docs.google.com/presentation/d/1vJ25q7QR4IcVfUsokYegkMcz_yAqjFFY8D0RLbddG7s/edit?usp=sharing"
   img: 2024/ut-data/6-model-training.jpg
@@ -69,7 +69,7 @@
     6장 결정 트리</strong>
   supp:
   readings: p. 177-296
-  hw1: "https://classroom.github.com/a/OnVgv0M3"
+  hw: "https://classroom.github.com/a/OnVgv0M3"
   hw2: "https://classroom.github.com/a/V3vUlq5O"
   slides: "https://docs.google.com/presentation/d/1WunSoesW_wXc5nzeX2_VK1LQkraNDNL3dxGpKIFd6xw/edit?usp=sharing"
   img: 2024/ut-data/7-3-models.jpg
@@ -83,7 +83,7 @@
     8장 차원 축소</strong>
   supp:
   readings: p. p. 268-323
-  hw1: "https://classroom.github.com/a/QRfTIAap"
+  hw: "https://classroom.github.com/a/QRfTIAap"
   hw2: "https://classroom.github.com/a/8-cIfNKZ"
   slides: "https://docs.google.com/presentation/d/1goTW6RepqzHNa3JZDuP8KadDMNuO2ZpyvSvQAiHStxY/edit?usp=sharing"
   img: 2024/ut-data/8-ensemble-dim.jpg
@@ -106,7 +106,7 @@
     <strong>9장 비지도 학습</strong>
   supp:
   readings: p. 324-365
-  hw1: "https://classroom.github.com/a/IJqfbGBf"
+  hw: "https://classroom.github.com/a/IJqfbGBf"
   hw2: "https://classroom.github.com/a/H0II5-LO"
   slides: "https://docs.google.com/presentation/d/1EEZBzmrEN8VDDdUnZ2Tj9BdJOJXLTrCUWy7KlHWNXQY/edit?usp=sharing"
   img: 2024/ut-data/10-unsupervised.jpg
@@ -118,7 +118,7 @@
     <strong>10장 케라스를 사용한 인공 신경망 소개</strong>
   supp:
   readings: p. 370-433
-  hw1: "https://classroom.github.com/a/3tIYKOXW"
+  hw: "https://classroom.github.com/a/3tIYKOXW"
   hw2: "https://classroom.github.com/a/93ZFafSD"
   slides: "https://docs.google.com/presentation/d/1nHUbriVxg7J4NUSok7QhskrAmTJ-Mio_BZcO9DSj2bM/edit?usp=sharing"
   img: 2024/ut-data/11-keras-nn.jpg
@@ -130,7 +130,7 @@
     <strong>11장 심층 신경망 훈련</strong>
   supp:
   readings: p. 434-488
-  hw1: "https://classroom.github.com/a/qlyNE-KC"
+  hw: "https://classroom.github.com/a/qlyNE-KC"
   hw2: "https://classroom.github.com/a/hmE_jdbS"
   slides: "https://docs.google.com/presentation/d/1hrGXot-GjUEMNCv7-zUH8yO9gI1NfmHHAkQ_TJj8qGo/edit?usp=sharing"
   img: 2024/ut-data/12-cnn-training.jpg
@@ -143,7 +143,7 @@
     13장 텐서플로를 사용한 데이터 적재와 전처리</strong>
   supp:
   readings: p. 489-576
-  hw1: "https://classroom.github.com/a/fkT6WA3o"
+  hw: "https://classroom.github.com/a/fkT6WA3o"
   hw2: "https://classroom.github.com/a/fssWZJyD"
   slides: "https://docs.google.com/presentation/d/1eMMfWqxcO-6yz4cU2PfY1hVEDmgVNG9m0_t-veLd20Q/edit?usp=sharing"
   img: 2024/ut-data/13-tf-user-defined.jpg
@@ -155,7 +155,7 @@
     <strong>14장 합성곱 신경망을 사용한 컴퓨터 비전</strong>
   supp:
   readings: p.
-  hw1: "https://classroom.github.com/a/O5IlB54x"
+  hw: "https://classroom.github.com/a/O5IlB54x"
   hw2: "https://classroom.github.com/a/eHDLKE_3"
   slides: "https://docs.google.com/presentation/d/1QrBSXQ03YFvQ9fvnp_p0zFit5HBjztRjMctJdBcxHyY/edit?usp=sharing"
   img: 2024/ut-data/14-cv.jpg
@@ -172,7 +172,7 @@
     </ul>
   supp:
   readings: p.
-  hw1: "https://classroom.github.com/a/v0Ll672L"
+  hw: "https://classroom.github.com/a/v0Ll672L"
   hw2: "https://classroom.github.com/a/PFDbQZp_"
   slides: "https://docs.google.com/presentation/d/1a4yxg59EzCwAriDRHNguuMnlwCPdx3DEQ4SFRcjiBsE/edit?usp=sharing"
   img: 2024/ut-data/15-final-guide.jpg

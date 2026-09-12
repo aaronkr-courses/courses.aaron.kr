@@ -74,8 +74,51 @@
 .strip-label { font-family: 'IBM Plex Mono', monospace; font-size: .56rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
 .strip-value { font-size: .82rem; color: var(--text); line-height: 1.3; }
 
+// Multi-section courses: each section's Section/Time/Room gets its own bolder-
+// bordered card instead of one continuous grid, so sections read as distinct
+// units at a glance (e.g. a course with 3 separate KakaoTalk/Classroom links).
+.stats-strip.multi-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: none;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+}
+.strip-group {
+  display: flex;
+  flex: 1 1 260px;
+  border: 1.5px solid rgba(126,184,247,.35);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  .strip-item { flex: 1; border-right-color: rgba(126,184,247,.2); }
+}
+
 // ── Quick links ──────────────────────────────────────────────────────────────
-.quick-links { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.quick-links { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: flex-start; }
+
+// When a course has multiple sections, each section's links are grouped into
+// their own subtly-bordered box so, e.g., 3 KakaoTalk + 3 Classroom links don't
+// read as one undifferentiated row.
+.ql-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 6px 8px 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(126,184,247,.03);
+}
+.ql-group-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .6rem;
+  color: var(--muted);
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
 .ql-btn {
   display: inline-flex;
   align-items: center;

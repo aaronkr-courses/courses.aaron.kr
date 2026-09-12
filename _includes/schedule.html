@@ -7,7 +7,13 @@
   Columns: date | slide thumb + slides2 link | week/day + title + readings | logistics + hw
   Test / no-class rows: colspan="3" across the last three columns.
   YAML fields: date, title, title_ko, week, img, img2, slides, slides2, slides2_title,
-               readings, logistics, hw, hw2, zoom, lms, skip, hidden
+               readings, logistics, hw, hw2, hw_label, hw2_label, zoom, lms, skip, hidden
+
+  hw / hw2 render as two SEPARATE homework links (e.g. one per section, when a
+  course has two sections with different assignments). hw_label / hw2_label let
+  a lecture row override the button's innerHTML (e.g. "Quiz →" instead of the
+  default HW text) — otherwise the default is "HW" on the English page and
+  "과제" on the Korean page (site-wide via .lang-en/.lang-ko, not hardcoded Korean).
   `intensive: true` (pass from page.intensive on winter-session courses) swaps the
   "Week N" label for "Day N" and renders zoom/lms as small mode links per row.
 
@@ -181,7 +187,7 @@
       {%- endif -%}
       {%- if item.slides2 -%}
       <a href="{{ item.slides2 }}" class="slides2-link" target="_blank">
-        {{ item.slides2_title | default: 'Slides 2' }}
+        {{ item.slides2_title | default: 'Slides 2' | strip }}
       </a>
       {%- endif -%}
     </td>
@@ -210,10 +216,10 @@
       <a href="{{ item.lms }}" class="mode-link lms-link" target="_blank" rel="noopener noreferrer">📺 <span class="lang-en">LMS Video</span><span class="lang-ko">LMS 동영상</span></a>
       {%- endif -%}
       {%- if item.hw -%}
-      <a href="{{ item.hw }}" class="hw-link" target="_blank">과제 →</a>
+      <a href="{{ item.hw }}" class="hw-link" target="_blank">{%- if item.hw_label -%}{{ item.hw_label }}{%- else -%}<span class="lang-en">HW</span><span class="lang-ko">과제</span> →{%- endif -%}</a>
       {%- endif -%}
       {%- if item.hw2 -%}
-      <a href="{{ item.hw2 }}" class="hw-link" target="_blank">과제 2 →</a>
+      <a href="{{ item.hw2 }}" class="hw-link" target="_blank">{%- if item.hw2_label -%}{{ item.hw2_label }}{%- else -%}<span class="lang-en">HW 2</span><span class="lang-ko">과제 2</span> →{%- endif -%}</a>
       {%- endif -%}
     </td>
 

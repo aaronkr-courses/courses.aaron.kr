@@ -48,10 +48,11 @@
     Chp 9. Sinusoids and Phasors II
   supp:
   readings:
-  _hw2: "https://forms.gle/PvD6LtxAsm5fza5Z6"
-  _slides: "https://docs.google.com/presentation/d/19LFPCXflIs4DN3cG2-610VEE7fj6XNYWBKTZEsP-bHU/edit?usp=sharing"
-  _slides2: "https://colab.research.google.com/drive/1w0vlz9vLKLxcGopV1l_l9gsojaomNyQ7?usp=sharing"
-  _img2: 2025/jbnu-circuits-ii/3-sinusoids-ii.jpg
+  hw:
+  slides: "https://docs.google.com/presentation/d/19LFPCXflIs4DN3cG2-610VEE7fj6XNYWBKTZEsP-bHU/edit?usp=sharing"
+  slides2: "https://colab.research.google.com/drive/1w0vlz9vLKLxcGopV1l_l9gsojaomNyQ7?usp=sharing"
+  slides2_title: "Colab: Sinusoid and Phasor Analysis"
+  img2: 2025/jbnu-circuits-ii/3-sinusoids-ii.jpg
   logistics: "Chp 9"
 
 - date: 9/22

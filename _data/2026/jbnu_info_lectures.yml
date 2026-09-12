@@ -40,7 +40,7 @@
   slides2:
   img: 2025/jbnu-info/2-info.jpg
   hw: 
-  logistics: "Hello Python, MD"
+  logistics: 
 
 - date: 9/16
   week: 3
@@ -48,11 +48,14 @@
     <strong>Baye's Rule</strong>
   supp:
   readings:
-  _slides: "https://docs.google.com/presentation/d/1K-wmU48lyNrBoEqKSDDb1YlE3J9higAFvylcUJk7HKI/edit?usp=sharing"
-  _slides2: "https://docs.google.com/presentation/d/1VETVI7XRg_bWrxb1VuvKYgwFk52-ycC1RY4T8zj9GcM/edit?usp=sharing"
-  _img: 2025/jbnu-info/3-inference.jpg
+  slides: "https://docs.google.com/presentation/d/1K-wmU48lyNrBoEqKSDDb1YlE3J9higAFvylcUJk7HKI/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1VETVI7XRg_bWrxb1VuvKYgwFk52-ycC1RY4T8zj9GcM/edit?usp=sharing"
+  slides2_title: "Self-Driving Cars & Baye's Rule (KO)"
+  img: 2025/jbnu-info/3-inference.jpg
   hw: 
-  logistics: "Baye's Rule"
+  logistics: >
+    Hello Python, MD<br>
+    Baye's Rule
 
 - date: 9/23
   week: 4

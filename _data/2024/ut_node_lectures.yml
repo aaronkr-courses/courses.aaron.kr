@@ -8,7 +8,7 @@
   readings: <strong>0장 pp. 35-64</strong>
   logistics:
   img: 2024/ut-node/0-node-introduction.jpg
-  hw1: "https://classroom.github.com/a/bsh3XZ5b"
+  hw: "https://classroom.github.com/a/bsh3XZ5b"
   hw2: "https://classroom.github.com/a/uvgAQkYv"
 
 - date: 3/13
@@ -23,7 +23,7 @@
   readings: Get Programming with Node, <strong>1장 pp. 67-116</strong>
   logistics:
   img: 2024/ut-node/2a-web-review.jpg
-  hw1: "https://classroom.github.com/a/x9xH4e-l"
+  hw: "https://classroom.github.com/a/x9xH4e-l"
   hw2: "https://classroom.github.com/a/nD0EtR_u"
 
 - date: 3/20
@@ -37,7 +37,7 @@
   readings: Get Programming with Node, <strong>1장 pp. 67-116</strong>
   logistics:
   img: 2024/ut-node/3-node-web-app.jpg
-  hw1: "https://classroom.github.com/a/m6tTvNhm"
+  hw: "https://classroom.github.com/a/m6tTvNhm"
   hw2: "https://classroom.github.com/a/4PghjxCa"
 
 - date: 3/27
@@ -52,7 +52,7 @@
     - Get Programming with Node, <strong>2장 pp. 143-185</strong>
   logistics:
   img: 2024/ut-node/4-node-web-app.jpg
-  hw1: "https://classroom.github.com/a/ed0IqywE"
+  hw: "https://classroom.github.com/a/ed0IqywE"
   hw2: "https://classroom.github.com/a/uMfwm9Wo"
 
 - date: 4/3
@@ -65,7 +65,7 @@
   readings: Get Programming with Node, <strong>3장 pp. 187-234</strong>
   logistics:
   img: 2024/ut-node/5-node-express.jpg
-  hw1: "https://classroom.github.com/a/cmvIvmhu"
+  hw: "https://classroom.github.com/a/cmvIvmhu"
   hw2: "https://classroom.github.com/a/33C5Nanw"
 
 - date: 4/10
@@ -84,7 +84,7 @@
   readings: Get Programming with Node, <strong>3장 pp. 187-234</strong>
   logistics:
   img: 2024/ut-node/7-express-capstone.jpg
-  hw1: "https://classroom.github.com/a/KGc0FDaH"
+  hw: "https://classroom.github.com/a/KGc0FDaH"
   hw2: "https://classroom.github.com/a/Qkt1r82C"
 
 - date: 4/24
@@ -110,7 +110,7 @@
   readings: Get Programming with Node, <strong>4장 pp. 237-286</strong>
   logistics:
   img: 2024/ut-node/9-node-mongodb.jpg
-  hw1: "https://classroom.github.com/a/0Ur4Oyoq"
+  hw: "https://classroom.github.com/a/0Ur4Oyoq"
   hw2: "https://classroom.github.com/a/crAoyCF_"
 
 - date: 5/8
@@ -123,7 +123,7 @@
   readings: Get Programming with Node, <strong>4장 pp. 237-286</strong>
   logistics:
   img: 2024/ut-node/10-node-subscribers.jpg
-  hw1: "https://classroom.github.com/a/DJPWgTS6"
+  hw: "https://classroom.github.com/a/DJPWgTS6"
   hw2: "https://classroom.github.com/a/_xVPvR6P"
 
 - date: 5/15
@@ -141,7 +141,7 @@
   readings: Get Programming with Node, <strong>4장 pp. 289-320</strong>
   logistics:
   img: 2024/ut-node/12-crud-operations.jpg
-  hw1: "https://classroom.github.com/a/vu6GfvGY"
+  hw: "https://classroom.github.com/a/vu6GfvGY"
   hw2: "https://classroom.github.com/a/pWYFBDa1"
 
 - date: 5/29
@@ -155,7 +155,7 @@
   readings: Get Programming with Node, <strong>4장 pp. 289-320</strong>
   logistics:
   img: 2024/ut-node/13-adding-crud.jpg
-  hw1: "https://classroom.github.com/a/3GuLx0wJ"
+  hw: "https://classroom.github.com/a/3GuLx0wJ"
   hw2: "https://classroom.github.com/a/Vo0H5yHd"
 
 - date: 6/5
@@ -175,7 +175,7 @@
   readings: Get Programming with Node, <strong>5장 pp. 321-374</strong>
   logistics:
   img: 2024/ut-node/14-node-user-auth.jpg
-  hw1: "https://classroom.github.com/a/50S_JjNZ"
+  hw: "https://classroom.github.com/a/50S_JjNZ"
   hw2: "https://classroom.github.com/a/-3NpQTwD"
 
 - date: >
@@ -191,7 +191,7 @@
   readings: Get Programming with Node, <strong>6장 pp. 375-433</strong>
   logistics:
   img: 2024/ut-node/15-node-api-build.jpg
-  hw1: "https://classroom.github.com/a/tMrOtBlL"
+  hw: "https://classroom.github.com/a/tMrOtBlL"
   hw2: "https://classroom.github.com/a/1QDu9-PS"
 
 - date: >
@@ -207,7 +207,7 @@
   readings: Get Programming with Node, <strong>7장 pp. 435-479</strong>
   logistics:
   img: 2024/ut-node/16-node-chatting.jpg
-  hw1: "https://classroom.github.com/a/soE4SSKd"
+  hw: "https://classroom.github.com/a/soE4SSKd"
   hw2: "https://classroom.github.com/a/ENNgJsBI"
 
 - date: 6/19
