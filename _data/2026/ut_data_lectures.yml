@@ -7,7 +7,8 @@
   hw:
   slides: "https://docs.google.com/presentation/d/1TUnhrNPdww_9EMbzZMzNn-F_1T7Zt0JDMMP00rdtSOs/edit?usp=sharing"
   img: 2024/ut-data/1-intro-to-data-sci.jpg
-  logistics:
+  logistics: >
+    0장 어휘 <a href="https://drive.google.com/file/d/1ExpjJ8i8gcBkTHomuKwa2sz_5sYKLrA-/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1xSfKHIfNVBZnB563U0-xiq4GE_SpOxlAyCASrrWrw5s/edit?usp=sharing">XLSX</a>
 
 - date: 9/14
   week: 2
@@ -25,7 +26,9 @@
   slides2_title: "1장) 한눈에 보는 머신러닝"
   img2: 2024/ut-data/2-ml-at-a-glance.jpg
   img: 2024/ut-data/3-ml-project.jpg
-  logistics:
+  logistics: >
+    1장 어휘 <a href="https://drive.google.com/file/d/1qIHTWyKqB9zLqK9d99KOUcEjhCnLytik/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1eq6BXMCUDbZHjebs5YWMAkR2OwbDtlbn10FFBcjkdak/edit?usp=sharing">XLSX</a><br>
+    2장 어휘 <a href="https://drive.google.com/file/d/1DYCiafh8r0bg4YSHstiZClYpxV8Y0X9-/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1aWB8yAKEmRMlvly5ipf5Cwbm3b_h9TgglLSkX9HUdBQ/edit?usp=sharing">XLSX</a>
 
 - date: 9/21
   week: 3
