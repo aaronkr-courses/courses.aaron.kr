@@ -40,10 +40,11 @@
   supp:
   readings:
   hw: 
-  slides: 
+  slides: "https://docs.google.com/presentation/d/1nhEMT3VWKEuLTYLUw00CyHO39RrZFbah71R4FCQkRrA/edit?usp=sharing"
   slides2:
-  img: 2026/wku-db/
-  logistics:
+  img: 2026/wku-db/3-relational-db.jpg
+  logistics: >
+    <a href="https://forms.gle/FwM9VzWct3wbLP8z8">GitHub IDs 입력</a>
 
 - date: 9/23
   week: 4
