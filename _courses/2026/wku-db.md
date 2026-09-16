@@ -22,6 +22,7 @@ information:
     time: 월 678 | Mon 2-5pm
     location: 프라임관 지상 2층 - 콘텐츠응용개발실습실
     kakaotalk: https://open.kakao.com/o/g2rtVpLi
+    github: https://classroom50.org/aaronkr-2026-2/wku-db/assignments/wku-db-files/accept
 
 Main-Text:
   - text: "부교재"
