@@ -39,7 +39,8 @@
     Chapter 5: Joining Database Tables
   supp:
   readings:
-  hw: 
+  hw: "https://classroom50.org/aaronkr-2026-2/wku-db/assignments/wku-db-files/accept"
+  hw_label: "SQL 코드 제출"
   slides: "https://docs.google.com/presentation/d/1nhEMT3VWKEuLTYLUw00CyHO39RrZFbah71R4FCQkRrA/edit?usp=sharing"
   slides2:
   img: 2026/wku-db/3-relational-db.jpg
