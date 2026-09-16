@@ -24,6 +24,7 @@ information:
     time: 목 789 | Thur 3pm-6pm
     location: N5-305
     kakaotalk: https://open.kakao.com/o/gs1hWpLi
+    github: https://classroom50.org/aaronkr-2026-2/cbnu-soft-eng/assignments/software-engineering-project/accept
 
 Main-Text:
   - text: "주교재"

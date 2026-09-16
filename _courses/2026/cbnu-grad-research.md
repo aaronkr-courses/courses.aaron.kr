@@ -24,6 +24,7 @@ information:
     time: 목 456 | Thur 12pm-3pm
     location: N5-305
     kakaotalk: https://open.kakao.com/o/gPXSVpLi
+    github: https://classroom50.org/aaronkr-2026-2/cbnu-research/assignments/research-files/accept
     discussions: https://github.com/aaronkr-2026-2/research-methods-course/discussions
     sci: https://sci.aaron.kr/
     
