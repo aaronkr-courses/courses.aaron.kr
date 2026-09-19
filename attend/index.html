@@ -150,10 +150,10 @@ body.dark {
     </div>
     <form onsubmit="doSubmit(event)">
       <div class="field">
-        <label for="f-name">이름 · Full name</label>
+        <label for="f-name" id="f-name-label">이름 · Full name</label>
         <input type="text" id="f-name" placeholder="홍길동" required autocomplete="name"/>
       </div>
-      <div class="field">
+      <div class="field" id="f-id-field">
         <label for="f-id">학번 · Student ID</label>
         <input type="text" id="f-id" placeholder="20231234" required autocomplete="off" inputmode="numeric"/>
       </div>
@@ -219,6 +219,8 @@ let timerInterval = null;
 let sessionData   = null;
 let userIp        = '';
 let onCampus      = false;
+let tokenSetAt    = null;  // client-epoch ms when the current token was issued — anchors the countdown
+let isOneOff      = false; // conference/guest session — no student ID required, not counted as attendance
 
 // REPLACE the entire getIP() function:
 async function getIP() {
@@ -257,9 +259,13 @@ async function init() {
   if (!snap.exists || !snap.data().active) { show('closed'); return; }
 
   sessionData = snap.data();
+  tokenSetAt  = typeof sessionData.tokenSetAt === 'number' ? sessionData.tokenSetAt : Date.now();
+  isOneOff    = !!sessionData.isOneOff || sessionData.school === 'TALK';
 
   if (!urlToken || urlToken !== sessionData.token) { show('expired'); return; }
   if (urlSessId && urlSessId !== sessionData.sessionId) { show('expired'); return; }
+
+  applyOneOffMode();
 
   // Show class badge
   if (sessionData.className) {
@@ -297,7 +303,8 @@ try {
       // Grace: only expire if form hasn't been started
       const nm = document.getElementById('f-name').value.trim();
       const id = document.getElementById('f-id').value.trim();
-      if (!nm && !id) show('expired');
+      const fb = document.getElementById('f-feedback')?.value.trim() || '';
+      if (!nm && !id && !fb) show('expired');
     }
   });
 }
@@ -309,8 +316,37 @@ function show(state) {
   });
 }
 
-function startTimer() { updateTimer(); timerInterval=setInterval(()=>{updateTimer();if(timeLeft()<=0&&!document.getElementById('f-name').value)show('expired');},1000); }
-function timeLeft()   { const ms=TOKEN_INTERVAL_SECONDS*1000;return Math.max(0,Math.ceil((ms-(Date.now()%ms))/1000)); }
+// Conference/guest sessions don't count as attendance, so student ID is
+// dropped entirely and name becomes optional — a comment alone is enough.
+function applyOneOffMode() {
+  if (!isOneOff) return;
+  const idField = document.getElementById('f-id-field');
+  const idInput = document.getElementById('f-id');
+  idField.style.display = 'none';
+  idInput.required = false;
+  idInput.value = '';
+
+  document.getElementById('f-name').required = false;
+  document.getElementById('f-name-label').innerHTML =
+    '이름 (선택사항) · Full name <span style="font-size:11px;font-weight:400">(optional)</span>';
+}
+
+function startTimer() {
+  updateTimer();
+  timerInterval = setInterval(() => {
+    updateTimer();
+    if (timeLeft() <= 0) {
+      const started = document.getElementById('f-name').value ||
+                       (isOneOff && document.getElementById('f-feedback')?.value);
+      if (!started) show('expired');
+    }
+  }, 1000);
+}
+function timeLeft() {
+  if (tokenSetAt == null) return TOKEN_INTERVAL_SECONDS;
+  const elapsed = Math.floor((Date.now()-tokenSetAt)/1000);
+  return Math.max(0, TOKEN_INTERVAL_SECONDS - elapsed);
+}
 function updateTimer(){
   const tl=timeLeft();
   const el=document.getElementById('timer-val');
@@ -320,9 +356,19 @@ function updateTimer(){
 
 async function doSubmit(e) {
   e.preventDefault();
-  const name = document.getElementById('f-name').value.trim();
-  const sid  = document.getElementById('f-id').value.trim();
-  if (!name||!sid) return;
+  const name     = document.getElementById('f-name').value.trim();
+  const sid      = document.getElementById('f-id').value.trim();
+  const feedback = document.getElementById('f-feedback')?.value.trim() || '';
+
+  if (isOneOff) {
+    if (!name && !feedback) {
+      showErr('이름 또는 코멘트를 입력해주세요 · Please enter a name or a comment');
+      return;
+    }
+  } else if (!name || !sid) {
+    return;
+  }
+
   const btn = document.getElementById('submit-btn');
   btn.disabled=true; btn.textContent='제출 중… / Submitting…'; hideErr();
 
@@ -330,13 +376,13 @@ async function doSubmit(e) {
     // Write attendance log
     if (scanLogRef) {
       await scanLogRef.update({
-        studentName:  name,
-        studentId:    sid,
+        studentName:  name || null,
+        studentId:    isOneOff ? null : sid,
         submitted:    true,
         country:      window.geoInfo?.country || '',
         region:       window.geoInfo?.region  || '',
         city:         window.geoInfo?.city    || '',
-        feedback:     document.getElementById('f-feedback')?.value.trim() || null,
+        feedback:     feedback || null,
         submittedAt:  firebase.firestore.FieldValue.serverTimestamp()
       });
     } else {
@@ -356,16 +402,16 @@ async function doSubmit(e) {
         tokenUsed:   urlToken
       });
       await fallbackRef.update({
-        studentName: name,
-        studentId:   sid,
+        studentName: name || null,
+        studentId:   isOneOff ? null : sid,
         submitted:   true,
-        feedback:    document.getElementById('f-feedback')?.value.trim() || null,
+        feedback:    feedback || null,
         submittedAt: firebase.firestore.FieldValue.serverTimestamp()
       });
     }
     clearInterval(timerInterval);
     document.getElementById('ok-detail').innerHTML =
-      `<strong>${escHtml(name)}</strong> (${escHtml(sid)})<br>
+      `<strong>${escHtml(name || '익명 · Anonymous')}</strong>${sid && !isOneOff ? ' ('+escHtml(sid)+')' : ''}<br>
        ${escHtml(sessionData.className || '')}<br><br>
        출석이 완료되었습니다 · You're all done!`;
     show('success');

@@ -523,6 +523,7 @@ let selectedClass = null;
 let sessionActive = false;
 let sessionId     = null;
 let currentToken  = null;
+let tokenSetAt    = null;  // client-epoch ms when currentToken was issued — anchors the countdown
 let cdInterval    = null;
 let unsubLogs     = null;
 let unsubSession  = null;
@@ -589,7 +590,8 @@ function useOneOffSession() {
     nameKo:   '',
     school:   'TALK',
     semester: new Date().getFullYear() + '-oneoff',
-    students: 0
+    students: 0,
+    isOneOff: true
   };
   selectedClass = cls;
   document.getElementById('selected-class-info').style.display = '';
@@ -634,6 +636,7 @@ function initListeners() {
       sessionActive = true;
       sessionId     = d.sessionId;
       currentToken  = d.token;
+      tokenSetAt    = typeof d.tokenSetAt === 'number' ? d.tokenSetAt : Date.now();
       setBadge(true);
       document.getElementById('start-btn').style.display = 'none';
       document.getElementById('stop-btn').style.display  = '';
@@ -657,6 +660,7 @@ function initListeners() {
       document.getElementById('qr-area').innerHTML =
         '<div class="qr-ph"><p>Start a session<br>to show QR code</p></div>';
       lastQrToken = null;
+      tokenSetAt  = null;
     }
   });
 
@@ -681,6 +685,7 @@ async function startSession() {
   const cls   = selectedClass || { id:'manual', name:'Manual', nameKo:'', school:'', semester:'', students:0 };
   const sid   = 'S' + Date.now().toString(36).toUpperCase();
   const token = genToken();
+  const startTs = Date.now();
 
   clearedAt = null;  // ADD at top of startSession()
 
@@ -689,12 +694,14 @@ async function startSession() {
       active:       true,
       sessionId:    sid,
       token:        token,
+      tokenSetAt:   startTs,
       classId:      cls.id,
       className:    cls.name,
       classNameKo:  cls.nameKo,
       school:       cls.school,
       semester:     cls.semester,
       totalStudents:cls.students,
+      isOneOff:     !!cls.isOneOff,
       startedAt:    firebase.firestore.FieldValue.serverTimestamp(),
       startedBy:    auth.currentUser.email
     });
@@ -704,8 +711,10 @@ async function startSession() {
       classId:      cls.id, className: cls.name,
       school:       cls.school, semester: cls.semester,
       totalStudents:cls.students,
+      isOneOff:     !!cls.isOneOff,
       startedAt:    firebase.firestore.FieldValue.serverTimestamp()
     });
+    tokenSetAt = startTs;
     showMsg('Session started — QR code is live.','ok');
   } catch(e) { showMsg('Error: '+e.message,'err'); }
 }
@@ -736,7 +745,8 @@ function genToken() {
 }
 async function rotateToken() {
   const t = genToken(); currentToken = t;
-  await db.collection('sessions').doc('current').update({token:t});
+  tokenSetAt = Date.now();
+  await db.collection('sessions').doc('current').update({token:t, tokenSetAt});
   document.getElementById('url-display').textContent = studentUrl();
   updateQR();
 }
@@ -748,7 +758,11 @@ function studentUrl() {
 // ── Countdown ──────────────────────────────────────────────────
 function startCd() { stopCd(); updateCd(); cdInterval=setInterval(()=>{updateCd();if(timeLeft()<=1)rotateToken();},1000); }
 function stopCd()  { if(cdInterval){clearInterval(cdInterval);cdInterval=null;} }
-function timeLeft(){ const ms=TOKEN_INTERVAL_SECONDS*1000; return Math.max(1,Math.ceil((ms-(Date.now()%ms))/1000)); }
+function timeLeft(){
+  if (tokenSetAt == null) return TOKEN_INTERVAL_SECONDS;
+  const elapsed = Math.floor((Date.now()-tokenSetAt)/1000);
+  return Math.max(1, TOKEN_INTERVAL_SECONDS - elapsed);
+}
 function updateCd() {
   const tl=timeLeft();
   const el=document.getElementById('countdown-display');
