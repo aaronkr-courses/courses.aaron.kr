@@ -292,7 +292,7 @@ body.dark {
           </div>
           <div class="card" style="margin-top:0">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-              <div class="card-label" style="margin-bottom:0">Attendance progress</div>
+              <div class="card-label" style="margin-bottom:0" id="att-progress-label">Attendance progress</div>
               <button class="btn-s" style="font-size:12px;padding:4px 10px" onclick="clearSessionStats()" 
                       title="Hide scans collected so far — does not delete data">✕ Clear display</button>
             </div>
@@ -818,6 +818,8 @@ function updateStats() {
   document.getElementById('att-pend-txt').textContent   = total>0?Math.max(0,total-subs)+' pending':'—';
   document.getElementById('att-rate').textContent       =
     logs.length>0?Math.round(subs/logs.length*100)+'% of scanners submitted':'—';
+  document.getElementById('att-progress-label').textContent =
+    selectedClass?.isOneOff ? 'Feedback progress' : 'Attendance progress';
   const wEl = document.getElementById('offcampus-warn');
   if (offCmp>0) {
     wEl.style.display='flex';

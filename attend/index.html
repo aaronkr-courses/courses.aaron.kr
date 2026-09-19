@@ -93,7 +93,7 @@ body.dark {
   <div class="topbar">
     <div class="topbar-l">
       <span style="font-size:20px">🎓</span>
-      <h2>Aaronkr Attendance</h2>
+      <h2 id="app-name">Aaronkr Attendance</h2>
     </div>
     <div class="topbar-r">
       <!-- INSERT before <span style="font-size:12px..." id="user-email"> -->
@@ -114,7 +114,7 @@ body.dark {
 <div class="card">
   <div class="hdr">
     <div class="icon">📋</div>
-    <h1>출석 체크인 · Attendance</h1>
+    <h1 id="main-heading">출석 체크인 · Attendance</h1>
     <p class="sub">QR 코드를 통해서만 접속 가능합니다<br>Only accessible via the classroom QR code</p>
     <div class="class-badge" id="class-badge" style="display:none"></div>
   </div>
@@ -126,7 +126,7 @@ body.dark {
   <div class="state" id="s-closed">
     <div class="closed-box">
       <div class="icon">🔒</div>
-      <h2>출석 세션이 열려있지 않습니다<br>Session not active</h2>
+      <h2>세션이 열려있지 않습니다<br>Session not active</h2>
       <p>교수님이 세션을 열 때까지 기다려 주세요.<br>Wait for your professor to open the session.</p>
     </div>
   </div>
@@ -172,7 +172,7 @@ body.dark {
   <div class="state" id="s-success">
     <div class="ok-box">
       <div class="icon">✅</div>
-      <h2>출석이 기록되었습니다<br>Attendance recorded!</h2>
+      <h2 id="success-heading">출석이 기록되었습니다<br>Attendance recorded!</h2>
       <p id="ok-detail">Please also complete the Google Form below.</p>
     </div>
   </div>
@@ -317,7 +317,10 @@ function show(state) {
 }
 
 // Conference/guest sessions don't count as attendance, so student ID is
-// dropped entirely and name becomes optional — a comment alone is enough.
+// dropped entirely, name becomes optional, and the whole page talks about
+// "feedback" instead of "attendance".
+function submitBtnLabel() { return isOneOff ? '피드백 제출 · Submit feedback' : '출석 제출 · Submit attendance'; }
+
 function applyOneOffMode() {
   if (!isOneOff) return;
   const idField = document.getElementById('f-id-field');
@@ -329,6 +332,12 @@ function applyOneOffMode() {
   document.getElementById('f-name').required = false;
   document.getElementById('f-name-label').innerHTML =
     '이름 (선택사항) · Full name <span style="font-size:11px;font-weight:400">(optional)</span>';
+
+  document.title = '피드백 · Feedback';
+  document.getElementById('app-name').textContent    = 'Aaronkr Feedback';
+  document.getElementById('main-heading').textContent = '피드백 · Feedback';
+  document.getElementById('submit-btn').textContent   = submitBtnLabel();
+  document.getElementById('success-heading').innerHTML = '피드백이 기록되었습니다<br>Feedback recorded!';
 }
 
 function startTimer() {
@@ -413,10 +422,10 @@ async function doSubmit(e) {
     document.getElementById('ok-detail').innerHTML =
       `<strong>${escHtml(name || '익명 · Anonymous')}</strong>${sid && !isOneOff ? ' ('+escHtml(sid)+')' : ''}<br>
        ${escHtml(sessionData.className || '')}<br><br>
-       출석이 완료되었습니다 · You're all done!`;
+       ${isOneOff ? '피드백이 접수되었습니다 · You\'re all done!' : '출석이 완료되었습니다 · You\'re all done!'}`;
     show('success');
   } catch(err) {
-    btn.disabled=false; btn.textContent='출석 제출 · Submit attendance';
+    btn.disabled=false; btn.textContent=submitBtnLabel();
     showErr('저장 실패 · Save error: '+err.message);
   }
 }
