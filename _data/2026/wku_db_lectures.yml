@@ -56,9 +56,9 @@
   supp:
   readings:
   hw: 
-  slides: 
+  slides: "https://docs.google.com/presentation/d/1QzaeXswwwKkHMNmqFPAX0y26-DM32MZvcsDtu0CAurE/edit?usp=sharing"
   slides2:
-  img: 2026/wku-db/
+  img: 2026/wku-db/4-sql.jpg
   logistics:
 
 - date: 9/30

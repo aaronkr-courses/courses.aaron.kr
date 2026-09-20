@@ -63,9 +63,10 @@
     <strong>Entropy</strong>
   supp:
   readings:
-  _slides: "https://docs.google.com/presentation/d/1nJZhh_2OGQdwBeYewASGnr087-go6pnkP98QC1IoXoQ/edit?usp=sharing"
-  _slides2: "https://docs.google.com/presentation/d/1lzYrjC7JivqDxQN0GmbEJ04xFz-VMC45aXJhH0Dt_SM/edit?usp=sharing"
-  _img: 2025/jbnu-info/4-entropy.jpg
+  slides: "https://docs.google.com/presentation/d/1nJZhh_2OGQdwBeYewASGnr087-go6pnkP98QC1IoXoQ/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1lzYrjC7JivqDxQN0GmbEJ04xFz-VMC45aXJhH0Dt_SM/edit?usp=sharing"
+  slides2_title: "How AI Works"
+  img: 2025/jbnu-info/4-entropy.jpg
   hw:
   logistics:
 

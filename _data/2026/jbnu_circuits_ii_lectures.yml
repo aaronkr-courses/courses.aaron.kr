@@ -62,9 +62,9 @@
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1yTW1ImXGjBLwgpinahKU70J_1qnF17nRym67EE0cJLI/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1yTW1ImXGjBLwgpinahKU70J_1qnF17nRym67EE0cJLI/edit?usp=sharing"
   _slides2:
-  _img2: 2025/jbnu-circuits-ii/4-sinusoid-ssa.jpg
+  img2: 2025/jbnu-circuits-ii/4-sinusoid-ssa.jpg
   _logistics: >
     <a href="https://www.khanacademy.org/join/XHUDCE3A">BONUS: Khan Academy Electrical Engineering Course</a>
 
