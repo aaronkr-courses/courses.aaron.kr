@@ -42,13 +42,17 @@
     </strong>
   supp:
   readings: p. 143-176, 177-226
-  hw: 
+  hw: "https://classroom50.org/aaronkr-2026-2/knut-2-am/assignments/3-classification/accept"
+  hw_label: "AM 오전 과제"
   hw2: 
+  hw2_label: "PM 오후 과제"
   slides: "https://docs.google.com/presentation/d/1PTBHY3TSIIe3jNy-gm0FtKuhyH67GuslhFyNj6Yp56c/edit?usp=sharing"
   slides2: "https://docs.google.com/presentation/d/1vJ25q7QR4IcVfUsokYegkMcz_yAqjFFY8D0RLbddG7s/edit?usp=sharing"
   slides2_title: "4장) 모델 훈련"
   img: 2024/ut-data/4-classification.jpg
-  logistics:
+  logistics: >
+    3장 어휘 <a href="https://drive.google.com/file/d/1zEvWguqSYaryYhpY5YLMADFRHtg5jgzw/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1GuqBzvBKOAH3D9Xy0YFr8hsZTODBrEzsPEK2TI7rCxg/edit?usp=sharing">XLSX</a><br>
+    4장 어휘 <a href="https://drive.google.com/file/d/1iMikE2SafXaMXcsjcsglQyGJUI2LKSSo/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1AW4XnIt-GZULEAZ0HVbimrcVsAA5vOGdyzc3WgPFzWo/edit?usp=sharing">XLSX</a>
 
 - date: 9/28
   week: 4
