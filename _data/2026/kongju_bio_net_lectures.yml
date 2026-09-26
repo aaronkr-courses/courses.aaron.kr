@@ -36,17 +36,25 @@
   logistics: >
     연구 프로젝트 소개 및 팀 구성
 
-- date: 9/25
+- date: <span style="color: red">9/25</a>
   week: 4
   title: >
-    <span style="color: red"><strong>No Class</strong> Chuseok!~</span>
+    <span style="color: red"><strong>Chuseok!~</strong> (LMS Video)</span><br>
+    10장) 보건의료정보 표준: 표준 개발 기구, 영역별 표준 현황
+  supp:
+  readings: 보건의료정보학 10장 (p.196-211)
+  hw:
+  slides: "https://docs.google.com/presentation/d/1w_ECv4Vn8BtAclcHR6YvmXJ1osz8RMidLWSiVCVN1RM/edit?usp=sharing"
+  slides2:
+  img: 2026/kongju-bio-net/4-standards.jpg
+  logistics: >
 
 - date: 10/2
   week: 5
   title: >
-    10장) 보건의료정보 표준: 표준 개발 기구, 영역별 표준 현황
+    11장) 보건의료 용어 표준: SNOMED CT, LOINC, KCD
   supp:
-  readings: 보건의료정보학 10장 (p.196-211)
+  readings: 보건의료정보학 11장 (p.216-237)
   hw:
   slides: 
   slides2:
@@ -61,14 +69,16 @@
 - date: 10/16
   week: 7
   title: >
-    11장) 보건의료 용어 표준: SNOMED CT, LOINC, KCD
+    12장) 상호운용성: 정의, 수준, 생태계 / HL7-FHIR 개념 도입
   supp:
-  readings: 보건의료정보학 11장 (p.216-237)
+  readings: >
+    보건의료정보학 12장 (p.242-251)<br>
+    Benson & Grieve 발췌
   hw:
   slides: 
   slides2:
   img: 2026/kongju-bio-net/
-  logistics: >
+  logistics: >   
 
 - date: 10/23
   week: 8
@@ -82,20 +92,6 @@
 - date: 10/30
   week: 9
   title: >
-    12장) 상호운용성: 정의, 수준, 생태계 / HL7-FHIR 개념 도입
-  supp:
-  readings: >
-    보건의료정보학 12장 (p.242-251)<br>
-    Benson & Grieve 발췌
-  hw:
-  slides: 
-  slides2:
-  img: 2026/kongju-bio-net/
-  logistics: >  
-
-- date: 11/6
-  week: 10
-  title: >
     23장) 의료영상정보학: DICOM, PACS, 영상 데이터 표준
   supp:
   readings: 보건의료정보학 23장 (p.476-496)
@@ -105,8 +101,8 @@
   img: 2026/kongju-bio-net/
   logistics: >
 
-- date: 11/13
-  week: 11
+- date: 11/6
+  week: 10
   title: >
     21장) 소비자건강정보학: 디지털 헬스, 웨어러블 기기
   supp:
@@ -118,9 +114,9 @@
   slides2:
   img: 2026/kongju-bio-net/
   logistics: >
-
-- date: 11/20
-  week: 12
+  
+- date: 11/13
+  week: 11
   title: >
     실습: ESP32 생체신호 센서 → MQTT → Node-RED 대시보드 구축
   supp:
@@ -132,8 +128,8 @@
   logistics: >
     프로젝트 리서치 및 개별 상담
 
-- date: 11/27
-  week: 13
+- date: 11/20
+  week: 12
   title: >
     19장) 원격의료: 개념, 서비스 유형, 팬데믹 이후 발전 방향
   supp:
@@ -144,8 +140,8 @@
   img: 2026/kongju-bio-net/
   logistics: >
 
-- date: 12/4
-  week: 14
+- date: 11/27
+  week: 13
   title: >
     9장) 정보보호와 보안: 개인정보보호, 보안기술, 비식별화
   supp:
@@ -156,8 +152,8 @@
   img: 2026/kongju-bio-net/
   logistics: >
 
-- date: 12/11
-  week: 15
+- date: 12/4
+  week: 14
   title: >
     24장) 보건의료정보학의 미래: 거대언어모델, 가상의료, 디지털헬스
   supp:
@@ -168,8 +164,8 @@
   img: 2026/kongju-bio-net/
   logistics: >
 
-- date: 12/12?
-  week: 16
+- date: 12/11
+  week: 15
   title: >
     Ch 13 사용성과 UX 또는 Ch 20 간호정보학
   supp:
@@ -179,7 +175,7 @@
   slides2:
   img: 2026/kongju-bio-net/
   logistics: >
-    프로젝트 작업 및 피드백
+    프로젝트 작업 및 피드백  
 
 - date: 12/18
   week: 17

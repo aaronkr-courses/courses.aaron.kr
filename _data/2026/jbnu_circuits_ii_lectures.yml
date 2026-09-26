@@ -63,7 +63,7 @@
   readings:
   hw:
   slides: "https://docs.google.com/presentation/d/1yTW1ImXGjBLwgpinahKU70J_1qnF17nRym67EE0cJLI/edit?usp=sharing"
-  _slides2:
+  slides2:
   img2: 2025/jbnu-circuits-ii/4-sinusoid-ssa.jpg
   _logistics: >
     <a href="https://www.khanacademy.org/join/XHUDCE3A">BONUS: Khan Academy Electrical Engineering Course</a>
@@ -81,9 +81,9 @@
   supp:
   readings:
   _hw2: "https://forms.gle/yPACnX2hgDAgJWtW9"
-  _slides: "https://doc_s.google.com/presentation/d/1yTW1ImXGjBLwgpinahKU70J_1qnF17nRym67EE0cJLI/edit?usp=sharing"
+  slides: "https://doc_s.google.com/presentation/d/1yTW1ImXGjBLwgpinahKU70J_1qnF17nRym67EE0cJLI/edit?usp=sharing"
   slides2:
-  _img2: 2025/jbnu-circuits-ii/4-sinusoid-ssa.jpg
+  img2: 2025/jbnu-circuits-ii/4-sinusoid-ssa.jpg
   _logistics: >
     Chp 10<br>
     Bring team computer Wednesday.

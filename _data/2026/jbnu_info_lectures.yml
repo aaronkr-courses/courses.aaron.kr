@@ -79,9 +79,10 @@
     - Stream Codes
   supp:
   readings:
-  _slides: "https://docs.google.com/presentation/d/1rqOkcXbjd2rDUNokM9ky0v5nq5Bmcmt81fxFPNic9ic/edit?usp=sharing"
-  _slides2: "https://docs.google.com/presentation/d/1p4RDEEcevlC_N9J6Cg3OSdjqKi2EKR6DuC8bUhkjnPE/edit?usp=sharing"
-  _img: 2025/jbnu-info/5-source-coding.jpg
+  slides: "https://docs.google.com/presentation/d/1rqOkcXbjd2rDUNokM9ky0v5nq5Bmcmt81fxFPNic9ic/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1p4RDEEcevlC_N9J6Cg3OSdjqKi2EKR6DuC8bUhkjnPE/edit?usp=sharing"
+  slides2_title: "Deep Learning Info Theory"
+  img: 2025/jbnu-info/5-source-coding.jpg
   hw: 
   logistics: "Run <code>huffman-coding.ipynb</code> and submit file with outputs."
 

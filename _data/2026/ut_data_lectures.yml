@@ -47,15 +47,32 @@
   hw2: "https://classroom50.org/aaronkr-2026-2/knut-1-pm/assignments/3-classification/accept"
   hw2_label: "PM 오후 과제"
   slides: "https://docs.google.com/presentation/d/1PTBHY3TSIIe3jNy-gm0FtKuhyH67GuslhFyNj6Yp56c/edit?usp=sharing"
-  slides2: "https://docs.google.com/presentation/d/1vJ25q7QR4IcVfUsokYegkMcz_yAqjFFY8D0RLbddG7s/edit?usp=sharing"
-  slides2_title: "4장) 모델 훈련"
   img: 2024/ut-data/4-classification.jpg
   logistics: >
-    3장 어휘 <a href="https://drive.google.com/file/d/1zEvWguqSYaryYhpY5YLMADFRHtg5jgzw/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1GuqBzvBKOAH3D9Xy0YFr8hsZTODBrEzsPEK2TI7rCxg/edit?usp=sharing">XLSX</a><br>
-    4장 어휘 <a href="https://drive.google.com/file/d/1iMikE2SafXaMXcsjcsglQyGJUI2LKSSo/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1AW4XnIt-GZULEAZ0HVbimrcVsAA5vOGdyzc3WgPFzWo/edit?usp=sharing">XLSX</a>
+    3장 어휘 <a href="https://drive.google.com/file/d/1zEvWguqSYaryYhpY5YLMADFRHtg5jgzw/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1GuqBzvBKOAH3D9Xy0YFr8hsZTODBrEzsPEK2TI7rCxg/edit?usp=sharing">XLSX</a>
 
 - date: 9/28
   week: 4
+  title: >
+    <strong>
+    4장) 모델 훈련
+    </strong>
+  supp:
+  readings: p. 177-226
+  hw: 
+  hw2: 
+  slides: "https://docs.google.com/presentation/d/1vJ25q7QR4IcVfUsokYegkMcz_yAqjFFY8D0RLbddG7s/edit?usp=sharing"
+  img: 2024/ut-data/6-model-training.jpg
+  logistics: >
+    4장 어휘 <a href="https://drive.google.com/file/d/1iMikE2SafXaMXcsjcsglQyGJUI2LKSSo/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1AW4XnIt-GZULEAZ0HVbimrcVsAA5vOGdyzc3WgPFzWo/edit?usp=sharing">XLSX</a>
+
+- date: 10/5
+  week: 5
+  title: >
+    <span style="color: red"><strong>No Class</strong> 대체휴일: Coming from Heaven Day</span>
+
+- date: 10/12
+  week: 6
   title: >
     <strong>5장) 서포트 벡터 머신<br>
     6장) 결정 트리</strong>
@@ -67,13 +84,8 @@
   img_: 2024/ut-data/7-3-models.jpg
   logistics:
 
-- date: 10/5
-  week: 5
-  title: >
-    <span style="color: red"><strong>No Class</strong> 대체휴일: Coming from Heaven Day</span>
-
-- date: 10/12
-  week: 6
+- date: 10/19
+  week: 7
   title: >
     <strong>7장) 앙상블 학습과 랜덤 포레스트<br>
     8장) 차원 축소</strong>
@@ -83,18 +95,6 @@
   hw2: 
   slides_: "https://docs.google.com/presentation/d/1goTW6RepqzHNa3JZDuP8KadDMNuO2ZpyvSvQAiHStxY/edit?usp=sharing"
   img_: 2024/ut-data/8-ensemble-dim.jpg
-
-- date: 10/19
-  week: 7
-  title: >
-    <strong>9장) 비지도 학습</strong>
-  supp:
-  readings: p. 324-365
-  hw: 
-  hw2: 
-  slides_: "https://docs.google.com/presentation/d/1EEZBzmrEN8VDDdUnZ2Tj9BdJOJXLTrCUWy7KlHWNXQY/edit?usp=sharing"
-  img_: 2024/ut-data/10-unsupervised.jpg
-  logistics:
 
 - date: 10/26
   week: 8
@@ -112,6 +112,18 @@
 - date: 11/2
   week: 9
   title: >
+    <strong>9장) 비지도 학습</strong>
+  supp:
+  readings: p. 324-365
+  hw: 
+  hw2: 
+  slides_: "https://docs.google.com/presentation/d/1EEZBzmrEN8VDDdUnZ2Tj9BdJOJXLTrCUWy7KlHWNXQY/edit?usp=sharing"
+  img_: 2024/ut-data/10-unsupervised.jpg
+  logistics:
+
+- date: 11/9
+  week: 10
+  title: >
     <strong>10장) 케라스를 사용한 인공 신경망 소개</strong>
   supp:
   readings: p. 370-433
@@ -121,8 +133,8 @@
   img_: 2024/ut-data/11-keras-nn.jpg
   logistics:
 
-- date: 11/9
-  week: 10
+- date: 11/16
+  week: 11
   title: >
     <strong>11장) 심층 신경망 훈련</strong>
   supp:
@@ -133,8 +145,8 @@
   img_: 2024/ut-data/12-cnn-training.jpg
   logistics:
 
-- date: 11/16
-  week: 11
+- date: 11/23
+  week: 12
   title: >
     <strong>12장) 텐서플로를 사용한 사용자 정의 모델과 훈련<br>
     13장) 텐서플로를 사용한 데이터 적재와 전처리</strong>
@@ -146,8 +158,8 @@
   img_: 2024/ut-data/13-tf-user-defined.jpg
   logistics:
 
-- date: 11/23
-  week: 12
+- date: 11/30
+  week: 13
   title: >
     <strong>14장) 합성곱 신경망을 사용한 컴퓨터 비전</strong>
   supp:
@@ -158,8 +170,8 @@
   img_: 2024/ut-data/14-cv.jpg
   logistics:
 
-- date: 11/30
-  week: 13
+- date: 12/7
+  week: 14
   title: >
     <strong>
     15장) RNN과 CNN을 사용한 시퀀스 처리<br>
@@ -173,8 +185,8 @@
   img_: 2024/ut-data/
   logistics:
 
-- date: 12/7
-  week: 14
+- date: 12/14
+  week: 15
   title: >
     <strong>
     17장) 오토인코더, GAN 그리고 확산 모델<br>
@@ -188,8 +200,8 @@
   img_: 2024/ut-data/14-cv.jpg
   logistics:
 
-- date: 12/14
-  week: 15
+- date: 12/21
+  week: 16
   title: >
     <strong>팀 프로젝트 발표</strong><br>
     <ul style="display: none">
@@ -212,11 +224,11 @@
       <li>19장) 대규모 텐서플로 모델 훈련과 배포</li>
     </ul>
 
-- date: 12/21
-  week: 16
-  title: >
-    <strong>Final Test</strong><br>
-    <div style="display: none;"><br>
-      <a href="">퀴즈 AM</a><br>
-      <a href="">퀴즈 PM</a>
-    </div>
+# - date: 12/21
+#   week: 16
+#   title: >
+#     <strong>Final Test</strong><br>
+#     <div style="display: none;"><br>
+#       <a href="">퀴즈 AM</a><br>
+#       <a href="">퀴즈 PM</a>
+#     </div>
