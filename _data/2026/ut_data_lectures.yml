@@ -36,10 +36,7 @@
 - date: 9/21
   week: 3
   title: >
-    <strong>
-    3장) 분류<br>
-    4장) 모델 훈련
-    </strong>
+    <strong>3장) 분류</strong>
   supp:
   readings: p. 143-176, 177-226
   hw: "https://classroom50.org/aaronkr-2026-2/knut-2-am/assignments/3-classification/accept"
