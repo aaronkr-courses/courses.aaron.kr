@@ -85,9 +85,9 @@
   supp:
   readings:
   hw: 
-  slides: 
+  slides: "https://docs.google.com/presentation/d/1WWQLoN7T0hPg8ZwW4__16ji7sue_XtVf3DPWPK1FmWM/edit?usp=sharing"
   slides2:
-  img: 2026/wku-db/
+  img: 2026/wku-db/6-crud.jpg
   logistics:
 
 - date: 10/14
