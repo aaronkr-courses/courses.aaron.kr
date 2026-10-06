@@ -3,7 +3,8 @@ const fs = require("fs");
 const orgs = [
   "aaronkr-classroom",
   "ut-nodejs",
-  "2023-aaronkr"
+  "2023-aaronkr",
+  "aaronkr-2026-2"
 ];
 
 function formatNumber(num) {
