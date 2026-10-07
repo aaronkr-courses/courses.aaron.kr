@@ -61,10 +61,10 @@
     Ch.3 Features, Scenarios and Stories
   supp:
   readings: Chp 3
-  hw:
-  slides: 
+  hw: 
+  slides: "https://docs.google.com/presentation/d/1Vv_LAtwsd-b5A4iIE13Q-fENG7PPXJuAe6Ur8dmeDhU/edit?usp=sharing"
   slides2:
-  img: 2026/cbnu-grad-soft-eng/
+  img: 2026/cbnu-grad-soft-eng/5-stories.jpg
   logistics: >
     Retrofit personas & user stories onto the MVP
 
