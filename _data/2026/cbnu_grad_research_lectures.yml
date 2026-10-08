@@ -4,6 +4,7 @@
   supp:
   readings: 
   hw: "https://github.com/aaronkr-2026-2/research-methods-course/discussions"
+  hw_label: "Discussions"
   slides: "https://docs.google.com/presentation/d/1LoaPdYRuN2OwBqldeamjKn6mUb4xBwaoX5k2Gw9Mohs/edit?usp=sharing"
   slides2:
   img: 2026/cbnu-grad-research/1-intro.jpg
@@ -16,6 +17,7 @@
   supp:
   readings:
   hw: "https://classroom50.org/aaronkr-2026-2/cbnu-research/assignments/research-files/accept"
+  hw_label: "GitHub Repo"
   slides: "https://docs.google.com/presentation/d/1KpG0-hS_89TjbaYUlw_nNGHpfnaCRDleiYcjHCM_IKw/edit?usp=sharing"
   slides2:
   img: 2026/cbnu-grad-research/2-topics.jpg
@@ -28,7 +30,7 @@
   supp:
   readings:
   hw: "https://github.com/aaronkr-2026-2/cbnu-research-research-files-jekkilekki/blob/main/hw/3-sources.md"
-  hw1_label: "Finding Sources - Upload to GitHub"
+  hw_label: "Finding Sources - Upload to GitHub"
   slides: "https://docs.google.com/presentation/d/1JBEn-vrzI3LML8FJlpIUFgD7zIDkEJuwL8e3het4bfM/edit?usp=sharing"
   slides2:
   img: 2026/cbnu-grad-research/3-sources.jpg
