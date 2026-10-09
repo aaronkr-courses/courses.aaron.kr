@@ -117,9 +117,9 @@
   supp:
   readings:
   _hw: "https://classroom.google.com/c/ODA0MjcwNTc3NDEx/a/ODE1ODkyMzE0ODMz/details"
-  _slides: "https://docs.google.com/presentation/d/1lEkpuQw6aPd-7C1HlNmmbWXwGpgVuDo3dnUTW8qlCTQ/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1lEkpuQw6aPd-7C1HlNmmbWXwGpgVuDo3dnUTW8qlCTQ/edit?usp=sharing"
   _slides2: "https://docs.google.com/presentation/d/1zSw6xTzT_-e1egdPLCmg5YFbwLQJXfdp910QppV4fBU/edit?usp=sharing"
-  _img: 2025/jbnu-circuits-ii/9-ac-power.jpg
+  img: 2025/jbnu-circuits-ii/9-ac-power.jpg
   logistics:
 
 - date: 10/20
