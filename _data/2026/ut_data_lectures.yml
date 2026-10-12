@@ -72,12 +72,13 @@
   week: 6
   title: >
     <strong>5장) 서포트 벡터 머신<br>
-    6장) 결정 트리</strong>
+    6장) 결정 트리</strong><br>
+    <a class="hw-link" style="display: none;" href="https://docs.google.com/presentation/d/1NO6_B8HVeR5WoJuTJXMgTgmhxURlt-uzPia3qDSeYsU/edit?usp=sharing">팀 프로젝트 설명 PPT</a>
   supp:
   readings: p. 177-296
   hw: "https://classroom50.org/aaronkr-2026-2/knut-2-am/assignments/4-svms-trees/accept"
   hw_label: "AM 오전 과제"
-  hw2: 
+  hw2: "https://classroom50.org/aaronkr-2026-2/knut-1-pm/assignments/4-svms-trees/accept"
   hw2_label: "PM 오후 과제"
   slides: "https://docs.google.com/presentation/d/1WunSoesW_wXc5nzeX2_VK1LQkraNDNL3dxGpKIFd6xw/edit?usp=sharing"
   img: 2024/ut-data/7-3-models.jpg
@@ -103,7 +104,6 @@
     <strong>Midterm Test</strong><br>
     <div style="display: none;">
       <a href="https://docs.google.com/spreadsheets/d/1nHiocAwXWG6uLGveyV1QqaXrRuLVGNkqZmT4gOHf0uw/edit?usp=sharing">핵심 개념 용어</a><br>
-      <a href="https://docs.google.com/presentation/d/1NO6_B8HVeR5WoJuTJXMgTgmhxURlt-uzPia3qDSeYsU/edit?usp=sharing">팀 프로젝트 설명 PPT</a><br>
       <div><br>
         [<a href="https://classroom.github.com/a/v0Ll672L">프로젝트 저장소 AM</a>]<br>
         [<a href="https://classroom.github.com/a/PFDbQZp_">프로젝트 저장소 PM</a>]
