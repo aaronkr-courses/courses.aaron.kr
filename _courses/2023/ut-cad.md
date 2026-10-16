@@ -5,6 +5,7 @@ title: Computer-Aided Diagnosis
 subtitle: 의료영상진단
 description: BIO030 • 2023년 2학기 • 교통대학교
 uni: ut
+topic: CS, BioMed
 img: assets/img/books/ai-for-healthcare.jpg
 importance: 6
 category: 2023
