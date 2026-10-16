@@ -78,6 +78,9 @@ layout: default
         {%- if section.sci -%}
         <a href="{{ section.sci }}" class="ql-btn syllabus" target="_blank" rel="noopener noreferrer">🔬 <span class="txt">Scientia</span></a>
         {%- endif -%}
+        {%- if section.dicoms -%}
+        <a href="{{ section.dicoms }}" class="ql-btn syllabus" target="_blank" rel="noopener noreferrer">🩻 <span class="txt">DICOM Viewer</span></a>
+        {%- endif -%}
       {%- if page.information.size > 1 -%}</div>{%- endif -%}
       {%- endfor -%}
     </div>
