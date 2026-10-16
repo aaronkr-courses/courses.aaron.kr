@@ -85,9 +85,10 @@
   supp:
   readings: 보건의료정보학 23장 (p.476-496)
   hw:
-  slides: 
-  slides2:
-  img: 2026/kongju-bio-net/
+  slides: "https://docs.google.com/presentation/d/1-CYEq-VtKOsxzDCL5i7cV7_TM8U0o89efLMzqgf_TZs/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1SfkpW5t11VP2V1xecIVo77lfhniez_wGf7mSzSQjE4k/edit?usp=sharing"
+  slides2_title: "이미지: Seeing inside"
+  img: 2026/kongju-bio-net/7-images.jpg
   logistics: >
 
 - date: 10/23
