@@ -124,7 +124,8 @@
   week: 8
   title: >
     <strong>Midterm Test</strong><br>
-    <a href="https://docs.google.com/presentation/d/1wqgA5ylGlZVApiVunBydzqdv3W7Ndgqi_BxwIUfyq_k/edit?usp=sharing">Study Guide</a>
+    <a style="display: none" href="https://docs.google.com/presentation/d/1wqgA5ylGlZVApiVunBydzqdv3W7Ndgqi_BxwIUfyq_k/edit?usp=sharing">Study Guide</a><br>
+    <a href="https://docs.google.com/presentation/d/1f9UdjGMlOjGWrjmEXj-uSbPOB35fWFZBlxc1RquDQR0/edit?usp=sharing">NEW Study Guide</a>
     <div style="display: none;">
       <a href="">Test</a><br>
     </div>
