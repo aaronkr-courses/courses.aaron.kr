@@ -104,9 +104,9 @@
   week: 8
   title: >
     <strong>Midterm Test</strong><br>
-    <div style="display: none;">
+    <div>
       <a href="https://docs.google.com/spreadsheets/d/1nHiocAwXWG6uLGveyV1QqaXrRuLVGNkqZmT4gOHf0uw/edit?usp=sharing">핵심 개념 용어</a><br>
-      <div><br>
+      <div style="display:none;"><br>
         [<a href="https://classroom.github.com/a/v0Ll672L">프로젝트 저장소 AM</a>]<br>
         [<a href="https://classroom.github.com/a/PFDbQZp_">프로젝트 저장소 PM</a>]
       </div>
