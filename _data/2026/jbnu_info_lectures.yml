@@ -152,9 +152,9 @@
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1Le-aGLXoYOzCUO-0EmGM8tA0ARks8b4AY1AXQ5vdWlY/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1Le-aGLXoYOzCUO-0EmGM8tA0ARks8b4AY1AXQ5vdWlY/edit?usp=sharing"
   _slides2:
-  _img: 2025/jbnu-info/9-cont-mi.jpg
+  img: 2025/jbnu-info/9-cont-mi.jpg
   logistics:
 
 - date: 11/4

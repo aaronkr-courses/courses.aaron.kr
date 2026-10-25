@@ -135,9 +135,9 @@
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1amfCscQHDUMPfttznKBRFGjBtBvE02aGQtncabxm7K4/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1amfCscQHDUMPfttznKBRFGjBtBvE02aGQtncabxm7K4/edit?usp=sharing"
   slides2:
-  _img: 2025/jbnu-circuits-ii/10-3-phase.jpg
+  img: 2025/jbnu-circuits-ii/10-3-phase.jpg
   logistics:
 
 - date: 11/3
