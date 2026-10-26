@@ -114,12 +114,9 @@
       <a class="hw-link" href="https://docs.google.com/document/d/1_HGoOgeKztlGsimvMTlwT7DrlEgTgXQumAuxYOLFScE/edit?usp=sharing">제안서 예시 2</a>
       <a class="hw-link" href="https://docs.google.com/document/d/1QicYkKAabiTAmGJuVvVESz950stfQ-WXFeeEkHgrumM/edit?usp=sharing">제안서 예시 3</a>
       <a class="hw-link" href="https://docs.google.com/document/d/1dEhn6xigCQiHq53bqZiAA4vrKqdRZcEoG_nkRfVaVo8/edit?usp=sharing">제안서 예시 4</a><br><br>
-      <a href="https://forms.gle/MAZfFAQApiCbvvbm7">AM 퀴즈</a><br><br>
+      <a style="display:none;" href="https://forms.gle/MAZfFAQApiCbvvbm7">AM 퀴즈</a><br>
+      <a href="https://forms.gle/8fvU51Kh5obXJm7w5">PM 퀴즈</a><br><br>
       <a href="https://forms.gle/j9cDVZUTuZYtCb1CA">팀 프로젝트 제안서 제출</a>
-      <div style="display:none;"><br>
-        [<a href="https://classroom.github.com/a/v0Ll672L">프로젝트 저장소 AM</a>]<br>
-        [<a href="https://classroom.github.com/a/PFDbQZp_">프로젝트 저장소 PM</a>]
-      </div>
     </div>
 
 - date: 11/2
@@ -132,7 +129,11 @@
   hw2: 
   slides_: "https://docs.google.com/presentation/d/1EEZBzmrEN8VDDdUnZ2Tj9BdJOJXLTrCUWy7KlHWNXQY/edit?usp=sharing"
   img_: 2024/ut-data/10-unsupervised.jpg
-  logistics:
+  logistics: >
+    <div style="display:none;"><br>
+      [<a href="https://classroom.github.com/a/v0Ll672L">프로젝트 저장소 AM</a>]<br>
+      [<a href="https://classroom.github.com/a/PFDbQZp_">프로젝트 저장소 PM</a>]
+    </div>
 
 - date: 11/9
   week: 10
