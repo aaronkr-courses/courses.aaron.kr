@@ -32,7 +32,8 @@
   readings: Chp 1
   hw: 
   slides: "https://docs.google.com/presentation/d/1ZIx4RcVZ315s4j_9zylTfuqQtfK9mQzv9xxMW0hxjuQ/edit?usp=sharing"
-  slides2:
+  slides2: "https://docs.google.com/presentation/d/1mMfmw9yo1JIpaLYW1cxiJzEgDarpQkRm/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.1 Software Products (Original)"
   img: 2026/cbnu-grad-soft-eng/3-soft-prod.jpg
   logistics: >
     Vibe-coded MVP due + product vision statement
@@ -50,7 +51,8 @@
   readings: Chp 2 (+ SWE@Google team-culture, optional)
   hw:
   slides: "https://docs.google.com/presentation/d/1Nd6Ymd3tg8HDT8pW90-f95cl0SfYcoLJz5qjECm3pc0/edit?usp=drive_link"
-  slides2:
+  slides2: "https://docs.google.com/presentation/d/1wDpFq9BeI_3rmhAXcX2NurQkrUmLwTty/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.2 Agile SWE (Original)"
   img: 2026/cbnu-grad-soft-eng/4-agile.jpg
   logistics: >
     Retrofit lightweight Scrum/Kanban
@@ -63,7 +65,8 @@
   readings: Chp 3
   hw: 
   slides: "https://docs.google.com/presentation/d/1Vv_LAtwsd-b5A4iIE13Q-fENG7PPXJuAe6Ur8dmeDhU/edit?usp=sharing"
-  slides2:
+  slides2: "https://docs.google.com/presentation/d/1US_4qKwsEZ6ZZ8I2k4M9UKpMTSefJLuo/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.3 Features, etc (Original)"
   img: 2026/cbnu-grad-soft-eng/5-stories.jpg
   logistics: >
     Retrofit personas & user stories onto the MVP
@@ -76,7 +79,8 @@
   readings: Chp 4
   hw:
   slides: "https://docs.google.com/presentation/d/1yhy9y3AKNvDY7vHRoIW1Ksbxkv-LkjUwWDiDT8ck_98/edit?usp=sharing"
-  slides2:
+  slides2: "https://docs.google.com/presentation/d/1s7aok8H53C99nUSr09A5F7ezI8ti_0Eg/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.4 Soft. Arch. (Original)"
   img: 2026/cbnu-grad-soft-eng/6-soft-arch.jpg
   logistics: >
     Architecture diagram + critique
@@ -98,9 +102,10 @@
   supp:
   readings: Chp 5
   hw:
-  slides: 
-  slides2:
-  img: 2026/cbnu-grad-soft-eng/
+  slides: "https://docs.google.com/presentation/d/1dPMTND_KaRaPdUVqpNcP_S61peXBFhjAGDHuh7PWI3c/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1O7KQ-iXZSWsCSxwp1HWrlFHb1f4YsgSD/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.5 Cloud-based (Original)"
+  img: 2026/cbnu-grad-soft-eng/9-cloud.jpg
   logistics: >
     Redeploy properly; midterm review
 
@@ -112,7 +117,8 @@
   readings: Chp 6
   hw:
   slides: 
-  slides2:
+  _slides2: "https://docs.google.com/presentation/d/1qaxgibA415OaRJwnP7xEHPWh4VMOdyWb/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  _slides2_title: "Ch.6 Microservices (Original)"
   img: 2026/cbnu-grad-soft-eng/
   logistics: >
     Apply only if it fits the project's scope — good critical-thinking angle on over-engineering
@@ -125,7 +131,8 @@
   readings: Chp 7
   hw:
   slides: 
-  slides2:
+  _slides2: "https://docs.google.com/presentation/d/1dbDdMgeSHwsezvrUpHj0VN-qCemOKEz3/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  _slides2_title: "Ch.7 Security (Original)"
   img: 2026/cbnu-grad-soft-eng/
   logistics: >
     Security audit
@@ -138,7 +145,8 @@
   readings: Chp 8 + SWE@Google Ch.8
   hw:
   slides: 
-  slides2:
+  _slides2: "https://docs.google.com/presentation/d/1k0C-gek2ioLf_y7QsFj6bVoHpdM3rtkV/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  _slides2_title: "Ch.8 Reliable Prog. (Original)"
   img: 2026/cbnu-grad-soft-eng/
   logistics: >
     Code style pass
@@ -151,7 +159,8 @@
   readings: Chp 9 + SWE@Google Ch.9
   hw:
   slides: 
-  slides2:
+  _slides2: "https://docs.google.com/presentation/d/1HF4bOZ-z9PrMyERqdnvPLYFgDaA2H_-y/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  _slides2_title: "Ch.9 Testing (Original)"
   img: 2026/cbnu-grad-soft-eng/
   logistics: >
     Real test suite + peer code review
@@ -164,7 +173,8 @@
   readings: Chp 10 + SWE@Google Ch.10
   hw:
   slides:
-  slides2:
+  _slides2: "https://docs.google.com/presentation/d/12XaxF0c8OOlitcSoPgNB56Tz3r721qL_/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  _slides2_title: "Ch.10 DevOps (Original)"
   img: 2026/cbnu-grad-soft-eng/
   logistics: >
     README, API docs, ADRs, CI setup
