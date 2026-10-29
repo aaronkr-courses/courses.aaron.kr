@@ -25,6 +25,7 @@ information:
     location: N5-305
     kakaotalk: https://open.kakao.com/o/gs1hWpLi
     github: https://classroom50.org/aaronkr-2026-2/cbnu-soft-eng/assignments/software-engineering-project/accept
+    "🔗 LIVE Link": https://forms.gle/eMZF76rrvZvqeBTQ6
 
 Main-Text:
   - text: "주교재"
