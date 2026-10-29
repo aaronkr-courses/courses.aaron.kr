@@ -25,7 +25,7 @@ information:
     location: 간호보건예술440
     kakaotalk: https://open.kakao.com/o/gjTOWpLi
     classroom: https://classroom.google.com/c/ODcyNDY2NDU4MDU2?cjc=7p7x4cbp
-    dicoms: https://www.docorbit.com/dicom-viewer/
+    "🩻 DICOM Viewer": https://www.docorbit.com/dicom-viewer/
 
 Main-Text:
   - text: "주교재"

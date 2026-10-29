@@ -551,6 +551,9 @@ information:
     time: 월 123 | Mon 9am-12pm
     location: W18동 214호
     kakaotalk: https://open.kakao.com/...
+    # Optional — any other key becomes a quick-link button (see "Quick-link buttons")
+    "💬 Discussions": https://github.com/.../discussions
+    slides: https://...                 # → "🔗 Slides"
 
 Main-Text:
   - text: "주교재"
@@ -567,6 +570,17 @@ Supplementary:
 
 [Markdown body = Overview/description content only]
 ```
+
+### Quick-link buttons (`information:` keys)
+
+The buttons at the top of each course page are built from each `information:` entry in `_layouts/course.html`.
+
+- **Reserved keys** (fixed meaning, same across all courses): `section`, `time`, `location`, `kakaotalk`, `classroom`, `github`. `section`/`time`/`location` fill the info strip; `kakaotalk`/`classroom`/`github` render their own styled buttons.
+- **Every other key becomes a bookmark button** — the key is the button text, the value is the `href`, in YAML order. No layout edit needed to add a new link.
+  - Each word's first letter is upcased (rest of the case preserved); `_` becomes a space: `lab_notes` → "Lab Notes", `"DICOM viewer"` → "DICOM Viewer".
+  - If the key's first word starts with an emoji/symbol, it's used as the icon (shown on mobile where the text is hidden): `"🔬 Scientia"`. Otherwise the icon defaults to 🔗.
+  - Quote keys that contain spaces, emoji, or symbols (`"</> Code": https://...`).
+  - Empty values are skipped. Don't add a new non-link field to `information:` — it would render as a button; put it elsewhere in front matter, or add it to the `_reserved` list in `course.html`.
 
 ## How to Add a New Semester
 

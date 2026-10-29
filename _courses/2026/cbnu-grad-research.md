@@ -25,9 +25,11 @@ information:
     location: N5-305
     kakaotalk: https://open.kakao.com/o/gPXSVpLi
     github: https://classroom50.org/aaronkr-2026-2/cbnu-research/assignments/research-files/accept
-    discussions: https://github.com/aaronkr-2026-2/research-methods-course/discussions
-    sci: https://sci.aaron.kr/
-    
+    "💬 Discussions": https://github.com/aaronkr-2026-2/research-methods-course/discussions
+    "🔬 Scientia": https://sci.aaron.kr/
+    "📝 IEEE Template": https://docs.google.com/document/d/17-BaNC1jGPIa5ENJyO5FYts_uMhe99Xk/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true
+    "📈 Synthesis XLS": https://docs.google.com/spreadsheets/d/1A7IoObsh7_ln-mFgHpAREJwDpMMftPrMBwMswKDCwmE/edit?usp=sharing
+
 Main-Text:
   - text: "주교재"
     author: "Booth, Wayne C. / Colomb, Gregory G. / Williams, Joseph M."

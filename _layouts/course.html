@@ -69,18 +69,34 @@ layout: default
         {%- if section.github -%}
         <a href="{{ section.github }}" class="ql-btn gh" target="_blank" rel="noopener noreferrer">💻 <span class="txt">GitHub Classroom</span></a>
         {%- endif -%}
-        {%- if section.code -%}
-        <a href="{{ section.code }}" class="ql-btn" target="_blank" rel="noopener noreferrer"></> <span class="txt">Code</span></a>
-        {%- endif -%}
-        {%- if section.discussions -%}
-        <a href="{{ section.discussions }}" class="ql-btn" target="_blank" rel="noopener noreferrer">💬 <span class="txt">Discussions</span></a>
-        {%- endif -%}
-        {%- if section.sci -%}
-        <a href="{{ section.sci }}" class="ql-btn syllabus" target="_blank" rel="noopener noreferrer">🔬 <span class="txt">Scientia</span></a>
-        {%- endif -%}
-        {%- if section.dicoms -%}
-        <a href="{{ section.dicoms }}" class="ql-btn syllabus" target="_blank" rel="noopener noreferrer">🩻 <span class="txt">DICOM Viewer</span></a>
-        {%- endif -%}
+        {%- comment -%}
+          Custom bookmark buttons: every key other than the reserved ones below
+          becomes a button (key = label, value = href), in YAML order.
+          A leading emoji/symbol word in the key becomes the icon (default 🔗);
+          underscores become spaces and each word's first letter is upcased.
+        {%- endcomment -%}
+        {%- assign _reserved = "section,time,location,kakaotalk,classroom,github" | split: "," -%}
+        {%- for _pair in section -%}
+          {%- assign _key = _pair[0] | append: "" -%}
+          {%- assign _href = _pair[1] -%}
+          {%- if _reserved contains _key or _href == blank -%}{%- continue -%}{%- endif -%}
+          {%- assign _words = _key | replace: "_", " " | split: " " -%}
+          {%- assign _c = _words.first | slice: 0 | downcase -%}
+          {%- if "abcdefghijklmnopqrstuvwxyz0123456789" contains _c -%}
+            {%- assign _icon = "🔗" -%}
+            {%- assign _start = 0 -%}
+          {%- else -%}
+            {%- assign _icon = _words.first -%}
+            {%- assign _start = 1 -%}
+          {%- endif -%}
+          {%- assign _label = "" -%}
+          {%- for _w in _words offset: _start -%}
+            {%- assign _first = _w | slice: 0 | upcase -%}
+            {%- assign _rest = _w | slice: 1, _w.size -%}
+            {%- assign _label = _label | append: " " | append: _first | append: _rest -%}
+          {%- endfor -%}
+        <a href="{{ _href }}" class="ql-btn" target="_blank" rel="noopener noreferrer">{{ _icon | escape }} <span class="txt">{{ _label | strip | escape }}</span></a>
+        {%- endfor -%}
       {%- if page.information.size > 1 -%}</div>{%- endif -%}
       {%- endfor -%}
     </div>
