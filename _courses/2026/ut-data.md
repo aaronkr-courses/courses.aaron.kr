@@ -24,6 +24,7 @@ information:
     time: 월 123 | Mon 9am-12pm
     location: W18-108호
     kakaotalk: https://open.kakao.com/o/gzMfNpLi
+    "팀 프로젝트 AM": https://classroom50.org/aaronkr-2026-2/knut-2-am/assignments/0-team-project/accept
 
   - section: 259124(1)
     time: 월 567 | Mon 1pm-4pm
