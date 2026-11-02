@@ -125,8 +125,10 @@
     <strong>9장) 비지도 학습</strong>
   supp:
   readings: p. 324-365
-  hw: 
-  hw2: 
+  hw: "https://classroom50.org/aaronkr-2026-2/knut-2-am/assignments/9-unsupervised/accept"
+  hw_label: "AM 오전 과제"
+  hw2: "https://classroom50.org/aaronkr-2026-2/knut-1-pm/assignments/9-unsupervised/accept"
+  hw2_label: "PM 오후 과제"
   slides: "https://docs.google.com/presentation/d/1EEZBzmrEN8VDDdUnZ2Tj9BdJOJXLTrCUWy7KlHWNXQY/edit?usp=sharing"
   img: 2024/ut-data/10-unsupervised.jpg
   logistics: >
