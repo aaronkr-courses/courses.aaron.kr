@@ -265,9 +265,12 @@ schedule:
   - uni: ut            # abbr from _data/universities.yml
     display_day: 1     # 1=Mon..5=Fri — the ONE day this uni's OH card/pill shows on
     days: [1]           # ALL days this uni meets; used only for the homepage's day label
+    lang: ko            # default site language that day + on this uni's course pages
   - uni: jbnu
-    display_day: 4      # JBNU's card sits under Thursday (HB already claims Wednesday)
-    days: [3, 4]         # but the homepage shows "Wednesday & Thursday" for it
+    display_day: 2
+    days: [2, 3]        # homepage shows "Tuesday & Wednesday" for it
+    lang: en
+    hours: { 3: [0, 13] }  # optional: on Wed, English only before 13:00 (WKU = Korean after)
 
 vacation:
   - start: "06-20"      # MM-DD, inclusive (start > end is fine for windows spanning New Year's)
@@ -283,6 +286,29 @@ vacation:
 - **When a break starts/ends**: add/update a `vacation:` entry. The date check runs client-side in the visitor's browser (not baked in at build time), so it stays accurate even if the site isn't rebuilt for weeks — see CLAUDE.md decision #30.
 - **When a university's display name/campus text changes**: edit that university's entry in `_data/universities.yml` (`name`, `name_ko`, `short_ko`, `campus`, `campus_en`, `logo`) — never the OH page directly.
 - Adding a new course does **not** require touching this file at all, unless the course also changes which day you're physically on a given campus.
+
+---
+
+## Display Defaults (theme, language, thumbnails, waves)
+
+Set in `_config.yml`:
+
+```yaml
+display_defaults:
+  theme: dark               # dark | light
+  thumbs: true              # course thumbnails on home + archive
+  waves: true               # animated hero waves
+  lang: ko                  # fallback language
+  lang_from_schedule: true  # use today's school `lang` from _data/office_hours.yml
+```
+
+How each setting is chosen on a visitor's computer:
+
+1. **Their own choice wins.** Clicking a toggle (🌙/☀️, 한국어/English, 🌊/〰, thumbnails) saves it in that browser's localStorage, and it sticks from then on. Nothing is saved until someone clicks.
+2. **Language only:** a course page opens in its school's language (`lang:` on that school's `schedule:` entry, or `course_lang: en|ko` in a course's front matter as an exception). Other pages use the language of the school taught *today* — Tue / Wed morning (JBNU) and Thu (CBNU) → English; Mon, Wed afternoon, Fri → Korean.
+3. Otherwise (weekends, vacation, nothing saved) → the `display_defaults` above.
+
+To reset a computer to the defaults, clear the site's data in the browser (or run `localStorage.clear()` in the dev-tools console). All logic lives in `_includes/prefs_js.html` — see CLAUDE.md decision #39.
 
 ---
 
@@ -324,7 +350,7 @@ The static `<a class="lab-note-row">` rows in `index.md`'s source are a **pre-JS
 | `_sass/_variables.scss` | All color & layout variables |
 | `_data/universities.yml` | **Single source of truth** for university logos, names, abbrs, campus names, and URLs |
 | `_data/office_hours.yml` | **Single source of truth** for the weekday→university teaching schedule + vacation windows (drives Office Hours page, Today Pill, homepage uni-groups) |
-| `_config.yml` | Site settings, course categories, GitHub/social handles |
+| `_config.yml` | Site settings, course categories, GitHub/social handles, `display_defaults` (theme/lang/thumbs/waves) |
 | `_data/nav.yml` | Nav links — edit here to add/remove nav items |
 | `_data/announcements.yml` | Homepage announcements strip |
 

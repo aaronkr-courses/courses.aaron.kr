@@ -2,15 +2,7 @@
 <html lang="{{ site.lang | default: 'en' }}" data-theme="dark">
 <head>
   {% include head.html %}
-  <script>
-  // Apply saved theme + language + waves state before first paint (prevents flash)
-  (function(){
-    var t = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', t);
-    if (localStorage.getItem('lang') === 'ko') document.documentElement.classList.add('ko');
-    if (localStorage.getItem('waves') !== 'on') document.documentElement.classList.add('waves-off');
-  })();
-  </script>
+  {% include prefs_js.html %}
 </head>
 <body>
   {% include nav.html %}
@@ -24,20 +16,22 @@
 
   <script>
   // ── Theme ──────────────────────────────────────────────────────────────────
-  function applyTheme(t) {
+  // Defaults come from _config.yml `display_defaults` via Prefs (_includes/prefs_js.html);
+  // localStorage is written only on an explicit click, so defaults aren't frozen on first visit.
+  function applyTheme(t, persist) {
     document.documentElement.setAttribute('data-theme', t);
     document.querySelectorAll('.theme-btn').forEach(b => b.textContent = t === 'dark' ? '🌙' : '☀️');
-    localStorage.setItem('theme', t);
+    if (persist) Prefs.save('theme', t);
   }
-  (() => applyTheme(localStorage.getItem('theme') || 'dark'))();
+  applyTheme(Prefs.theme());
   document.querySelectorAll('.theme-btn').forEach(b =>
     b.addEventListener('click', () => applyTheme(
-      document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+      document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true
     ))
   );
 
   // ── Language toggle ────────────────────────────────────────────────────────
-  function applyLang(lang) {
+  function applyLang(lang, persist) {
     document.documentElement.classList.toggle('ko', lang === 'ko');
     document.querySelectorAll('.lang-btn').forEach(x => x.textContent = lang === 'en' ? '한국어' : 'English');
     // Legacy data-en / data-ko attribute support
@@ -45,24 +39,24 @@
       if (lang === 'ko' && el.dataset.ko) el.textContent = el.dataset.ko;
       else el.textContent = el.dataset.en;
     });
-    localStorage.setItem('lang', lang);
+    if (persist) Prefs.save('lang', lang);
   }
-  let _lang = localStorage.getItem('lang') || 'en';
+  let _lang = Prefs.lang();
   applyLang(_lang);
   document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => {
     _lang = _lang === 'en' ? 'ko' : 'en';
-    applyLang(_lang);
+    applyLang(_lang, true);
   }));
 
   // ── Waves toggle ──────────────────────────────────────────────────────────
-  function applyWaves(on) {
+  function applyWaves(on, persist) {
     document.documentElement.classList.toggle('waves-off', !on);
     document.querySelectorAll('.wave-btn').forEach(b => b.textContent = on ? '🌊' : '〰');
-    localStorage.setItem('waves', on ? 'on' : 'off');
+    if (persist) Prefs.save('waves', on ? 'on' : 'off');
   }
-  (() => applyWaves(localStorage.getItem('waves') === 'on'))();
+  applyWaves(Prefs.waves());
   document.querySelectorAll('.wave-btn').forEach(b => b.addEventListener('click', () =>
-    applyWaves(document.documentElement.classList.contains('waves-off'))
+    applyWaves(document.documentElement.classList.contains('waves-off'), true)
   ));
 
   // ── Dropdowns (click only) ─────────────────────────────────────────────────

@@ -198,10 +198,10 @@ eyebrow: Teaching History
     });
   }
 
-  // Thumbnail toggle (persisted in localStorage)
+  // Thumbnail toggle (saved choice, else _config.yml display_defaults.thumbs)
   const archThumbToggle = document.getElementById('arch-thumb-toggle');
   if (archThumbToggle) {
-    if (localStorage.getItem('thumbs') === '1') {
+    if (Prefs.thumbs()) {
       main.classList.add('thumbs-active');
       archThumbToggle.classList.add('active');
       const _ic0 = archThumbToggle.querySelector('.t-icon');
@@ -212,7 +212,7 @@ eyebrow: Teaching History
       archThumbToggle.classList.toggle('active', a);
       const ic = archThumbToggle.querySelector('.t-icon');
       if (ic) ic.textContent = a ? '⊟' : '⊞';
-      localStorage.setItem('thumbs', a ? '1' : '0');
+      Prefs.save('thumbs', a ? '1' : '0');
     });
   }
 

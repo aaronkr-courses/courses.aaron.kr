@@ -372,7 +372,7 @@ TodayPill.updatePill();
 const _tt = document.getElementById('thumb-toggle');
 if (_tt) {
   const _sec = document.getElementById('thumb-section');
-  if (localStorage.getItem('thumbs') === '1') {
+  if (Prefs.thumbs()) {
     _sec.classList.add('thumbs-active');
     _tt.classList.add('active');
     _tt.setAttribute('aria-pressed', 'true');
@@ -385,7 +385,7 @@ if (_tt) {
     _tt.setAttribute('aria-pressed', a ? 'true' : 'false');
     const ic = _tt.querySelector('.t-icon');
     if (ic) ic.textContent = a ? '⊟' : '⊞';
-    localStorage.setItem('thumbs', a ? '1' : '0');
+    Prefs.save('thumbs', a ? '1' : '0');
   });
 }
 </script>

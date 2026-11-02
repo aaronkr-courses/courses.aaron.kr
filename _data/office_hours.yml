@@ -22,23 +22,35 @@
 #                  only for the homepage group header's day label (e.g. JBNU
 #                  shows "Wednesday & Thursday" even though its OH card/pill
 #                  only appears under Thursday).
+#   lang         — en | ko. Default site language on the days this university
+#                  meets, and on its course pages (see `display_defaults` in
+#                  _config.yml; a visitor's own saved toggle always wins).
+#   hours        — optional { weekday: [startHour, endHour) } narrowing `lang` on
+#                  a shared day. Entries are checked top-to-bottom, first match
+#                  wins (e.g. JBNU = English Wed before 13:00, then WKU = Korean).
 # ─────────────────────────────────────────────────────────────
 schedule:
   - uni: ut
     display_day: 1
     days: [1]
+    lang: ko
   - uni: jbnu
     display_day: 2
     days: [2, 3]
+    lang: en
+    hours: { 3: [0, 13] }   # Wed morning only — WKU takes Wed afternoon
   - uni: wku
     display_day: 3
     days: [3]
+    lang: ko
   - uni: cbnu
     display_day: 4
     days: [4]
+    lang: en
   - uni: kjnu
     display_day: 5
     days: [5]
+    lang: ko
   # - uni: hb
   #   display_day: 3
   #   days: [3]

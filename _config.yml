@@ -46,6 +46,21 @@ research_gate_profile: Aaron-Snowberger
 navbar_fixed: true
 
 # ─────────────────────────────────────────
+# Display defaults
+# Used only when the visitor has NOT clicked a toggle on that computer
+# (a click saves their own choice to localStorage, which always wins).
+# ─────────────────────────────────────────
+display_defaults:
+  theme: dark               # dark | light
+  thumbs: true              # course thumbnail images on home + archive
+  waves: true               # animated hero waves (home + office hours)
+  lang: ko                  # en | ko — fallback language
+  # Pick the language of the school taught today (`lang` on each entry in
+  # _data/office_hours.yml `schedule:`). Course pages always default to their
+  # own school's language. Weekends / vacation / no match → `lang` above.
+  lang_from_schedule: true
+
+# ─────────────────────────────────────────
 # Collections
 # ─────────────────────────────────────────
 collections:

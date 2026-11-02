@@ -19,7 +19,7 @@ grading:
 
 information:
   - section: 0000130650
-    time: 월 | Mon 2-5pm
+    time: 수 | Wed 9am-12pm
     location: 정보화 교육동 203
     kakaotalk: https://open.kakao.com/o/gm10UpLi
     classroom: https://classroom.google.com/c/ODY5MzIwMzI5OTY4?cjc=mjust257

@@ -1,0 +1,90 @@
+{%- comment -%}
+  Display preferences (theme / lang / waves / thumbs). Included in <head> by
+  _layouts/default.html so it runs before first paint. Exposes window.Prefs.
+
+  Resolution order for each setting:
+    1. The visitor's own saved choice in localStorage (written ONLY when they click a toggle)
+    2. Language only: the course page's language (page.course_lang, else the `lang` of the
+       course's uni in _data/office_hours.yml `schedule`)
+    3. Language only: the language of the school taught TODAY (`schedule` entry whose `days`
+       include today, optionally narrowed by `hours`), unless on vacation/weekend
+    4. _config.yml `display_defaults`
+  See CLAUDE.md decision #38.
+{%- endcomment -%}
+{%- assign _plang = page.course_lang -%}
+{%- if _plang == nil and page.collection == 'courses' and page.uni -%}
+  {%- assign _psched = site.data.office_hours.schedule | where: 'uni', page.uni | first -%}
+  {%- if _psched -%}{%- assign _plang = _psched.lang -%}{%- endif -%}
+{%- endif -%}
+<script>
+(function(g) {
+  var D = {{ site.display_defaults | jsonify }} || {};
+  var SCHED = {{ site.data.office_hours.schedule | jsonify }} || [];
+  var SESSIONS = {{ site.data.office_hours.sessions | jsonify }} || [];
+  var VACATION = {{ site.data.office_hours.vacation | jsonify }} || [];
+  var PAGE_LANG = {{ _plang | jsonify }};
+
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+
+  function saved(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function save(key, val) {
+    try { localStorage.setItem(key, val); } catch (e) {}
+  }
+
+  // Language of the school being taught right now, or null (weekend, vacation, no match).
+  function scheduleLang() {
+    var n = new Date(), day = n.getDay(), hr = n.getHours();
+    var iso = n.getFullYear() + '-' + pad2(n.getMonth() + 1) + '-' + pad2(n.getDate());
+    var mmdd = iso.slice(5);
+    for (var i = 0; i < SESSIONS.length; i++) {
+      var s = SESSIONS[i];
+      if (iso >= s.start && iso <= s.end) return s.lang || null;
+    }
+    for (var j = 0; j < VACATION.length; j++) {
+      var w = VACATION[j];
+      var inVac = w.start <= w.end ? (mmdd >= w.start && mmdd <= w.end)
+                                   : (mmdd >= w.start || mmdd <= w.end);
+      if (inVac) return null;
+    }
+    for (var k = 0; k < SCHED.length; k++) {
+      var e = SCHED[k];
+      if (!e.lang || !e.days || e.days.indexOf(day) < 0) continue;
+      var h = e.hours && e.hours[day];   // optional [startHour, endHour) for that weekday
+      if (h && (hr < h[0] || hr >= h[1])) continue;
+      return e.lang;
+    }
+    return null;
+  }
+
+  function defaultLang() {
+    if (PAGE_LANG) return PAGE_LANG;
+    if (D.lang_from_schedule !== false) {
+      var s = scheduleLang();
+      if (s) return s;
+    }
+    return D.lang || 'en';
+  }
+
+  function bool(key, on, fallback) {
+    var v = saved(key);
+    if (v !== null) return v === on;
+    return D[key] === undefined ? fallback : !!D[key];
+  }
+
+  g.Prefs = {
+    theme:  function() { return saved('theme') || D.theme || 'dark'; },
+    lang:   function() { return saved('lang') || defaultLang(); },
+    waves:  function() { return bool('waves', 'on', false); },
+    thumbs: function() { return bool('thumbs', '1', false); },
+    save:   save
+  };
+
+  // Apply before first paint (prevents flash of wrong theme / both languages)
+  var root = document.documentElement;
+  root.setAttribute('data-theme', g.Prefs.theme());
+  if (g.Prefs.lang() === 'ko') root.classList.add('ko');
+  if (!g.Prefs.waves()) root.classList.add('waves-off');
+})(window);
+</script>
