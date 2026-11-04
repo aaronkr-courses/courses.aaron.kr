@@ -154,10 +154,10 @@
   hw: 
   _slides: "https://docs.google.com/presentation/d/1amjSqpvLULjzbvBpUYQTCvOfq-aqHfLbDMDTizzjXaY/edit?usp=sharing"
   _img: 2025/jbnu-circuits/14-first-order.jpg
+  logistics:
 
 - date: 12/1
   week: 14
-   logistics:
   title: >
     <strong>Chp 8. Second-Order Circuits</strong>
   supp:

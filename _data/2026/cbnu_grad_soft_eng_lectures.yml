@@ -116,10 +116,10 @@
   supp:
   readings: Chp 6
   hw:
-  slides: 
-  _slides2: "https://docs.google.com/presentation/d/1qaxgibA415OaRJwnP7xEHPWh4VMOdyWb/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
-  _slides2_title: "Ch.6 Microservices (Original)"
-  img: 2026/cbnu-grad-soft-eng/
+  slides: "https://docs.google.com/presentation/d/1fOvbz5XtTVdriHHTpg9_HPa0MOAB3fA4QSCBwU90pPM/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1qaxgibA415OaRJwnP7xEHPWh4VMOdyWb/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.6 Microservices (Original)"
+  img: 2026/cbnu-grad-soft-eng/10-micro.jpg
   logistics: >
     Apply only if it fits the project's scope — good critical-thinking angle on over-engineering
 
