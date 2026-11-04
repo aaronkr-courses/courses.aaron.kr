@@ -104,7 +104,7 @@
 - date: 10/27
   week: 9
   title: >
-    <strong>Chp 4. Circuit Theorems</strong>
+    <strong>Chp 4. Circuit Theorems I</strong>
   supp:
   readings: p. 125-171
   hw: 
@@ -114,6 +114,17 @@
 
 - date: 11/3
   week: 10
+    title: >
+    <strong>Chp 4. Circuit Theorems II</strong>
+  supp:
+  readings: p. 125-171
+  hw: 
+  slides: "https://docs.google.com/presentation/d/1-inXDXOmnyMGSuMCToj63lDjvydTU-5SL-rl3ClKazA/edit?usp=sharing"
+  img: 2025/jbnu-circuits/11-c-theorems.jpg
+  logistics:
+  
+- date: 11/10
+  week: 11
   title: >
     <strong>Chp 5. Operational Amplifiers</strong>
   supp:
@@ -123,8 +134,8 @@
   img: 2025/jbnu-circuits/12-op-amps.jpg
   logistics:
 
-- date: 11/10
-  week: 11
+- date: 11/17
+  week: 12
   title: >
     <strong>Chp 6. Capacitors & Inductors</strong>
   supp:
@@ -134,8 +145,8 @@
   _img: 2025/jbnu-circuits/13-capacitors-inductors.jpg
   logistics:
 
-- date: 11/17
-  week: 12
+- date: 11/24
+  week: 13
   title: >
     <strong>Chp 7. First-Order Circuits</strong>
   supp:
@@ -143,10 +154,10 @@
   hw: 
   _slides: "https://docs.google.com/presentation/d/1amjSqpvLULjzbvBpUYQTCvOfq-aqHfLbDMDTizzjXaY/edit?usp=sharing"
   _img: 2025/jbnu-circuits/14-first-order.jpg
-  logistics:
 
-- date: 11/24
-  week: 13
+- date: 12/1
+  week: 14
+   logistics:
   title: >
     <strong>Chp 8. Second-Order Circuits</strong>
   supp:
@@ -156,9 +167,14 @@
   _img: 2025/jbnu-circuits/15-second-order.jpg
   logistics:
 
-- date: 12/1
-  week: 14
+- date: 12/8
+  week: 15
   title: >
+    <strong>Final Test</strong><br>
+    <div style="display:none;">
+      <a href="https://docs.google.com/presentation/d/1b1rAy5iCSO1If5ptMIG3z5lUf9WH8Tm6y4P0_CmV2x4/edit?usp=sharing">Final Study Guide</a>
+    </div>
+  _title: >
     <span style="color: red"><a href="https://lms.jbnu.ac.kr/">LMS Asynchronous Lecture</a></span><br>
     <strong>Review</strong>
   supp:
@@ -167,11 +183,3 @@
   _slides: "https://docs.google.com/presentation/d/1b1rAy5iCSO1If5ptMIG3z5lUf9WH8Tm6y4P0_CmV2x4/edit?usp=sharing"
   _img: 2025/jbnu-circuits/16-final-review.jpg
   logistics:
-
-- date: 12/8
-  week: 15
-  title: >
-    <strong>Final Test</strong><br>
-    <div style="display:none;">
-      <a href="https://docs.google.com/presentation/d/1b1rAy5iCSO1If5ptMIG3z5lUf9WH8Tm6y4P0_CmV2x4/edit?usp=sharing">Final Study Guide</a>
-    </div>
