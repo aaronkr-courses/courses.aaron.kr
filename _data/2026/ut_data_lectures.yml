@@ -145,8 +145,8 @@
   readings: p. 370-433
   hw: 
   hw2: 
-  slides_: "https://docs.google.com/presentation/d/1nHUbriVxg7J4NUSok7QhskrAmTJ-Mio_BZcO9DSj2bM/edit?usp=sharing"
-  img_: 2024/ut-data/11-keras-nn.jpg
+  slides: "https://docs.google.com/presentation/d/1nHUbriVxg7J4NUSok7QhskrAmTJ-Mio_BZcO9DSj2bM/edit?usp=sharing"
+  img: 2024/ut-data/11-keras-nn.jpg
   logistics:
 
 - date: 11/16
