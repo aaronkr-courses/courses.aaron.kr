@@ -2,7 +2,7 @@
   Course structured data — schema.org/Course
   Rendered inside <head> for every page using layout: course
 {%- endcomment -%}
-{%- assign _info = page.information | first -%}
+{%- assign _info = page.information | where_exp: "s", "s.links == nil" | first -%}
 {%- assign _provider_name = "Aaron Snowberger" -%}
 {%- for _u in site.data.universities -%}
   {%- if _u.abbr == page.uni -%}

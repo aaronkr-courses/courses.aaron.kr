@@ -576,12 +576,18 @@ Supplementary:
 
 The buttons at the top of each course page are built from each `information:` entry in `_layouts/course.html`.
 
-- **Reserved keys** (fixed meaning, same across all courses): `section`, `time`, `location`, `kakaotalk`, `classroom`, `github`. `section`/`time`/`location` fill the info strip; `kakaotalk`/`classroom`/`github` render their own styled buttons.
+- **Reserved keys** (fixed meaning, same across all courses): `section`, `links`, `time`, `location`, `kakaotalk`, `classroom`, `github`. `section`/`time`/`location` fill the info strip; `kakaotalk`/`classroom`/`github` render their own styled buttons.
 - **Every other key becomes a bookmark button** — the key is the button text, the value is the `href`, in YAML order. No layout edit needed to add a new link.
   - Each word's first letter is upcased (rest of the case preserved); `_` becomes a space: `lab_notes` → "Lab Notes", `"DICOM viewer"` → "DICOM Viewer".
   - If the key's first word starts with an emoji/symbol, it's used as the icon (shown on mobile where the text is hidden): `"🔬 Scientia"`. Otherwise the icon defaults to 🔗.
   - Quote keys that contain spaces, emoji, or symbols (`"</> Code": https://...`).
   - Empty values are skipped. Don't add a new non-link field to `information:` — it would render as a button; put it elsewhere in front matter, or add it to the `_reserved` list in `course.html`.
+- **Common / shared links** — an `information:` entry with a `links:` key (instead of `section:`) is NOT a course section: it gets no hero badge and no stats-strip column, and is excluded from `info` (first section) in `course.html`, `archive.md` and `seo_course_schema.html` (all filter with `where_exp: "s", "s.links == nil"`). Its buttons render as their own `.ql-group.common` after all section groups, labeled with the `links:` value. Example (`_courses/2026/ut-data.md`):
+  ```yaml
+  - links: EDA 템플릿
+    "📊 표 형식": https://drive.google.com/...
+  ```
+  Any course with a common group shows group labels even if it has only one section, so the shared links read as separate.
 
 ## How to Add a New Semester
 

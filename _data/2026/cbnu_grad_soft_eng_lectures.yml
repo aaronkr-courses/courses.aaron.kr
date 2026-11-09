@@ -5,6 +5,7 @@
   supp:
   readings: ESP Appendix + old 10th ed. for contrast
   hw: "https://drive.google.com/file/d/1RUTejcdw1wzTYTi_c-EhKWC3-FzNxKKq/view?usp=sharing"
+  hw_label: "Vibe-coded MVP Project Instructions"
   slides: "https://docs.google.com/presentation/d/1uSXAXXdTdfvp9WdtwvzS7Nru902A6vhSBbjRCpeg1oI/edit?usp=sharing"
   slides2:
   img: 2026/cbnu-grad-soft-eng/1-intro.jpg
@@ -18,6 +19,7 @@
   supp:
   readings: Online Git & GitHub guides
   hw: "https://classroom50.org/aaronkr-2026-2/cbnu-soft-eng/assignments/software-engineering-project/accept"
+  hw_label: "Classroom50 Assignment"
   slides: "https://docs.google.com/presentation/d/1A_MGryE5jj5IkRrNKQhq10hlWlIWnZrdY3Ggo3tcdqU/edit?usp=sharing"
   slides2:
   img: 2026/cbnu-grad-soft-eng/2-git.jpg

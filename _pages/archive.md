@@ -38,7 +38,7 @@ eyebrow: Teaching History
         <ul class="archive-list">
           {%- for course in cat_courses -%}
             {%- assign _uni = course.init | upcase -%}
-            {%- assign _info = course.information | first -%}
+            {%- assign _info = course.information | where_exp: "s", "s.links == nil" | first -%}
             {%- include topic_tag.html course=course -%}
             <li>
               <a class="archive-item{% if course.grad %} grad-item{% endif %}"
