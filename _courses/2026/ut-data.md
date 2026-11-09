@@ -32,6 +32,11 @@ information:
     kakaotalk: https://open.kakao.com/o/gu14NpLi
     "🧠 팀 프로젝트 PM": https://classroom50.org/aaronkr-2026-2/knut-1-pm/assignments/0-team-project/accept
 
+  - section: EDA 템플릿
+    "📊 표 형식": https://drive.google.com/file/d/1gyP2ziRAmCJWaUAkLY4kSXBWBOQS9C9e/view?usp=sharing
+    "⏱️ 시계열/순차 형식": https://drive.google.com/file/d/1LXjm5R_sHCDkDEzzHp5lXiLK62Slpd5R/view?usp=sharing
+    "🖼️ 이미지 형식": https://drive.google.com/file/d/1pZ5k7yQLFNZdAyyWZKmqnYEBXLAINq_m/view?usp=sharing
+
 Main-Text:
   - text: "주교재"
     author: "오렐리앙 제롱 저/박해선 역"
