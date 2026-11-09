@@ -1,0 +1,102 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 8/17
+  title: "Typing Master Pro (touch typing)"
+  readings: "Lessons 1–4"
+  exam: false
+
+- date: 8/24
+  title: "Typing Master Pro (touch typing)"
+  readings: "Lessons 5–9"
+  exam: false
+
+- date: 8/31
+  title: "Typing + Computer basics"
+  readings: "Lessons 10–12 · GCF Computer Basics: computers, OS, applications, the cloud, parts, ports, laptops, mobile, safety & maintenance"
+  logistics: "Graded: TMP results · Computer worksheet"
+  exam: false
+
+- date: 9/7
+  title: "Basic computer skills"
+  readings: "GCF: Basic computer skills · Windows basics · Internet 101 & tips · Internet safety · IE, Firefox & Chrome"
+  logistics: "Graded: Worksheet"
+  exam: false
+
+- date: 9/14
+  title: "Google Drive essential training"
+  readings: "Overview, files, organization · Docs, Presentations, Spreadsheets · Forms & Drawings · collaboration"
+  logistics: "Graded: Drive worksheet"
+  exam: false
+
+- date: 9/21
+  title: "Google Docs & Sheets + a mobile office"
+  readings: "Essential Docs & Sheets · personal vs. school accounts · mobile use · security"
+  logistics: "Graded: Worksheet"
+  exam: false
+
+- date: 9/28
+  title: "Google Cloud & Google Calendar"
+  readings: "Cloud, mobile & web apps · storage · Calendar events, invitations, sharing"
+  logistics: "Graded: Google Cloud quiz"
+  exam: false
+
+- date: 10/5
+  title: "Gmail & Google Search"
+  readings: "Gmail overview · searching & filtering · Gmail Labs · Search basics"
+  logistics: "Graded: Google Search scavenger hunt"
+  exam: false
+
+- date: 10/12
+  title: "Midterm"
+  logistics: "School trip 10/16"
+  exam: true
+
+- date: 10/19
+  title: "Google Calendar & Maps"
+  readings: "Calendar intro & advanced · Maps intro · fun with Google Maps"
+  logistics: "Graded: Calendar"
+  exam: false
+
+- date: 10/26
+  title: "Google Docs"
+  readings: "Docs, Sheets, Slides, Drawings & Forms overview"
+  logistics: "Graded: Resume"
+  exam: false
+
+- date: 11/2
+  title: "Writing research papers"
+  readings: "Research paper · styling · APA style & bibliography"
+  logistics: "Graded: Research paper"
+  exam: false
+
+- date: 11/9
+  title: "Google Sheets"
+  readings: "Sheets overview · making a calendar & a schedule · styling"
+  logistics: "Graded: Make a calendar"
+  exam: false
+
+- date: 11/16
+  title: "Statistics, charts & graphs"
+  readings: "Charts & graphs · basic & advanced formulas · making a budget"
+  logistics: "Graded: Life budget · College budget"
+  exam: false
+
+- date: 11/23
+  title: "Google Slides"
+  readings: "Drawings, video & art · templates · transitions & animations · button links"
+  exam: false
+
+- date: 11/30
+  title: "Principles of public speaking"
+  readings: "Good PPT design · public speaking · research-paper presentation"
+  logistics: "Graded: Deliver your speech"
+  exam: false
+
+- date: 12/7
+  title: "PPT games"
+  readings: "Research presentations II · PPT game design principles · design & present"
+  logistics: "Graded: PPT game · Fine Arts Recital 12/11"
+  exam: false
+
+- date: 12/14
+  title: "Final Test"
+  exam: true

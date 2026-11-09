@@ -1,0 +1,88 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/22
+  title: "Intro to design & Canva"
+  logistics: "Graded: Social media designs"
+  exam: false
+
+- date: 2/29
+  title: "Fonts & color"
+  logistics: "Graded: Font-pairing exercise · Color-palette exercise"
+  exam: false
+
+- date: 3/7
+  title: "Images & backgrounds"
+  logistics: "Graded: Images folder · Copyright worksheet"
+  exam: false
+
+- date: 3/14
+  title: "Shapes, icons & layout"
+  logistics: "Graded: Brochure sketching"
+  exam: false
+
+- date: 3/21
+  title: "Design in MS Word"
+  logistics: "Graded: Brochure 1 in MS Word"
+  exam: false
+
+- date: 3/28
+  title: "Design in MS Publisher"
+  logistics: "Graded: Brochure 2 in MS Publisher"
+  exam: false
+
+- date: 4/4
+  title: "Design in InDesign I"
+  logistics: "Graded: Brochure 3 in InDesign"
+  exam: false
+
+- date: 4/11
+  title: "Design in InDesign II"
+  logistics: "Graded: Brochure 4 in InDesign (new)"
+  exam: false
+
+- date: 4/18
+  title: "Midterm"
+  exam: true
+
+- date: 4/25
+  title: "Branding"
+  logistics: "Graded: Rebrand something"
+  exam: false
+
+- date: 5/2
+  title: "Advanced design in action"
+  logistics: "Graded: Presentation"
+  exam: false
+
+- date: 5/9
+  title: "WordPress I"
+  logistics: "Graded: Create a blog & fill it"
+  exam: false
+
+- date: 5/16
+  title: "WordPress II"
+  logistics: "Graded: Online magazine"
+  exam: false
+
+- date: 5/23
+  title: "Yearbook + newsletter I"
+  logistics: "Graded: Newsletter I (past)"
+  exam: false
+
+- date: 5/30
+  title: "Yearbook + newsletter II"
+  logistics: "Graded: Newsletter II (new)"
+  exam: false
+
+- date: 6/6
+  title: "Yearbook + newsletter III"
+  logistics: "Graded: Newsletter III (present)"
+  exam: false
+
+- date: 6/13
+  title: "Yearbook + newsletter IV"
+  logistics: "Graded: Newsletter IV (future)"
+  exam: false
+
+- date: 6/20
+  title: "Final Test + final yearbook"
+  exam: true

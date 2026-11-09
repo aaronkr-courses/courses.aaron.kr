@@ -4,8 +4,8 @@
   is set, in which case it overrides auto-detection — and may list more than one topic
   as a comma-separated string (e.g. `topic: Systems, BioMed`) to tag a course with
   several. Each value accepts either the internal filter key (ai-tag, data, web,
-  theory, systems, ee, biomed) or the human-readable label (AI/ML, Data, Web,
-  Programming, Systems, EE, BioMed) — matched case- and punctuation-insensitively,
+  theory, systems, ee, biomed, design, gened) or the human-readable label (AI/ML, Data,
+  Web, Programming, Systems, EE, BioMed, Design, General Ed.) — matched case- and punctuation-insensitively,
   since that's what most people will naturally type.
 
   Usage: {% include topic_tag.html course=c %}
@@ -57,6 +57,8 @@
       {%- when 'systems' -%}{%- assign _one_tc = 'systems' -%}{%- assign _one_tl = 'Systems' -%}
       {%- when 'ee' -%}{%- assign _one_tc = 'ee' -%}{%- assign _one_tl = 'EE' -%}
       {%- when 'biomed' or 'biomedical' -%}{%- assign _one_tc = 'biomed' -%}{%- assign _one_tl = 'BioMed' -%}
+      {%- when 'design' -%}{%- assign _one_tc = 'design' -%}{%- assign _one_tl = 'Design' -%}
+      {%- when 'gened' or 'generaled' or 'general' -%}{%- assign _one_tc = 'gened' -%}{%- assign _one_tl = 'General Ed.' -%}
       {%- else -%}{%- assign _one_tc = _raw | strip -%}{%- assign _one_tl = _raw | strip -%}
     {%- endcase -%}
     {%- assign _tc_join = _tc_join | append: _one_tc | append: ',' -%}

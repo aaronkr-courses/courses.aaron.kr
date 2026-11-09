@@ -1,0 +1,99 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 8/19
+  title: "Typing — Step 1"
+  readings: "Typing Master Pro lessons 1–5"
+  exam: false
+
+- date: 8/26
+  title: "Typing — Step 2"
+  readings: "Typing Master Pro lessons 6–10"
+  exam: false
+
+- date: 9/2
+  title: "Typing — Step 3 + WordPress blogs"
+  readings: "Lessons 11–12 · setup, optimizing, security, customizing"
+  logistics: "Project: Initial blog setup"
+  exam: false
+
+- date: 9/9
+  title: "MS Word — Beautiful reports"
+  readings: "Reports, essays, forms"
+  logistics: "Project: A beautiful report or form for another class"
+  exam: false
+
+- date: 9/16
+  title: "MS Word — Resumes & cover letters"
+  logistics: "Project: Your resume · Chuseok (9/18–20)"
+  exam: false
+
+- date: 9/23
+  title: "MS Excel — Business cashflow"
+  readings: "SUM and PRODUCT functions — setting up a business"
+  logistics: "Project: Cashflow spreadsheet for a business"
+  exam: false
+
+- date: 9/30
+  title: "MS Excel — Personal budgeting"
+  readings: "Advanced functions — creating a budget"
+  logistics: "Project: Personal budget"
+  exam: false
+
+- date: 10/7
+  title: "MS Excel — Gradebooks & trackers"
+  readings: "More advanced functions — a grade-tracking gradebook"
+  logistics: "Project: Personal grade tracker"
+  exam: false
+
+- date: 10/14
+  title: "Google Docs"
+  exam: false
+
+- date: 10/21
+  title: "Midterm Exams"
+  exam: true
+
+- date: 10/28
+  title: "MS PowerPoint — Self-intro speeches"
+  readings: "Going over the basics"
+  logistics: "Project: Personal PPT, part 1"
+  exam: false
+
+- date: 11/4
+  title: "MS PowerPoint — Self-intro 2.0"
+  readings: "Beautiful, functional, impressive — consistent design, multimedia"
+  logistics: "Project: Personal PPT 2.0"
+  exam: false
+
+- date: 11/11
+  title: "MS PowerPoint — PowerPoint games"
+  readings: "Buttons, GIFs, sounds, and transitions"
+  logistics: "Project: An educational game"
+  exam: false
+
+- date: 11/18
+  title: "MS Publisher — Postcards"
+  readings: "Going over the basics"
+  logistics: "Project: Designing a postcard"
+  exam: false
+
+- date: 11/25
+  title: "MS Publisher — Calendars"
+  readings: "Getting more complex"
+  logistics: "Project: Designing a calendar"
+  exam: false
+
+- date: 12/2
+  title: "MS Publisher — Newspapers & magazines"
+  readings: "Going all out"
+  logistics: "Project: Designing a newsletter or newspaper"
+  exam: false
+
+- date: 12/9
+  title: "WordPress — Portfolios"
+  readings: "What makes a good portfolio · finalize"
+  logistics: "Project: The finished portfolio collecting ALL semester projects"
+  exam: false
+
+- date: 12/16
+  title: "Final Exams"
+  exam: true

@@ -1,0 +1,98 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/19
+  week_no: 1
+  title: "Digital Compass"
+  logistics: "No school 2/19"
+  exam: false
+
+- date: 2/26
+  week_no: 2
+  title: "Digital Compass"
+  logistics: "No school 3/1"
+  exam: false
+
+- date: 3/5
+  week_no: 3
+  title: "Digital Compass<br>Digital Citizenship Surveys 1 & 2<br>Lynda.com Digital Citizenship"
+  exam: false
+
+- date: 3/12
+  week_no: 4
+  title: "CSM - Digital Life 102<br>CSM - Oops! I Broadcast it on the Internet<br>CSM - Copyrights & Wrongs<br>CSM - Feelings on Display<br>CSM - Turn Down the Dial on Cyberbullying"
+  exam: false
+
+- date: 3/19
+  week_no: 5
+  title: "Digital Bytes<br>Unit 1 Assessment"
+  exam: false
+
+- date: 3/26
+  week_no: 6
+  title: "CSM - My Online Code<br>CSM - Who are you online?<br>CSM - Building Community Online<br>CSM - Overexposed: Sexting and Relationships<br>CSM - Risky Online Relationships"
+  exam: false
+
+- date: 4/2
+  week_no: 7
+  title: "Digital Bytes<br>Unit 2 Assessment"
+  exam: false
+
+- date: 4/9
+  week_no: 8
+  title: "CSM - Rights, Remixes, and Respect<br>CSM - Taking Perspectives on Cyberbullying<br>CSM - What's the Big deal about Internet Privacy?<br>CSM - Becoming a Web Celeb<br>CSM - College Bound"
+  exam: false
+
+- date: 4/16
+  week_no: 9
+  title: "Digital Bytes<br>Unit 3 Assessment"
+  exam: false
+
+- date: 4/23
+  week_no: 10
+  title: "CSM - Private Today, Public Tomorrow<br>CSM - Does it matter who has your data?<br>CSM - Breaking Down Hate Speech<br>CSM - Retouching Reality"
+  exam: false
+
+- date: 4/30
+  week_no: 11
+  title: "CSM - Collective Intelligence<br>Digital Bytes<br>Unit 4 Assessment"
+  logistics: "No school 5/4"
+  exam: false
+
+- date: 5/7
+  week_no: 12
+  title: "CSM (6-8) Strategic Searching<br>CSM (6-8) - Scams and Schemes<br>CSM (6-8) - Cyberbullying: Be upstanding<br>CSM (6-8) - A Creator's Rights"
+  logistics: "No school 5/7"
+  exam: false
+
+- date: 5/14
+  week_no: 13
+  title: "Digital Bytes<br>Unit 1 (6-8) Assessment"
+  logistics: "No school 5/18"
+  exam: false
+
+- date: 5/21
+  week_no: 14
+  title: "CSM (6-8) - My Media<br>CSM (6-8) - A Creator's Responsibilities<br>CSM (6-8) - Safe Online Talk<br>CSM (6-8) - Which Me should I be?"
+  logistics: "No school 5/22"
+  exam: false
+
+- date: 5/28
+  week_no: 15
+  title: "CSM (6-8) - Gender Stereotypes Online<br>Digital Bytes<br>Unit 2 (6-8) Assessment"
+  exam: false
+
+- date: 6/4
+  week_no: 16
+  title: "CSM (6-8) - Trillion Dollar Footprint<br>CSM (6-8) - Identifying High-quality sites<br>CSM (6-8) - The Reality of Digital Drama<br>CSM (6-8) - Cyberbullying: Crossing the Line"
+  logistics: "No school 6/6"
+  exam: false
+
+- date: 6/11
+  week_no: 17
+  title: "CSM (6-8) - Rework, Reuse, Remix<br>Digital Bytes<br>Unit 3 (6-8) Assessment"
+  exam: false
+
+- date: 6/18
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam T 6/19, 1:00-3:00; No school 6/22"
+  exam: true

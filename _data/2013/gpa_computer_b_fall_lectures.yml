@@ -1,0 +1,82 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 8/19
+  title: "HTML5 fundamentals"
+  readings: "Basic codes · first website"
+  exam: false
+
+- date: 8/26
+  title: "HTML5 first websites"
+  readings: "Syntax · comments · character codes · tables · attributes"
+  exam: false
+
+- date: 9/2
+  title: "CSS3: inline and header styles"
+  readings: "Styling the first website"
+  exam: false
+
+- date: 9/9
+  title: "CSS3: styling in a separate file"
+  readings: "External stylesheets"
+  exam: false
+
+- date: 9/16
+  title: "CSS3: layouts, grids & responsive design"
+  readings: "Website structures"
+  logistics: "Chuseok (9/18–20)"
+  exam: false
+
+- date: 9/23
+  title: "HTML5: building a second website"
+  exam: false
+
+- date: 9/30
+  title: "CSS3: styling the second website"
+  exam: false
+
+- date: 10/7
+  title: "HTML5: building a third website"
+  exam: false
+
+- date: 10/14
+  title: "CSS3: styling the third website"
+  exam: false
+
+- date: 10/21
+  title: "Midterm Exams"
+  exam: true
+
+- date: 10/28
+  title: "JavaScript: intro to object-oriented programming"
+  exam: false
+
+- date: 11/4
+  title: "JavaScript: building a first widget"
+  exam: false
+
+- date: 11/11
+  title: "JavaScript: building a first plugin"
+  exam: false
+
+- date: 11/18
+  title: "JavaScript: building a website game"
+  exam: false
+
+- date: 11/25
+  title: "Your website — HTML"
+  logistics: "Final project: Create YOUR site"
+  exam: false
+
+- date: 12/2
+  title: "Your website — CSS"
+  logistics: "Final project: Create YOUR site"
+  exam: false
+
+- date: 12/9
+  title: "Your website — JavaScript"
+  logistics: "Final project: Create YOUR site"
+  exam: false
+
+- date: 12/16
+  title: "Final Exams"
+  logistics: "HTML structure (45 pts) · CSS styling (25) · JavaScript survey script (20) · Alice3 \"Merry Christmas\" animation (10 + bonus)"
+  exam: true

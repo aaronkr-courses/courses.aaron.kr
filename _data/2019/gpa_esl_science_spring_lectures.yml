@@ -1,0 +1,96 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/18
+  week_no: 1
+  title: "Intro<br>Video Lesson: 10 Famous scientists / inventors<br>1-1 Dinosaurs Vocab / Video / Reading<br>1-1 Reading / Activities<br>1-1 Review"
+  exam: false
+
+- date: 2/25
+  week_no: 2
+  title: "2-1 Global Warming Vocab / Video / Reading<br>2-1 Reading / Activities<br>3-1 Stem Cells Vocab / Video / Reading<br>3-1 Reading / Activities"
+  logistics: "No school 3/1"
+  exam: false
+
+- date: 3/4
+  week_no: 3
+  title: "4-1 Killer Bees<br>4-1 Reading / Activities<br>5-1 Alzheimer's Disease<br>5-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 3/11
+  week_no: 4
+  title: "6-1 Dentistry<br>6-1 Reading / Activities<br>7-1 Internet<br>7-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 3/18
+  week_no: 5
+  title: "8-1 2003 UB313 (or other)<br>8-1 Reading / Activities<br>9-1 Acupuncture<br>9-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 3/25
+  week_no: 6
+  title: "10-1 Earthquakes<br>10-1 Reading / Activities<br>11-1 Identical Twins<br>11-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 4/1
+  week_no: 7
+  title: "12-1 Lasers<br>12-1 Reading / Activities<br>13-1 Astrology<br>13-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 4/8
+  week_no: 8
+  title: "14-1 Xerography<br>14-1 Reading / Activities<br>15-1 Carnivorous Plants<br>15-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 4/15
+  week_no: 9
+  title: "16-1 Automation<br>16-1 Reading / Activities<br>17-1 Lunar Landing<br>17-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 4/22
+  week_no: 10
+  title: "18-1 DNA<br>18-1 Reading / Activities<br>19-1 Sports Medicine<br>19-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 4/29
+  week_no: 11
+  title: "20-1 Hubble Space Telescope<br>20-1 Reading / Activities<br>21-1 Genetic Engineering<br>21-1 Reading / Activities"
+  logistics: "No school 5/3 (JJU Bday)"
+  exam: false
+
+- date: 5/6
+  week_no: 12
+  title: "22-1 Endangered Species<br>22-1 Reading / Activities<br>Review"
+  logistics: "No school 5/6 (Children's Day)"
+  exam: false
+
+- date: 5/13
+  week_no: 13
+  title: "23-1 Hydroponics<br>23-1 Reading / Activities<br>Review"
+  logistics: "No school 5/13 (Buddha's Bday)"
+  exam: false
+
+- date: 5/20
+  week_no: 14
+  title: "24-1 Satellites<br>24-1 Reading / Activities<br>25-1 Rain forests<br>25-1 Reading / Activities<br>Review"
+  exam: false
+
+- date: 5/27
+  week_no: 15
+  title: "Final Project"
+  exam: false
+
+- date: 6/3
+  week_no: 16
+  title: "Final Project"
+  logistics: "No school 6/6 (Memorial Day)"
+  exam: false
+
+- date: 6/10
+  week_no: 17
+  title: "Final Project"
+  exam: false
+
+- date: 6/17
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam T 6/18, 9:30-11:30; No school 6/21 (GPA Ends)"
+  exam: true

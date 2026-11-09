@@ -6,7 +6,7 @@
     - Legacy flat key:   "2026_hb_cpp_lectures" → site.data["2026_hb_cpp_lectures"]
   Columns: date | slide thumb + slides2 link | week/day + title + readings | logistics + hw
   Test / no-class rows: colspan="3" across the last three columns.
-  YAML fields: date, title, title_ko, week, img, img2, slides, slides2, slides2_title,
+  YAML fields: date, title, title_ko, week, img, img2, slides, slides2, slides2_title, exam, week_no,
                readings, logistics, hw, hw2, hw_label, hw2_label, zoom, lms, skip, hidden
 
   hw / hw2 render as two SEPARATE homework links (e.g. one per section, when a
@@ -101,13 +101,23 @@
     {%- assign _title_flat = item.title | strip_html | downcase | replace: ':', ' ' | replace: ',', ' ' | replace: ';', ' ' | replace: '.', ' ' | replace: '(', ' ' | replace: ')', ' ' -%}
     {%- assign _title_words = _title_flat | split: ' ' -%}
 
+    {%- comment -%}
+      Exam detection by keyword; `exam: true` / `exam: false` on a row overrides it
+      (e.g. "Final project" weeks that aren't the final exam).
+    {%- endcomment -%}
+    {%- assign _is_exam = false -%}
+    {%- if _title_words contains 'test' or _title_words contains 'exam' or _title_words contains 'midterm' or _title_words contains 'final' or title_lower contains '시험' or title_lower contains '고사' -%}
+      {%- assign _is_exam = true -%}
+    {%- endif -%}
+    {%- if item.exam == true -%}{%- assign _is_exam = true -%}{%- elsif item.exam == false -%}{%- assign _is_exam = false -%}{%- endif -%}
+
     {%- comment -%} Determine row type and CSS class {%- endcomment -%}
     {%- if title_lower contains 'no class' or title_lower contains '휴강' or item.skip -%}
       {%- assign row_class = 'no-class' -%}
       {%- assign row_type  = 'noclass'  -%}
       {%- assign skip_count = skip_count | plus: 1 -%}
 
-    {%- elsif _title_words contains 'test' or _title_words contains 'exam' or _title_words contains 'midterm' or _title_words contains 'final' or title_lower contains '시험' or title_lower contains '고사' -%}
+    {%- elsif _is_exam -%}
       {%- assign row_type   = 'test' -%}
       {%- assign skip_count = skip_count | plus: 1 -%}
       {%- if _is_current -%}
@@ -138,6 +148,7 @@
     {%- endif -%}
 
     {%- assign display_week = forloop.index | minus: skip_count -%}
+    {%- if item.week_no -%}{%- assign display_week = item.week_no -%}{%- endif -%}
 
   <tr class="sched-row {{ row_class }}">
 

@@ -1,0 +1,106 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/19
+  week_no: 1
+  title: "Typing 1<br>Typing 2<br>Typing 3<br>Typing 4"
+  logistics: "No school 2/19"
+  exam: false
+
+- date: 2/26
+  week_no: 2
+  title: "Typing 5<br>Typing 6<br>Typing 7<br>Typing 8"
+  logistics: "No school 3/1"
+  exam: false
+
+- date: 3/5
+  week_no: 3
+  title: "Typing Catchup<br>Typing Finish<br>CompTIA+ Overview<br>220-901 Overview<br>220-902 Overview"
+  exam: false
+
+- date: 3/12
+  week_no: 4
+  title: "220-901 Core Processing: Visible Computer<br>Microprocessors<br>RAM<br>BIOS<br>Quiz/Test"
+  logistics: "Reading: Chp 3, Chp 4, Chp 5, Chp 6"
+  exam: false
+
+- date: 3/19
+  week_no: 5
+  title: "220-901 Core Hardware: Motherboards<br>Power Supplies<br>Hard Drive Tech<br>Implementing Hard Drives<br>Quiz/Test"
+  logistics: "Reading: Chp 7, Chp 8, Chp 9, Chp 10"
+  exam: false
+
+- date: 3/26
+  week_no: 6
+  title: "220-901 Peripherals and Building a PC: Essential Peripherals<br>Looking in a PC<br>Quiz/Test"
+  logistics: "Reading: Chp 11, Chp 12"
+  exam: false
+
+- date: 4/2
+  week_no: 7
+  title: "220-901 Displays and Printers: Display Tech<br>Printers & Multifunction Devices<br>Quiz/Test"
+  logistics: "Reading: Chp 19, Chp 27"
+  exam: false
+
+- date: 4/9
+  week_no: 8
+  title: "220-901 Networking: Essentials<br>Local Area Networking"
+  logistics: "Reading: Chp 20, Chp 21"
+  exam: false
+
+- date: 4/16
+  week_no: 9
+  title: "Wireless Networking<br>The Internet<br>Quiz/Test"
+  logistics: "Reading: Chp 22, Chp 23"
+  exam: false
+
+- date: 4/23
+  week_no: 10
+  title: "220-901 Laptops and Mobile Devices: Portable Computing<br>Understanding Mobile Devices<br>Quiz/Test"
+  logistics: "Reading: Chp 24, Chp 25"
+  exam: false
+
+- date: 4/30
+  week_no: 11
+  title: "220-902 Intro to Computers: Operational Procedures<br>Windows 7<br>Windows 8, 10<br>OS X, Linux"
+  logistics: "No school 5/4; Reading: Chp 13, ???"
+  exam: false
+
+- date: 5/7
+  week_no: 12
+  title: "220-902 Putting Pieces Together: RAM & Power Supplies<br>Implementing Hard Drives & Essential Peripherals<br>Building a PC<br>Quiz/Test"
+  logistics: "No school 5/7; Reading: Chp 12, Chp 10, Chp 11"
+  exam: false
+
+- date: 5/14
+  week_no: 13
+  title: "220-902 Windows Basics: Windows under the Hood<br>Users, Groups, and Permissions<br>Maintaining & Optimizing Operating Systems<br>Quiz/Test"
+  logistics: "No school 5/18; Reading: Chp 13, Chp 14, Chp 15"
+  exam: false
+
+- date: 5/21
+  week_no: 14
+  title: "220-902 Virtualization Printers and Troubleshooting: CLI<br>Troubleshooting OSs"
+  logistics: "No school 5/22; Reading: Chp 16, Chp 17"
+  exam: false
+
+- date: 5/28
+  week_no: 15
+  title: "Virtualization<br>The Internet<br>Printers & Multifunction Devices<br>Quiz/Test"
+  logistics: "Reading: Chp 18, Chp 23, Chp 27"
+  exam: false
+
+- date: 6/4
+  week_no: 16
+  title: "220-902 Mobile Devices: Understanding Mobile Devices<br>Care and Feeding of Mobile Devices<br>220-902 Securing Computers<br>Quiz/Test"
+  logistics: "No school 6/6; Reading: Chp 25, Chp 26, Chp 28"
+  exam: false
+
+- date: 6/11
+  week_no: 17
+  title: "Google Drive<br>Google Docs<br>Google Sheets<br>Google Slides<br>Final Review"
+  exam: false
+
+- date: 6/18
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam W 6/20, 9:30-11:30; No school 6/22"
+  exam: true

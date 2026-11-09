@@ -1,0 +1,105 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 8/18
+  title: "HTML basics I"
+  readings: "Codecademy: HTML Basics I · Build your own webpage"
+  logistics: "Project 1: First webpage"
+  exam: false
+
+- date: 8/25
+  title: "HTML basics II & III"
+  readings: "Codecademy: HTML Basics II & III · Social networking profile · Clickable photo page"
+  logistics: "Projects 2–3: Social-network profile · Photo page"
+  exam: false
+
+- date: 9/1
+  title: "CSS overview"
+  readings: "HTML review & quiz · CSS: An Overview I & II · Design a button for your website"
+  logistics: "Quiz A: HTML · Project 4: Website button"
+  exam: false
+
+- date: 9/8
+  title: "CSS selectors & positioning I"
+  readings: "CSS Selectors I & II · Sorting your friends · CSS Positioning I"
+  logistics: "Project 5: Sorting your friends; No school 9/8–9/9 (Chuseok)"
+  exam: false
+
+- date: 9/15
+  title: "CSS positioning II"
+  readings: "CSS Positioning II · Build a resume · Chris Coyier one-page resume site"
+  logistics: "Projects 6–7: Resume · Chris Coyier resume · Quiz B: CSS"
+  exam: false
+
+- date: 9/22
+  title: "Personal webpage (responsive)"
+  readings: "Build your personal webpage I–IV"
+  logistics: "Project 8: Responsive webpage"
+  exam: false
+
+- date: 9/29
+  title: "Alice3 I"
+  readings: "Alice3 overview & storyboards · MIT tutorial · Project 1 storyboard"
+  logistics: "Project 9: Alice project 1; No school 10/3 (Foundation Day)"
+  exam: false
+
+- date: 10/6
+  title: "Alice3 II"
+  readings: "Alice3 projects 2 & 3"
+  logistics: "Projects 10–11: Alice projects 2 & 3; No school 10/9 (Hangeul Day)"
+  exam: false
+
+- date: 10/13
+  title: "CSS & HTML review, JavaScript intro"
+  readings: "Codecademy: Getting started with programming I & II · Choose your own adventure"
+  logistics: "Project 12: Choose your own adventure"
+  exam: false
+
+- date: 10/20
+  title: "Midterm Test"
+  logistics: "School trip 10/24"
+  exam: true
+
+- date: 10/27
+  title: "JS functions & \"for\" loops"
+  readings: "Introduction to functions · Rock, paper, scissors · Intro to \"for\" loops · Search text for your name"
+  logistics: "Projects 13–14: Rock, paper, scissors · Search text"
+  exam: false
+
+- date: 11/3
+  title: "JS \"while\" loops"
+  readings: "Introduction to \"while\" loops · Dragon Slayer!"
+  logistics: "Project 15: Dragon Slayer!; No school (two days)"
+  exam: false
+
+- date: 11/10
+  title: "JS control flow, arrays & objects"
+  readings: "More on control flow · Choose your own adventure 2 · Arrays & objects · Contact list"
+  logistics: "Projects 16–17: Adventure 2 · Contact list"
+  exam: false
+
+- date: 11/17
+  title: "JS objects I"
+  readings: "Introduction to objects I · Building an address book · catch up"
+  logistics: "Project 18: Address book"
+  exam: false
+
+- date: 11/24
+  title: "JS objects II"
+  readings: "Introduction to objects II · Building a cash register"
+  logistics: "Project 19: Cash register · Quiz C: JavaScript; No school one day"
+  exam: false
+
+- date: 12/1
+  title: "Quintus game (setup + art)"
+  readings: "Install WAMP & Quintus · build a map in Tiled with OpenGameArt.org tiles · create sprites"
+  logistics: "Final project I: Game + map design"
+  exam: false
+
+- date: 12/8
+  title: "Quintus game (code)"
+  readings: "Write the HTML · add the character and baddies · load assets, \"Play again?\" · add something new"
+  logistics: "Final project II: A playable game!"
+  exam: false
+
+- date: 12/15
+  title: "Final Test"
+  exam: true

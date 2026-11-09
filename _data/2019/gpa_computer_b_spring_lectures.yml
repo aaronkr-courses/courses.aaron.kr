@@ -1,0 +1,96 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/18
+  week_no: 1
+  title: "Intro - Codepen<br>HTML Structure + Text + Lists<br>HTML Links + Images + Flash, Video & Audio<br>HTML Tables + Forms + Extra<br>HTML Project"
+  exam: false
+
+- date: 2/25
+  week_no: 2
+  title: "Codecademy project or continue<br>HTML Quiz / Test"
+  logistics: "No school 3/1 (Liberation Day)"
+  exam: false
+
+- date: 3/4
+  week_no: 3
+  title: "CSS Intro + Color + Text<br>CSS Color Theory + Typography + Branding<br>CSS Lists, Tables, & Forms<br>CSS Boxes, Images<br>CSS Layout (Float, Flex, Grid)"
+  exam: false
+
+- date: 3/11
+  week_no: 4
+  title: "Codecademy project or continue<br>CSS Quiz / Test"
+  exam: false
+
+- date: 3/18
+  week_no: 5
+  title: "Intro - GitHub, Git, Visual Studio Code (+ setup)<br>Git commands & workflows<br>Pull requests & collaboration<br>Collaborative web project with git<br>Git Quiz / Test"
+  exam: false
+
+- date: 3/25
+  week_no: 6
+  title: "HTML & CSS Project overview<br>Building<br>Finalize project"
+  exam: false
+
+- date: 4/1
+  week_no: 7
+  title: "Intro - JavaScript & functional programming<br>ABCs of Script programming (progressive enhancement stuff)<br>JS Basics (var, data types, arrays, expressions, operators)<br>JS Functions & Methods (scope)<br>JS Objects (Date / Time, String, constructors, etc)"
+  exam: false
+
+- date: 4/8
+  week_no: 8
+  title: "JS Decisions (conditionals & comparisons, If / Else, Switch, truthy / falsy)<br>JS Loops (for, while, do while)<br>JS DOM (access, select, traverse, update, add, remove)<br>JS Security (XSS prevention)<br>JS Events (binding, listeners, various events)"
+  exam: false
+
+- date: 4/15
+  week_no: 9
+  title: "JS Events continued<br>Codecademy project or continue<br>JS Quiz / Test"
+  exam: false
+
+- date: 4/22
+  week_no: 10
+  title: "jQuery Intro<br>jQuery part II<br>Ajax & JSON part I<br>Ajax & JSON part II<br>Continue / review"
+  exam: false
+
+- date: 4/29
+  week_no: 11
+  title: "APIs part I<br>APIs part II<br>Error Handling & Debugging<br>Error Handling & Debugging part II"
+  logistics: "No school 5/3 (JJU Bday)"
+  exam: false
+
+- date: 5/6
+  week_no: 12
+  title: "Control Panels (accordion, modals, photo viewer, slider)<br>Filtering, Searching, Sorting<br>Form Enhancement & Validation<br>Field Trip"
+  logistics: "No school 5/6 (Children's Day)"
+  exam: false
+
+- date: 5/13
+  week_no: 13
+  title: "Codecademy project or continue<br>jQuery Quiz / Test"
+  logistics: "No school 5/13 (Buddha's Bday)"
+  exam: false
+
+- date: 5/20
+  week_no: 14
+  title: "HTML Frameworks intro (Bootstrap, Foundation, etc)<br>Simple site building with a Framework<br>Framework Quiz / Test"
+  exam: false
+
+- date: 5/27
+  week_no: 15
+  title: "React Intro, npm, setup, etc<br>Create-react-app - convert site to React<br>React Router<br>Stateful / Stateless components<br>Redux Intro?"
+  exam: false
+
+- date: 6/3
+  week_no: 16
+  title: "Codecademy project or continue<br>Final project overview"
+  logistics: "No school 6/6 (Memorial Day)"
+  exam: false
+
+- date: 6/10
+  week_no: 17
+  title: "Final project"
+  exam: false
+
+- date: 6/17
+  week_no: 18
+  title: "Final Exam<br>PT - Create final"
+  logistics: "Final exam M 6/17, 9:30-11:30; No school 6/21 (GPA finished)"
+  exam: true

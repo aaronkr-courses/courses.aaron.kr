@@ -1,0 +1,103 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 8/18
+  title: "Typing Master Pro (touch typing)"
+  readings: "Lessons 1–4"
+  exam: false
+
+- date: 8/25
+  title: "Typing Master Pro (touch typing)"
+  readings: "Lessons 5–9"
+  exam: false
+
+- date: 9/1
+  title: "Typing + Computer hardware & peripherals + WordPress"
+  readings: "Lessons 10–12 · Hardware & peripherals overview · Set up WordPress for portfolios"
+  logistics: "Graded: TMP results · Computer quiz · WordPress setup"
+  exam: false
+
+- date: 9/8
+  title: "Software safety & online security"
+  readings: "Program download & installation · virus/adware & phishing scanning · TMI on SNS & password safety"
+  logistics: "Graded: Quiz; No school 9/8–9/9 (Chuseok)"
+  exam: false
+
+- date: 9/15
+  title: "Google Drive essential training"
+  readings: "Overview, files, organization · Docs, Presentations, Spreadsheets · Forms & Drawings · collaboration, templates, settings"
+  logistics: "Graded: Google Drive quiz"
+  exam: false
+
+- date: 9/22
+  title: "Google Docs & Sheets + a mobile office"
+  readings: "Essential Docs & Sheets · personal vs. school accounts · files, task lists & mobile use · apps, working at home, security"
+  logistics: "Graded: Personal mobile office"
+  exam: false
+
+- date: 9/29
+  title: "Google Cloud & Google Calendar"
+  readings: "Cloud, mobile & web apps · storage · cloud databases · Calendar events, invitations, sharing"
+  logistics: "Graded: Google Cloud quiz; No school 10/3 (Foundation Day)"
+  exam: false
+
+- date: 10/6
+  title: "Office for Students / Office Online"
+  readings: "Documents, presentations, spreadsheets · Outlook & online services · Word, Excel & PowerPoint Online · OneNote"
+  logistics: "Graded: Quiz on each component; No school 10/9 (Hangeul Day)"
+  exam: false
+
+- date: 10/13
+  title: "Other online office options"
+  readings: "ThinkFree Office · N-Drive & Office"
+  logistics: "Graded: Online office options quiz"
+  exam: false
+
+- date: 10/20
+  title: "Midterm Test"
+  logistics: "School trip 10/24"
+  exam: true
+
+- date: 10/27
+  title: "Writing research papers (Word, Docs)"
+  readings: "Types of research papers · preparing to write · writing & citing sources"
+  logistics: "Graded: Research paper"
+  exam: false
+
+- date: 11/3
+  title: "Statistics, charts & graphs (Excel, Sheets)"
+  readings: "Organizing spreadsheets · sorting & filtering · charts & graphs · practical application"
+  logistics: "Graded: Personalized charts & graphs"
+  exam: false
+
+- date: 11/10
+  title: "Public speaking with PowerPoint"
+  readings: "Using PPT to enhance speeches · principles of good slides · creation · peer review"
+  logistics: "Graded: Presentation PPT"
+  exam: false
+
+- date: 11/17
+  title: "Principles of public speaking"
+  readings: "The visual, story, and physical message · practice & memorization"
+  logistics: "Graded: Deliver your speech"
+  exam: false
+
+- date: 11/24
+  title: "Publishing & getting creative (Publisher)"
+  readings: "Publisher tools · color theory, typography & layout · three designs"
+  logistics: "Graded: Newsletter · Poster"
+  exam: false
+
+- date: 12/1
+  title: "Formal documents"
+  readings: "Resumes · cover letters · applications · proposals"
+  logistics: "Graded: Personal resume · Formal writing; Fine Arts Recital 12/5"
+  exam: false
+
+- date: 12/8
+  title: "Final portfolio work"
+  readings: "Work on final portfolios"
+  logistics: "Graded: Final portfolio of work"
+  exam: false
+
+- date: 12/15
+  title: "Final Test"
+  exam: true

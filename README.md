@@ -103,7 +103,10 @@ The section is hidden automatically when the file is empty.
 | URL | File | Description |
 |---|---|---|
 | `/` | `index.md` | Homepage — today pill, current courses |
-| `/archive/` | `_pages/archive.md` | All courses by semester |
+| `/archive/` | `_pages/archive.md` | University courses, newest 5 years, by semester (page 1) |
+| `/archive/N/` | `_pages/archive-N.md` | Older university years (only once you add the file — see "Course Archive Pages") |
+| `/archive/hs/` | `_pages/archive-hs.md` | High School & Online — the last archive page |
+| `/courses/gpa/2015-2-computer-b/` | `_courses/gpa/*.md` | Global Prodigy Academy (high school) courses, 2013–2019 |
 | `/policies/` | `_pages/policies.md` | Shared academic policies |
 | `/office-hours/` | `_pages/office-hours.md` | Campus schedule + contact |
 | `/resources/how-to-get-an-a/` | `_pages/how-to-get-an-a.md` | Study advice + Cal Newport book summary, sticky sidebar TOC |
@@ -189,9 +192,68 @@ Main-Text:
 
 ---
 
+## High School Courses (GPA, 2013–2019)
+
+Every course taught at **Global Prodigy Academy (국제영재아카데미)** has its own page in `_courses/gpa/<year>-<sem>-<slug>.md`, e.g. `_courses/gpa/2015-2-computer-b.md`, with its schedule in `_data/<year>/gpa_<slug>_<spring|fall>_lectures.yml`. Categories are `gpa-<year>-<sem>` (`group: hs`). They were rebuilt from the original syllabi, 18-week plans, and the daily lesson-plan master list; semesters with no surviving plans have listing-only pages (links + a note).
+
+Front matter differs from the university courses in a few ways:
+
+```yaml
+init: GPA
+logo: /assets/img/gpa-logo.png
+img: assets/img/gpa-logo.png          # archive/home thumbnail
+category: gpa-2015-2
+course_lang: en                       # English classes → page opens in English (see Display Defaults)
+grading_type: absolute
+information:
+  - section: "Period 6"
+    time: "Mon–Fri 2:05–3:15"
+    location: "GPA @ Jeonju University"
+    classroom: https://classroom.google.com/c/...   # → Google Classroom button
+    "📄 Syllabus": https://docs.google.com/...
+grading_items:                        # free-form grading bar (any number of categories)
+  - label: "Coding Projects"
+    label_ko: "코딩 프로젝트"
+    short: "Code"                     # optional short label inside the bar
+    pct: 40
+```
+
+`grading_items:` can be used by any course whose grading doesn't fit the fixed `grading:` keys (attendance, homework, quiz, midterm, final, project); colors cycle through the six grade colors. A course with neither shows "Grading breakdown not available."
+
+---
+
+## Course Archive Pages (pagination)
+
+The archive is split into pages, all rendered by one include, `_includes/archive_page.html` (each page file is just front matter + `{% include archive_page.html %}`):
+
+| Page | File | Shows |
+|---|---|---|
+| 1 | `_pages/archive.md` (`archive_page: 1`) | University courses from the newest `archive.years_per_page` (default 5) calendar years |
+| 2, 3, … | `_pages/archive-2.md` … (`archive_page: N`) | The next block of years — **only exists once you create the file** |
+| last | `_pages/archive-hs.md` (`archive_group: hs`) | Every `group: hs` category — Online first, then Special / HS workshops, then GPA semesters newest → oldest |
+
+- A category's year is the first four characters of its `key` (`2027-winter` → 2027). Years are counted back from the newest year that has a visible course.
+- The highest-numbered university page that exists also shows **every older year**, so nothing is ever hidden. Right now all university courses (2023–2026) fit on page 1.
+- **To split older years onto a new page:** create `_pages/archive-2.md` with:
+  ```yaml
+  ---
+  layout: default
+  title: Course Archive
+  permalink: /archive/2/
+  archive_page: 2
+  eyebrow: Teaching History
+  ---
+
+  {% include archive_page.html %}
+  ```
+  The pager (year-range pills at the top and bottom of every archive page) picks it up automatically.
+- **New high-school / online semesters** go in `_config.yml` `course_categories` with `group: hs` — they're excluded from the university pages and listed on the HS page in config order.
+
+---
+
 ## Course Topic Tags & Archive Filters
 
-Every course shows a colored **Topic pill** (AI/ML, Programming, Web, Data, Systems, EE, BioMed) on its `index.md` card, its `/archive/` row, and its own course page. By default this is auto-detected from the course `title:` by keyword (e.g. a title containing "database" → Data). The logic lives in one place, `_includes/topic_tag.html`, and is shared by `_includes/course_card.html`, `_pages/archive.md`, and `_layouts/course.html` — **never copy the keyword-match logic into a new template**; always `{% include topic_tag.html course=<obj> %}` instead, or a future topic will silently show correctly in one place and not another (this happened once already — see CLAUDE.md decision #35).
+Every course shows a colored **Topic pill** (AI/ML, Programming, Web, Data, Systems, EE, BioMed — plus Design and General Ed., used by the high-school courses) on its `index.md` card, its `/archive/` row, and its own course page. By default this is auto-detected from the course `title:` by keyword (e.g. a title containing "database" → Data). The logic lives in one place, `_includes/topic_tag.html`, and is shared by `_includes/course_card.html`, `_pages/archive.md`, and `_layouts/course.html` — **never copy the keyword-match logic into a new template**; always `{% include topic_tag.html course=<obj> %}` instead, or a future topic will silently show correctly in one place and not another (this happened once already — see CLAUDE.md decision #35).
 
 **Overriding the auto-detected topic:** add `topic:` to a course's front matter. It accepts either the label you see in the UI or the internal key, matched loosely (case/punctuation-insensitive) — `topic: AI/ML` and `topic: ai-tag` do the same thing:
 
@@ -211,6 +273,8 @@ A course with multiple topics gets one pill per topic everywhere, and shows up u
 - University pills come from `_data/universities.yml` — **add a new university there and give it a course, and its filter pill appears automatically.** No edit to `archive_filters.html` needed for that case.
 
 The **Level** and **Topic** rows are hand-maintained lists (there's no small backing data file for those), so adding a Topic value still means editing `archive_filters.html` as described above.
+
+Filters are **per archive page**: Semester and University pills only appear for the categories on the current page. On the High School & Online page the University row becomes a **School** row (one pill per course `init:` — GPA, HS, Eduonix, IETTP), the Level row is hidden, and the Topic row lists the HS topic set.
 
 ---
 
@@ -253,7 +317,9 @@ Each row in `_data/YYYY/school_subject_lectures.yml`:
 3. **Info** — `week:` heading + `title:` + `readings:`
 4. **Logistics** — `logistics:` HTML + `hw:`/`hw2:` buttons
 
-**Exam/test detection:** there is no `test:` boolean field — `_includes/schedule.html` looks at the `title:` text itself. A row gets the yellow exam styling if its title contains the whole word `Test`, `Exam`, `Midterm`, or `Final` (English titles are stripped of HTML/punctuation and split into words, so only exact-word matches count — a title like "20. A **Example** Inference Task" will NOT false-trigger), or the substring `시험`/`고사` (Korean words don't need whole-word matching since compounds don't use spaces). If a lecture title happens to need the word "test"/"exam" without being an actual exam (unlikely), rephrase the title.
+**Optional row fields:** `exam: true|false` overrides the exam detection below (e.g. `exam: false` on a "Final project" week); `week_no: 9` overrides the auto-counted "Week N" label (used when a schedule starts mid-semester or skips weeks).
+
+**Exam/test detection:** `_includes/schedule.html` looks at the `title:` text itself (unless the row sets `exam:`). A row gets the yellow exam styling if its title contains the whole word `Test`, `Exam`, `Midterm`, or `Final` (English titles are stripped of HTML/punctuation and split into words, so only exact-word matches count — a title like "20. A **Example** Inference Task" will NOT false-trigger), or the substring `시험`/`고사` (Korean words don't need whole-word matching since compounds don't use spaces). If a lecture title needs the word "test"/"exam"/"final" without being an actual exam, add `exam: false` to that row.
 
 ---
 
@@ -347,11 +413,12 @@ The static `<a class="lab-note-row">` rows in `index.md`'s source are a **pre-JS
 | `_includes/about_aaron.html` | Instructor bio box — fetches from aaronsnowberger.com/bio.json, renders as HTML |
 | `_includes/course_card.html` | Card component used on home/archive pages |
 | `_includes/topic_tag.html` | **Single source of truth** for a course's Topic pill(s) — auto-detect + `topic:` override |
-| `_includes/archive_filters.html` | Archive page's Filters toolbar — Semester/University rows are data-driven |
+| `_includes/archive_page.html` | The whole archive page body + pager, shared by every archive page |
+| `_includes/archive_filters.html` | Archive page's Filters toolbar — Semester/University rows are data-driven, per page |
 | `_sass/_variables.scss` | All color & layout variables |
 | `_data/universities.yml` | **Single source of truth** for university logos, names, abbrs, campus names, and URLs |
 | `_data/office_hours.yml` | **Single source of truth** for the weekday→university teaching schedule + vacation windows (drives Office Hours page, Today Pill, homepage uni-groups) |
-| `_config.yml` | Site settings, course categories, GitHub/social handles, `display_defaults` (theme/lang/thumbs/waves) |
+| `_config.yml` | Site settings, course categories (`group: hs` = HS & Online page), `archive.years_per_page`, GitHub/social handles, `display_defaults` |
 | `_data/nav.yml` | Nav links — edit here to add/remove nav items |
 | `_data/announcements.yml` | Homepage announcements strip |
 

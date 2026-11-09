@@ -1,0 +1,52 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 10/16
+  week_no: 9
+  title: "§16-2<br>Lab or Worksheet or Review<br>Chp 15-16 Review<br>Chp 15-16 Test"
+  exam: false
+
+- date: 10/23
+  week_no: 10
+  title: "§17-1<br>§17-2<br>§17-3<br>Lab or Worksheet or Review"
+  logistics: "No school 10/27 (School Trip)"
+  exam: false
+
+- date: 10/30
+  week_no: 11
+  title: "§18-1<br>§18-2<br>§18-3<br>Lab or Worksheet or Review<br>Chp 17-18 Test"
+  exam: false
+
+- date: 11/6
+  week_no: 12
+  title: "§19-1<br>§19-2<br>§19-3<br>§20-1<br>Lab or Worksheet or Review"
+  exam: false
+
+- date: 11/13
+  week_no: 13
+  title: "§20-2<br>§20-3<br>Lab or Worksheet or Review<br>§21-1<br>§21-2"
+  exam: false
+
+- date: 11/20
+  week_no: 14
+  title: "§21-3<br>Lab or Worksheet or Review<br>Chp 19-21 Review<br>Chp 19-21 Test"
+  exam: false
+
+- date: 11/27
+  week_no: 15
+  title: "§22-1<br>§22-2<br>§22-3<br>§23-1<br>§23-2"
+  exam: false
+
+- date: 12/4
+  week_no: 16
+  title: "§23-3<br>Lab or Worksheet or Review<br>§24-1<br>§24-2<br>§24-3"
+  exam: false
+
+- date: 12/11
+  week_no: 17
+  title: "§24-4<br>§25-1<br>§25-2<br>§25-3<br>Final Test Review"
+  exam: false
+
+- date: 12/18
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam W 12/20, 1:00-3:00; No school 12/22 (School's Over!)"
+  exam: true

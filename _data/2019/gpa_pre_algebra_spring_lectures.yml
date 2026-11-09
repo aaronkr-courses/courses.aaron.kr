@@ -1,0 +1,96 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/18
+  week_no: 1
+  title: "Intro<br>Pre-algebra Level test / intro<br>§1-1<br>§1-2<br>§1-3"
+  exam: false
+
+- date: 2/25
+  week_no: 2
+  title: "§1-4<br>§1-5<br>§1-6<br>§1-7"
+  logistics: "No school 3/1"
+  exam: false
+
+- date: 3/4
+  week_no: 3
+  title: "§1-8<br>§1-9<br>§1-10<br>Chp 1 Review<br>Chp 1 Test"
+  exam: false
+
+- date: 3/11
+  week_no: 4
+  title: "§2-1<br>§2-2<br>§2-3<br>§2-4<br>§2-5"
+  exam: false
+
+- date: 3/18
+  week_no: 5
+  title: "§2-6<br>§2-7<br>§2-8<br>§2-9<br>§2-10"
+  exam: false
+
+- date: 3/25
+  week_no: 6
+  title: "Chp 2 Review<br>Chp 2 Test<br>§3-1<br>§3-2<br>§3-3"
+  exam: false
+
+- date: 4/1
+  week_no: 7
+  title: "§3-4<br>§3-5<br>§3-6<br>§3-7<br>§3-8"
+  exam: false
+
+- date: 4/8
+  week_no: 8
+  title: "Chp 3 Review<br>Chp 3 Test<br>§4-1<br>§4-2<br>§4-3"
+  exam: false
+
+- date: 4/15
+  week_no: 9
+  title: "§4-4<br>§4-5<br>§4-6<br>§4-7<br>§4-8"
+  exam: false
+
+- date: 4/22
+  week_no: 10
+  title: "§4-9<br>Chp 4 Review<br>Chp 4 Test<br>§5-1<br>§5-2"
+  exam: false
+
+- date: 4/29
+  week_no: 11
+  title: "§5-3<br>§5-4<br>§5-5<br>§5-6"
+  logistics: "No school 5/3 (JJU Bday)"
+  exam: false
+
+- date: 5/6
+  week_no: 12
+  title: "§5-7<br>§5-8<br>§5-9"
+  logistics: "No school 5/6 (Children's Day)"
+  exam: false
+
+- date: 5/13
+  week_no: 13
+  title: "Chp 5 Review<br>Chp 5 Test<br>§6-1<br>§6-2"
+  logistics: "No school 5/13 (Buddha's Bday)"
+  exam: false
+
+- date: 5/20
+  week_no: 14
+  title: "§6-3<br>§6-4<br>§6-5<br>§6-6<br>§6-7"
+  exam: false
+
+- date: 5/27
+  week_no: 15
+  title: "§6-8<br>§6-9<br>§6-10<br>Chp 6 Review<br>Chp 6 Test"
+  exam: false
+
+- date: 6/3
+  week_no: 16
+  title: "§7-1<br>§7-2<br>§7-3<br>§7-4"
+  logistics: "No school 6/6 (Memorial Day)"
+  exam: false
+
+- date: 6/10
+  week_no: 17
+  title: "§7-5<br>§7-6<br>§7-7<br>§7-8<br>Chp 7 Review"
+  exam: false
+
+- date: 6/17
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam M 6/17, 1:00-3:00; No school 6/21 (GPA Ends)"
+  exam: true

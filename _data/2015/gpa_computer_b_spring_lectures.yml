@@ -1,0 +1,102 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/23
+  title: "Course intro, setup, resources"
+  readings: "Install programs, cPanel, FTP, \"Hello World\" · webpage structure · accounts"
+  logistics: "Weekend project: self-introduction (자기소개) · Classes begin 2/24"
+  exam: false
+
+- date: 3/2
+  title: "HTML"
+  readings: "Working with text · lists & images · forms & links · tables & iframes"
+  logistics: "Project 1: Hello World page · No school one day"
+  exam: false
+
+- date: 3/9
+  title: "CSS"
+  readings: "Inline & internal CSS · classes, IDs & divs · colors, floating, positioning · the box model"
+  logistics: "Project 2: BBC News / Korea Times site"
+  exam: false
+
+- date: 3/16
+  title: "JavaScript"
+  readings: "Accessing elements & responding to clicks · changing content · variables, arrays, ifs · loops & functions"
+  logistics: "Project 3: Reaction-time game"
+  exam: false
+
+- date: 3/23
+  title: "jQuery"
+  readings: "External JS & embedding jQuery · fading & animating · AJAX & regular expressions · jQuery UI"
+  logistics: "Project 4: CodePlayer"
+  exam: false
+
+- date: 3/30
+  title: "Twitter Bootstrap"
+  readings: "Intro & \"Hello World\" · the grid & nav bars · forms, tables & components · modals & ScrollSpy"
+  logistics: "Project 5: App landing page"
+  exam: false
+
+- date: 4/6
+  title: "WordPress"
+  readings: "Setup & dashboard · themes & plugins · create a blog (copy, branding, social media)"
+  logistics: "Project 6: WordPress site"
+  exam: false
+
+- date: 4/13
+  title: "Review + catch up"
+  readings: "Catch up on old assignments"
+  exam: false
+
+- date: 4/20
+  title: "Midterm Test"
+  exam: true
+
+- date: 4/27
+  title: "WordPress challenges"
+  readings: "Create a shop (WooCommerce) · a forum (bbPress) · a social network (BuddyPress) · a membership / class site"
+  logistics: "Project 7: Online shopping mall"
+  exam: false
+
+- date: 5/4
+  title: "PHP"
+  readings: "Variables & arrays · if, for, foreach, while · sending email, GET & POST"
+  logistics: "Project 8: Weather scraper · No school one day"
+  exam: false
+
+- date: 5/11
+  title: "MySQL"
+  readings: "Connecting to a database · retrieving & adding data · looping & sessions · cookies & passwords"
+  logistics: "Project 9: Secret diary"
+  exam: false
+
+- date: 5/18
+  title: "Google API"
+  readings: "Intro to APIs · Google Maps JavaScript API · Geolocation API"
+  logistics: "Project 10: Postcode finder"
+  exam: false
+
+- date: 5/25
+  title: "Twitter API"
+  readings: "The Twitter API & JSON · API functions"
+  logistics: "Project 11: Twitter client · No school one day"
+  exam: false
+
+- date: 6/1
+  title: "Mobile apps"
+  readings: "HTML5 mobile apps & jQuery Mobile · Cordova & Android tools · an iOS app"
+  logistics: "Project 12: Etch-A-Sketch drawing app"
+  exam: false
+
+- date: 6/8
+  title: "Enhance a previous project"
+  readings: "Enhance a project OR build a \"Habit Keeper\" mobile app"
+  logistics: "Project 13: Enhanced project"
+  exam: false
+
+- date: 6/15
+  title: "Final project"
+  logistics: "Project 14: Final project"
+  exam: false
+
+- date: 6/22
+  title: "Final Test"
+  exam: true

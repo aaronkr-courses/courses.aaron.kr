@@ -1,0 +1,52 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 10/16
+  week_no: 9
+  title: "VEX Unit 3<br>3: En Note<br>VEX Unit 4<br>Autodesk"
+  exam: false
+
+- date: 10/23
+  week_no: 10
+  title: "Autodesk<br>4 Eng Notebook"
+  logistics: "No school 10/27 (School Trip)"
+  exam: false
+
+- date: 10/30
+  week_no: 11
+  title: "VEX Unit 5, 5.1, 5.2<br>5.3, 5.4<br>5.5, 5.6<br>Build Robot?<br>5.7 Eng Notebook"
+  exam: false
+
+- date: 11/6
+  week_no: 12
+  title: "VEX Unit 6, 6.1, 6.2<br>6.2, 6.3<br>6.6<br>6.7 Eng Notebook<br>Study Hall?"
+  exam: false
+
+- date: 11/13
+  week_no: 13
+  title: "VEX Unit 7, 7.1<br>7.2<br>7.3, 7.4<br>7.5, 7.6<br>7.7 Eng Notebook"
+  exam: false
+
+- date: 11/20
+  week_no: 14
+  title: "VEX Unit 8, 8.1<br>8.2<br>8.3, 8.4, 8.5, 8.6, 8.7<br>8.8, 8.9<br>8.12 Eng Notebook"
+  exam: false
+
+- date: 11/27
+  week_no: 15
+  title: "VEX Unit 9, 9.1, 9.2<br>9.3, 9.4<br>9.5, 9.6<br>9.7 Eng Notebook<br>Study Hall?"
+  exam: false
+
+- date: 12/4
+  week_no: 16
+  title: "VEX Unit 10, 10.1<br>10.2, 10.3<br>10.4, 10.5<br>10.6, 10.7<br>10.9 Eng Notebook"
+  exam: false
+
+- date: 12/11
+  week_no: 17
+  title: "VEX Unit 11, 11.1, 11.2<br>11.4 Eng Notebook<br>VEX Unit 12, 12.1<br>12.2, 12.3, 12.4<br>Review"
+  exam: false
+
+- date: 12/18
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam T 12/19, 1:00-3:00; No school 12/22 (School's Over!)"
+  exam: true

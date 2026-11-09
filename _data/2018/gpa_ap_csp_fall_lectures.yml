@@ -1,0 +1,86 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 8/27
+  week_no: 1
+  title: "Intro<br>1-1: Personal Innovations<br>1-2, 1-3: Binary Messages<br>1-4, 1-5: Number systems<br>Code.org & Catch-up"
+  exam: false
+
+- date: 9/3
+  week_no: 2
+  title: "1-6, 1-7: Sending Numbers / text<br>1-8, 1-9: Internet & Addressing<br>1-10, 1-11: Redundancy & Reliability<br>1-12, 1-13: DNS, HTTP<br>Code.org & Catch-up"
+  exam: false
+
+- date: 9/10
+  week_no: 3
+  title: "1-1, 1-2 Assessment, Practice PT Prep<br>2-1, 2-2 File sizes & compression<br>2-3, 2-4 Encoding Images<br>2-5, 2-6 Lossy, Lossless, Format Research<br>Give PT \"flash talks\" (Catch-up)"
+  exam: false
+
+- date: 9/17
+  week_no: 4
+  title: "2-1 Assessment, 4 Intro to Big Data<br>4-2, 4-3, 4-4 Trends, Assumptions, Research<br>4-5, 4-6 People & Data<br>4-7, 4-8, (4-9)? Encryption<br>Code.org & Catch-up"
+  exam: false
+
+- date: 9/24
+  week_no: 5
+  title: "(4-9)?, 4-10 Research Cybercrime<br>4-1 Assessment (Catch-up)"
+  logistics: "No school 9/24–9/25 (Chuseok)"
+  exam: false
+
+- date: 10/1
+  week_no: 6
+  title: "Explore PT - 1<br>Explore PT - 2<br>Explore PT - 3<br>Explore PT - 4"
+  logistics: "No school 10/3 (Foundation Day)"
+  exam: false
+
+- date: 10/8
+  week_no: 7
+  title: "Explore PT - 5<br>Explore PT - 6<br>Explore PT - 7<br>Explore PT - 8"
+  logistics: "No school 10/9 (Hangul Day)"
+  exam: false
+
+- date: 10/22
+  week_no: 9
+  title: "3-1<br>3-2, 3-3<br>Catch up day"
+  exam: false
+
+- date: 10/29
+  week_no: 10
+  title: "3-4, 3-5<br>3-6, 3-7<br>3-8, 3-9<br>3-10, Assessment"
+  logistics: "No school 11/2 (School Field Trip)"
+  exam: false
+
+- date: 11/5
+  week_no: 11
+  title: "5-1<br>5-2<br>5-3<br>5-4<br>5-5 (Clicker Game)"
+  exam: false
+
+- date: 11/12
+  week_no: 12
+  title: "Unit 5 Assessment 1 + 5-6<br>5-7<br>5-8<br>5-9<br>5-10 (Color Sleuth)"
+  exam: false
+
+- date: 11/19
+  week_no: 13
+  title: "Unit 5 Assessment 2 + 5-11<br>5-12<br>5-13<br>5-14 (Image Scroller)<br>Catch up day"
+  exam: false
+
+- date: 11/26
+  week_no: 14
+  title: "Unit 5 Assessment 3 + 5-15<br>5-16<br>5-17 (Canvas Painter)<br>PT - Create (Intro)<br>PT - Create"
+  logistics: "HW: Unit 5 Assessment 4 + 5"
+  exam: false
+
+- date: 12/3
+  week_no: 15
+  title: "PT - Create"
+  exam: false
+
+- date: 12/10
+  week_no: 16
+  title: "PT - Create"
+  exam: false
+
+- date: 12/17
+  week_no: 17
+  title: "Final Exam<br>PT - Create final"
+  logistics: "Final exam M 12/17, 9:30-11:30; No school 12/21 (GPA Ends)"
+  exam: true

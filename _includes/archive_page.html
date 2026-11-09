@@ -1,0 +1,305 @@
+{%- comment -%}
+  The whole Course Archive page body, shared by every archive page so they can't drift:
+    _pages/archive.md      archive_page: 1     /archive/      newest university years
+    _pages/archive-N.md    archive_page: N     /archive/N/    (add when needed, see below)
+    _pages/archive-hs.md   archive_group: hs   /archive/hs/   High School & Online (last page)
+
+  University categories (no `group:` in _config.yml course_categories) are split into
+  blocks of `site.archive.years_per_page` calendar years, counted back from the newest
+  year that has a visible course (a category's year = first 4 chars of its key, e.g.
+  "2027-winter" -> 2027). The highest-numbered archive_page file that exists also takes
+  every year older than its block, so courses are never hidden; to split them off onto
+  a new page, add `_pages/archive-N.md` with `archive_page: N` (see CLAUDE.md decision
+  #40). `group: hs` categories appear only on the HS page, in _config.yml order.
+
+  Builds `_page_keys` (",key1,key2," delimited so `contains` can't substring-match) for
+  the current page, plus the pager. String lists instead of arrays because this is
+  Jekyll 3.10 (no push filter) and where_exp can't see outer assigns (Bug #16).
+{%- endcomment -%}
+{%- assign _ypp = site.archive.years_per_page | default: 5 -%}
+{%- assign _arch_pages = site.pages | where_exp: "p", "p.archive_page" | sort: "archive_page" -%}
+{%- assign _hs_page = site.pages | where: "archive_group", "hs" | first -%}
+{%- assign _last_uni_n = 1 -%}
+{%- for _ap in _arch_pages -%}{%- assign _last_uni_n = _ap.archive_page -%}{%- endfor -%}
+{%- assign _is_hs = false -%}
+{%- if page.archive_group == 'hs' -%}{%- assign _is_hs = true -%}{%- endif -%}
+
+{%- comment -%} Newest university year that has at least one visible course {%- endcomment -%}
+{%- assign _newest = 0 -%}
+{%- for cat in site.course_categories -%}
+  {%- if cat.group == 'hs' -%}{%- continue -%}{%- endif -%}
+  {%- assign _n = site.courses | where: "category", cat.key | where_exp: "c", "c.visible != false" | size -%}
+  {%- if _n > 0 -%}
+    {%- assign _y = cat.key | slice: 0, 4 | plus: 0 -%}
+    {%- if _y > _newest -%}{%- assign _newest = _y -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign _page_keys = "," -%}
+{%- assign _page_lo = 9999 -%}
+{%- assign _page_hi = 0 -%}
+{%- capture _pager -%}
+  {%- for _ap in _arch_pages -%}
+    {%- assign _p = _ap.archive_page -%}
+    {%- assign _hi = _p | minus: 1 | times: _ypp -%}
+    {%- assign _hi = _newest | minus: _hi -%}
+    {%- assign _lo = _hi | minus: _ypp | plus: 1 -%}
+    {%- if _p == _last_uni_n -%}{%- assign _lo = 0 -%}{%- endif -%}
+    {%- assign _keys = "," -%}
+    {%- assign _min = 9999 -%}
+    {%- assign _max = 0 -%}
+    {%- for cat in site.course_categories -%}
+      {%- if cat.group == 'hs' -%}{%- continue -%}{%- endif -%}
+      {%- assign _y = cat.key | slice: 0, 4 | plus: 0 -%}
+      {%- if _y < _lo or _y > _hi -%}{%- continue -%}{%- endif -%}
+      {%- assign _n = site.courses | where: "category", cat.key | where_exp: "c", "c.visible != false" | size -%}
+      {%- if _n == 0 -%}{%- continue -%}{%- endif -%}
+      {%- assign _keys = _keys | append: cat.key | append: "," -%}
+      {%- if _y < _min -%}{%- assign _min = _y -%}{%- endif -%}
+      {%- if _y > _max -%}{%- assign _max = _y -%}{%- endif -%}
+    {%- endfor -%}
+    {%- if _max > 0 -%}
+      {%- if _p == page.archive_page -%}
+        {%- assign _page_keys = _keys -%}{%- assign _page_lo = _min -%}{%- assign _page_hi = _max -%}
+      {%- endif -%}
+      <a class="pill pill-blue{% if _p == page.archive_page %} active{% endif %}" href="{{ _ap.url | relative_url }}"{% if _p == page.archive_page %} aria-current="page"{% endif %}>{{ _min }}{% if _max != _min %}–{{ _max }}{% endif %}</a>
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign _hs_keys = "," -%}
+  {%- for cat in site.course_categories -%}
+    {%- if cat.group != 'hs' -%}{%- continue -%}{%- endif -%}
+    {%- assign _n = site.courses | where: "category", cat.key | where_exp: "c", "c.visible != false" | size -%}
+    {%- if _n > 0 -%}{%- assign _hs_keys = _hs_keys | append: cat.key | append: "," -%}{%- endif -%}
+  {%- endfor -%}
+  {%- if _is_hs -%}{%- assign _page_keys = _hs_keys -%}{%- endif -%}
+  {%- if _hs_page and _hs_keys != "," -%}
+  <a class="pill pill-teal{% if _is_hs %} active{% endif %}" href="{{ _hs_page.url | relative_url }}"{% if _is_hs %} aria-current="page"{% endif %}><span class="lang-en">High School &amp; Online</span><span class="lang-ko">고등학교 · 온라인</span></a>
+  {%- endif -%}
+{%- endcapture -%}
+
+<div class="wrap">
+  <header class="page-header" data-waves>
+    <div class="eyebrow">
+      <span class="lang-en">Teaching History</span>
+      <span class="lang-ko">강의 이력</span>
+    </div>
+    {%- if _is_hs -%}
+    <h1>High School &amp; <em>Online</em></h1>
+    <p class="hero-desc" style="margin-top:16px;">
+      <span class="lang-en">Online courses, high-school workshops, and every course taught at Global Prodigy Academy (2013–2019).</span>
+      <span class="lang-ko">온라인 강좌, 고등학교 특강, 그리고 Global Prodigy Academy에서 강의한 모든 과목(2013–2019)입니다.</span>
+    </p>
+    {%- else -%}
+    <h1>Course <em>Archive</em></h1>
+    <p class="hero-desc" style="margin-top:16px;">
+      <span class="lang-en">University courses taught {{ _page_lo }}–{{ _page_hi }}, organized by semester.</span>
+      <span class="lang-ko">{{ _page_lo }}–{{ _page_hi }}년에 강의한 대학 강좌를 학기별로 정리했습니다.</span>
+    </p>
+    {%- endif -%}
+
+    <nav class="arch-pager" aria-label="Archive pages">{{ _pager }}</nav>
+
+    {%- include archive_filters.html keys=_page_keys hs=_is_hs -%}
+    <div class="hero-wave-ctrl">
+      <button class="wave-btn ctrl-btn" aria-label="Toggle wave animation">🌊</button>
+    </div>
+  </header>
+
+  <main id="archive-main" style="padding:32px 0 80px;">
+    {%- for cat in site.course_categories -%}
+      {%- assign _ck = "," | append: cat.key | append: "," -%}
+      {%- unless _page_keys contains _ck -%}{%- continue -%}{%- endunless -%}
+      {%- assign cat_courses = site.courses | where: "category", cat.key | where_exp: "c", "c.visible != false" | sort: "importance" -%}
+      {%- if cat_courses.size > 0 -%}
+      {%- assign is_current = cat_courses | where_exp: "c", "c.now" | size -%}
+      <div class="semester-group{% if is_current > 0 %} is-current{% endif %}" data-sem="{{ cat.key }}">
+        <div class="group-heading">
+          <span class="group-label">{{ cat.label }}</span>
+          {%- if is_current > 0 -%}<span class="current-chip">Current</span>{%- endif -%}
+          <span class="group-line"></span>
+        </div>
+        <ul class="archive-list">
+          {%- for course in cat_courses -%}
+            {%- assign _uni = course.init | upcase -%}
+            {%- assign _info = course.information | where_exp: "s", "s.links == nil" | first -%}
+            {%- include topic_tag.html course=course -%}
+            <li>
+              <a class="archive-item{% if course.grad %} grad-item{% endif %}"
+                 href="{{ course.url | relative_url }}"
+                 data-uni="{{ _uni }}"
+                 data-sem="{{ course.category }}"
+                 data-topic="{{ _topics_str }}"
+                 data-level="{% if course.grad %}grad{% else %}undergrad{% endif %}"
+                 data-title="{{ course.title | downcase }}">
+                {%- if course.img -%}
+                <div class="item-thumb" style="background-image:url('{{ course.img | relative_url }}')"></div>
+                {%- else -%}
+                <div class="item-thumb"></div>
+                {%- endif -%}
+                <div class="item-content">
+                  <div class="item-code">
+                    {{ course.description | split: ' • ' | first }}
+                    <span class="uni-init-tag">{{ _uni }}</span>
+                    {%- unless course.now %}<span class="archived-badge">Archived</span>{%- endunless -%}
+                  </div>
+                  <div class="item-main">
+                    <div class="item-title">{{ course.title }}</div>
+                    {%- if course.subtitle %}<div class="item-subtitle">{{ course.subtitle }}</div>{%- endif -%}
+                    <div class="item-meta-row">
+                      {%- for _cls in _tc_list -%}
+                        {%- assign _lbl = _tl_list[forloop.index0] -%}
+                        <span class="item-tag {{ _cls }}">{{ _lbl }}</span>
+                      {%- endfor -%}
+                      {%- if course.grad -%}<span class="item-tag grad-tag">🎓 <span class="lang-en">Grad</span><span class="lang-ko">대학원</span></span>{%- endif -%}
+                      {%- if course.intensive -%}<span class="item-tag intensive-tag">❄ <span class="lang-en">Intensive</span><span class="lang-ko">계절학기</span></span>{%- endif -%}
+                      {%- if _info.time -%}<span class="item-meta-val">{{ _info.time }}</span>{%- endif -%}
+                      {%- if _info.location -%}<span class="item-meta-val">{{ _info.location }}</span>{%- endif -%}
+                    </div>
+                  </div>
+                </div>
+                {%- assign _c_logo = course.logo -%}
+                {%- for _u in site.data.universities -%}
+                  {%- if _u.abbr == course.uni -%}{%- assign _c_logo = _u.logo -%}{%- endif -%}
+                {%- endfor -%}
+                {%- if _c_logo -%}
+                <div class="uni-badge">
+                  <img src="{{ _c_logo }}" class="ub-abbr" />
+                </div>
+                {%- endif -%}
+                <span class="item-arrow">→</span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+    {%- endfor -%}
+    <nav class="arch-pager arch-pager-bottom" aria-label="Archive pages">{{ _pager }}</nav>
+  </main>
+</div>
+
+<script>
+// ── Archive filter + sort + thumbnail logic ───────────────────────────────────
+(function() {
+  let activeSem   = 'all';
+  let activeUni   = 'all';
+  let activeTopic = 'all';
+  let activeLevel = 'all';
+  let activeSort  = 'newest';
+
+  const main = document.getElementById('archive-main');
+  const allRows = document.querySelectorAll('.archive-item');
+
+  // Store original group order for sort reset
+  const origGroupOrder = [...document.querySelectorAll('.semester-group')];
+
+  function countVisible() {
+    let n = 0;
+    allRows.forEach(r => { if (!r.closest('li').classList.contains('arch-hidden')) n++; });
+    const el = document.getElementById('arch-count');
+    if (el) el.textContent = n + ' course' + (n !== 1 ? 's' : '');
+  }
+
+  function applyFilters() {
+    allRows.forEach(row => {
+      const li    = row.closest('li');
+      const semOk   = activeSem   === 'all' || row.dataset.sem   === activeSem;
+      const uniOk   = activeUni   === 'all' || row.dataset.uni   === activeUni;
+      const topicOk = activeTopic === 'all' || row.dataset.topic.split(' ').includes(activeTopic);
+      const levelOk = activeLevel === 'all' || row.dataset.level === activeLevel;
+      li.classList.toggle('arch-hidden', !(semOk && uniOk && topicOk && levelOk));
+    });
+    document.querySelectorAll('.semester-group').forEach(sec => {
+      const anyVis = [...sec.querySelectorAll('li')].some(li => !li.classList.contains('arch-hidden'));
+      sec.style.display = anyVis ? '' : 'none';
+    });
+    countVisible();
+  }
+
+  function applySort() {
+    if (activeSort === 'newest') {
+      origGroupOrder.forEach(g => main.appendChild(g));
+    } else if (activeSort === 'oldest') {
+      [...origGroupOrder].reverse().forEach(g => main.appendChild(g));
+    } else if (activeSort === 'az' || activeSort === 'byuni') {
+      // Restore original group order first, then sort items within each group
+      origGroupOrder.forEach(g => main.appendChild(g));
+      document.querySelectorAll('.semester-group').forEach(group => {
+        const ul = group.querySelector('.archive-list');
+        if (!ul) return;
+        const items = [...ul.querySelectorAll('li')];
+        if (activeSort === 'az') {
+          items.sort((a, b) => {
+            const ta = (a.querySelector('.archive-item')?.dataset.title || '');
+            const tb = (b.querySelector('.archive-item')?.dataset.title || '');
+            return ta.localeCompare(tb);
+          });
+        } else {
+          items.sort((a, b) => {
+            const ua = (a.querySelector('.archive-item')?.dataset.uni || '');
+            const ub = (b.querySelector('.archive-item')?.dataset.uni || '');
+            return ua.localeCompare(ub);
+          });
+        }
+        items.forEach(li => ul.appendChild(li));
+      });
+    }
+    applyFilters();
+  }
+
+  // Filter buttons
+  document.querySelectorAll('[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.filter;
+      const val   = btn.dataset.value;
+      document.querySelectorAll(`[data-filter="${group}"]`).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (group === 'sem')   activeSem   = val;
+      if (group === 'uni')   activeUni   = val;
+      if (group === 'topic') activeTopic = val;
+      if (group === 'level') activeLevel = val;
+      applyFilters();
+    });
+  });
+
+  // Sort buttons
+  document.querySelectorAll('[data-sort]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-sort]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSort = btn.dataset.sort;
+      applySort();
+    });
+  });
+
+  // Filter panel toggle
+  const filterToggle = document.getElementById('filter-toggle');
+  const filterPanel  = document.getElementById('filter-panel');
+  if (filterToggle && filterPanel) {
+    filterToggle.addEventListener('click', () => {
+      const o = filterPanel.classList.toggle('open');
+      filterToggle.classList.toggle('open', o);
+    });
+  }
+
+  // Thumbnail toggle (saved choice, else _config.yml display_defaults.thumbs)
+  const archThumbToggle = document.getElementById('arch-thumb-toggle');
+  if (archThumbToggle) {
+    if (Prefs.thumbs()) {
+      main.classList.add('thumbs-active');
+      archThumbToggle.classList.add('active');
+      const _ic0 = archThumbToggle.querySelector('.t-icon');
+      if (_ic0) _ic0.textContent = '⊟';
+    }
+    archThumbToggle.addEventListener('click', () => {
+      const a = main.classList.toggle('thumbs-active');
+      archThumbToggle.classList.toggle('active', a);
+      const ic = archThumbToggle.querySelector('.t-icon');
+      if (ic) ic.textContent = a ? '⊟' : '⊞';
+      Prefs.save('thumbs', a ? '1' : '0');
+    });
+  }
+
+  countVisible();
+})();
+</script>

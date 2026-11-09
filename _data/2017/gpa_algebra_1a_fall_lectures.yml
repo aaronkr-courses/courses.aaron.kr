@@ -1,0 +1,59 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 10/16
+  week_no: 9
+  title: "§3-4<br>§3-5<br>§3-6<br>Finish practice problems<br>Chp 3 Test"
+  logistics: "HW: p. 191 #15, 37, 51-54, p. 197 #20-26, p. 206 #15-28"
+  exam: false
+
+- date: 10/23
+  week_no: 10
+  title: "§4-1<br>§4-2<br>§4-3<br>Finish practice problems"
+  logistics: "No school 10/27 (School Trip); HW: p. 233 #10-16, 16-28, p. 239 #15-20, Functions worksheet"
+  exam: false
+
+- date: 10/30
+  week_no: 11
+  title: "§4-4<br>§4-5<br>§4-6<br>Chp 4 Review<br>Chp 4 Test"
+  logistics: "HW: p. 256 #17-24, p. 268 #24, p. 275 #22-31"
+  exam: false
+
+- date: 11/6
+  week_no: 12
+  title: "§5-1<br>§5-2<br>§5-3 I<br>§5-3 II<br>Finish practice problems"
+  logistics: "HW: Math Fair prep?"
+  exam: false
+
+- date: 11/13
+  week_no: 13
+  title: "§5-4<br>§5-5<br>§5-6<br>Choose Your Own Adventure<br>Finish Challenge Qs"
+  logistics: "HW: Math Fair prep?, STEM Expo, p. 300 #15-20, Challenge Qs"
+  exam: false
+
+- date: 11/20
+  week_no: 14
+  title: "§5-7<br>§5-8<br>Finish practice problems<br>Chp 5 Review<br>Chp 5 Test"
+  logistics: "HW: p. 314 #4-7, 14-17, Problem Solving Workbook, p. 338 #21-26"
+  exam: false
+
+- date: 11/27
+  week_no: 15
+  title: "§6-1<br>§6-2<br>§6-3<br>Worksheet<br>Finish practice problems"
+  logistics: "HW: p. 345 #29-31, 35-37, Groupwork challenge, p. 386 #12-15"
+  exam: false
+
+- date: 12/4
+  week_no: 16
+  title: "§6-4<br>§6-5<br>§6-6<br>Chp 6 Review<br>Chp 6 Test"
+  logistics: "HW: p. 394 #18-20, p. 401 #11-13"
+  exam: false
+
+- date: 12/11
+  week_no: 17
+  title: "Review"
+  exam: false
+
+- date: 12/18
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam W 12/20, 9:30-11:30; No school 12/22 (School's Over!)"
+  exam: true

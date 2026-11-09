@@ -1,0 +1,97 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 8/17
+  title: "Course intro, setup, resources"
+  readings: "Course setup & intro · class syllabus & website · HTML basics"
+  logistics: "Weekend project"
+  exam: false
+
+- date: 8/24
+  title: "HTML & CSS basics"
+  readings: "Working with text · lists & images · forms & links · tables & iframes · HTML5 quiz + CSS overview"
+  logistics: "Project 1: Hello World page"
+  exam: false
+
+- date: 8/31
+  title: "HTML classes & IDs + linked stylesheets"
+  readings: "Inline & internal CSS · classes, IDs & divs · colors, floating, positioning · the box model · CSS3 quiz"
+  exam: false
+
+- date: 9/7
+  title: "Advanced HTML5 + CSS3"
+  readings: "Korean news websites — choose one · build the structure · style the header, body, footer & sidebar"
+  logistics: "Project 2: Hello World II (news site)"
+  exam: false
+
+- date: 9/14
+  title: "Codecademy HTML & CSS course"
+  logistics: "Project 3: Codecademy"
+  exam: false
+
+- date: 9/21
+  title: "Codecademy website course"
+  logistics: "Project 4: Codecademy"
+  exam: false
+
+- date: 9/28
+  title: "4-page template I"
+  readings: "Intro to the site · reading the code structure & requirements · finding and linking components"
+  logistics: "No school 9/28–9/29 (Chuseok)"
+  exam: false
+
+- date: 10/5
+  title: "4-page template II"
+  readings: "index.html · about.html · blog.html · contact.html"
+  logistics: "No school 10/9 (Hangeul Day)"
+  exam: false
+
+- date: 10/12
+  title: "Midterm Test"
+  logistics: "School trip 10/16"
+  exam: true
+
+- date: 10/19
+  title: "4-page template III"
+  readings: "Header, footer & sidebar styles · clean up · add store.html and purchase.html pages"
+  logistics: "Project 5: 4-page template"
+  exam: false
+
+- date: 10/26
+  title: "Intro to JavaScript"
+  readings: "How JS powers the web · terminology · data types · math, variables, order of operations"
+  exam: false
+
+- date: 11/2
+  title: "JavaScript control structures"
+  readings: "If / else if / else · switch · for loops · while loops"
+  exam: false
+
+- date: 11/9
+  title: "JavaScript functions"
+  readings: "Basic functions · functions as variables · parameters · finger-counting game"
+  exam: false
+
+- date: 11/16
+  title: "JavaScript enhancements"
+  readings: "Adding JS to our pages · a shopping-cart page · classes & objects · events"
+  logistics: "Project 6: 4-page template II"
+  exam: false
+
+- date: 11/23
+  title: "Codecademy JavaScript course"
+  logistics: "Project 7: Codecademy"
+  exam: false
+
+- date: 11/30
+  title: "Website project"
+  readings: "Overview & rubric · build"
+  exam: false
+
+- date: 12/7
+  title: "Website project (cont.)"
+  readings: "Build · review for the final test"
+  logistics: "Project 8: Final website project · Fine Arts Recital 12/11"
+  exam: false
+
+- date: 12/14
+  title: "Final Test"
+  exam: true

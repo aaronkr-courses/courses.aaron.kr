@@ -25,7 +25,12 @@ layout: default
     {%- include topic_tag.html course=page -%}
     <div class="course-badges animate d1">
       <span class="c-badge code">{{ info.section | default: page.section }}</span>
+      {%- assign _cat_obj = site.course_categories | where: "key", page.category | first -%}
+      {%- if _cat_obj.group == 'hs' and page.category contains '-' -%}
+      <span class="c-badge sem"><span class="lang-en">{{ _cat_obj.label }}</span><span class="lang-ko">{{ _cat_obj.label_ko }}</span></span>
+      {%- else -%}
       <span class="c-badge sem">{{ page.category | replace: '-', ' ' }}</span>
+      {%- endif -%}
       <span class="c-badge uni">{{ page.description | split: ' • ' | last }}</span>
       {%- for _cls in _tc_list -%}
         {%- assign _lbl = _tl_list[forloop.index0] -%}
@@ -133,7 +138,7 @@ layout: default
       <div class="crs-section" id="grading">
         <div class="crs-heading"><span class="crs-label"><span class="lang-en">Grading</span><span class="lang-ko">성적 평가</span></span><span class="crs-line"></span></div>
 
-        {%- if page.grading -%}
+        {%- if page.grading or page.grading_items -%}
         {%- assign g = page.grading -%}
 
         {%- comment -%} 상대평가 badge — default to relative grading {%- endcomment -%}
@@ -147,6 +152,28 @@ layout: default
           {%- endif -%}
         </div>
 
+        {%- if page.grading_items -%}
+        {%- comment -%}
+          Free-form breakdown (used by the GPA high-school courses, whose syllabi have more /
+          different categories than the fixed keys below). Each item: label, label_ko, pct.
+          Colors cycle through the same six grade tokens.
+        {%- endcomment -%}
+        {%- assign _gcols = "attend,hw,quiz,mid,final,project" | split: "," -%}
+        <div class="grade-track">
+          {%- for gi in page.grading_items -%}
+          {%- assign _ci = forloop.index0 | modulo: 6 -%}
+          <div class="grade-seg" style="flex:{{ gi.pct }};background:var(--grade-{{ _gcols[_ci] }});">
+            <span class="grade-pct">{{ gi.pct }}%</span><span class="grade-name"><span class="lang-en">{{ gi.short | default: gi.label }}</span><span class="lang-ko">{{ gi.short_ko | default: gi.label_ko | default: gi.label }}</span></span>
+          </div>
+          {%- endfor -%}
+        </div>
+        <div class="grade-legend">
+          {%- for gi in page.grading_items -%}
+          {%- assign _ci = forloop.index0 | modulo: 6 -%}
+          <span class="gl-item"><span class="gl-dot" style="background:var(--grade-{{ _gcols[_ci] }});"></span>{{ gi.pct }}% <span class="lang-en">{{ gi.label }}</span><span class="lang-ko">{{ gi.label_ko | default: gi.label }}</span></span>
+          {%- endfor -%}
+        </div>
+        {%- else -%}
         <div class="grade-track">
           {%- if g.attendance -%}
           <div class="grade-seg" style="flex:{{ g.attendance }};background:var(--grade-attend);">
@@ -187,6 +214,9 @@ layout: default
           {%- if g.final -%}<span class="gl-item"><span class="gl-dot" style="background:var(--grade-final);"></span>{{ g.final }}% <span class="lang-en">Final</span><span class="lang-ko">기말고사</span></span>{%- endif -%}
           {%- if g.project -%}<span class="gl-item"><span class="gl-dot" style="background:var(--grade-project);"></span>{{ g.project }}% <span class="lang-en">Project</span><span class="lang-ko">프로젝트</span></span>{%- endif -%}
         </div>
+        {%- endif -%}
+        {%- else -%}
+          <p style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:.8rem;"><span class="lang-en">Grading breakdown not available.</span><span class="lang-ko">성적 평가 정보가 없습니다.</span></p>
         {%- endif -%}
       </div>
 

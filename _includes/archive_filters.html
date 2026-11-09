@@ -1,7 +1,12 @@
 {%- comment -%}
   Archive page filter/sort toolbar + panel — pulled out of _pages/archive.md so it
   can be tweaked without touching the page's layout/loop logic.
-  Usage: {% include archive_filters.html %}
+  Usage: {% include archive_filters.html keys=_page_keys hs=_is_hs %}
+    keys — ",key1,key2," list of the course_categories shown on this archive page
+           (built by _includes/archive_page.html); pills only appear for those.
+    hs   — true on the High School & Online page: the University row becomes a
+           School row (one pill per course `init:`), Level is hidden, and the Topic
+           row lists the HS topic set.
 
   The Semester and University rows are generated from data (site.course_categories
   and site.data.universities respectively) and only show a pill for a value that at
@@ -40,6 +45,8 @@
       <span class="lang-en">All</span><span class="lang-ko">전체</span>
     </button>
     {%- for cat in site.course_categories -%}
+    {%- assign _fk = "," | append: cat.key | append: "," -%}
+    {%- unless include.keys contains _fk -%}{%- continue -%}{%- endunless -%}
     {%- assign cat_courses = site.courses | where: "category", cat.key -%}
     {%- if cat_courses.size > 0 -%}
     <button class="pill pill-blue" data-filter="sem" data-value="{{ cat.key }}">{{ cat.label }}</button>
@@ -47,19 +54,45 @@
     {%- endfor -%}
   </div>
   <div class="ctrl-row">
+    {%- if include.hs -%}
+    <span class="ctrl-row-label"><span class="lang-en">School</span><span class="lang-ko">학교</span></span>
+    <button class="pill active" data-filter="uni" data-value="all">
+      <span class="lang-en">All</span><span class="lang-ko">전체</span>
+    </button>
+    {%- comment -%} One pill per distinct `init:` among this page's courses (matches each row's data-uni) {%- endcomment -%}
+    {%- assign _seen_inits = "," -%}
+    {%- for cat in site.course_categories -%}
+      {%- assign _fk = "," | append: cat.key | append: "," -%}
+      {%- unless include.keys contains _fk -%}{%- continue -%}{%- endunless -%}
+      {%- assign _cc = site.courses | where: "category", cat.key -%}
+      {%- for c in _cc -%}
+        {%- assign _ini = c.init | upcase -%}
+        {%- assign _ik = "," | append: _ini | append: "," -%}
+        {%- unless _seen_inits contains _ik -%}
+          {%- assign _seen_inits = _seen_inits | append: _ini | append: "," -%}
+      <button class="pill" data-filter="uni" data-value="{{ _ini }}">{{ _ini }}</button>
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endfor -%}
+    {%- else -%}
     <span class="ctrl-row-label"><span class="lang-en">Univ.</span><span class="lang-ko">대학교</span></span>
     <button class="pill active" data-filter="uni" data-value="all">
       <span class="lang-en">All</span><span class="lang-ko">전체</span>
     </button>
     {%- for u in site.data.universities -%}
-      {%- assign _u_count = site.courses | where: "uni", u.abbr | size -%}
-      {%- if _u_count > 0 -%}
+      {%- assign _u_courses = site.courses | where: "uni", u.abbr -%}
+      {%- assign _u_on_page = false -%}
+      {%- for c in _u_courses -%}
+        {%- assign _fk = "," | append: c.category | append: "," -%}
+        {%- if include.keys contains _fk -%}{%- assign _u_on_page = true -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if _u_on_page -%}
       <button class="pill" data-filter="uni" data-value="{{ u.abbr | upcase }}"><span class="lang-en">{{ u.abbr | upcase }}</span><span class="lang-ko">{{ u.short_ko | default: u.name_ko }}</span></button>
       {%- endif -%}
     {%- endfor -%}
-    {%- comment -%} Non-university courses (high school outreach etc.) aren't in universities.yml {%- endcomment -%}
-    <button class="pill" data-filter="uni" data-value="HS"><span class="lang-en">HS</span><span class="lang-ko">고등학교</span></button>
+    {%- endif -%}
   </div>
+  {%- unless include.hs -%}
   <div class="ctrl-row">
     <span class="ctrl-row-label"><span class="lang-en">Level</span><span class="lang-ko">과정</span></span>
     <button class="pill active" data-filter="level" data-value="all">
@@ -68,11 +101,20 @@
     <button class="pill" data-filter="level" data-value="grad">🎓 <span class="lang-en">Graduate</span><span class="lang-ko">대학원</span></button>
     <button class="pill" data-filter="level" data-value="undergrad"><span class="lang-en">Undergraduate</span><span class="lang-ko">학부</span></button>
   </div>
+  {%- endunless -%}
   <div class="ctrl-row">
     <span class="ctrl-row-label"><span class="lang-en">Topic</span><span class="lang-ko">주제</span></span>
     <button class="pill active" data-filter="topic" data-value="all">
       <span class="lang-en">All</span><span class="lang-ko">전체</span>
     </button>
+    {%- if include.hs -%}
+    <button class="pill" data-filter="topic" data-value="theory"><span class="lang-en">Programming</span><span class="lang-ko">프로그래밍</span></button>
+    <button class="pill" data-filter="topic" data-value="web"><span class="lang-en">Web</span><span class="lang-ko">웹</span></button>
+    <button class="pill" data-filter="topic" data-value="systems"><span class="lang-en">Systems</span><span class="lang-ko">시스템</span></button>
+    <button class="pill" data-filter="topic" data-value="design"><span class="lang-en">Design</span><span class="lang-ko">디자인</span></button>
+    <button class="pill" data-filter="topic" data-value="gened"><span class="lang-en">General Ed.</span><span class="lang-ko">일반 교과</span></button>
+    <button class="pill" data-filter="topic" data-value="ai-tag"><span class="lang-en">AI/ML</span><span class="lang-ko">AI/머신러닝</span></button>
+    {%- else -%}
     <button class="pill" data-filter="topic" data-value="ai-tag"><span class="lang-en">AI/ML</span><span class="lang-ko">AI/머신러닝</span></button>
     <button class="pill" data-filter="topic" data-value="theory"><span class="lang-en">Programming</span><span class="lang-ko">프로그래밍</span></button>
     <button class="pill" data-filter="topic" data-value="web"><span class="lang-en">Web</span><span class="lang-ko">웹</span></button>
@@ -80,6 +122,7 @@
     <button class="pill" data-filter="topic" data-value="systems"><span class="lang-en">Systems</span><span class="lang-ko">시스템</span></button>
     <button class="pill" data-filter="topic" data-value="ee"><span class="lang-en">EE</span><span class="lang-ko">전기전자</span></button>
     <button class="pill" data-filter="topic" data-value="biomed"><span class="lang-en">BioMed</span><span class="lang-ko">바이오메디컬</span></button>
+    {%- endif -%}
   </div>
   <div class="ctrl-row">
     <span class="ctrl-row-label"><span class="lang-en">Sort</span><span class="lang-ko">정렬</span></span>
@@ -93,7 +136,7 @@
       <span class="lang-en">A–Z</span><span class="lang-ko">가나다순</span>
     </button>
     <button class="pill" data-sort="byuni">
-      <span class="lang-en">By University</span><span class="lang-ko">대학교별</span>
+      {%- if include.hs -%}<span class="lang-en">By School</span><span class="lang-ko">학교별</span>{%- else -%}<span class="lang-en">By University</span><span class="lang-ko">대학교별</span>{%- endif -%}
     </button>
   </div>
 </div>

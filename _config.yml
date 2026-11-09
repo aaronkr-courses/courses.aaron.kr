@@ -68,7 +68,18 @@ collections:
     output: true
     permalink: /courses/:path/
 
-# Course category display order (newest first)
+# ─────────────────────────────────────────
+# Archive pagination
+# University courses are paginated by year (newest first): page 1 = the newest
+# `years_per_page` years, page 2 the next block, and so on. The LAST university page
+# that exists (a `_pages/archive*.md` file with `archive_page: N`) also takes every
+# older year, so nothing is ever hidden. Categories with `group: hs` (online + high
+# school) skip the university pages and are listed only on /archive/hs/, the final page.
+# ─────────────────────────────────────────
+archive:
+  years_per_page: 5
+
+# Course category display order (newest first). `group: hs` = High School & Online page.
 course_categories:
   - label: "Winter 2027"
     label_ko: "2027년 겨울 계절학기"
@@ -94,12 +105,66 @@ course_categories:
   - label: "2023"
     label_ko: "2023년"
     key: "2023"
-  - label: "Special / HS"
-    label_ko: "특수 / 고등학교"
-    key: "Special"
   - label: "Online Courses"
     label_ko: "온라인 강의"
     key: "Online"
+    group: hs
+  - label: "Special / HS"
+    label_ko: "특수 / 고등학교"
+    key: "Special"
+    group: hs
+  - label: "GPA Spring 2019"
+    label_ko: "GPA 2019년 1학기"
+    key: "gpa-2019-1"
+    group: hs
+  - label: "GPA Fall 2018"
+    label_ko: "GPA 2018년 2학기"
+    key: "gpa-2018-2"
+    group: hs
+  - label: "GPA Spring 2018"
+    label_ko: "GPA 2018년 1학기"
+    key: "gpa-2018-1"
+    group: hs
+  - label: "GPA Fall 2017"
+    label_ko: "GPA 2017년 2학기"
+    key: "gpa-2017-2"
+    group: hs
+  - label: "GPA Spring 2017"
+    label_ko: "GPA 2017년 1학기"
+    key: "gpa-2017-1"
+    group: hs
+  - label: "GPA Fall 2016"
+    label_ko: "GPA 2016년 2학기"
+    key: "gpa-2016-2"
+    group: hs
+  - label: "GPA Spring 2016"
+    label_ko: "GPA 2016년 1학기"
+    key: "gpa-2016-1"
+    group: hs
+  - label: "GPA Fall 2015"
+    label_ko: "GPA 2015년 2학기"
+    key: "gpa-2015-2"
+    group: hs
+  - label: "GPA Spring 2015"
+    label_ko: "GPA 2015년 1학기"
+    key: "gpa-2015-1"
+    group: hs
+  - label: "GPA Fall 2014"
+    label_ko: "GPA 2014년 2학기"
+    key: "gpa-2014-2"
+    group: hs
+  - label: "GPA Spring 2014"
+    label_ko: "GPA 2014년 1학기"
+    key: "gpa-2014-1"
+    group: hs
+  - label: "GPA Fall 2013"
+    label_ko: "GPA 2013년 2학기"
+    key: "gpa-2013-2"
+    group: hs
+  - label: "GPA Spring 2013"
+    label_ko: "GPA 2013년 1학기"
+    key: "gpa-2013-1"
+    group: hs
 
 # ─────────────────────────────────────────
 # Jekyll Settings

@@ -1,0 +1,98 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/19
+  week_no: 1
+  title: "Join Code.org<br>U4L1: Analysis of Design<br>U4L2: Understanding your User<br>Study Hall"
+  logistics: "No school 2/19"
+  exam: false
+
+- date: 2/26
+  week_no: 2
+  title: "U4L3: User-Centered Design Micro Activity<br>U4L4: User Interfaces<br>Study Hall"
+  logistics: "No school 3/1"
+  exam: false
+
+- date: 3/5
+  week_no: 3
+  title: "Study Hall<br>U4L4: cont.<br>U4L5: Feedback and Testing<br>U4L6: Identifying User Needs<br>Catch up"
+  exam: false
+
+- date: 3/12
+  week_no: 4
+  title: "U4L7: Project - Paper Prototype<br>U4L8: Designing Apps for Good<br>U4L9: Market Research<br>U4L10: Paper Prototypes"
+  exam: false
+
+- date: 3/19
+  week_no: 5
+  title: "U4L11: Prototype Testing<br>U4L12: Digital Design<br>U4L13: Linking Screens<br>U4L14: Testing the App<br>Catch up"
+  exam: false
+
+- date: 3/26
+  week_no: 6
+  title: "U4L15: Improving and Iterating<br>U4L16: App Presentation<br>Study Hall"
+  exam: false
+
+- date: 4/2
+  week_no: 7
+  title: "U5L1: Representation Matters<br>U5L2: Patterns and Representation<br>U5L3: ASCII and Binary Representation<br>U5L4: Representing Images<br>U5L5: Representing Numbers"
+  exam: false
+
+- date: 4/9
+  week_no: 8
+  title: "U5L6: Keeping Data Secret<br>U5L7: Combining Representations<br>U5L8: Create a Representation<br>U5L9: Problem Solving & Data<br>Study Hall"
+  exam: false
+
+- date: 4/16
+  week_no: 9
+  title: "U5L10: Problem Solving with Big Data<br>U5L11: Structuring Data<br>U5L12: Making Decisions with Data<br>U5L13: Interpreting Data<br>U5L14: Automating Data Decisions"
+  exam: false
+
+- date: 4/23
+  week_no: 10
+  title: "U5L15: Make a Recommendation<br>Study Hall"
+  exam: false
+
+- date: 4/30
+  week_no: 11
+  title: "U6L1: Innovations in Computing<br>U6L2: Designing with Code<br>U6L3: The Circuit Playground<br>U6L4: Input Unplugged"
+  logistics: "No school 5/4"
+  exam: false
+
+- date: 5/7
+  week_no: 12
+  title: "U6L5: Board Events<br>U6L6: Getting Properties<br>U6L7: Analog Input<br>U6L8: The Program Design Process"
+  logistics: "No school 5/7"
+  exam: false
+
+- date: 5/14
+  week_no: 13
+  title: "U6L9: Project: Make a Game"
+  logistics: "No school 5/18"
+  exam: false
+
+- date: 5/21
+  week_no: 14
+  title: "U6L10: Arrays and Color LEDs<br>U6L11: Making Music<br>U6L12: Arrays and For Loops<br>U6L13: Accelerometer"
+  logistics: "No school 5/22"
+  exam: false
+
+- date: 5/28
+  week_no: 15
+  title: "U6L14: Functions with Parameters<br>U6L15: Circuits and Physical Prototypes<br>Study Hall"
+  exam: false
+
+- date: 6/4
+  week_no: 16
+  title: "U6L16: Project: Prototype an Innovation"
+  logistics: "No school 6/6"
+  exam: false
+
+- date: 6/11
+  week_no: 17
+  title: "Review"
+  exam: false
+
+- date: 6/18
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam M 6/18, 1:00-3:00; No school 6/22"
+  exam: true

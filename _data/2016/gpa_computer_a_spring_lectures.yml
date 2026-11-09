@@ -1,0 +1,91 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/22
+  title: "Intro + Typing 1 (touch typing)"
+  readings: "Typing Master Pro"
+  exam: false
+
+- date: 2/29
+  title: "Typing 2 (touch typing)"
+  readings: "Typing Master Pro"
+  exam: false
+
+- date: 3/7
+  title: "Typing 3 + Computer hardware & peripherals"
+  readings: "GCF Computer Basics"
+  logistics: "Graded: TMP results · Computer worksheet"
+  exam: false
+
+- date: 3/14
+  title: "Software safety & online security"
+  readings: "Program installation · viruses/adware · TMI on SNS · passwords"
+  logistics: "Graded: Worksheet"
+  exam: false
+
+- date: 3/21
+  title: "Windows basics training"
+  readings: "Windows · email · search"
+  logistics: "Graded: Worksheet"
+  exam: false
+
+- date: 3/28
+  title: "Google Drive essential training"
+  logistics: "Graded: Drive worksheet"
+  exam: false
+
+- date: 4/4
+  title: "Social media essential training"
+  logistics: "Graded: Worksheet"
+  exam: false
+
+- date: 4/11
+  title: "WordPress blogs"
+  logistics: "Graded: Blog creation"
+  exam: false
+
+- date: 4/18
+  title: "Midterm"
+  exam: true
+
+- date: 4/25
+  title: "Google Calendar, Maps & Apps"
+  logistics: "Graded: Calendar"
+  exam: false
+
+- date: 5/2
+  title: "Google Docs (Word, Docs, etc.)"
+  logistics: "Graded: Resume"
+  exam: false
+
+- date: 5/9
+  title: "Writing research papers"
+  logistics: "Graded: Research paper"
+  exam: false
+
+- date: 5/16
+  title: "Google Sheets"
+  logistics: "Graded: Make a calendar"
+  exam: false
+
+- date: 5/23
+  title: "Statistics, charts & graphs (Excel, Sheets)"
+  logistics: "Graded: Life budget · College budget"
+  exam: false
+
+- date: 5/30
+  title: "Google Slides (PowerPoint, Present, etc.)"
+  logistics: "Graded: Newsletter · Poster"
+  exam: false
+
+- date: 6/6
+  title: "Principles of public speaking"
+  logistics: "Graded: Deliver your speech"
+  exam: false
+
+- date: 6/13
+  title: "PPT games"
+  logistics: "Graded: PPT game"
+  exam: false
+
+- date: 6/20
+  title: "Final Test"
+  exam: true

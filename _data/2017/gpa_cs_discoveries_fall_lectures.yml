@@ -1,0 +1,52 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 10/16
+  week_no: 9
+  title: "U2L14: Portfolio<br>U3L1: Programming for Entertainment<br>U3L2: Plotting Shapes<br>U3L3: Drawing in Game Lab"
+  exam: false
+
+- date: 10/23
+  week_no: 10
+  title: "U3L4: Shapes & Randomization<br>U3L5: Variables<br>U3L6: Sprites<br>U3L7: The Draw Loop"
+  logistics: "No school 10/27 (School Trip)"
+  exam: false
+
+- date: 10/30
+  week_no: 11
+  title: "U3L8: The Counter Pattern Unplugged<br>U3L9: Sprite Movement<br>U3L10: Bools Unplugged<br>U3L11: Conditionals<br>U3L12: Keyboard Input"
+  exam: false
+
+- date: 11/6
+  week_no: 12
+  title: "U3L13: Other Input<br>U3L14: Interactive Card<br>U3L15: Velocity<br>U3L16: Collision Detection"
+  exam: false
+
+- date: 11/13
+  week_no: 13
+  title: "U3L17: Complex Sprite Movement<br>U3L18: Collisions<br>U3L19: Functions<br>U3L20: Game Design Process<br>U3L21: Game Design Process II"
+  exam: false
+
+- date: 11/20
+  week_no: 14
+  title: "U3L22: Design a Game<br>U4L1: Analysis of Design<br>U4L2: Understanding Your User<br>U4L3: User-Centered Design Micro Activity"
+  exam: false
+
+- date: 11/27
+  week_no: 15
+  title: "U4L4: User Interfaces<br>U4L5: Feedback and Testing<br>U4L6: Identifying User Needs<br>U4L7: Paper Prototype<br>U4L8: Designing Apps for Good"
+  exam: false
+
+- date: 12/4
+  week_no: 16
+  title: "U4L9: Market Research<br>U4L10: Paper Prototypes<br>U4L11: Prototype Testing<br>U4L12: Digital Design<br>U4L13: Event Driven Programming"
+  exam: false
+
+- date: 12/11
+  week_no: 17
+  title: "U4L14: Basic App Functionality<br>U4L15: Testing the App<br>U4L16: Improving and Iterating<br>U4L17: App Presentation<br>App Presentations"
+  exam: false
+
+- date: 12/18
+  week_no: 18
+  title: "Final Exam"
+  logistics: "Final exam R 12/21, 9:30-11:30; No school 12/22 (School's Over!)"
+  exam: true

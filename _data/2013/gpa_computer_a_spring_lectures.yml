@@ -1,0 +1,105 @@
+# Reconstructed from the original GPA syllabus / lesson plans (see _courses/gpa/).
+- date: 2/18
+  title: "Typing — Step 1"
+  readings: "Typing Master Pro lessons 1–5 + daily typing tests (goal: 35 WPM, 95% accuracy)"
+  logistics: "Weekend HW: watch a \"Why Typing Matters\" video + notebook summary"
+  exam: false
+
+- date: 2/25
+  title: "Typing — Step 2"
+  readings: "Typing Master Pro lessons 6–10"
+  logistics: "Weekend HW: watch an \"Intro to WordPress\" video + notebook summary"
+  exam: false
+
+- date: 3/4
+  title: "Typing — Step 3 + WordPress blogs"
+  readings: "Lessons 11–12 · Set up a WordPress.com blog, settings, categories, a STAR portfolio page"
+  logistics: "Project: Initial blog setup; Weekend HW: watch a \"MS Word & Beautiful Reports\" video"
+  exam: false
+
+- date: 3/11
+  title: "MS Word — Beautiful reports"
+  readings: "Tables & report outlines · graphics & notes · APA bibliography"
+  logistics: "Project: A beautiful report or form for another class; Weekend HW: watch a \"Resume Design & Modern Resumes\" video"
+  exam: false
+
+- date: 3/18
+  title: "MS Word — Resumes & cover letters"
+  readings: "Resume draft & design · matching cover letter · WordPress.com resume"
+  logistics: "Project: Your resume; Weekend HW: watch a \"Using Excel SUM & PRODUCT\" video"
+  exam: false
+
+- date: 3/25
+  title: "MS Excel — Business cashflow"
+  readings: "SUM & PRODUCT · .csv import/export · printable forms"
+  logistics: "Project: Cashflow spreadsheet for a business; Weekend HW: watch a \"Personal Finance / Budgets / Debt\" video"
+  exam: false
+
+- date: 4/1
+  title: "MS Excel — Personal budgeting"
+  readings: "SUM, PRODUCT, AVERAGE · multiple sheets · VLOOKUP college-cost page"
+  logistics: "Project: Personal budget; Weekend HW: watch an \"Advanced Excel\" (statistics) video"
+  exam: false
+
+- date: 4/8
+  title: "MS Excel — Gradebooks & trackers"
+  readings: "Gradebook formulas · bell curve & graphs"
+  logistics: "Project: Personal grade tracker; Weekend HW: watch a \"Test Tips\" video"
+  exam: false
+
+- date: 4/15
+  title: "Midterm Exams"
+  logistics: "Skills test on typing, Word, and Excel · School trip 4/19"
+  exam: true
+
+- date: 4/22
+  title: "MS PowerPoint — Self-intro speeches"
+  readings: "Write a self-intro speech and design a supporting PPT · upload to SlideShare"
+  logistics: "Project: Personal PPT, part 1; Weekend HW: watch a \"PPT Media (videos / images)\" video"
+  exam: false
+
+- date: 4/29
+  title: "MS PowerPoint — Self-intro 2.0"
+  readings: "Add YouTube video and other media · consistent design"
+  logistics: "Project: Personal PPT 2.0 · No school 5/3; Weekend HW: watch a \"Creating PPT Games\" video"
+  exam: false
+
+- date: 5/6
+  title: "MS PowerPoint — PowerPoint games"
+  readings: "Gather resources · build a game with hyperlink buttons, GIFs, sounds, transitions"
+  logistics: "Project: An educational game; Weekend HW: watch a \"Good Print Design\" video"
+  exam: false
+
+- date: 5/13
+  title: "MS Publisher — Postcards"
+  readings: "Fonts, images, postal info · layout & design"
+  logistics: "Project: Designing a postcard · No school 5/17; Weekend HW: watch a \"Typography\" video"
+  exam: false
+
+- date: 5/20
+  title: "MS Publisher — Calendars"
+  readings: "Layout with no pictures first, then add pictures & quotations"
+  logistics: "Project: Designing a calendar; Weekend HW: watch a \"Professional Printing\" video"
+  exam: false
+
+- date: 5/27
+  title: "MS Publisher — Newspapers & magazines"
+  readings: "Write stories · design with a consistent font · compile a personal newspaper"
+  logistics: "Project: Designing a newsletter or newspaper; Weekend HW: watch a \"Good Portfolio Websites\" video"
+  exam: false
+
+- date: 6/3
+  title: "WordPress — Portfolio updates"
+  readings: "Clean up the blog · add elements · plan the portfolio"
+  logistics: "Project: Hand-drawn layout, plans, portfolio templates · No school 6/6; Weekend HW: watch an \"Accomplishments / Professionalism\" video"
+  exam: false
+
+- date: 6/10
+  title: "WordPress — Portfolio finalization"
+  readings: "Final changes · reflection post on the class"
+  logistics: "Project: The finished portfolio collecting ALL semester projects; Weekend HW: watch a \"Future, finals, etc.\" video"
+  exam: false
+
+- date: 6/17
+  title: "Final Exams"
+  exam: true
