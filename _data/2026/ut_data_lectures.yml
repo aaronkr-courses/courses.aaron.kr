@@ -143,8 +143,10 @@
     <strong>10장) 케라스를 사용한 인공 신경망 소개</strong>
   supp:
   readings: p. 370-433
-  hw: 
-  hw2: 
+  hw: "https://classroom50.org/aaronkr-2026-2/knut-2-am/assignments/10-keras-nn/accept"
+  hw_label: "AM 오전 과제"
+  hw2: "https://classroom50.org/aaronkr-2026-2/knut-1-pm/assignments/10-keras-nn/accept"
+  hw2_label: "PM 오후 과제"
   slides: "https://docs.google.com/presentation/d/1nHUbriVxg7J4NUSok7QhskrAmTJ-Mio_BZcO9DSj2bM/edit?usp=sharing"
   img: 2024/ut-data/11-keras-nn.jpg
   logistics:
