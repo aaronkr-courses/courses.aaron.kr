@@ -32,6 +32,15 @@ information:
     kakaotalk: https://open.kakao.com/o/gu14NpLi
     "🧠 팀 프로젝트 PM": https://classroom50.org/aaronkr-2026-2/knut-1-pm/assignments/0-team-project/accept
 
+  - links: 팀 프로젝트
+    "👨‍💻 설명 PPT": https://docs.google.com/presentation/d/1NO6_B8HVeR5WoJuTJXMgTgmhxURlt-uzPia3qDSeYsU/edit?usp=sharing
+    "📝 제안서 템플릿": https://docs.google.com/document/d/18JfUpOLhA3qyS2qCjQgi7EjcPTS_02-ewDG441BScmc/edit?usp=drive_link
+    "예시1": https://docs.google.com/document/d/1N6y8dwdzpBi_8G29llBwN8VYVY9dLrdAqjMNVT7rki8/edit?usp=sharing
+    "예시2": https://docs.google.com/document/d/1_HGoOgeKztlGsimvMTlwT7DrlEgTgXQumAuxYOLFScE/edit?usp=sharing
+    "예시3": https://docs.google.com/document/dbc1qnmz2l8lr0yzj9eun48dyds7rlzg6t6hk5vw5ztWXFeeEkHgrumM/edit?usp=sharing
+    "예시4": https://docs.google.com/document/d/1dEhn6xigCQiHq53bqZiAA4vrKqdRZcEoG_nkRfVaVo8/edit?usp=sharing
+    "📥 제출": https://forms.gle/j9cDVZUTuZYtCb1CA
+
   - links: EDA 템플릿
     "📊 표 형식": https://drive.google.com/file/d/1gyP2ziRAmCJWaUAkLY4kSXBWBOQS9C9e/view?usp=sharing
     "⏱️ 시계열/순차 형식": https://drive.google.com/file/d/1LXjm5R_sHCDkDEzzHp5lXiLK62Slpd5R/view?usp=sharing

@@ -26,6 +26,7 @@ information:
     kakaotalk: https://open.kakao.com/o/gjTOWpLi
     classroom: https://classroom.google.com/c/ODcyNDY2NDU4MDU2?cjc=7p7x4cbp
     "🩻 DICOM Viewer": https://www.docorbit.com/dicom-viewer/
+    "🛠️ Colab - 한글 글꼴 설치 방법": https://docs.google.com/document/d/1aH1Tv6erRsEV6ff9hcaeSkm3rfQFiYIrjUgvSpoZrTA/edit?usp=sharing
 
 Main-Text:
   - text: "주교재"

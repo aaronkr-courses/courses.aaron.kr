@@ -107,8 +107,8 @@
   week: 8
   title: >
     <strong>Midterm Test</strong><br>
-    <div>
-      <a href="https://docs.google.com/spreadsheets/d/1nHiocAwXWG6uLGveyV1QqaXrRuLVGNkqZmT4gOHf0uw/edit?usp=sharing">핵심 개념 용어</a><br><br>
+    <a href="https://docs.google.com/spreadsheets/d/1nHiocAwXWG6uLGveyV1QqaXrRuLVGNkqZmT4gOHf0uw/edit?usp=sharing">핵심 개념 용어</a>
+    <div style="display: none">
       <a class="hw-link" href="https://docs.google.com/document/d/18JfUpOLhA3qyS2qCjQgi7EjcPTS_02-ewDG441BScmc/edit?usp=drive_link">팀 프로젝트 제안서</a>
       <a class="hw-link" href="https://docs.google.com/document/d/1N6y8dwdzpBi_8G29llBwN8VYVY9dLrdAqjMNVT7rki8/edit?usp=sharing">제안서 예시 1</a>
       <a class="hw-link" href="https://docs.google.com/document/d/1_HGoOgeKztlGsimvMTlwT7DrlEgTgXQumAuxYOLFScE/edit?usp=sharing">제안서 예시 2</a>
@@ -131,11 +131,8 @@
   hw2_label: "PM 오후 과제"
   slides: "https://docs.google.com/presentation/d/1EEZBzmrEN8VDDdUnZ2Tj9BdJOJXLTrCUWy7KlHWNXQY/edit?usp=sharing"
   img: 2024/ut-data/10-unsupervised.jpg
-  logistics: >
-    <div style="display:none;"><br>
-      [<a href="https://classroom.github.com/a/v0Ll672L">프로젝트 저장소 AM</a>]<br>
-      [<a href="https://classroom.github.com/a/PFDbQZp_">프로젝트 저장소 PM</a>]
-    </div>
+  logistics:  >
+    9장 어휘 <a href="https://drive.google.com/file/d/1ZzcAtB_aAvKCM6vl6misUqAhV6GNppP2/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/15xfTwSvMhFeb_I3rqZ534D_nKYiNdfSkWKSqy4-uUCQ/edit?usp=sharing">XLSX</a>
 
 - date: 11/9
   week: 10
@@ -149,7 +146,8 @@
   hw2_label: "PM 오후 과제"
   slides: "https://docs.google.com/presentation/d/1nHUbriVxg7J4NUSok7QhskrAmTJ-Mio_BZcO9DSj2bM/edit?usp=sharing"
   img: 2024/ut-data/11-keras-nn.jpg
-  logistics:
+  logistics: >
+    10장 어휘 <a href="https://drive.google.com/file/d/1GrVOOeuvc98n7UtTz9972m1RdiHbBU4W/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1287mbUJ4wuDKd68lXDvCU-mqUse4yFygWvUNTGxjMmY/edit?usp=sharing">XLSX</a>
 
 - date: 11/16
   week: 11
@@ -159,9 +157,10 @@
   readings: p. 434-488
   hw: 
   hw2: 
-  slides_: "https://docs.google.com/presentation/d/1hrGXot-GjUEMNCv7-zUH8yO9gI1NfmHHAkQ_TJj8qGo/edit?usp=sharing"
-  img_: 2024/ut-data/12-cnn-training.jpg
-  logistics:
+  slides: "https://docs.google.com/presentation/d/1hrGXot-GjUEMNCv7-zUH8yO9gI1NfmHHAkQ_TJj8qGo/edit?usp=sharing"
+  img: 2024/ut-data/12-cnn-training.jpg
+  logistics: >
+    11장 어휘 <a href="https://drive.google.com/file/d/1nHmcC1-8sV-8BGdq0falGZRr9-viC05d/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/dbc1qnmz2l8lr0yzj9eun48dyds7rlzg6t6hk5vw5ztkje-D0jE/edit?usp=sharing">XLSX</a>
 
 - date: 11/23
   week: 12
