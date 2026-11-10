@@ -155,9 +155,9 @@
   supp:
   readings:
   hw: 
-  slides: 
+  slides: "https://docs.google.com/presentation/d/1y2IqhDvZ3sFSiqNaqTyvZAZFvpSGSuPllEv5AegJQDI/edit?usp=sharing"
   slides2:
-  img: 2026/wku-db/
+  img: 2026/wku-db/11-db-design.jpg
   logistics:
 
 - date: 11/18
