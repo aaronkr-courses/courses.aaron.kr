@@ -172,31 +172,36 @@
 - date: 11/11
   week: 11
   title: >
-    <strong>Transfer Entropy, Thermodynamics</strong>
+    <strong>Transfer Entropy</strong>
   supp:
   readings:
   hw:
   slides: "https://docs.google.com/presentation/d/1vLpW48dMe1jnSf7kjrBX-O48AsLRpGZk5iTQi_eD2WE/edit?usp=sharing"
   slides2:
   img: 2025/jbnu-info/11-transfer.jpg
-  logistics:
+  logistics: >
+    <ul>Three Notebooks:
+      <li>09 Transfer Entropy</li>
+      <li>09 TE: Stock Markets</li>
+      <li>08 Rate Distortion</li>
+    </ul>
 
 - date: 11/18
   week: 12
   title: >
-    <strong>Information as Nature's Currency I</strong>
+    <strong>Thermodynamic Entropy and Information</strong>
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1NjT9QmRU5Hn9q2jN3vp4NLKoZes28C63rYykNpw4Sk8/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1yFznwPRwzxA_DEhN10AWyV3Lh_lhPGRulvxnCOum1lI/edit?usp=sharing"
   slides2:
-  _img: 2025/jbnu-info/12-nature.jpg
+  img: 2025/jbnu-info/12-thermo.jpg
   logistics:
 
 - date: 11/25
   week: 13
   title: >
-    <strong>Information as Nature's Currency II</strong>
+    <strong>Information as Nature's Currency</strong>
   supp:
   readings:
   hw:
