@@ -154,7 +154,8 @@
     Chapter 15: Calling MySQL from Programming Languages
   supp:
   readings:
-  hw: 
+  hw: "https://github.com/aaronkr-courses/flask-py-book-reviews-sql-app"
+  hw_label: "북 리뷰 앱"
   slides: "https://docs.google.com/presentation/d/1y2IqhDvZ3sFSiqNaqTyvZAZFvpSGSuPllEv5AegJQDI/edit?usp=sharing"
   slides2:
   img: 2026/wku-db/11-db-design.jpg
