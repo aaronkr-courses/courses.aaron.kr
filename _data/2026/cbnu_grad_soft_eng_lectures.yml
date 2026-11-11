@@ -132,10 +132,10 @@
   supp:
   readings: Chp 7
   hw:
-  slides: 
-  _slides2: "https://docs.google.com/presentation/d/1dbDdMgeSHwsezvrUpHj0VN-qCemOKEz3/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
-  _slides2_title: "Ch.7 Security (Original)"
-  img: 2026/cbnu-grad-soft-eng/
+  slides: "https://docs.google.com/presentation/d/14tVjjeSLEcDrJhUqOgmE8EaCUksRgICNU65HckiZwoM/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1dbDdMgeSHwsezvrUpHj0VN-qCemOKEz3/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.7 Security (Original)"
+  img: 2026/cbnu-grad-soft-eng/11-sec-priv.jpg
   logistics: >
     Security audit
 
