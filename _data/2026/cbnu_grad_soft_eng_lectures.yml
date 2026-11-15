@@ -147,10 +147,10 @@
   supp:
   readings: Chp 8 + SWE@Google Ch.8
   hw:
-  slides: 
-  _slides2: "https://docs.google.com/presentation/d/1k0C-gek2ioLf_y7QsFj6bVoHpdM3rtkV/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
-  _slides2_title: "Ch.8 Reliable Prog. (Original)"
-  img: 2026/cbnu-grad-soft-eng/
+  slides: "https://docs.google.com/presentation/d/1kd7_7icbpqTKF7rYd5hkJJ_weIOo9q3va2X9_iaRgug/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1k0C-gek2ioLf_y7QsFj6bVoHpdM3rtkV/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.8 Reliable Prog. (Original)"
+  img: 2026/cbnu-grad-soft-eng/12-reliable.jpg
   logistics: >
     Code style pass
 

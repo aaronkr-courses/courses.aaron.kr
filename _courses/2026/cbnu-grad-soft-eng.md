@@ -41,7 +41,7 @@ Supplementary:
     title: >
       <strong>Software Engineering at Google:</strong> Lessons Learned from Programming Over Time
     publisher: "O'Reilly Media | 2020년 02월 29일"
-    link: "https://www.yes24.com/product/goods/133247948"
+    link: "https://abseil.io/resources/swe-book"
     ebook: "https://abseil.io/resources/swe-book"
     image: books/swe-google.jpg
 
