@@ -41,10 +41,14 @@ information:
     "예시4": https://docs.google.com/document/d/1dEhn6xigCQiHq53bqZiAA4vrKqdRZcEoG_nkRfVaVo8/edit?usp=sharing
     "📥 제출": https://forms.gle/j9cDVZUTuZYtCb1CA
 
-  - links: EDA 템플릿
+  - links: 1. EDA 템플릿
     "📊 표 형식": https://drive.google.com/file/d/1gyP2ziRAmCJWaUAkLY4kSXBWBOQS9C9e/view?usp=sharing
     "⏱️ 시계열/순차 형식": https://drive.google.com/file/d/1LXjm5R_sHCDkDEzzHp5lXiLK62Slpd5R/view?usp=sharing
     "🖼️ 이미지 형식": https://drive.google.com/file/d/1pZ5k7yQLFNZdAyyWZKmqnYEBXLAINq_m/view?usp=sharing
+
+  - links: 2. 모델 선택
+    "📊 표나 시간 형식": https://drive.google.com/file/d/1p57ycDofoWEZ2QDADtdnAnuRLi53Wm1c/view?usp=sharing
+    "🖼️ 이미지 형식": https://drive.google.com/file/d/1V8J5jPn9-WdsEx37x_8xeY3ufoEKqwjR/view?usp=sharing
 
 Main-Text:
   - text: "주교재"
