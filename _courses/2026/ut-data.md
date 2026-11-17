@@ -15,9 +15,9 @@ data_file: 2026/ut_data_lectures
 grading:
   attendance: 10
   midterm: 25
-  final: 25
+  final: 10
   homework: 30
-  project: 10
+  project: 25
 
 information:
   - section: 259124(2)
