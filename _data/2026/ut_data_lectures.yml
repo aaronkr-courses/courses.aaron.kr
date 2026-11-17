@@ -155,12 +155,14 @@
     <strong>11장) 심층 신경망 훈련</strong>
   supp:
   readings: p. 434-488
-  hw: 
-  hw2: 
+  hw_label: "AM 오전 과제"
+  hw: "https://classroom50.org/aaronkr-2026-2/knut-2-am/assignments/11-dnn/accept"
+  hw2_label: "PM 오후 과제"
+  hw2: "https://classroom50.org/aaronkr-2026-2/knut-1-pm/assignments/11-dnn/accept"
   slides: "https://docs.google.com/presentation/d/1hrGXot-GjUEMNCv7-zUH8yO9gI1NfmHHAkQ_TJj8qGo/edit?usp=sharing"
   img: 2024/ut-data/12-cnn-training.jpg
   logistics: >
-    11장 어휘 <a href="https://drive.google.com/file/d/1nHmcC1-8sV-8BGdq0falGZRr9-viC05d/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/dbc1qnmz2l8lr0yzj9eun48dyds7rlzg6t6hk5vw5ztkje-D0jE/edit?usp=sharing">XLSX</a>
+    11장 어휘 <a href="https://drive.google.com/file/d/1nHmcC1-8sV-8BGdq0falGZRr9-viC05d/view?usp=sharing">PDF</a> | <a href="https://docs.google.com/spreadsheets/d/1ZuVN3iLGF0x2oWXBp2aUEJhvuCKmHvYCg2-kje-D0jE/edit?usp=sharing">XLSX</a>
 
 - date: 11/23
   week: 12
