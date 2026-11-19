@@ -132,7 +132,8 @@
   title: Writing the Paper II - Organizing, Sources, Visuals
   supp:
   readings:
-  hw:
+  hw: "https://raw.githubusercontent.com/aaronkr-2026-2/software-project/refs/heads/main/repo_stats.py"
+  hw_label: "repo_stats.py"
   slides: "https://docs.google.com/presentation/d/13KIB0u7U11dSY4bsixdq0HuId0rNt9CIQU-2deSEVAA/edit?usp=sharing"
   slides2:
   img: 2026/cbnu-grad-research/12-drafting.jpg
