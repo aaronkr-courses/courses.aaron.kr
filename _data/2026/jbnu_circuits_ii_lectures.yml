@@ -186,9 +186,9 @@
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1pHAgSR-2xsDewQwf6-c_c7afYWJ5Cygrg6xGnP5cCUc/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1pHAgSR-2xsDewQwf6-c_c7afYWJ5Cygrg6xGnP5cCUc/edit?usp=sharing"
   slides2:
-  _img: 2025/jbnu-circuits-ii/14-freq.jpg
+  img: 2025/jbnu-circuits-ii/14-freq.jpg
   _logistics: >
     <ul>Select one:
     <li><a href="https://aesk.arduino.cc/aesk/module/education/lesson/musical-keyboard">Music Keyboard</a></li>
