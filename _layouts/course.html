@@ -13,8 +13,9 @@ layout: default
   {%- assign info = _sections | first -%}
 
   {%- assign _page_logo = page.logo -%}
+  {%- assign _page_uni = nil -%}
   {%- for _u in site.data.universities -%}
-    {%- if _u.abbr == page.uni -%}{%- assign _page_logo = _u.logo -%}{%- endif -%}
+    {%- if _u.abbr == page.uni -%}{%- assign _page_logo = _u.logo -%}{%- assign _page_uni = _u -%}{%- endif -%}
   {%- endfor -%}
   <div class="course-hero">
     {%- if _page_logo -%}
@@ -31,7 +32,7 @@ layout: default
       {%- else -%}
       <span class="c-badge sem">{{ page.category | replace: '-', ' ' }}</span>
       {%- endif -%}
-      <span class="c-badge uni">{{ page.description | split: ' • ' | last }}</span>
+      <span class="c-badge uni{% if _page_uni.color_dark %} branded{% endif %}"{% if _page_uni.color_dark %} style="--uni-c-dark:{{ _page_uni.color_dark }};--uni-c-light:{{ _page_uni.color_light }};"{% endif %}>{{ page.description | split: ' • ' | last }}</span>
       {%- for _cls in _tc_list -%}
         {%- assign _lbl = _tl_list[forloop.index0] -%}
         <span class="c-badge {{ _cls }}">{{ _lbl }}</span>
@@ -76,7 +77,7 @@ layout: default
         {%- assign _link_groups = _sections | concat: _common -%}
       {%- endif -%}
       {%- for section in _link_groups -%}
-      {%- if _grouped -%}<div class="ql-group{% if section.links %} common{% endif %}"><span class="ql-group-label">{{ section.links | default: section.section }}</span>{%- endif -%}
+      {%- if _grouped and section.dropdown != true -%}<div class="ql-group{% if section.links %} common{% endif %}"><span class="ql-group-label">{{ section.links | default: section.section }}</span>{%- endif -%}
         {%- if section.kakaotalk -%}
         <a href="{{ section.kakaotalk }}" class="ql-btn kakao" target="_blank" rel="noopener noreferrer">
           💬 <span class="txt">KakaoTalk</span>
@@ -90,35 +91,62 @@ layout: default
         {%- endif -%}
         {%- comment -%}
           Custom bookmark buttons: every key other than the reserved ones below
-          becomes a button (key = label, value = href), in YAML order.
-          A leading emoji/symbol word in the key becomes the icon (default 🔗);
-          underscores become spaces and each word's first letter is upcased.
+          becomes a button (key = label, value = href), in YAML order — label/icon
+          rules in _includes/ql_link.html. A key whose value is itself a map of
+          label → url becomes a click-to-open dropdown button (see CLAUDE.md
+          "Quick-link buttons"). A `links:` group with `dropdown: true` collapses
+          the WHOLE group into one dropdown labeled with the group name.
         {%- endcomment -%}
-        {%- assign _reserved = "section,links,time,location,kakaotalk,classroom,github" | split: "," -%}
+        {%- assign _reserved = "section,links,dropdown,time,location,kakaotalk,classroom,github" | split: "," -%}
+        {%- if section.links and section.dropdown -%}
+        <details class="ql-dd">
+          <summary class="ql-btn ql-dd-btn">☰ <span class="txt">{{ section.links | escape }}</span><span class="ql-caret" aria-hidden="true">▾</span></summary>
+          <div class="ql-dd-menu">
+        {%- endif -%}
         {%- for _pair in section -%}
           {%- assign _key = _pair[0] | append: "" -%}
           {%- assign _href = _pair[1] -%}
           {%- if _reserved contains _key or _href == blank -%}{%- continue -%}{%- endif -%}
-          {%- assign _words = _key | replace: "_", " " | split: " " -%}
-          {%- assign _c = _words.first | slice: 0 | downcase -%}
-          {%- if "abcdefghijklmnopqrstuvwxyz0123456789" contains _c -%}
-            {%- assign _icon = "🔗" -%}
-            {%- assign _start = 0 -%}
+          {%- if _href.first -%}
+            {%- include ql_link.html key=_key -%}
+        <details class="ql-dd">
+          <summary class="ql-btn ql-dd-btn">{{ _ql_icon | escape }} <span class="txt">{{ _ql_label | escape }}</span><span class="ql-caret" aria-hidden="true">▾</span></summary>
+          <div class="ql-dd-menu">
+            {%- for _sub in _href -%}
+              {%- assign _sk = _sub[0] -%}{%- assign _sh = _sub[1] -%}
+              {%- if _sh == blank -%}{%- continue -%}{%- endif -%}
+              {%- include ql_link.html key=_sk href=_sh cls="ql-dd-item" -%}
+            {%- endfor -%}
+          </div>
+        </details>
+          {%- elsif section.links and section.dropdown -%}
+            {%- include ql_link.html key=_key href=_href cls="ql-dd-item" -%}
           {%- else -%}
-            {%- assign _icon = _words.first -%}
-            {%- assign _start = 1 -%}
+            {%- include ql_link.html key=_key href=_href -%}
           {%- endif -%}
-          {%- assign _label = "" -%}
-          {%- for _w in _words offset: _start -%}
-            {%- assign _first = _w | slice: 0 | upcase -%}
-            {%- assign _rest = _w | slice: 1, _w.size -%}
-            {%- assign _label = _label | append: " " | append: _first | append: _rest -%}
-          {%- endfor -%}
-        <a href="{{ _href }}" class="ql-btn" target="_blank" rel="noopener noreferrer">{{ _icon | escape }} <span class="txt">{{ _label | strip | escape }}</span></a>
         {%- endfor -%}
-      {%- if _grouped -%}</div>{%- endif -%}
+        {%- if section.links and section.dropdown -%}</div></details>{%- endif -%}
+      {%- if _grouped and section.dropdown != true -%}</div>{%- endif -%}
       {%- endfor -%}
+      {%- comment -%}
+        Full assignments list (one page/doc listing every assignment for the term).
+        Set `assignments_list: <url>` in front matter. Grad courses without one show a
+        ✎ placeholder so it's obvious it still needs adding (see course_todos.html).
+      {%- endcomment -%}
+      {%- if page.assignments_list -%}
+        <a href="{{ page.assignments_list }}" class="ql-btn ql-assign" target="_blank" rel="noopener noreferrer">📋 <span class="txt"><span class="lang-en">Full Assignments List</span><span class="lang-ko">전체 과제 목록</span></span></a>
+      {%- elsif page.grad -%}
+        <span class="ql-btn ql-todo" title="Placeholder — add assignments_list: to this course's front matter">✎ <span class="txt"><span class="lang-en">Full Assignments List</span><span class="lang-ko">전체 과제 목록</span> <em><span class="lang-en">coming soon</span><span class="lang-ko">준비 중</span></em></span></span>
+      {%- endif -%}
     </div>
+
+    {%- include course_editions.html course=page -%}
+    {%- if _ed_n > 0 -%}
+    <div class="editions-row animate d3">
+      <span class="editions-label"><span class="lang-en">Other editions</span><span class="lang-ko">다른 학기</span></span>
+      {{ _ed_html }}
+    </div>
+    {%- endif -%}
   </div><!-- /.course-hero -->
 
   <div class="page-layout">
@@ -158,19 +186,18 @@ layout: default
           different categories than the fixed keys below). Each item: label, label_ko, pct.
           Colors cycle through the same six grade tokens.
         {%- endcomment -%}
-        {%- assign _gcols = "attend,hw,quiz,mid,final,project" | split: "," -%}
         <div class="grade-track">
           {%- for gi in page.grading_items -%}
-          {%- assign _ci = forloop.index0 | modulo: 6 -%}
-          <div class="grade-seg" style="flex:{{ gi.pct }};background:var(--grade-{{ _gcols[_ci] }});">
+          {%- assign _ci = forloop.index0 | modulo: 10 -%}
+          <div class="grade-seg" style="flex:{{ gi.pct }};background:var(--gi-{{ _ci }});">
             <span class="grade-pct">{{ gi.pct }}%</span><span class="grade-name"><span class="lang-en">{{ gi.short | default: gi.label }}</span><span class="lang-ko">{{ gi.short_ko | default: gi.label_ko | default: gi.label }}</span></span>
           </div>
           {%- endfor -%}
         </div>
         <div class="grade-legend">
           {%- for gi in page.grading_items -%}
-          {%- assign _ci = forloop.index0 | modulo: 6 -%}
-          <span class="gl-item"><span class="gl-dot" style="background:var(--grade-{{ _gcols[_ci] }});"></span>{{ gi.pct }}% <span class="lang-en">{{ gi.label }}</span><span class="lang-ko">{{ gi.label_ko | default: gi.label }}</span></span>
+          {%- assign _ci = forloop.index0 | modulo: 10 -%}
+          <span class="gl-item"><span class="gl-dot" style="background:var(--gi-{{ _ci }});"></span>{{ gi.pct }}% <span class="lang-en">{{ gi.label }}</span><span class="lang-ko">{{ gi.label_ko | default: gi.label }}</span></span>
           {%- endfor -%}
         </div>
         {%- else -%}

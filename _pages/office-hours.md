@@ -102,6 +102,7 @@ permalink: /office-hours/
   </div>
   <div class="contact-grid">
     <div class="contact-card c1">
+      <span class="contact-watermark" aria-hidden="true">💬</span>
       <span class="contact-rank">① <span class="lang-en">Quickest</span><span class="lang-ko">가장 빠름</span></span>
       <div class="contact-name">KakaoTalk Open Chat</div>
       <p class="contact-desc">
@@ -111,6 +112,7 @@ permalink: /office-hours/
       <a href="https://open.kakao.com/me/aaronkr" class="contact-link cl-kakao" target="_blank">💬 <span class="lang-en">Open KakaoTalk</span><span class="lang-ko">카카오톡 열기</span></a>
     </div>
     <div class="contact-card c2">
+      <span class="contact-watermark" aria-hidden="true">✉️</span>
       <span class="contact-rank">② <span class="lang-en">Formal</span><span class="lang-ko">공식 문의</span></span>
       <div class="contact-name">Email</div>
       <p class="contact-desc">
@@ -120,6 +122,7 @@ permalink: /office-hours/
       <a href="mailto:{{ site.email }}" class="contact-link cl-email">✉ {{ site.email | replace: '@', ' &#064; ' }}</a>
     </div>
     <div class="contact-card c3">
+      <span class="contact-watermark" aria-hidden="true">📍</span>
       <span class="contact-rank">③ <span class="lang-en">In Person</span><span class="lang-ko">직접 방문</span></span>
       <div class="contact-name"><span class="lang-en">On Campus</span><span class="lang-ko">캠퍼스 방문</span></div>
       <p class="contact-desc">

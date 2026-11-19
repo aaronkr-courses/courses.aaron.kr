@@ -11,6 +11,11 @@ importance: 6
 category: 2023
 external_url: https://2023-aaronkr.github.io/ut-cad/
 
+information:
+  - links: Resources
+    "🌐 Course Site": https://2023-aaronkr.github.io/ut-cad/
+    "📄 Syllabus": /assets/pdf/2023/ut-cad-20240201101206649.pdf
+
 grading:
   attendance: 10
   midterm: 30

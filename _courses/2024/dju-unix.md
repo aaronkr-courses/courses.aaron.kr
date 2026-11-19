@@ -22,6 +22,7 @@ information:
     time: 화 1234 | Tues 9am-1pm
     location: 융합과학관 24호환
     kakaotalk: https://open.kakao.com/o/gpDW9Hbg
+    "📄 Syllabus": /assets/pdf/2024/2024-1-dju-unix-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

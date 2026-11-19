@@ -21,9 +21,11 @@ information:
   - section: 259122 (AM)
     time: 월 AM | Mon morning
     kakaotalk: https://classroom.github.com/classrooms/126310482-2023sp-259122-1-am
+    "📄 Syllabus": /assets/pdf/2023/ut-nodejs-am-20240201101014081.pdf
   - section: 259122 (PM)
     time: 월 PM | Mon afternoon
     kakaotalk: https://classroom.github.com/classrooms/126310482-2023sp-259122-2-pm
+    "📄 Syllabus": /assets/pdf/2023/ut-nodejs-pm-20240201101014081.pdf
 
 Main-Text:
   - text: "주교재"

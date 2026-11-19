@@ -43,7 +43,7 @@ permalink: /
         <div class="stat-label"><span class="lang-en">Total Courses</span><span class="lang-ko">총 강좌</span></div>
       </div>
       <div class="stat">
-        <div class="stat-num">{{ site.data.github.total_repos_formatted }}</div>
+        <div class="stat-num"{% if site.data.github.private_repos %} title="{{ site.data.github.public_repos_formatted }} public · {{ site.data.github.private_repos_formatted }} private"{% endif %}>{{ site.data.github.total_repos_formatted }}</div>
         <div class="stat-label">
           <span class="lang-en">Student Repositories</span>
           <span class="lang-ko">학생 레포지토리</span>

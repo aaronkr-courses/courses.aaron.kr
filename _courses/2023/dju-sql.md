@@ -22,6 +22,7 @@ information:
     time: 월 234 | Mon 10am-12:50pm
     location: 융합과학환 408호
     kakaotalk: https://open.kakao.com/o/ghMiKZEf
+    "📄 Syllabus": /assets/pdf/2023/dju-sql-hl_4040505_r03.pdf
 
 Main-Text:
   - text: "주교재"

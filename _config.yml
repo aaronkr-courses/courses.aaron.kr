@@ -78,6 +78,7 @@ collections:
 # ─────────────────────────────────────────
 archive:
   years_per_page: 5
+  show_todos: true       # ✎ "To add: syllabus · textbook…" notes on archive rows (_includes/course_todos.html)
 
 # Course category display order (newest first). `group: hs` = High School & Online page.
 course_categories:

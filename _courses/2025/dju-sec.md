@@ -21,6 +21,7 @@ information:
     time: 화 678 | Tues 2pm-5pm
     location: 융합과학관 408호
     kakaotalk: https://open.kakao.com/o/gVHtQgjh
+    "📄 Syllabus": /assets/pdf/2025/2025-DJU-secure.pdf
 
 Main-Text:
   - text: "주교재"

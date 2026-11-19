@@ -35,6 +35,11 @@
       <span class="t-icon">⊞</span>
       <span class="lang-en">Thumbnails</span><span class="lang-ko">썸네일</span>
     </button>
+    {%- if site.archive.show_todos != false -%}
+    <button class="thumb-toggle todo-toggle" id="arch-todo-toggle" title="Show only courses with missing items">
+      ✎ <span class="lang-en">To update</span><span class="lang-ko">업데이트 필요</span>
+    </button>
+    {%- endif -%}
     <span id="arch-count" style="font-family:'IBM Plex Mono',monospace;font-size:.65rem;color:var(--muted);margin-left:6px;"></span>
   </div>
 </div>

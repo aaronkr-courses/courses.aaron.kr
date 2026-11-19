@@ -23,6 +23,7 @@ information:
     location: 글로벌인제관 107호
     kakaotalk: https://open.kakao.com/o/gj9iUdii
     classroom: https://classroom.google.com/c/ODQ3ODU2NjgxMjI4?cjc=rv6h23y6
+    "📄 Syllabus": /assets/pdf/2026/2026-1-JBNU-Power-Electronics.pdf
 
 Main-Text:
   - text: "주교재"

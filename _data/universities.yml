@@ -4,6 +4,9 @@
   campus: "충주캠퍼스"
   campus_en: "Chungju Campus"
   abbr: ut
+  color: "#703030"        # dominant logo color (extracted)
+  color_dark: "#f47b7b"   # bright variant for dark theme
+  color_light: "#a11717"  # deep variant for light theme
   url: "https://www.ut.ac.kr/"
   portal: "https://portal.ut.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/ut-logo_beiynv.png
@@ -14,6 +17,9 @@
   campus: "익산캠퍼스"
   campus_en: "Iksan Campus"
   abbr: wku
+  color: "#105090"        # dominant logo color (extracted)
+  color_dark: "#7bb8f4"   # bright variant for dark theme
+  color_light: "#175ca1"  # deep variant for light theme
   url: "https://www.wku.ac.kr/"
   portal: "https://itra.wku.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/wku-logo_cu76kg.png
@@ -24,6 +30,9 @@
   campus: "전주캠퍼스"
   campus_en: "Jeonju Campus"
   abbr: jbnu
+  color: "#b01050"        # dominant logo color (extracted)
+  color_dark: "#f47bab"   # bright variant for dark theme
+  color_light: "#a1174e"  # deep variant for light theme
   url: "https://www.jbnu.ac.kr/"
   portal: "https://jump.jbnu.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/jbnu-logo_r6c50n.png
@@ -34,6 +43,9 @@
   campus: "대전캠퍼스"
   campus_en: "Daejeon Campus"
   abbr: hb
+  color: "#1090b0"        # dominant logo color (extracted)
+  color_dark: "#7bdcf4"   # bright variant for dark theme
+  color_light: "#116478"  # deep variant for light theme
   url: "https://www.hanbat.ac.kr/"
   portal: "https://my.hanbat.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/hanbat-logo_mvle6l.png
@@ -44,6 +56,9 @@
   campus: "전주캠퍼스"
   campus_en: "Jeonju Campus"
   abbr: jnue
+  color: "#103070"        # dominant logo color (extracted)
+  color_dark: "#7ba3f4"   # bright variant for dark theme
+  color_light: "#1745a1"  # deep variant for light theme
   url: "https://www.jnue.kr/"
   portal: "https://portal.jnue.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jnue-logo_jmyh9e.png
@@ -52,6 +67,9 @@
   name_ko: "대전대학교"
   short_ko: "대전대"
   abbr: dju
+  color: "#107050"        # dominant logo color (extracted)
+  color_dark: "#7bf4cc"   # bright variant for dark theme
+  color_light: "#0f6b4c"  # deep variant for light theme
   url: "https://www.dju.ac.kr/"
   portal: "https://portal.dju.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/dju-logo-2_jxm7py.png
@@ -60,6 +78,9 @@
   name_ko: "전주대학교"
   short_ko: "전주대"
   abbr: jj
+  color: "#1090d0"        # dominant logo color (extracted)
+  color_dark: "#7bccf4"   # bright variant for dark theme
+  color_light: "#14638a"  # deep variant for light theme
   url: "https://www.jj.ac.kr/"
   portal: "https://juis.jj.ac.kr/"
   logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038668/jju-logo_x1phga.png
@@ -70,6 +91,9 @@
   campus: "광주캠퍼스"
   campus_en: "Gwangju Campus"
   abbr: gnue
+  color: "#10b050"        # dominant logo color (extracted)
+  color_dark: "#7bf4ab"   # bright variant for dark theme
+  color_light: "#0f6b34"  # deep variant for light theme
   url: "https://www.gnue.ac.kr/"
   portal: "https://portal.gnue.ac.kr/"
   logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/gnue-logo_tkxaro.png"
@@ -80,6 +104,9 @@
   campus: "청주캠퍼스"
   campus_en: "Cheongju Campus"
   abbr: cbnu
+  color: "#901050"        # dominant logo color (extracted)
+  color_dark: "#f47bb8"   # bright variant for dark theme
+  color_light: "#a1175c"  # deep variant for light theme
   url: "https://www.cbnu.ac.kr/"
   portal: "https://eis.cbnu.ac.kr/"
   logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/cbnu-logo_xme7s0.png"
@@ -90,6 +117,9 @@
   campus: "공주캠퍼스"
   campus_en: "Kongju Campus"
   abbr: kjnu
+  color: "#103090"        # dominant logo color (extracted)
+  color_dark: "#7b99f4"   # bright variant for dark theme
+  color_light: "#1739a1"  # deep variant for light theme
   url: "https://www.kongju.ac.kr/"
   portal: "https://portal.kongju.ac.kr/"
   logo: "https://res.cloudinary.com/dobann7wi/image/upload/v1786089776/kongju-logo_rspuq9.png"

@@ -22,6 +22,7 @@ information:
     location: 글로벌인제관 107호
     kakaotalk: https://open.kakao.com/o/guPlVdii
     classroom: https://classroom.google.com/c/Nzk2NDE5Njc5NTkw?cjc=ifpsgfon
+    "📄 Syllabus": /assets/pdf/2026/2026-1-JBNU-DC-Circuits.pdf
 
 Main-Text:
   - text: "주교재"

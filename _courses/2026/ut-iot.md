@@ -26,6 +26,7 @@ information:
     github: https://classroom.github.com/a/kpJtYeMa
     "</> Code": https://github.com/aaronkr-courses/esp32-iotmaker
     classroom: https://classroom.google.com/c/ODY4MzUwNDMwMzQ5?cjc=c5hhprci
+    "📄 Syllabus": /assets/pdf/2026/2026-1-UT-IoT-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

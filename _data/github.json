@@ -1,5 +1,27 @@
 {
-  "total_repos": 5009,
-  "total_repos_formatted": "5,009",
-  "updated_at": "2026-11-19T06:03:19.408Z"
+  "total_repos": 6329,
+  "total_repos_formatted": "6,329",
+  "public_repos": 5009,
+  "public_repos_formatted": "5,009",
+  "private_repos": 1320,
+  "private_repos_formatted": "1,320",
+  "orgs": {
+    "aaronkr-classroom": {
+      "public": 4939,
+      "private": 30
+    },
+    "ut-nodejs": {
+      "public": 18,
+      "private": 574
+    },
+    "2023-aaronkr": {
+      "public": 27,
+      "private": 273
+    },
+    "aaronkr-2026-2": {
+      "public": 25,
+      "private": 443
+    }
+  },
+  "updated_at": "2026-11-19T14:44:42.409Z"
 }

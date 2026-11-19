@@ -1,10 +1,157 @@
-- date: 7/16/2026
+# 2023 summer high-school crash course (나의 첫 웹프로그래밍) — rebuilt from the course site
+# https://2023-aaronkr.github.io/web-crash-course/ (lesson pages in docs/lessons/ of github.com/2023-aaronkr/web-crash-course).
+# The original daily dates weren't recorded on the site, so `date:` is just "2023"
+# (✎ add them if you still have the 2023 timetable).
+- date: "2023"
   week: 1
   title: >
+    <strong>Website Structure</strong>
+  title_ko: >
+    <strong>웹사이트 구조</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 1"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/01.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 2
+  title: >
+    <strong>Text</strong>
+  title_ko: >
+    <strong>텍스트</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 2"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/02.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 3
+  title: >
+    <strong>Lists</strong>
+  title_ko: >
+    <strong>목록</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 3"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/03.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 4
+  title: >
+    <strong>Links</strong>
+  title_ko: >
+    <strong>링크</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 4"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/04.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 5
+  title: >
+    <strong>Images</strong>
+  title_ko: >
+    <strong>이미지</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 5"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/05.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 6
+  title: >
+    <strong>Tables</strong>
+  title_ko: >
+    <strong>테이블</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 6"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/06.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 7
+  title: >
+    <strong>Forms</strong>
+  title_ko: >
+    <strong>폼</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 7"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/07.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 8
+  title: >
+    <strong>Additional Markup</strong>
+  title_ko: >
+    <strong>추가 마크업</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 8"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/08.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 9
+  title: >
+    <strong>Flash, Video, Audio</strong>
+  title_ko: >
+    <strong>플래시, 비디오, 오디오</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 9"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/09.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 10
+  title: >
+    <strong>CSS Introduction</strong>
+  title_ko: >
+    <strong>CSS 소개</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 10"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/10.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 11
+  title: >
+    <strong>Color</strong>
+  title_ko: >
+    <strong>색상</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 11"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/11.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 12
+  title: >
+    <strong>Text (CSS)</strong>
+  title_ko: >
+    <strong>텍스트 (CSS)</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 12"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/12.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 13
+  title: >
+    <strong>Box Model</strong>
+  title_ko: >
+    <strong>박스 모델</strong>
+  readings: "Duckett, <em>HTML &amp; CSS</em>, Ch. 13"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/web-crash-course/lessons/13.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 14
+  title: >
+    <strong>JavaScript</strong>
+  title_ko: >
+    <strong>자바스크립트</strong>
+  readings: ""
+  logistics: >
+    <a href="https://github.com/2023-aaronkr/web-crash-course/tree/main/code/3_%20javascript" target="_blank" rel="noopener">Lesson code →</a>
+- date: "2023"
+  week: 15
+  title: >
+    <strong>jQuery</strong>
+  title_ko: >
+    <strong>jQuery</strong>
+  readings: ""
+  logistics: >
+    <a href="https://github.com/2023-aaronkr/web-crash-course/tree/main/code/4_%20jquery" target="_blank" rel="noopener">Lesson code →</a>
+- date: "2023"
+  week: 16
+  title: >
+    <strong>Bootstrap — Photo Gallery Project</strong>
+  title_ko: >
+    <strong>Bootstrap — 사진 갤러리 프로젝트</strong>
+  readings: ""
+  logistics: >
+    <a href="https://github.com/2023-aaronkr/web-crash-course/tree/main/code/5_%20bootstrap" target="_blank" rel="noopener">Lesson code →</a>
+
+# ── Separate 2026 workshop (충주 중산고등학교) — was the only row in this file before.
+# ✎ Probably deserves its own course page (it's not part of the 2023 course).
+- date: 7/16/2026
+  week: 17
+  title: >
     <strong>Instar-Oz (충주 중산고등학교)</strong>
-  supp:
-  readings:
-  hw:
   slides: "https://codepen.io/jekkilekki/pen/ogBdmQe?editors=1000"
   img: hs/instar-oz.png
-  logistics:

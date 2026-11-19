@@ -22,6 +22,7 @@ information:
     time: 수 6789 | Wed 2pm-6pm
     location: 산업정보관 316호
     kakaotalk: https://open.kakao.com/o/gzs1Vdii
+    "📄 Syllabus": /assets/pdf/2026/2026-1-HB-CPP-syllabus.xls
 
 Main-Text:
   - text: "주교재"

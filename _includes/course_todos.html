@@ -1,0 +1,58 @@
+{%- comment -%}
+  "What's still missing" checker for one course — drives the ✎ marker + italic
+  footnote on archive rows (_includes/archive_page.html). Usage:
+    {% include course_todos.html course=course %}
+  Sets `_todo_html` (rendered list items, empty when nothing is missing) and
+  `_todo_n` (count) in the caller's scope.
+
+  Automatic checks:
+    🗓 schedule          no data_file and no external_url
+    📄 syllabus          no information key containing "Syllabus" (and no `syllabus:` field)
+    📚 textbook          university course (has `uni:`) with no Main-Text, or a TBD one
+    🖼 image             no `img:`
+    📋 assignments list  grad: true course with no `assignments_list:` URL
+  Manual: `todo:` front matter — a string or a list of strings — for anything else
+  (e.g. `todo: "replace cover image"`). Mark a check as intentionally N/A with
+  `todo_skip: [syllabus, textbook]`.
+  Turn the whole feature off site-wide with `archive.show_todos: false` in _config.yml.
+{%- endcomment -%}
+{%- assign _c = include.course -%}
+{%- assign _skip = _c.todo_skip | join: "," | prepend: "," | append: "," -%}
+{%- capture _todo_html -%}
+  {%- unless _skip contains ",schedule," -%}
+  {%- if _c.data_file == nil and _c.external_url == nil -%}<li>🗓 <span class="lang-en">schedule</span><span class="lang-ko">강의 일정</span></li>{%- endif -%}
+  {%- endunless -%}
+
+  {%- unless _skip contains ",syllabus," -%}
+  {%- assign _has_syl = false -%}
+  {%- if _c.syllabus -%}{%- assign _has_syl = true -%}{%- endif -%}
+  {%- for _s in _c.information -%}{%- for _pair in _s -%}
+    {%- assign _pk = _pair[0] | append: "" -%}
+    {%- if _pk contains "Syllabus" or _pk contains "syllabus" or _pk contains "강의계획서" -%}{%- assign _has_syl = true -%}{%- endif -%}
+  {%- endfor -%}{%- endfor -%}
+  {%- unless _has_syl -%}<li class="t-syl">📄 <span class="lang-en">syllabus</span><span class="lang-ko">강의계획서</span></li>{%- endunless -%}
+  {%- endunless -%}
+
+  {%- unless _skip contains ",textbook," -%}
+  {%- if _c.uni -%}
+    {%- assign _mt = _c["Main-Text"] | first -%}
+    {%- assign _mt_title = _mt.title | append: "" -%}
+    {%- if _mt == nil or _mt_title contains "TBD" -%}<li>📚 <span class="lang-en">textbook</span><span class="lang-ko">교재</span></li>{%- endif -%}
+  {%- endif -%}
+  {%- endunless -%}
+
+  {%- unless _skip contains ",image," -%}
+  {%- if _c.img == nil or _c.img == "" -%}<li>🖼 <span class="lang-en">image</span><span class="lang-ko">이미지</span></li>{%- endif -%}
+  {%- endunless -%}
+
+  {%- if _c.grad and _c.assignments_list == nil -%}<li>📋 <span class="lang-en">full assignments list</span><span class="lang-ko">전체 과제 목록</span></li>{%- endif -%}
+
+  {%- if _c.todo -%}
+    {%- assign _manual = _c.todo -%}
+    {%- if _manual.first == nil -%}{%- assign _manual = _c.todo | split: "|||" -%}{%- endif -%}
+    {%- for _t in _manual -%}<li>✎ {{ _t }}</li>{%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+{%- assign _todo_html = _todo_html | strip -%}
+{%- assign _todo_n = _todo_html | split: "<li" | size | minus: 1 -%}
+{%- if _todo_n < 0 -%}{%- assign _todo_n = 0 -%}{%- endif -%}

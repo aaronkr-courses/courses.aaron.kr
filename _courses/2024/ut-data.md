@@ -22,6 +22,7 @@ information:
     time: 목 123 | Thur 9am-12pm
     location: W18-402호
     kakaotalk: https://open.kakao.com/o/gY8jNGMg
+    "📄 Syllabus": /assets/pdf/2024/2024-2-ut-data-syllabus.pdf
 
   - section: 259124(1)
     time: 목 567 | Thur 1pm-4pm

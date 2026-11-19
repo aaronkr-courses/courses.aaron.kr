@@ -21,6 +21,7 @@ information:
     time: 화 234 | Tues 10am-1pm
     location: 융합과학관 408호
     kakaotalk: https://open.kakao.com/o/ghQkqGMg
+    "📄 Syllabus": /assets/pdf/2024/2024-2-dju-db-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

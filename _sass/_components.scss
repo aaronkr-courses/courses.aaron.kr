@@ -34,6 +34,18 @@
 .arch-pager {
   display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px;
   a.pill { text-decoration: none; }
+  // Transparent resting state (the solid --tag-bg read as a black slab on the hero);
+  // the colored slide-in fill on hover/active is unchanged.
+  a.pill-blue { background-image: linear-gradient(to right, var(--accent2) 50%, transparent 50%); }
+  a.pill-teal { background-image: linear-gradient(to right, var(--accent3) 50%, transparent 50%); }
+  a.pill-upcoming {
+    background-image: linear-gradient(to right, var(--accent) 50%, transparent 50%);
+    border-style: dashed;
+    opacity: .28;
+    cursor: default;
+    &:hover { opacity: .5; background-position: 100%; color: var(--sub); border-color: var(--border); }
+    &.active { opacity: 1; background-position: 0; color: #fff; border-style: solid; }
+  }
   &:empty { display: none; }
 }
 .arch-pager-bottom { justify-content: center; margin-top: 40px; }
@@ -221,6 +233,16 @@
   50%       { opacity: .4; transform: scale(.75); }
 }
 [data-theme="light"] .today-pill { background: rgba(11,173,188,.06); border-color: rgba(11,173,188,.2); }
+.today-logos { display: inline-flex; align-items: center; margin-left: -4px; }
+.today-logo {
+  width: 18px; height: 18px;
+  object-fit: contain;
+  padding: 2px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(109,204,221,.35);
+  & + & { margin-left: -5px; } // slight overlap when two schools share the day
+}
 
 // ── Course cards (grid) ──────────────────────────────────────────────────────
 .course-grid {
@@ -467,6 +489,46 @@ a.archive-item.grad-item::before {
   border: 1px solid rgba(85,85,122,.2);
   color: var(--muted);
 }
+.archived-badge.canceled-badge { color: var(--error); border-color: rgba(251,111,132,.3); background: rgba(251,111,132,.06); }
+.archived-badge.draft-badge    { color: var(--accent);  border-color: rgba(155,101,255,.3); background: rgba(155,101,255,.06); }
+
+// ── "Needs attention" marker + footnote on archive rows (_includes/course_todos.html)
+.todo-mark {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: .8em;
+  color: var(--warn);
+  opacity: .85;
+  transform: translateY(-1px);
+}
+.item-todo {
+  margin-top: 7px;
+  padding: 3px 9px;
+  display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px;
+  font-size: .7rem;
+  font-style: italic;
+  color: var(--muted);
+  background: rgba(251,191,36,.06);
+  border-left: 2px solid rgba(251,191,36,.45);
+  border-radius: 0 3px 3px 0;
+  .todo-lead { font-family: 'IBM Plex Mono', monospace; font-style: normal; font-size: .6rem; letter-spacing: .06em; text-transform: uppercase; color: var(--warn); opacity: .8; }
+  ul { list-style: none; display: contents; }
+  li { display: inline; }
+  li + li::before { content: '·'; margin-right: 8px; opacity: .5; font-style: normal; }
+}
+[data-theme="light"] .item-todo { background: rgba(159,85,4,.05); border-left-color: rgba(159,85,4,.4); }
+.edition-count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .58rem;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+// "Needs update" quick filter
+.thumb-toggle.todo-toggle.active { border-color: var(--warn); color: var(--warn); }
+.archive-main-todo-only li:not(.has-todo) { display: none; }
+
 .item-uni {
   flex-shrink: 0;
   font-family: 'IBM Plex Mono', monospace;

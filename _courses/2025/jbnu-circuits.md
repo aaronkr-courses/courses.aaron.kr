@@ -21,6 +21,7 @@ information:
     time: 월 1-4pm
     location: 인문대학 2호관 504호
     kakaotalk: https://open.kakao.com/o/gNhLNgjh
+    "📄 Syllabus": /assets/pdf/2025/2025-JBNU-circuits.pdf
 
 Main-Text:
   - text: "주교재"

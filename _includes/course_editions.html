@@ -1,0 +1,31 @@
+{%- comment -%}
+  "Other editions" — links to every other visible course with the same name, so a
+  past schedule / past assignments are one click away. Used by _layouts/course.html
+  (pills under the quick links) and _includes/archive_page.html (count chip).
+    {% include course_editions.html course=page %}
+  Sets `_ed_html` (pill links, newest first, current page excluded) and `_ed_n`.
+
+  Twin key = `twin_key:` front matter if set, else the Korean title (`subtitle:`)
+  with any " — subtopic" and " (parenthetical)" removed, so "컴퓨터 A — 타자 · MS Office"
+  and "컴퓨터 A — 컴퓨터 리터러시" both key to "컴퓨터 A", and "데이터베이스 보안
+  (PostgreSQL)" joins "데이터베이스 보안". Give a course its own `twin_key:` to
+  split it off (or to join two differently-named courses).
+{%- endcomment -%}
+{%- assign _ec = include.course -%}
+{%- assign _ek = _ec.twin_key | default: _ec.subtitle | append: "" | split: " — " | first | append: "" | split: " (" | first | append: "" | strip -%}
+{%- assign _ed_n = 0 -%}
+{%- capture _ed_html -%}
+{%- if _ek != "" -%}
+  {%- for _cat in site.course_categories -%}
+    {%- assign _cands = site.courses | where: "category", _cat.key | where_exp: "c", "c.visible != false" -%}
+    {%- for _o in _cands -%}
+      {%- if _o.url == _ec.url -%}{%- continue -%}{%- endif -%}
+      {%- assign _ok = _o.twin_key | default: _o.subtitle | append: "" | split: " — " | first | append: "" | split: " (" | first | append: "" | strip -%}
+      {%- if _ok == _ek -%}
+        {%- assign _ed_n = _ed_n | plus: 1 -%}
+        <a class="edition-pill" href="{{ _o.url | relative_url }}"><span class="ed-sem">{{ _cat.label }}</span><span class="ed-uni">{{ _o.init | upcase }}</span></a>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- endcapture -%}

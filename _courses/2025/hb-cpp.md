@@ -21,6 +21,7 @@ information:
     time: 금 6789 | Fri 2pm-6pm
     location: N4동 316호
     kakaotalk: https://open.kakao.com/o/gHkvRgjh
+    "📄 Syllabus": /assets/pdf/2025/2025-HB-CPP.pdf
 
 Main-Text:
   - text: "주교재"

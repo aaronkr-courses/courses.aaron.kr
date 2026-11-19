@@ -19,18 +19,42 @@
     return null;
   }
 
-  // Build weekday(1-5) -> { en, ko } display text from _data/office_hours.yml
+  // Build weekday(1-5) -> { en, ko, unis[] } from _data/office_hours.yml. A school is
+  // listed on EVERY weekday in its `days` (not just its display_day), in schedule order,
+  // so a shared day (e.g. Wed = JBNU morning + WKU afternoon) shows both schools + logos.
   var SCH = {};
   (DATA.schedule || []).forEach(function(entry) {
     var u = uniByAbbr(entry.uni);
     if (!u) return;
-    var dn = DAY_NAMES[entry.display_day];
-    if (!dn) return;
-    SCH[entry.display_day] = {
-      en: entry.uni.toUpperCase() + ' — ' + u.name,
-      ko: u.name_ko + ' (' + dn.ko + ')'
-    };
+    (entry.days || [entry.display_day]).forEach(function(d) {
+      if (!DAY_NAMES[d]) return;
+      (SCH[d] = SCH[d] || { unis: [] }).unis.push(u);
+    });
   });
+  Object.keys(SCH).forEach(function(d) {
+    var us = SCH[d].unis, dn = DAY_NAMES[d];
+    if (us.length === 1) {
+      SCH[d].en = us[0].abbr.toUpperCase() + ' — ' + us[0].name;
+      SCH[d].ko = us[0].name_ko + ' (' + dn.ko + ')';
+    } else {
+      SCH[d].en = us.map(function(u) { return u.abbr.toUpperCase(); }).join(' + ');
+      SCH[d].ko = us.map(function(u) { return u.short_ko || u.name_ko; }).join(' · ') + ' (' + dn.ko + ')';
+    }
+  });
+
+  // Small round logo chips for the pill (white backing so dark logos read in dark mode)
+  function logoChips(unis) {
+    var wrap = document.createElement('span');
+    wrap.className = 'today-logos';
+    unis.forEach(function(u) {
+      if (!u.logo) return;
+      var img = document.createElement('img');
+      img.src = u.logo; img.alt = ''; img.className = 'today-logo';
+      img.title = isKo() ? u.name_ko : u.name;
+      wrap.appendChild(img);
+    });
+    return wrap.childNodes.length ? wrap : null;
+  }
 
   function isKo() { return document.documentElement.classList.contains('ko'); }
   function pad2(n) { return (n < 10 ? '0' : '') + n; }
@@ -105,6 +129,10 @@
       txt.textContent = ko ? '주말 — 휴강' : 'Weekend — No Class';
     } else if (s.type === 'class') {
       txt.textContent = (ko ? '오늘: ' : 'Today: ') + (ko ? SCH[s.day].ko : SCH[s.day].en);
+      var old = pill.querySelector('.today-logos');
+      if (old) old.remove();
+      var chips = logoChips(SCH[s.day].unis);
+      if (chips) pill.insertBefore(chips, txt);
     } else {
       pill.classList.add('noclass');
       txt.textContent = ko ? '오늘은 강의 없음' : 'No Class Today';

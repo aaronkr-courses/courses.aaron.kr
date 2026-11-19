@@ -20,6 +20,9 @@
   --grade-mid:     #{$grade-mid};
   --grade-final:   #{$grade-final};
   --grade-project: #{$grade-project};
+  @for $i from 1 through length($grade-items) {
+    --gi-#{$i - 1}: #{nth($grade-items, $i)};
+  }
 }
 
 [data-theme="light"] {

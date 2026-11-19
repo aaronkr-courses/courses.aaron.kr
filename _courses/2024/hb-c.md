@@ -21,6 +21,7 @@ information:
     time: 금 1234 | Fri 9am-1pm
     location: N4동 316호
     kakaotalk: https://open.kakao.com/o/g5SP7dNg
+    "📄 Syllabus": /assets/pdf/2024/2024-2-hb-c-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

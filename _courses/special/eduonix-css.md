@@ -5,7 +5,8 @@ title: A Beginner's Guide to CSS
 subtitle: CSS 기초 과정
 description: Eduonix • Online Course
 logo: https://res.cloudinary.com/dobann7wi/image/upload/q_auto/f_auto/v1777038667/eduonix-logo_s1jewl.png
-img: assets/img/books/html-css.jpg
+todo: "correct course cover image (previous one was wrong)"
+todo_skip: [syllabus]
 importance: 1
 category: Online
 external_url: https://www.eduonix.com/beginners-guide-to-css

@@ -21,6 +21,7 @@ information:
     time: 월 2-4pm & 수 2-3pm
     location: 인문대학 2호관 504호
     kakaotalk: https://open.kakao.com/o/g7HxmtMg
+    "📄 Syllabus": /assets/pdf/2024/JBNU-DATA-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

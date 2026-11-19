@@ -1,0 +1,94 @@
+# 2023 summer high-school crash course (나의 첫 파이썬) — rebuilt from the course site
+# https://2023-aaronkr.github.io/python-crash-course/ (lesson pages in docs/lessons/ of github.com/2023-aaronkr/python-crash-course).
+# The original daily dates weren't recorded on the site, so `date:` is just "2023"
+# (✎ add them if you still have the 2023 timetable).
+- date: "2023"
+  week: 1
+  title: >
+    <strong>Getting Started</strong>
+  title_ko: >
+    <strong>시작하기</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 1 — Install Python + VS Code, Hello World"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/01.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 2
+  title: >
+    <strong>Variables &amp; Data Types</strong>
+  title_ko: >
+    <strong>변수와 데이터 타입</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 2"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/02.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 3
+  title: >
+    <strong>Lists 1</strong>
+  title_ko: >
+    <strong>리스트 1</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 3"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/03.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 4
+  title: >
+    <strong>Lists 2</strong>
+  title_ko: >
+    <strong>리스트 2</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 4"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/04.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 5
+  title: >
+    <strong>If Statements</strong>
+  title_ko: >
+    <strong>조건문</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 5"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/05.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 6
+  title: >
+    <strong>Dictionaries</strong>
+  title_ko: >
+    <strong>사전</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 6"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/06.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 7
+  title: >
+    <strong>User Input</strong>
+  title_ko: >
+    <strong>사용자 입력</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 7 — input() and while loops"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/07.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 8
+  title: >
+    <strong>Functions</strong>
+  title_ko: >
+    <strong>함수</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 8"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/08.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 9
+  title: >
+    <strong>Classes</strong>
+  title_ko: >
+    <strong>클래스</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 9"
+  logistics: >
+    <a href="https://2023-aaronkr.github.io/python-crash-course/lessons/09.html" target="_blank" rel="noopener">Lesson notes →</a>
+- date: "2023"
+  week: 10
+  title: >
+    <strong>Projects — Alien Invasion game</strong>
+  title_ko: >
+    <strong>프로젝트 — 외계인 침공 게임</strong>
+  readings: "Matthes, <em>Python Crash Course</em>, Ch. 12–14"
+  logistics: >
+    <a href="https://github.com/aaronkr-courses/PyProject" target="_blank" rel="noopener">Projects →</a>

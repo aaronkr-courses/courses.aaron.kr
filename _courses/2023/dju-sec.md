@@ -22,6 +22,7 @@ information:
     time: 월 6789 | Mon 2pm-5:50pm
     location: 융합과학환 408호
     kakaotalk: https://open.kakao.com/o/g85r1PDf
+    "📄 Syllabus": /assets/pdf/2023/dju-sec-hl_4040505_r03.pdf
 
 Main-Text:
   - text: "주교재"

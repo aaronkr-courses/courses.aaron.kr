@@ -22,6 +22,7 @@ information:
     time: 목 89야1 | Thur 4pm-7pm
     location: W18-108호
     kakaotalk: https://open.kakao.com/o/gWM1v3jh
+    "📄 Syllabus": /assets/pdf/2025/2025-UT-CARS-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

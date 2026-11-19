@@ -22,6 +22,7 @@ information:
     time: 목 123 | Thur 9am-12pm
     location: W18동 102호
     kakaotalk: https://open.kakao.com/o/gfKXhIbg
+    "📄 Syllabus": /assets/pdf/2024/2024-1-ut-imd-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

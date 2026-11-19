@@ -21,6 +21,7 @@ information:
     time: 월 9-11am & 수 9-10am
     location: 인문대학 2호관
     kakaotalk: https://open.kakao.com/o/g4dQMgjh
+    "📄 Syllabus": /assets/pdf/2025/2025-JBNU-semiconductor-science.pdf
 
 Main-Text:
   - text: "주교재"

@@ -23,6 +23,7 @@ information:
     location: W18동 214호
     kakaotalk: https://open.kakao.com/o/grwzTdii
     github: https://classroom.github.com/a/r5TabZFB
+    "📄 Syllabus": /assets/pdf/2026/2026-1-UT-DB-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

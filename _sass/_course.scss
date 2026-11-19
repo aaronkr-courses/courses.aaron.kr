@@ -26,6 +26,19 @@
   &.code { background: rgba(109,204,221,.1);  color: var(--accent3); border: 1px solid rgba(109,204,221,.25); }
   &.sem  { background: rgba(126,184,247,.08); color: var(--accent2); border: 1px solid rgba(126,184,247,.2); }
   &.uni  { background: var(--tag-bg);         color: var(--muted);   border: 1px solid var(--border); }
+  // School name in its logo color (colors from _data/universities.yml color_dark/_light,
+  // pre-tuned for >=5.5:1 contrast on each theme's tag background)
+  &.uni.branded {
+    color: var(--uni-c-dark);
+    border-color: color-mix(in srgb, var(--uni-c-dark) 35%, transparent);
+    background: color-mix(in srgb, var(--uni-c-dark) 9%, transparent);
+    font-weight: 500;
+    [data-theme="light"] & {
+      color: var(--uni-c-light);
+      border-color: color-mix(in srgb, var(--uni-c-light) 30%, transparent);
+      background: color-mix(in srgb, var(--uni-c-light) 7%, transparent);
+    }
+  }
   &.grad      { background: rgba(251,191,36,.1);  color: var(--warn);    border: 1px solid rgba(251,191,36,.28); }
   &.intensive { background: rgba(126,184,247,.08); color: var(--accent2); border: 1px solid rgba(126,184,247,.25); }
   // Topic badge — same palette as .tag/.item-tag (index cards, archive rows) so a
@@ -208,6 +221,9 @@
   gap: 7px;
   padding: 0 10px;
   cursor: default;
+  min-width: 0;
+  overflow: hidden;
+  & + & { box-shadow: inset 1.5px 0 0 rgba(255,255,255,.45); } // divider between segments
 }
 .grade-pct  { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; color: #fff; font-weight: 500; letter-spacing: .04em; white-space: nowrap; }
 .grade-name { font-size: .7rem; color: #fff; white-space: nowrap; }
@@ -317,3 +333,132 @@
 @media (max-width: 560px) {
   .quick-links .ql-btn .txt { display: none; }
 }
+
+// ── Markdown tables (Grading breakdowns etc. in course/page bodies) ─────────────
+// Kramdown emits a bare <table>; header row is optional (`| a | b |` lines with no
+// `|---|` separator render tbody-only, like most Grading tables in _courses/).
+.overview-text table,
+.page-content table {
+  width: 100%;
+  margin: 14px 0 22px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  font-size: .88rem;
+  line-height: 1.5;
+
+  th, td {
+    padding: 9px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:last-child > td { border-bottom: none; }
+  thead th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: .64rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    background: var(--tag-bg);
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr { transition: background .15s; }
+  tbody tr:nth-child(even) { background: color-mix(in srgb, var(--tag-bg) 55%, transparent); }
+  tbody tr:hover { background: color-mix(in srgb, var(--accent) 7%, transparent); }
+  td { color: var(--sub); }
+  // Last column = the number (e.g. "15%") — mono, right-aligned, accent
+  td:last-child:not(:first-child),
+  th:last-child:not(:first-child) {
+    text-align: right;
+    white-space: nowrap;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  td:last-child:not(:first-child) { color: var(--accent); font-weight: 500; }
+  strong { color: var(--text); }
+}
+// Wide tables scroll inside themselves instead of the page on phones
+@media (max-width: 640px) {
+  .overview-text table, .page-content table { display: block; overflow-x: auto; }
+}
+
+// ── Full-assignments-list button + placeholder ──────────────────────────────────
+.ql-btn.ql-assign { border-color: rgba(251,191,36,.35); }
+.ql-btn.ql-todo {
+  cursor: help;
+  border-style: dashed;
+  background: transparent;
+  color: var(--muted);
+  em { font-style: italic; opacity: .8; }
+  &:hover { background: transparent; color: var(--muted); }
+}
+
+// ── Other editions (same course, other semesters) ───────────────────────────────
+.editions-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  margin-top: 12px;
+}
+.editions-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .58rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 4px;
+}
+a.edition-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'IBM Plex Mono', monospace; font-size: .62rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--sub);
+  text-decoration: none;
+  transition: border-color .2s, color .2s, background .2s;
+  .ed-uni { color: var(--muted); font-size: .56rem; }
+  &:hover { border-color: var(--accent2); color: var(--accent2); background: rgba(126,184,247,.06); }
+}
+
+// ── Quick-link dropdowns (`dropdown: true` groups / nested-map keys) ───────────
+// <details>/<summary> = click to open, no JS needed; a tiny script in
+// course_scripts.html closes others + closes on outside click / Esc.
+.ql-dd {
+  position: relative;
+  display: inline-block;
+  > summary { list-style: none; cursor: pointer; user-select: none; }
+  > summary::-webkit-details-marker { display: none; }
+  .ql-caret { font-size: .6rem; opacity: .7; transition: transform .2s; }
+  &[open] > summary { border-color: var(--accent2); color: var(--accent2); }
+  &[open] .ql-caret { transform: rotate(180deg); }
+}
+.ql-dd-menu {
+  position: absolute;
+  top: calc(100% + 6px); left: 0;
+  z-index: 30;
+  min-width: 200px;
+  max-width: min(320px, 90vw);
+  padding: 6px;
+  display: flex; flex-direction: column; gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  animation: qlDdIn .14s ease-out;
+}
+[data-theme="light"] .ql-dd-menu { box-shadow: 0 10px 30px rgba(20,20,60,.12); }
+@keyframes qlDdIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+a.ql-dd-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .68rem;
+  color: var(--sub);
+  text-decoration: none;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  &:hover, &:focus-visible { background: rgba(126,184,247,.1); color: var(--accent2); }
+}
+// Right-align the menu when its button sits near the right edge (set by JS)
+.ql-dd.align-right .ql-dd-menu { left: auto; right: 0; }

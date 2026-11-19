@@ -1,0 +1,31 @@
+{%- comment -%}
+  One custom quick-link button / dropdown item from an `information:` key → value pair.
+    {% include ql_link.html key=_key href=_href cls="ql-btn" %}
+  If the key has 2+ words and its first word starts with an emoji/symbol, that word is
+  the icon (shown alone on mobile); otherwise the icon is 🔗. ASCII letters/digits and
+  Hangul (UTF-8 lead bytes EA–ED) never count as an icon — so "예시1" or "팀 프로젝트"
+  keep all their words as the label. Underscores become spaces; each word's first
+  letter is upcased. `cls` = class on the <a> (default "ql-btn").
+  Also sets `_ql_icon` / `_ql_label` for callers that only need the text (dropdowns).
+{%- endcomment -%}
+{%- assign _words = include.key | append: "" | replace: "_", " " | split: " " -%}
+{%- assign _ql_icon = "🔗" -%}
+{%- assign _start = 0 -%}
+{%- if _words.size > 1 -%}
+  {%- assign _c = _words.first | slice: 0 | downcase -%}
+  {%- assign _enc = _c | url_encode | slice: 0, 3 -%}
+  {%- assign _is_text = false -%}
+  {%- if "abcdefghijklmnopqrstuvwxyz0123456789" contains _c -%}{%- assign _is_text = true -%}{%- endif -%}
+  {%- if _enc == "%EA" or _enc == "%EB" or _enc == "%EC" or _enc == "%ED" -%}{%- assign _is_text = true -%}{%- endif -%}
+  {%- unless _is_text -%}{%- assign _ql_icon = _words.first -%}{%- assign _start = 1 -%}{%- endunless -%}
+{%- endif -%}
+{%- assign _ql_label = "" -%}
+{%- for _w in _words offset: _start -%}
+  {%- assign _first = _w | slice: 0 | upcase -%}
+  {%- assign _rest = _w | slice: 1, _w.size -%}
+  {%- assign _ql_label = _ql_label | append: " " | append: _first | append: _rest -%}
+{%- endfor -%}
+{%- assign _ql_label = _ql_label | strip -%}
+{%- if include.href -%}
+<a href="{{ include.href }}" class="{{ include.cls | default: 'ql-btn' }}" target="_blank" rel="noopener noreferrer">{{ _ql_icon | escape }} <span class="txt">{{ _ql_label | escape }}</span></a>
+{%- endif -%}

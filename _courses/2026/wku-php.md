@@ -22,6 +22,7 @@ information:
     time: 화 678 | Tues 2-5pm
     location: 프라임관 지상 2층 - 콘텐츠응용개발실습실
     kakaotalk: https://open.kakao.com/o/gNS2Wdii
+    "📄 Syllabus": /assets/pdf/2026/2026-1-WKU-Internet-Contents-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

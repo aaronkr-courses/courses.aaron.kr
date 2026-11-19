@@ -23,6 +23,7 @@ information:
     location: 인문대학 2호관 505호
     kakaotalk: https://open.kakao.com/o/gJHYOpLi
     classroom: https://classroom.google.com/c/ODcyNDY2NDk5MDQ2?cjc=cpysrxz2
+    "📄 Syllabus": /assets/pdf/2026/2026-2-JBNU-AC-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

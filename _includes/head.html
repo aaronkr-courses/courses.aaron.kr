@@ -1,6 +1,6 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="robots" content="index, follow"/>
+<meta name="robots" content="{% if page.noindex or page.visible == false %}noindex, nofollow{% else %}index, follow{% endif %}"/>
 {%- comment -%}
   For course pages, page.description holds the structured "CODE • SEMESTER • UNIVERSITY"
   string used for display logic. We inject a human-readable meta description separately

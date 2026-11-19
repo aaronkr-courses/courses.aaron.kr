@@ -22,10 +22,12 @@ information:
     time: 수 123 | Wed 9am-11:50am
     location: W18 (미래융합정보관) 108호
     kakaotalk: https://open.kakao.com/o/gpQLjODf
+    "📄 Syllabus": /assets/pdf/2023/ut-web-am-20240201101127330.pdf
   - section: 259111 (PM)
     time: 수 567 | Wed 1pm-3:50pm
     location: W18 (미래융합정보관) 108호
     kakaotalk: https://open.kakao.com/o/gEEjkODf
+    "📄 Syllabus": /assets/pdf/2023/ut-web-pm-20240201101150861.pdf
 
 Main-Text:
   - text: "주교재"

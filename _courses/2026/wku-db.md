@@ -23,6 +23,7 @@ information:
     location: 프라임관 지상 2층 - 콘텐츠응용개발실습실
     kakaotalk: https://open.kakao.com/o/g2rtVpLi
     github: https://classroom50.org/aaronkr-2026-2/wku-db/assignments/wku-db-files/accept
+    "📄 Syllabus": /assets/pdf/2026/2026-2-WKU-Database-syllabus.pdf
 
 Main-Text:
   - text: "부교재"

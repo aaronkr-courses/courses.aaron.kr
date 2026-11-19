@@ -30,6 +30,11 @@ jobs:
           node-version: 20
 
       - name: Fetch GitHub stats
+        env:
+          # GITHUB_TOKEN alone fixes the rate-limit 403s (public counts). For private
+          # repo counts add a classic PAT with `read:org` as secret STATS_TOKEN.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_TOKEN:  ${{ secrets.STATS_TOKEN }}
         run: node scripts/fetch-github-stats.js
 
       - name: Commit updated stats

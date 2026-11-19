@@ -23,6 +23,7 @@ information:
     location: 정보화 교육동 203
     kakaotalk: https://open.kakao.com/o/gm10UpLi
     classroom: https://classroom.google.com/c/ODY5MzIwMzI5OTY4?cjc=mjust257
+    "📄 Syllabus": /assets/pdf/2026/2026-2-JBNU-Info-syllabus.pdf
 
 Main-Text:
   - text: "주교재"

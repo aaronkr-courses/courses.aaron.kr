@@ -25,6 +25,7 @@ information:
     classroom: https://classroom.google.com/c/ODUwMTIwNTMyODI3?cjc=onakzmcx
     github: https://classroom.github.com/a/ckk3PfSO
     "</> Code": https://github.com/aaronkr-courses/esp32-iotmaker
+    "📄 Syllabus": /assets/pdf/2026/2026-1-JBNU-Device-Instrument-Analysis.pdf
 
 Main-Text:
   - text: "주교재"
