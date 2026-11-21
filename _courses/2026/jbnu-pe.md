@@ -2,7 +2,7 @@
 layout: course
 init: JBNU
 title: Convergence Power Electronics
-subtitle: 융합전자전력공학
+subtitle: 융합전력전자공학
 description: 0000131120 • 2026년 1학기 • 전북대학교
 uni: jbnu
 img: assets/img/books/pe-principles.jpg
