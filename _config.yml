@@ -82,6 +82,9 @@ archive:
 
 # Course category display order (newest first). `group: hs` = High School & Online page.
 course_categories:
+  - label: "2027-1"
+    label_ko: "2027년 1학기"
+    key: "2027-1"
   - label: "Winter 2027"
     label_ko: "2027년 겨울 계절학기"
     key: "2027-winter"
