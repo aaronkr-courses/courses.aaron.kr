@@ -33,6 +33,7 @@
 // ── Archive pager (university year blocks → High School & Online) ───────────────
 .arch-pager {
   display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px;
+  background: transparent; border: none; backdrop-filter: none;
   a.pill { text-decoration: none; }
   // Transparent resting state (the solid --tag-bg read as a black slab on the hero);
   // the colored slide-in fill on hover/active is unchanged.
