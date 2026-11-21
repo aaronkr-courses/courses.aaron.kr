@@ -197,7 +197,7 @@
                     {%- elsif course.now == nil or course.now == false -%}<span class="archived-badge">Archived</span>{%- endif -%}
                   </div>
                   <div class="item-main">
-                    <div class="item-title">{{ course.title }}{% if _todo_n > 0 %}<span class="todo-mark" title="Needs updating">✎</span>{% endif %}</div>
+                    <div class="item-title">{{ course.title }}{% if _todo_n > 0 %}<span class="todo-mark" title="To add: {{ _todo_text | escape }}" aria-label="Needs updating">✎</span>{% endif %}</div>
                     {%- if course.subtitle %}<div class="item-subtitle">{{ course.subtitle }}</div>{%- endif -%}
                     <div class="item-meta-row">
                       {%- for _cls in _tc_list -%}

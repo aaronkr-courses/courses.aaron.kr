@@ -505,7 +505,7 @@ a.archive-item.grad-item::before {
 .item-todo {
   margin-top: 7px;
   padding: 3px 9px;
-  display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px;
+  display: none; // only shown while the "✎ To update" filter is on (see below) flex-wrap: wrap; align-items: baseline; gap: 2px 8px;
   font-size: .7rem;
   font-style: italic;
   color: var(--muted);
@@ -528,7 +528,11 @@ a.archive-item.grad-item::before {
 }
 // "Needs update" quick filter
 .thumb-toggle.todo-toggle.active { border-color: var(--warn); color: var(--warn); }
-.archive-main-todo-only li:not(.has-todo) { display: none; }
+.archive-main-todo-only {
+  .archive-list > li:not(.has-todo) { display: none; } // direct children only — not the note's own <li> items
+  .item-todo { display: inline-flex; }
+}
+.todo-mark { cursor: help; }
 
 .item-uni {
   flex-shrink: 0;

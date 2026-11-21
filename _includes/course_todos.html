@@ -2,8 +2,8 @@
   "What's still missing" checker for one course — drives the ✎ marker + italic
   footnote on archive rows (_includes/archive_page.html). Usage:
     {% include course_todos.html course=course %}
-  Sets `_todo_html` (rendered list items, empty when nothing is missing) and
-  `_todo_n` (count) in the caller's scope.
+  Sets `_todo_html` (rendered list items, empty when nothing is missing),
+  `_todo_text` (plain English, for the ✎ tooltip) and `_todo_n` (count) in the caller's scope.
 
   Automatic checks:
     🗓 schedule          no data_file and no external_url
@@ -54,5 +54,15 @@
   {%- endif -%}
 {%- endcapture -%}
 {%- assign _todo_html = _todo_html | strip -%}
+{%- comment -%} Plain-text English version for the ✎ tooltip: drop each lang-ko span, then tags {%- endcomment -%}
+{%- assign _parts = _todo_html | split: '<span class="lang-ko">' -%}
+{%- assign _todo_text = "" -%}
+{%- for _p in _parts -%}
+  {%- if forloop.first -%}{%- assign _todo_text = _p -%}{%- continue -%}{%- endif -%}
+  {%- assign _ko = _p | split: '</span>' | first | append: '</span>' -%}
+  {%- assign _todo_text = _todo_text | append: _p | remove_first: _ko -%}
+{%- endfor -%}
+{%- comment -%} Separator only BETWEEN items (Liquid 4 here has no remove_last) {%- endcomment -%}
+{%- assign _todo_text = _todo_text | replace: '</li><li', '</li>, <li' | strip_html | strip -%}
 {%- assign _todo_n = _todo_html | split: "<li" | size | minus: 1 -%}
 {%- if _todo_n < 0 -%}{%- assign _todo_n = 0 -%}{%- endif -%}
