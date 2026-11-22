@@ -164,10 +164,10 @@
   supp:
   readings: Chp 9 + SWE@Google Ch.9
   hw:
-  slides: 
-  _slides2: "https://docs.google.com/presentation/d/1HF4bOZ-z9PrMyERqdnvPLYFgDaA2H_-y/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
-  _slides2_title: "Ch.9 Testing (Original)"
-  img: 2026/cbnu-grad-soft-eng/
+  slides: "https://docs.google.com/presentation/d/1IjbrRcTQkVnMpycJJkA2_sAzRng9T4544KvT97fI00Y/edit?usp=sharing"
+  slides2: "https://docs.google.com/presentation/d/1HF4bOZ-z9PrMyERqdnvPLYFgDaA2H_-y/edit?usp=sharing&ouid=111221545203304105756&rtpof=true&sd=true"
+  slides2_title: "Ch.9 Testing (Original)"
+  img: 2026/cbnu-grad-soft-eng/13-testing.jpg
   logistics: >
     Real test suite + peer code review
 
