@@ -44,16 +44,18 @@ information:
       "예시4": https://docs.google.com/document/d/1dEhn6xigCQiHq53bqZiAA4vrKqdRZcEoG_nkRfVaVo8/edit?usp=sharing
     "📥 제출": https://forms.gle/j9cDVZUTuZYtCb1CA
 
-  - links: 1. EDA 템플릿
-    dropdown: true
-    "📊 표 형식": https://drive.google.com/file/d/1gyP2ziRAmCJWaUAkLY4kSXBWBOQS9C9e/view?usp=sharing
-    "⏱️ 시계열/순차 형식": https://drive.google.com/file/d/1LXjm5R_sHCDkDEzzHp5lXiLK62Slpd5R/view?usp=sharing
-    "🖼️ 이미지 형식": https://drive.google.com/file/d/1pZ5k7yQLFNZdAyyWZKmqnYEBXLAINq_m/view?usp=sharing
-
-  - links: 2. 모델 선택
-    dropdown: true
-    "📊 표나 시간 형식": https://drive.google.com/file/d/1p57ycDofoWEZ2QDADtdnAnuRLi53Wm1c/view?usp=sharing
-    "🖼️ 이미지 형식": https://drive.google.com/file/d/1V8J5jPn9-WdsEx37x_8xeY3ufoEKqwjR/view?usp=sharing
+  - links: 템플릿
+    "1. EDA 템플릿:
+      "📊 표 형식": https://drive.google.com/file/d/1gyP2ziRAmCJWaUAkLY4kSXBWBOQS9C9e/view?usp=sharing
+      "⏱️ 시계열/순차 형식": https://drive.google.com/file/d/1LXjm5R_sHCDkDEzzHp5lXiLK62Slpd5R/view?usp=sharing
+      "🖼️ 이미지 형식": https://drive.google.com/file/d/1pZ5k7yQLFNZdAyyWZKmqnYEBXLAINq_m/view?usp=sharing
+    "2. 모델 선택":
+      "📊 표/시간 형식": https://drive.google.com/file/d/1p57ycDofoWEZ2QDADtdnAnuRLi53Wm1c/view?usp=sharing
+      "🖼️ 이미지 형식": https://drive.google.com/file/d/1V8J5jPn9-WdsEx37x_8xeY3ufoEKqwjR/view?usp=sharing
+    "3. 특징 튜닝":
+      "📊 표 형식": https://drive.google.com/file/d/1uXoNNbvCSzPB83Y86ill3FGAvnkMAsUD/view?usp=sharing
+      "⏱️ 시계열/순차 형식": https://drive.google.com/file/d/1uRk4gUHuaeL8wD7KIgTpjR5-Edw4Nj5c/view?usp=sharing
+      "🖼️ 이미지 형식": https://drive.google.com/file/d/1KXOUHX9sqi6diGrzgKWKtymRqX_iPjP5/view?usp=sharing
 
 Main-Text:
   - text: "주교재"
