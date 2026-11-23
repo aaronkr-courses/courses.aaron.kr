@@ -4,8 +4,9 @@ init: GNUE
 title: AI Convergence Education Project (Graduate)
 title_ko: AI융합교육프로젝트 (대학원)
 subtitle: 대학원 계절학기 집중 강좌
-description: TBD • 2027년 겨울 계절학기 • 광주교육대학교
+description: 818728 • 2027년 겨울 계절학기 • 광주교육대학교
 uni: gnue
+img: assets/img/books/ai-and-ed.jpg
 importance: 1
 category: 2027-winter
 now: Yes
@@ -23,18 +24,19 @@ grading:
   project: 50
 
 information:
-  - section: TBD
-    time: 매일 09:00–12:00 | Daily 9am–12pm
-    location: TBD
+  - section: 818728
+    time: 매일 14:00–17:00 | Daily 2pm–5pm
+    location: AI융합교육실 333호
     kakaotalk:
+    syllabus: /assets/pdf/2027/2027-winter-GNUE-AI-project-syllabus.pdf
 
 Main-Text:
   - text: "주교재"
-    author: "TBD"
-    title: "<strong>TBD</strong>"
-    publisher: "TBD"
-    link:
-    image:
+    author: "Shah, Priten"
+    title: "<strong>AI and the Future of Education</strong> Teaching in the Age of Artificial Intelligence"
+    publisher: "Jossey-Bass | 2023년 09월 06일"
+    link: https://www.yes24.com/product/goods/119117959
+    image: books/ai-and-ed.jpg
 ---
 
 광주교육대학교 대학원 계절학기 집중 강좌입니다. 15주 분량의 과정을 15일(3시간/일) 일정으로 압축하여 진행하며, 실시간 Zoom 강의와 LMS 동영상 강의를 병행합니다.
