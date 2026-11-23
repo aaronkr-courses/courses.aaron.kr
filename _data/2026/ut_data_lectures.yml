@@ -171,8 +171,10 @@
     13장) 텐서플로를 사용한 데이터 적재와 전처리</strong>
   supp:
   readings: p. 489-576
-  hw: 
-  hw2: 
+  hw_label: "AM 오전 과제"
+  hw: "https://classroom50.org/aaronkr-2026-2/knut-2-am/assignments/12-user-defined/accept"
+  hw2_label: "PM 오후 과제"
+  hw2: "https://classroom50.org/aaronkr-2026-2/knut-1-pm/assignments/12-user-defined/accept"
   slides: "https://docs.google.com/presentation/d/1eMMfWqxcO-6yz4cU2PfY1hVEDmgVNG9m0_t-veLd20Q/edit?usp=sharing"
   img: 2024/ut-data/13-tf-user-defined.jpg
   logistics: >
