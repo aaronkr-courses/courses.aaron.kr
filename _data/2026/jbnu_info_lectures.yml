@@ -220,9 +220,9 @@
   supp:
   readings:
   hw:
-  _slides: "https://docs.google.com/presentation/d/1ijxPgnRbIhz7LpjJQdu0h4NHg7SjkidAfJeRp9pJ3s0/edit?usp=sharing"
+  slides: "https://docs.google.com/presentation/d/1ijxPgnRbIhz7LpjJQdu0h4NHg7SjkidAfJeRp9pJ3s0/edit?usp=sharing"
   slides2:
-  _img: 2025/jbnu-info/13-nn.jpg
+  img: 2025/jbnu-info/13-nn.jpg
   logistics:
 
 - date: 12/9

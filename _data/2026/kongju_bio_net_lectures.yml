@@ -40,7 +40,7 @@
     <span style="color: red">9/25</a>
   week: 4
   title: >
-    <strong style="color: red">Chuseok!~</strong> (<a href="https://kncu.kongju.ac.kr/">LMS Video</a> | <a href="#">YT</a>)<br>
+    <strong style="color: red">Chuseok!~</strong> (<a href="https://kncu.kongju.ac.kr/">LMS Video</a>)<br>
     10장) 보건의료정보 표준: 표준 개발 기구, 영역별 표준 현황
   supp:
   readings: 보건의료정보학 10장 (p.196-211)
@@ -66,7 +66,7 @@
     <span style="color: red">10/9</a>
   week: 6
   title: >
-    <strong style="color: red">Hangul Day!~</strong> (<a href="https://kncu.kongju.ac.kr/">LMS Video</a> | <a href="#">YT</a>)<br>
+    <strong style="color: red">Hangul Day!~</strong> (<a href="https://kncu.kongju.ac.kr/">LMS Video</a>)<br>
     12장) 상호운용성: 정의, 수준, 생태계 / HL7-FHIR 개념 도입
   supp:
   readings: >
@@ -121,7 +121,7 @@
 - date: 11/6
   week: 10
   title: >
-    과제: 웨어러블 심박수 + 흉부 X-ray 탐색
+    <strong style="color: red">과제:</strong> 웨어러블 심박수 + 흉부 X-ray 탐색
   supp:
   readings: 자체 실습 자료
   hw:
@@ -158,19 +158,21 @@
 - date: 11/27
   week: 13
   title: >
+    <strong style="color: red">비대면</strong> (<a href="https://kncu.kongju.ac.kr/">LMS Video</a>)<br>
     24장) 보건의료정보학의 미래: 거대언어모델, 가상의료, 디지털헬스
   supp:
   readings: 보건의료정보학 24장 (p.504-523)
-  hw:
+  hw: "https://classroom.google.com/c/ODcyNDY2NDU4MDU2/a/OTAxMTgwODk3Njcz/details"
+  hw_label: "과제 노트북"
   slides: "https://docs.google.com/presentation/d/1M784zPkKfGlpvVIS--gbTUR8ZcQJJ2BCw0indnc82Tw/edit?usp=sharing"
-  slides2:
+  slides2: 
   img: 2026/kongju-bio-net/13-future.jpg
   logistics: >
 
 - date: 12/4
   week: 14
   title: >
-    실습: ESP32 생체신호 센서 → MQTT → Node-RED 대시보드 구축<br>
+    <strong style="color: red">실습:</strong> ESP32 생체신호 센서 → MQTT → Node-RED 대시보드 구축<br>
     Ch 13 사용성과 UX 또는 Ch 20 간호정보학
   supp:
   readings:
