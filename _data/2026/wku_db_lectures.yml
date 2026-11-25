@@ -170,7 +170,8 @@
     Chapter 16: Building a Weather Database
   supp:
   readings:
-  hw: 
+  hw: "https://raw.githubusercontent.com/aaronkr-2026-2/wku-db-wku-db-files-jekkilekki/refs/heads/main/%EC%8B%A4%EC%8A%B5/12%EC%A3%BC%EC%B0%A8/weather.sql?token=GHSAT0AAAAAAER4CWTDFHDVK5WKZE6OV2AC2YGSYXA"
+  hw_label: "weather.sql"
   slides: "https://docs.google.com/presentation/d/1kyfcm65aVJaG7dmSQ5QRjsHfoo4yzeME-_7v3Rm3XsA/edit?usp=sharing"
   slides2:
   img: 2026/wku-db/12-db-ops.jpg
